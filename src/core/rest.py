@@ -174,6 +174,10 @@ class RESTSpecification:
 
         return RESTSpecification.load_specs_from_str(reqs, tests)
 
+    @staticmethod
+    def dprint(debug, *args, **kwargs):
+        if debug: print(*args, **kwargs)
+
     def check_req(self, req: str) -> bool:
         return req in self._reqs_index
 
@@ -308,7 +312,8 @@ class RESTSpecification:
     def to_local(
             self,
             model_name_or_path: str | PathLike,
-            max_new_tokens: int
+            max_new_tokens: int,
+            debug: bool = False
         ) -> tuple[Response, float]:
 
         id_: str = f"{id(self)}-{datetime.datetime.now().timestamp()}"
@@ -323,7 +328,9 @@ class RESTSpecification:
         err: dict[str, list[str]] = {}
     
         cummulative_time: float = .0
-        for req in self._reqs:
+        for i, req in enumerate(self._reqs):
+            self.dprint(debug, f'Iteration nr.: {i+1}')
+
             start: float = perf_counter()
             # This is the important code block to time. Parsing the 'raw'
             # output reponse can be neglected.
@@ -331,12 +338,15 @@ class RESTSpecification:
                             (self._tests, req, self._prompt), True)
             end: float = perf_counter()
             cummulative_time += (end - start)
+            
+            self.dprint(debug, f'Raw output: {raw_res}')
 
             links: list[str]
 
             # Use the requirement ID instead of its internal index
             req_id: str = self \
                 ._reqs_index[int(req["ID"].replace(RESTSpecification._REQ_INDEX_PREFIX, ""))]
+            self.dprint(debug, f'Req. ID: {req_id}')
 
             try:
                 # Parse the output of the LLM
@@ -347,6 +357,9 @@ class RESTSpecification:
                 err[req_id] = [traceback.format_exc(), raw_res]
 
             res[req_id] = links
+
+            self.dprint(debug, f'Created links: {links}');
+            self.dprint(debug, f'Parsed response {res}') 
 
         session.delete()
         return Response(res, err), cummulative_time

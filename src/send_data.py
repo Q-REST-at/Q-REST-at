@@ -107,11 +107,19 @@ def main() -> None:
         req_path = os.getenv("ENCO_REQ_PATH")
         test_path = os.getenv("ENCO_TEST_PATH")
         mapping_path = os.getenv("ENCO_MAP_PATH")
+    
+    debug_mode: bool = False
+    try:
+        mode = int(os.getenv("DEBUG_MODE"))
+        debug_mode = mode == 1 # 1 for True/ON
+    except Exception:
+        pass
         
     print(f"Model path: {model_path}")
     print(f"Token limit: {token}")
     print(f"Requirements path: {req_path}")
     print(f"Tests path: {test_path}")
+    print(f"Debug mode: {'ON' if debug_mode else 'OFF'}")
 
     # Load the REST specifications
     specs: RESTSpecification = RESTSpecification.load_specs(
@@ -178,7 +186,7 @@ def main() -> None:
             traceback.print_exc()
 
     # Send data to local model
-    res, t = specs.to_local(model_path, token)
+    res, t = specs.to_local(model_path, token, debug_mode)
 
     payload: dict[str, dict] = { # = res.json
         "meta": {
