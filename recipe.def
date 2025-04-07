@@ -1,0 +1,17 @@
+Bootstrap: localimage
+From: /apps/containers/Conda/miniforge-24.3.0-0.sif
+
+%files 
+    /mimer/NOBACKUP/groups/naiss2025-22-104/REST/REST-at/requirements.txt
+
+%post
+    /opt/conda/bin/conda install pip
+    /opt/conda/bin/pip install -r /mimer/NOBACKUP/groups/naiss2025-22-104/REST/REST-at/requirements.txt
+
+    conda install -c conda-forge scalene
+
+    # GGUF stuff
+    # /opt/conda/bin/conda install -y cmake make gcc_linux-64 gxx_linux-64
+    # /opt/conda/bin/conda install -c conda-forge cuda-toolkit
+    # CMAKE_ARGS="-DGGML_CUDA=on" /opt/conda/bin/pip install llama-cpp-python
+    # /opt/conda/bin/pip install gguf
