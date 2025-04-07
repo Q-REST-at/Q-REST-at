@@ -16,6 +16,7 @@ import json
 from io import StringIO
 import traceback
 from typing_extensions import override
+from time import perf_counter
 
 from openai import OpenAI
 from openai.types.chat import ChatCompletion
@@ -308,7 +309,8 @@ class RESTSpecification:
             self,
             model_name_or_path: str | PathLike,
             max_new_tokens: int
-        ) -> Response:
+        ) -> tuple[Response, float]:
+
         id_: str = f"{id(self)}-{datetime.datetime.now().timestamp()}"
         session: Session = Session.create(
             id_,
@@ -319,11 +321,17 @@ class RESTSpecification:
 
         res: dict[str, list[str]] = {}
         err: dict[str, list[str]] = {}
-
+    
+        cummulative_time: float = .0
         for req in self._reqs:
-            raw_res: str = session.prompt(format_req_is_tested_prompt(self._tests, req, self._prompt), True)
+            start: float = perf_counter()
+            # This is the important code block to time. Parsing the 'raw'
+            # output reponse can be neglected.
+            raw_res: str = session.prompt(format_req_is_tested_prompt\
+                            (self._tests, req, self._prompt), True)
+            end: float = perf_counter()
+            cummulative_time += (end - start)
 
-            curr_res: str
             links: list[str]
 
             # Use the requirement ID instead of its internal index
@@ -341,7 +349,7 @@ class RESTSpecification:
             res[req_id] = links
 
         session.delete()
-        return Response(res, err)
+        return Response(res, err), cummulative_time
 
     def __str__(self) -> str:
         return f"{self.__class__.__name__} {{\n" \

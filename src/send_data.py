@@ -178,15 +178,18 @@ def main() -> None:
             traceback.print_exc()
 
     # Send data to local model
-    res: Response = specs.to_local(model_path, token)
+    res, t = specs.to_local(model_path, token)
 
-    payload: dict[str, dict] = {
+    payload: dict[str, dict] = { # = res.json
         "meta": {
             "req_path": req_path,
             "test_path": test_path,
             "mapping_path": mapping_path
         },
-        "data": res.as_dict
+        "data": {
+            **res.as_dict,           # efficacy data
+            **{"time-to-analyze": t} # .. efficiency data
+        }
     }
 
     # Log response to a file
