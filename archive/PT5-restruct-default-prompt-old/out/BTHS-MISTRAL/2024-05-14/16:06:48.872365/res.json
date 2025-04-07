@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "req_path": "./data/BTHS-REs.csv",
+    "test_path": "./data/BTHS-STs.csv",
+    "mapping_path": "./data/BTHS-Mapping.csv"
+  },
+  "data": {
+    "links": {
+      "4.2": [
+        "HSP/AG/IAC/BV-01-I",
+        "HSP/HS/IAC/BV-01-I",
+        "HSP/AG/OAC/BV-01-I",
+        "HSP/AG/ACR/BV-01-I",
+        "HSP/HS/ACR/BV-02-I",
+        "HSP/AG/ACT/BV-01-I",
+        "HSP/HS/ACT/BV-02-I"
+      ],
+      "4.2.1": [
+        "HSP/AG/IAC/BV-02-I",
+        "HSP/HS/IAC/BV-02-I"
+      ],
+      "4.2.2": [
+        "HSP/HS/IAC/BV-02-I",
+        "HSP/HS/ACT/BV-02-I",
+        "HSP/AG/RAV/BV-02-I",
+        "HSP/AG/RAV/BV-03-I",
+        "HSP/HS/RAV/BV-03-I"
+      ],
+      "4.3": [],
+      "4.5": [
+        "HSP/AG/ACR/BV-01-I",
+        "HSP/HS/ACR/BV-01-I",
+        "HSP/HS/ACR/BV-02-I",
+        "HSP/HS/ACT/BV-02-I",
+        "HSP/AG/RAV/BV-02-I"
+      ],
+      "4.6.1": [
+        "HSP/AG/ACT/BV-01-I",
+        "HSP/AG/ACT/BV-02-I",
+        "HSP/HS/ACT/BV-02-I"
+      ],
+      "4.6.2": [
+        "HSP/AG/ACT/BV-01-I",
+        "HSP/AG/ACT/BV-02-I",
+        "HSP/HS/ACT/BV-02-I"
+      ],
+      "4.7": [
+        "HSP/AG/RAV/BV-02-I",
+        "HSP/AG/RAV/BV-03-I",
+        "HSP/HS/RAV/BV-03-I"
+      ]
+    },
+    "err": {
+      "4.3": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 331, in to_local\n    curr_res = json.loads(curr_res)\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 353, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ^^^^^^^^^^^^^^^^^^^^^^\njson.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 47 (char 46)\n",
+        "Based on the requirement \"R-3: Headset Initiated ACL Connection Establishment\", the following test cases are directly related:\n\n{\"requirementID\": \"R-3\", \"tests\": \"T-4\", \"T-5\"}\n\nExplanation:\nTest cases T-4 and T-5 verify that the headset (HS) can establish a complete audio connection towards the access point (AG) upon user action (pressing a button on the HS). This directly relates to the requirement as it specifies that \"upon completion of a connection establishment that was initiated by pressing the 'headset button'\", the HS shall send the AT+CKPD=200 command to the AG. These test cases cover the scenario where the HS initiates the connection establishment."
+      ]
+    }
+  }
+}

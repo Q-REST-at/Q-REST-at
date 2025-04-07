@@ -1,0 +1,177 @@
+{
+  "meta": {
+    "req_path": "./data/ENCO-REs.csv",
+    "test_path": "./data/ENCO-STs.csv",
+    "mapping_path": "./data/ENCO_mapping.csv"
+  },
+  "data": {
+    "links": {
+      "S5": [
+        "39",
+        "40",
+        "41",
+        "81"
+      ],
+      "S63": [],
+      "S69": [
+        "437",
+        "439"
+      ],
+      "S117": [
+        "50"
+      ],
+      "S125": [
+        "200"
+      ],
+      "S217": [
+        "50"
+      ],
+      "S230": [
+        "16",
+        "25",
+        "53",
+        "224",
+        "332",
+        "378"
+      ],
+      "S232": [
+        "26"
+      ],
+      "S247": [
+        "16",
+        "25",
+        "53",
+        "97",
+        "378",
+        "428",
+        "652"
+      ],
+      "B113": [],
+      "S184": [
+        "378",
+        "428"
+      ],
+      "S81": [
+        "463",
+        "464"
+      ],
+      "B40": [],
+      "S95": [],
+      "B47": [],
+      "S202": [
+        "7",
+        "11"
+      ],
+      "S163": [
+        "273"
+      ],
+      "B89": [
+        "273"
+      ],
+      "S130": [
+        "210"
+      ],
+      "S131": [],
+      "S539": [
+        "81"
+      ],
+      "S540": [
+        "81"
+      ],
+      "S226": [
+        "16"
+      ],
+      "B107": [],
+      "S207": [],
+      "S220": [
+        "61"
+      ],
+      "S50": [],
+      "S93": [
+        "145"
+      ],
+      "S102": [
+        "177"
+      ],
+      "S115": [],
+      "S132": [
+        "212"
+      ],
+      "S556": [],
+      "B73": [
+        "224"
+      ],
+      "B87": [
+        "271"
+      ],
+      "B35": [],
+      "S13": [],
+      "B7": [],
+      "B102": [],
+      "S82": [
+        "428"
+      ],
+      "S262": [
+        "652"
+      ]
+    },
+    "err": {
+      "S63": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    links = self._parse_intermediary_output(raw_res)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 382, in _parse_intermediary_output\n    return self._parse_json_output(res)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 423, in _parse_json_output\n    raise TypeError(f\"Value ({res_obj[key]}) of key ({key}) not a string.\")\nTypeError: Value (['T-7']) of key (tests) not a string.\n",
+        "{\"requirementID\": \"R-1\", \"tests\": [\"T-7\"]}"
+      ],
+      "B113": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    links = self._parse_intermediary_output(raw_res)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 382, in _parse_intermediary_output\n    return self._parse_json_output(res)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 423, in _parse_json_output\n    raise TypeError(f\"Value ({res_obj[key]}) of key ({key}) not a string.\")\nTypeError: Value (['T-1']) of key (tests) not a string.\n",
+        "{\"requirementID\": \"R-9\", \"tests\": [\"T-1\"]}"
+      ],
+      "B40": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    links = self._parse_intermediary_output(raw_res)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 382, in _parse_intermediary_output\n    return self._parse_json_output(res)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 423, in _parse_json_output\n    raise TypeError(f\"Value ({res_obj[key]}) of key ({key}) not a string.\")\nTypeError: Value (['T-12', 'T-13']) of key (tests) not a string.\n",
+        "{\"requirementID\": \"R-12\", \"tests\": [\"T-12\", \"T-13\"]}"
+      ],
+      "S95": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    links = self._parse_intermediary_output(raw_res)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 382, in _parse_intermediary_output\n    return self._parse_json_output(res)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 423, in _parse_json_output\n    raise TypeError(f\"Value ({res_obj[key]}) of key ({key}) not a string.\")\nTypeError: Value (['T-14', 'T-15']) of key (tests) not a string.\n",
+        "{\"requirementID\": \"R-13\", \"tests\": [\"T-14\", \"T-15\"]}"
+      ],
+      "B47": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    links = self._parse_intermediary_output(raw_res)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 382, in _parse_intermediary_output\n    return self._parse_json_output(res)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 423, in _parse_json_output\n    raise TypeError(f\"Value ({res_obj[key]}) of key ({key}) not a string.\")\nTypeError: Value (['T-16', 'T-17']) of key (tests) not a string.\n",
+        "{\"requirementID\": \"R-14\", \"tests\": [\"T-16\", \"T-17\"]}"
+      ],
+      "B107": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    links = self._parse_intermediary_output(raw_res)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 382, in _parse_intermediary_output\n    return self._parse_json_output(res)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 423, in _parse_json_output\n    raise TypeError(f\"Value ({res_obj[key]}) of key ({key}) not a string.\")\nTypeError: Value (['T-24']) of key (tests) not a string.\n",
+        "{\"requirementID\": \"R-23\", \"tests\": [\"T-24\"]}"
+      ],
+      "S207": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    links = self._parse_intermediary_output(raw_res)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 382, in _parse_intermediary_output\n    return self._parse_json_output(res)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 423, in _parse_json_output\n    raise TypeError(f\"Value ({res_obj[key]}) of key ({key}) not a string.\")\nTypeError: Value (['T-25']) of key (tests) not a string.\n",
+        "{\"requirementID\": \"R-24\", \"tests\": [\"T-25\"]}"
+      ],
+      "S50": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    links = self._parse_intermediary_output(raw_res)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 382, in _parse_intermediary_output\n    return self._parse_json_output(res)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 423, in _parse_json_output\n    raise TypeError(f\"Value ({res_obj[key]}) of key ({key}) not a string.\")\nTypeError: Value (['T-29']) of key (tests) not a string.\n",
+        "{\"requirementID\": \"R-26\", \"tests\": [\"T-29\"]}"
+      ],
+      "S115": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    links = self._parse_intermediary_output(raw_res)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 382, in _parse_intermediary_output\n    return self._parse_json_output(res)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 423, in _parse_json_output\n    raise TypeError(f\"Value ({res_obj[key]}) of key ({key}) not a string.\")\nTypeError: Value (['T-31']) of key (tests) not a string.\n",
+        "{\"requirementID\": \"R-29\", \"tests\": [\"T-31\"]}"
+      ],
+      "S556": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    links = self._parse_intermediary_output(raw_res)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 382, in _parse_intermediary_output\n    return self._parse_json_output(res)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 423, in _parse_json_output\n    raise TypeError(f\"Value ({res_obj[key]}) of key ({key}) not a string.\")\nTypeError: Value (['T-27']) of key (tests) not a string.\n",
+        "{\"requirementID\": \"R-31\", \"tests\": [\"T-27\"]}"
+      ],
+      "B35": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    links = self._parse_intermediary_output(raw_res)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 382, in _parse_intermediary_output\n    return self._parse_json_output(res)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 423, in _parse_json_output\n    raise TypeError(f\"Value ({res_obj[key]}) of key ({key}) not a string.\")\nTypeError: Value (['T-35']) of key (tests) not a string.\n",
+        "{\"requirementID\": \"R-34\", \"tests\": [\"T-35\"]}"
+      ],
+      "S13": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    links = self._parse_intermediary_output(raw_res)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 382, in _parse_intermediary_output\n    return self._parse_json_output(res)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 423, in _parse_json_output\n    raise TypeError(f\"Value ({res_obj[key]}) of key ({key}) not a string.\")\nTypeError: Value (['T-36']) of key (tests) not a string.\n",
+        "{\"requirementID\": \"R-35\", \"tests\": [\"T-36\"]}"
+      ],
+      "B7": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    links = self._parse_intermediary_output(raw_res)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 382, in _parse_intermediary_output\n    return self._parse_json_output(res)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 423, in _parse_json_output\n    raise TypeError(f\"Value ({res_obj[key]}) of key ({key}) not a string.\")\nTypeError: Value (['T-37']) of key (tests) not a string.\n",
+        "{\"requirementID\": \"R-36\", \"tests\": [\"T-37\"]}"
+      ],
+      "B102": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    links = self._parse_intermediary_output(raw_res)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 382, in _parse_intermediary_output\n    return self._parse_json_output(res)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 423, in _parse_json_output\n    raise TypeError(f\"Value ({res_obj[key]}) of key ({key}) not a string.\")\nTypeError: Value (['T-38']) of key (tests) not a string.\n",
+        "{\"requirementID\": \"R-37\", \"tests\": [\"T-38\"]}"
+      ]
+    }
+  }
+}

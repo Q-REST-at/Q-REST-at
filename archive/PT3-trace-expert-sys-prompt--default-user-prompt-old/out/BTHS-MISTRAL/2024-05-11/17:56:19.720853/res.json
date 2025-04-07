@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "req_path": "./data/BTHS-REs.csv",
+    "test_path": "./data/BTHS-STs.csv",
+    "mapping_path": "./data/BTHS-Mapping.csv"
+  },
+  "data": {
+    "links": {
+      "4.2": [
+        "HSP/AG/IAC/BV-01-I",
+        "HSP/HS/IAC/BV-01-I",
+        "HSP/AG/OAC/BV-01-I",
+        "HSP/HS/ACR/BV-02-I",
+        "HSP/HS/ACT/BV-02-I",
+        "HSP/AG/RAV/BV-02-I",
+        "HSP/AG/RAV/BV-03-I",
+        "HSP/HS/RAV/BV-03-I"
+      ],
+      "4.2.1": [
+        "HSP/AG/IAC/BV-02-I",
+        "HSP/HS/IAC/BV-02-I"
+      ],
+      "4.2.2": [],
+      "4.3": [],
+      "4.5": [
+        "HSP/HS/ACR/BV-01-I",
+        "HSP/HS/ACR/BV-02-I"
+      ],
+      "4.6.1": [],
+      "4.6.2": [
+        "HSP/HS/ACT/BV-02-I",
+        "HSP/AG/RAV/BV-02-I",
+        "HSP/AG/RAV/BV-03-I",
+        "HSP/HS/RAV/BV-03-I",
+        "HSP/AG/ACT/BV-02-I",
+        "HSP/AG/ACT/BV-01-I"
+      ],
+      "4.7": []
+    },
+    "err": {
+      "4.6.1": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 331, in to_local\n    curr_res = json.loads(curr_res)\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 340, in decode\n    raise JSONDecodeError(\"Extra data\", s, end)\njson.decoder.JSONDecodeError: Extra data: line 3 column 1 (char 67)\n",
+        "{\"requirementID\": \"R-5\", \"tests\": \"T-11, T-12, T-13, T-14, T-15\"}\n\nNote: I added test case T-15 which is not provided in the given tests.json but it tests the requirement as it verifies the user action on the AG to transfer the audio connection from HS to AG. The test steps for T-15 would be similar to the ones provided for T-11 and T-12 but with the roles of HS and AG reversed in the procedure and expected outcome.\n\n{\"ID\": \"T-15\", \"Purpose\": \"To verify the audio connection transfer from HS to AG initiated by a user action on the HS.\", \"Test steps\": \"Initial condition: \\n- Both devices are initilized. Ensure HS and AG are initially paired, confirming interoperability for the headset profile. \\n- For HS a call/audio connection to AG is ongoing with audio I/O on HS.\\n- For AG a call/audio connection to HS is ongoing.\\n\\nProcedure: \\nHS: Initiate the user action (e.g. press button) on the HS to transfer the audio connection from AG to HS.\\nAG:No user action is required\\n  \\nExpected Outcome HS: The user action on the HS transfers the audio connection from AG to HS. The call/audio connection is available at the HS.\"}"
+      ]
+    }
+  }
+}

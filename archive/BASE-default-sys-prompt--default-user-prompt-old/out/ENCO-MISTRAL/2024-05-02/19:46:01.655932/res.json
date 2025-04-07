@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "req_path": "./data/ENCO-REs.csv",
+    "test_path": "./data/ENCO-STs.csv",
+    "mapping_path": "./data/ENCO_mapping.csv"
+  },
+  "data": {
+    "links": {
+      "S5": [
+        "39",
+        "40",
+        "41"
+      ],
+      "S63": [
+        "376"
+      ],
+      "S69": [
+        "437",
+        "439"
+      ],
+      "S117": [
+        "50"
+      ],
+      "S125": [
+        "200"
+      ],
+      "S217": [
+        "50"
+      ],
+      "S230": [
+        "16"
+      ],
+      "S232": [
+        "26"
+      ],
+      "S247": [],
+      "B113": [
+        "26"
+      ],
+      "S184": [],
+      "S81": [
+        "463",
+        "464"
+      ],
+      "B40": [
+        "334",
+        "335"
+      ],
+      "S95": [
+        "147",
+        "148"
+      ],
+      "B47": [
+        "469",
+        "470"
+      ],
+      "S202": [
+        "7",
+        "11"
+      ],
+      "S163": [
+        "273"
+      ],
+      "B89": [
+        "273"
+      ],
+      "S130": [
+        "210"
+      ],
+      "S131": [],
+      "S539": [
+        "81"
+      ],
+      "S540": [],
+      "S226": [
+        "16"
+      ],
+      "B107": [
+        "25"
+      ],
+      "S207": [
+        "53"
+      ],
+      "S220": [
+        "61"
+      ],
+      "S50": [
+        "168"
+      ],
+      "S93": [
+        "145"
+      ],
+      "S102": [
+        "177"
+      ],
+      "S115": [
+        "192"
+      ],
+      "S132": [
+        "212"
+      ],
+      "S556": [
+        "97"
+      ],
+      "B73": [
+        "224"
+      ],
+      "B87": [],
+      "B35": [
+        "332"
+      ],
+      "S13": [
+        "366"
+      ],
+      "B7": [
+        "371",
+        "378"
+      ],
+      "B102": [
+        "378"
+      ],
+      "S82": [
+        "428"
+      ],
+      "S262": [
+        "652"
+      ]
+    },
+    "err": {
+      "B87": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 260, in to_local\n    curr_res = json.loads(curr_res)\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 340, in decode\n    raise JSONDecodeError(\"Extra data\", s, end)\njson.decoder.JSONDecodeError: Extra data: line 3 column 1 (char 44)\n",
+        "{\"requirementID\": \"R-33\", \"tests\": \"T-43\"}\n\nNote: I assumed that test case \"T-43\" exists in the file and it is testing the requirement of copying static fields in HES. However, I couldn't find any test case with that ID in the provided list. If there is no such test case, then the answer should be:\n\n{\"requirementID\": \"R-33\", \"tests\": \"\"}"
+      ]
+    }
+  }
+}

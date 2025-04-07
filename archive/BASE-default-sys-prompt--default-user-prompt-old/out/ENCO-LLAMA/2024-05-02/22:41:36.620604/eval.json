@@ -1,0 +1,15 @@
+{
+  "prevalence": 0.02804878048780488,
+  "n": 1640,
+  "tp": 46,
+  "tn": 1590,
+  "fp": 4,
+  "fn": 0,
+  "accuracy": 0.9975609756097561,
+  "balanced_accuracy": 0.96,
+  "f1": 0.9583333333333334,
+  "recall": 1.0,
+  "precision": 0.92,
+  "specificity": 1.0,
+  "err": 0
+}

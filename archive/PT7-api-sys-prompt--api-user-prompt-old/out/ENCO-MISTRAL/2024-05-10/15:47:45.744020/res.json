@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "req_path": "./data/ENCO-REs.csv",
+    "test_path": "./data/ENCO-STs.csv",
+    "mapping_path": "./data/ENCO_mapping.csv"
+  },
+  "data": {
+    "links": {
+      "S5": [
+        "39",
+        "40",
+        "41",
+        "50",
+        "147",
+        "148"
+      ],
+      "S63": [],
+      "S69": [
+        "437",
+        "439"
+      ],
+      "S117": [
+        "50"
+      ],
+      "S125": [
+        "200"
+      ],
+      "S217": [
+        "50"
+      ],
+      "S230": [
+        "16",
+        "25",
+        "145",
+        "192",
+        "332",
+        "366",
+        "378"
+      ],
+      "S232": [
+        "26",
+        "7",
+        "145",
+        "366",
+        "378"
+      ],
+      "S247": [
+        "25",
+        "53",
+        "145",
+        "212",
+        "271",
+        "366",
+        "378",
+        "428",
+        "652"
+      ],
+      "B113": [
+        "26"
+      ],
+      "S184": [
+        "147",
+        "148",
+        "145",
+        "192",
+        "271",
+        "366",
+        "378",
+        "428"
+      ],
+      "S81": [],
+      "B40": [
+        "334",
+        "335"
+      ],
+      "S95": [],
+      "B47": [],
+      "S202": [
+        "7",
+        "11",
+        "145",
+        "168",
+        "192",
+        "332",
+        "378",
+        "428"
+      ],
+      "S163": [
+        "273"
+      ],
+      "B89": [
+        "273"
+      ],
+      "S130": [
+        "210"
+      ],
+      "S131": [
+        "469",
+        "470",
+        "7",
+        "11",
+        "210",
+        "332",
+        "378",
+        "428"
+      ],
+      "S539": [
+        "81"
+      ],
+      "S540": [
+        "81"
+      ],
+      "S226": [
+        "16",
+        "25",
+        "53",
+        "61",
+        "145",
+        "212",
+        "332",
+        "378",
+        "428"
+      ],
+      "B107": [
+        "25"
+      ],
+      "S207": [
+        "53"
+      ],
+      "S220": [
+        "61"
+      ],
+      "S50": [
+        "11",
+        "168",
+        "378",
+        "428"
+      ],
+      "S93": [
+        "145"
+      ],
+      "S102": [
+        "177"
+      ],
+      "S115": [
+        "192"
+      ],
+      "S132": [
+        "212"
+      ],
+      "S556": [
+        "97"
+      ],
+      "B73": [
+        "224"
+      ],
+      "B87": [
+        "271"
+      ],
+      "B35": [
+        "332"
+      ],
+      "S13": [
+        "366"
+      ],
+      "B7": [],
+      "B102": [
+        "378"
+      ],
+      "S82": [
+        "378"
+      ],
+      "S262": [
+        "39",
+        "81",
+        "145",
+        "192",
+        "332",
+        "366",
+        "378",
+        "652"
+      ]
+    },
+    "err": {
+      "S63": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    .replace(\" \", \"\") \\\n     ^^^^^^^\nAttributeError: 'list' object has no attribute 'replace'\n",
+        "{\"requirementID\": \"R-1\", \"tests\": [\"T-7\"]}"
+      ],
+      "S81": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 331, in to_local\n    curr_res = json.loads(curr_res)\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 353, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ^^^^^^^^^^^^^^^^^^^^^^\njson.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 50 (char 49)\n",
+        "{\"requirementID\": \"R-11\", \"tests\": \"T-10\", \"T-11\"}"
+      ],
+      "S95": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 331, in to_local\n    curr_res = json.loads(curr_res)\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 353, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ^^^^^^^^^^^^^^^^^^^^^^\njson.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 50 (char 49)\n",
+        "{\"requirementID\": \"R-13\", \"tests\": \"T-14\", \"T-15\"}"
+      ],
+      "B47": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 331, in to_local\n    curr_res = json.loads(curr_res)\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 353, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ^^^^^^^^^^^^^^^^^^^^^^\njson.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 50 (char 49)\n",
+        "{\"requirementID\": \"R-14\", \"tests\": \"T-16\", \"T-17\"}"
+      ],
+      "B7": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 331, in to_local\n    curr_res = json.loads(curr_res)\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 355, in raw_decode\n    raise JSONDecodeError(\"Expecting value\", s, err.value) from None\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n",
+        "{\"requirementID\": \"R-36\", \"tests\": \"T-37, T-38, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T-39, T"
+      ]
+    }
+  }
+}

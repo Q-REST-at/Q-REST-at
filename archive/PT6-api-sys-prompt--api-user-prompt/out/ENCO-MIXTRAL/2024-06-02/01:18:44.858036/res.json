@@ -1,0 +1,127 @@
+{
+  "meta": {
+    "req_path": "./data/ENCO-REs.csv",
+    "test_path": "./data/ENCO-STs.csv",
+    "mapping_path": "./data/ENCO_mapping.csv"
+  },
+  "data": {
+    "links": {
+      "S5": [
+        "39",
+        "40",
+        "41"
+      ],
+      "S63": [
+        "376"
+      ],
+      "S69": [],
+      "S117": [
+        "50"
+      ],
+      "S125": [
+        "200"
+      ],
+      "S217": [],
+      "S230": [],
+      "S232": [
+        "26"
+      ],
+      "S247": [],
+      "B113": [
+        "26"
+      ],
+      "S184": [],
+      "S81": [
+        "463",
+        "464"
+      ],
+      "B40": [
+        "334",
+        "335"
+      ],
+      "S95": [
+        "147",
+        "148"
+      ],
+      "B47": [
+        "469",
+        "470"
+      ],
+      "S202": [
+        "7",
+        "11"
+      ],
+      "S163": [
+        "273"
+      ],
+      "B89": [
+        "273"
+      ],
+      "S130": [
+        "210"
+      ],
+      "S131": [],
+      "S539": [],
+      "S540": [],
+      "S226": [
+        "16"
+      ],
+      "B107": [
+        "25"
+      ],
+      "S207": [
+        "53"
+      ],
+      "S220": [],
+      "S50": [
+        "168"
+      ],
+      "S93": [
+        "145"
+      ],
+      "S102": [
+        "177"
+      ],
+      "S115": [
+        "192"
+      ],
+      "S132": [
+        "212"
+      ],
+      "S556": [
+        "97"
+      ],
+      "B73": [
+        "224"
+      ],
+      "B87": [
+        "271"
+      ],
+      "B35": [
+        "332"
+      ],
+      "S13": [
+        "366"
+      ],
+      "B7": [
+        "366",
+        "371"
+      ],
+      "B102": [
+        "378"
+      ],
+      "S82": [
+        "428"
+      ],
+      "S262": [
+        "652"
+      ]
+    },
+    "err": {
+      "S230": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    links = self._parse_intermediary_output(raw_res)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 384, in _parse_intermediary_output\n    return self._parse_list_output(res)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 463, in _parse_list_output\n    links = json.loads(curr_res)\n            ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 355, in raw_decode\n    raise JSONDecodeError(\"Expecting value\", s, err.value) from None\njson.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n",
+        "Based on the given requirement and test cases, the following test IDs cover the requirement:\n\nT-0\n\nThis test case covers the requirement as it verifies the solutions based on encryption technology."
+      ]
+    }
+  }
+}

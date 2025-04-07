@@ -1,0 +1,48 @@
+{
+  "meta": {
+    "req_path": "./data/BTHS-REs.csv",
+    "test_path": "./data/BTHS-STs.csv",
+    "mapping_path": "./data/BTHS-Mapping.csv",
+    "fingerprint": "fp_ea6eb70039 -> fp_294de9593d\nFingerprint changed, expect changes.",
+    "input_tokens": 26337,
+    "output_tokens": 173
+  },
+  "data": {
+    "links": {
+      "4.2": [
+        "HSP/AG/IAC/BV-01-I",
+        "HSP/HS/IAC/BV-01-I"
+      ],
+      "4.2.1": [
+        "HSP/AG/IAC/BV-02-I",
+        "HSP/HS/IAC/BV-02-I"
+      ],
+      "4.2.2": [],
+      "4.3": [
+        "HSP/AG/OAC/BV-01-I",
+        "HSP/HS/OAC/BV-01-I",
+        "HSP/HS/ACR/BV-01-I"
+      ],
+      "4.5": [
+        "HSP/HS/ACR/BV-01-I",
+        "HSP/HS/ACR/BV-02-I"
+      ],
+      "4.6.1": [
+        "HSP/HS/ACR/BV-01-I"
+      ],
+      "4.6.2": [
+        "HSP/AG/ACT/BV-02-I",
+        "HSP/HS/ACT/BV-02-I"
+      ],
+      "4.7": [
+        "HSP/AG/RAV/BV-02-I",
+        "HSP/AG/RAV/BV-03-I",
+        "HSP/HS/RAV/BV-03-I"
+      ]
+    },
+    "err": {},
+    "input_tokens": 26337,
+    "output_tokens": 173,
+    "system_fingerprint": "fp_ea6eb70039 -> fp_294de9593d\nFingerprint changed, expect changes."
+  }
+}

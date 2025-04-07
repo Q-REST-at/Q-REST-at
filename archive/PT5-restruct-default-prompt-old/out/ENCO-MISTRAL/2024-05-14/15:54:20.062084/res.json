@@ -1,0 +1,216 @@
+{
+  "meta": {
+    "req_path": "./data/ENCO-REs.csv",
+    "test_path": "./data/ENCO-STs.csv",
+    "mapping_path": "./data/ENCO_mapping.csv"
+  },
+  "data": {
+    "links": {
+      "S5": [
+        "39",
+        "40",
+        "41",
+        "50",
+        "200",
+        "334",
+        "335",
+        "147",
+        "148",
+        "469",
+        "470",
+        "7",
+        "11",
+        "192",
+        "332",
+        "366",
+        "378",
+        "428"
+      ],
+      "S63": [],
+      "S69": [
+        "437",
+        "439"
+      ],
+      "S117": [
+        "50"
+      ],
+      "S125": [],
+      "S217": [
+        "50"
+      ],
+      "S230": [
+        "16",
+        "25",
+        "53",
+        "145",
+        "192",
+        "332",
+        "366",
+        "378",
+        "428"
+      ],
+      "S232": [
+        "26",
+        "7",
+        "145",
+        "366",
+        "378",
+        "428"
+      ],
+      "S247": [
+        "16",
+        "25",
+        "145",
+        "366",
+        "378",
+        "652"
+      ],
+      "B113": [
+        "26"
+      ],
+      "S184": [
+        "168",
+        "366",
+        "378",
+        "428"
+      ],
+      "S81": [],
+      "B40": [],
+      "S95": [],
+      "B47": [],
+      "S202": [],
+      "S163": [
+        "273"
+      ],
+      "B89": [
+        "273"
+      ],
+      "S130": [
+        "210"
+      ],
+      "S131": [],
+      "S539": [
+        "81"
+      ],
+      "S540": [
+        "81"
+      ],
+      "S226": [
+        "16",
+        "25",
+        "53",
+        "61",
+        "145",
+        "212",
+        "224",
+        "332",
+        "378",
+        "428",
+        "652"
+      ],
+      "B107": [],
+      "S207": [],
+      "S220": [
+        "61"
+      ],
+      "S50": [],
+      "S93": [],
+      "S102": [],
+      "S115": [],
+      "S132": [],
+      "S556": [
+        "97"
+      ],
+      "B73": [
+        "224"
+      ],
+      "B87": [
+        "271"
+      ],
+      "B35": [],
+      "S13": [],
+      "B7": [],
+      "B102": [],
+      "S82": [
+        "378"
+      ],
+      "S262": [
+        "273"
+      ]
+    },
+    "err": {
+      "S63": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    .replace(\" \", \"\") \\\n     ^^^^^^^\nAttributeError: 'list' object has no attribute 'replace'\n",
+        "{\"requirementID\": \"R-1\", \"tests\": [\"T-7\"]}"
+      ],
+      "S125": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    .replace(\" \", \"\") \\\n     ^^^^^^^\nAttributeError: 'list' object has no attribute 'replace'\n",
+        "{\"requirementID\": \"R-4\", \"tests\": [\"T-6\"]}"
+      ],
+      "S81": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 331, in to_local\n    curr_res = json.loads(curr_res)\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 353, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ^^^^^^^^^^^^^^^^^^^^^^\njson.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 50 (char 49)\n",
+        "{\"requirementID\": \"R-11\", \"tests\": \"T-10\", \"T-11\"}"
+      ],
+      "B40": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    .replace(\" \", \"\") \\\n     ^^^^^^^\nAttributeError: 'list' object has no attribute 'replace'\n",
+        "{\"requirementID\": \"R-12\", \"tests\": [\"T-12\", \"T-13\"]}"
+      ],
+      "S95": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 331, in to_local\n    curr_res = json.loads(curr_res)\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 353, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ^^^^^^^^^^^^^^^^^^^^^^\njson.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 50 (char 49)\n",
+        "{\"requirementID\": \"R-13\", \"tests\": \"T-14\", \"T-15\"}"
+      ],
+      "B47": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 331, in to_local\n    curr_res = json.loads(curr_res)\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 353, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ^^^^^^^^^^^^^^^^^^^^^^\njson.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 50 (char 49)\n",
+        "{\"requirementID\": \"R-14\", \"tests\": \"T-16\", \"T-17\"}"
+      ],
+      "S202": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 331, in to_local\n    curr_res = json.loads(curr_res)\n               ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/__init__.py\", line 346, in loads\n    return _default_decoder.decode(s)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 337, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/conda/lib/python3.11/json/decoder.py\", line 353, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ^^^^^^^^^^^^^^^^^^^^^^\njson.decoder.JSONDecodeError: Expecting ':' delimiter: line 1 column 50 (char 49)\n",
+        "{\"requirementID\": \"R-15\", \"tests\": \"T-18\", \"T-19\"}"
+      ],
+      "B107": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    .replace(\" \", \"\") \\\n     ^^^^^^^\nAttributeError: 'list' object has no attribute 'replace'\n",
+        "{\"requirementID\": \"R-23\", \"tests\": [\"T-24\"]}"
+      ],
+      "S207": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    .replace(\" \", \"\") \\\n     ^^^^^^^\nAttributeError: 'list' object has no attribute 'replace'\n",
+        "{\"requirementID\": \"R-24\", \"tests\": [\"T-23\", \"T-25\"]}"
+      ],
+      "S50": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    .replace(\" \", \"\") \\\n     ^^^^^^^\nAttributeError: 'list' object has no attribute 'replace'\n",
+        "{\"requirementID\": \"R-26\", \"tests\": [\"T-29\"]}"
+      ],
+      "S93": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    .replace(\" \", \"\") \\\n     ^^^^^^^\nAttributeError: 'list' object has no attribute 'replace'\n",
+        "{\"requirementID\": \"R-27\", \"tests\": [\"T-28\"]}"
+      ],
+      "S102": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    .replace(\" \", \"\") \\\n     ^^^^^^^\nAttributeError: 'list' object has no attribute 'replace'\n",
+        "{\"requirementID\": \"R-28\", \"tests\": [\"T-30\"]}"
+      ],
+      "S115": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    .replace(\" \", \"\") \\\n     ^^^^^^^\nAttributeError: 'list' object has no attribute 'replace'\n",
+        "{\"requirementID\": \"R-29\", \"tests\": [\"T-31\"]}"
+      ],
+      "S132": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    .replace(\" \", \"\") \\\n     ^^^^^^^\nAttributeError: 'list' object has no attribute 'replace'\n",
+        "{\"requirementID\": \"R-30\", \"tests\": [\"T-32\"]}"
+      ],
+      "B35": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    .replace(\" \", \"\") \\\n     ^^^^^^^\nAttributeError: 'list' object has no attribute 'replace'\n",
+        "{\"requirementID\": \"R-34\", \"tests\": [\"T-35\"]}"
+      ],
+      "S13": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    .replace(\" \", \"\") \\\n     ^^^^^^^\nAttributeError: 'list' object has no attribute 'replace'\n",
+        "{\"requirementID\": \"R-35\", \"tests\": [\"T-36\"]}"
+      ],
+      "B7": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    .replace(\" \", \"\") \\\n     ^^^^^^^\nAttributeError: 'list' object has no attribute 'replace'\n",
+        "{\"requirementID\": \"R-36\", \"tests\": [\"T-37\"]}"
+      ],
+      "B102": [
+        "Traceback (most recent call last):\n  File \"/cephyr/NOBACKUP/groups/llm-readability/rest-at/LLM-Req-Traceability/src/core/rest.py\", line 335, in to_local\n    .replace(\" \", \"\") \\\n     ^^^^^^^\nAttributeError: 'list' object has no attribute 'replace'\n",
+        "{\"requirementID\": \"R-37\", \"tests\": [\"T-38\"]}"
+      ]
+    }
+  }
+}
