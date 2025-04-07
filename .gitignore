@@ -11,10 +11,11 @@
 .DS_Store
 
 # Data files
-# data/
-# out/
-# res/
-# archive/
+#data/
+#out/
+#res/
+#archive/
+containers/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
