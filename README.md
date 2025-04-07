@@ -6,6 +6,19 @@ Requirement Engineering and Software Testing Alignment Tool
 
 The scripts and files used in our evaluation are in the `analysis/` folder.
 
+### Misc
+
+There's two separate branches:
+[`data-archive`](https://github.com/SEM25-BSc/REST-at-upstream/tree/data-archive)
+and [`stable`](https://github.com/SEM25-BSc/REST-at-upstream/tree/stable). The
+former contains all *archived* job runs and produced artifacts, and the latter
+contains **Alvis** env. definitions.
+> TBD: these may be eventually deleted; used as a handy reference. \=)
+
+---
+
+*(Written by Nicole \& Bao; used as a reference)*
+
 ## Models Used
 
 The models used are stated in this section and will include the exact snapshot for the open-weight models.
