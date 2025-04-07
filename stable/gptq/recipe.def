@@ -1,0 +1,19 @@
+Bootstrap: localimage
+From: /apps/containers/Conda/miniforge-24.3.0-0.sif
+
+%files 
+    /mimer/NOBACKUP/groups/naiss2025-22-104/REST/REST-at/requirements.txt
+
+%post
+    # Ensure pip is installed
+    /opt/conda/bin/conda install pip
+    
+    # Install dependencies
+    /opt/conda/bin/pip install -r /mimer/NOBACKUP/groups/naiss2025-22-104/REST/REST-at/requirements.txt
+
+    # /opt/conda/bin/pip install -U torch
+    # /opt/conda/bin/pip freeze | grep torch
+
+    /opt/conda/bin/pip install --upgrade accelerate optimum transformers
+    /opt/conda/bin/pip install auto-gptq --no-build-isolation
+
