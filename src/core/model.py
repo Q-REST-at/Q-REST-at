@@ -1,7 +1,7 @@
 """
 Copyright:
 ----------
-(c) 2024 Anonymous software testing consultancy company
+(c) 2024 Test-Scouts
 
 License:
 --------
@@ -16,7 +16,6 @@ from transformers import (
     AutoTokenizer,
     AutoModelForCausalLM,
     BatchEncoding,
-    Conversation,
     PreTrainedTokenizer,
     PreTrainedTokenizerFast,
     PreTrainedModel,
@@ -138,7 +137,7 @@ class Model:
         model: PreTrainedModel = AutoModelForCausalLM.from_pretrained(
             model_name_or_path,
             torch_dtype=torch.float16,
-            device_map="auto",
+            device_map="auto"
         )
         model.eval()
 
@@ -240,7 +239,7 @@ class Model:
     
     def prompt(
             self,
-            history: list[dict[str, str]] | Conversation,
+            history,
             prompt: str,
         ) -> str:
         history.append({"role": "user", "content": prompt})
