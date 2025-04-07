@@ -7,5 +7,5 @@ ml purge # good practice
 
 PROJ_PATH="/mimer/NOBACKUP/groups/naiss2025-22-104/REST/REST-at"
 
-PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/container.sif \
+PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$1 \
     python -m src.send_data --model mixtral22 --data bths --sessionName bths

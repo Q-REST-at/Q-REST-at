@@ -7,6 +7,6 @@ ml purge # good practice
 
 PROJ_PATH="/mimer/NOBACKUP/groups/naiss2025-22-104/REST/REST-at"
 
-PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/container.sif \
-    scalene --gpu --memory --outfile profiles/$1 \
+PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$1 \
+    scalene --gpu --memory --outfile profiles/$2 \
     -m src.send_data --- --model mixtral22 --data bths --sessionName bths
