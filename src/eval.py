@@ -32,6 +32,7 @@ date: str = str(now.date())
 time: str = str(now.time())
 
 res_dir: str = f"./res/{date}/{time}"
+res_dir = res_dir.replace(":", "-") # TODO remove before merging: this is simply to work with windows file system
 log_path: str = f"{res_dir}/eval.log"
 
 # Data cache for easy access
@@ -109,6 +110,9 @@ def main() -> None:
 
         all_err: list[int] = []
 
+        all_time_to_analyze: list[int] = []
+        all_memory_usage: list[int] = []
+
         json_list = []
 
         # Frequency table of predicted true links split into true and false
@@ -130,6 +134,10 @@ def main() -> None:
                 # Each key is a requirement ID
                 res: dict[str, list[str]] = payload["data"]["links"]
                 err: dict[str, list[str]] = payload["data"]["err"]
+
+                # Efficiency metrics are single integers
+                time: int = payload["data"]["time_to_analyze"]
+                memory: int = payload["data"]["memory_usage"]
 
                 curr_tests: set[str]
                 curr_mapping: dict[str, set[str]]
@@ -243,6 +251,9 @@ def main() -> None:
 
                 all_err.append(len(err))
 
+                all_time_to_analyze.append(time)
+                all_memory_usage.append(memory)
+
                 prevalence: float = (tp + fn) / n
 
                 eval_path = f"{os.path.dirname(out_path)}/eval.json"
@@ -259,7 +270,9 @@ def main() -> None:
                     "recall": recall,
                     "precision": precision,
                     "specificity": specificity,
-                    "err": len(err)
+                    "err": len(err),
+                    "time_to_analyze": time,
+                    "memory_usage": memory
                 }
 
                 with open(eval_path, "w+") as f:
@@ -284,7 +297,9 @@ def main() -> None:
                     "recall": recall,
                     "precision": precision,
                     "specificity": specificity,
-                    "err": len(err)
+                    "err": len(err),
+                    "time_to_analyze": time,
+                    "memory_usage": memory
                 }
 
                 json_list.append(data_json)
@@ -312,10 +327,12 @@ def main() -> None:
             "all_precision": Stats("all_precision", all_precision).as_dict,
             "all_specificity": Stats("all_specificity", all_specificity).as_dict,
             "frequency_table": frequency_table,
-            "all_err": Stats("all_err", all_err).as_dict
+            "all_err": Stats("all_err", all_err).as_dict,
+            "all_time_to_analyze": Stats("all_time_to_analyze", all_time_to_analyze).as_dict,
+            "all_memory_usage": Stats("all_memory_usage", all_memory_usage).as_dict
         }
 
-        print(f"Info - Logging total and avarage metrics for {m}")
+        print(f"Info - Logging total and average metrics for {m}")
         with open(f"{res_dir}/{m}.json", "w") as f:
             f.write(json.dumps(data, indent=2) + "\n")
 
@@ -323,8 +340,10 @@ def main() -> None:
 
 if __name__ == "__main__":
     os.makedirs(res_dir, exist_ok=True)
+    main()
 
+    # TODO: uncomment before merging
     # Redirect stdout to a log file
-    with open(log_path, "a+") as out:
-        with redirect_stdout(out):
-            main()
+    #with open(log_path, "a+") as out:
+    #    with redirect_stdout(out):
+    #        main()
