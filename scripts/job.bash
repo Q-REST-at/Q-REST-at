@@ -5,6 +5,8 @@
 
 ml purge # good practice
 
+PROJ_PATH="/mimer/NOBACKUP/groups/naiss2025-22-104/REST/REST-at"
+
 # === ARGUMENTS ===
 SESSION_NAME=$1
 MODEL=$2
