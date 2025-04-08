@@ -5,7 +5,27 @@
 
 ml purge # good practice
 
-PROJ_PATH="/mimer/NOBACKUP/groups/naiss2025-22-104/REST/REST-at"
+# === ARGUMENTS ===
+SESSION_NAME=$1
+MODEL=$2
+DATA=$3
+CONTAINER_NAME=$4
 
-PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$1 \
-    python -m src.send_data --model mixtral22 --data bths --sessionName bths
+# === MONITOR FUNCTION ===
+__monitor() {
+    while true; do
+        echo "[MONITOR] $(date): Script is running..."
+        sleep 1 # interval to sleep
+    done
+}
+
+__monitor & MONITOR_PID=$!
+
+PYTHONPATH=$PROJ_PATH apptainer exec "$PROJ_PATH/$CONTAINER_NAME" \
+    python -m src.send_data --sessionName "$SESSION_NAME" --model "$MODEL" --data "$DATA"
+
+# === CLEAN UP MONITOR ===
+kill $MONITOR_PID 2>/dev/null
+wait $MONITOR_PID 2>/dev/null
+
+echo "[MONITOR] $(date): Main process finished. Monitor stopped."
