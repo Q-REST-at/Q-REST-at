@@ -7,7 +7,7 @@ ml purge # good practice
 
 SESSION_NAME=$1; MODEL=$2; DATA=$3
 CONTAINER_NAME=$4
-PROFILE_FILEPATH=$5
+PROFILE_FILEPATH="profiles/$5"
 
 PROJ_PATH="/mimer/NOBACKUP/groups/naiss2025-22-104/REST/REST-at"
 QUERY="timestamp,gpu_uuid,utilization.gpu,utilization.memory,memory.used,temperature.gpu"
