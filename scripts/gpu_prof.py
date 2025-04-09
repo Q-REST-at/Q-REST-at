@@ -93,6 +93,7 @@ print(RES_JSON)
 if not('--graph' in argv or '-g' in argv): exit(0)
 
 fig, axes = plt.subplots(2, 1, figsize=(14, 10), sharex=True)
+fig.suptitle(FILE_PATH, fontsize=16)
 
 axes[0].plot(df.index, df["utilization.gpu"], marker="o", label="GPU Utilization (%)", zorder=1)
 axes[0].scatter(
