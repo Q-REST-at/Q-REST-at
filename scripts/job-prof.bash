@@ -16,7 +16,7 @@ PROBE_INTERVAL_MS=1000
 
 __monitor() {
     # Print raw 'CSV' header 
-    echo $QUERY
+    echo $QUERY > $PROFILE_FILEPATH
     
     # Query in CSV format in a loop and continually append to filepath
     nvidia-smi --query-gpu=$QUERY --format=csv,noheader \
