@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # From REST-at (see send_data.py)
-session="MistralAI-REST-at-BTHS-eval"
+session=""
 model="mistral"
 data="ENCO"
 
@@ -14,7 +14,7 @@ _help() {
     echo "Usage: $0 [OPTIONS]"
     echo ""
     echo "Options:"
-    echo "  --session-name=NAME, -s=NAME   Customize the session name. Default: MistralAI-REST-at-BTHS-eval"
+    echo "  --session-name=NAME, -s=NAME   Customize the session name."
     echo "  --model=NAME, -m=NAME          Set the model to use. Default: mistral"
     echo "  --data=NAME, -d=NAME           Select dataset (MIX, Mix-small, BTHS, ENCO). Not case sensitive. Default: ENCO"
     echo "  --container=PATH, -c=PATH      Specify relative path to an Apptainer-based container to use. Defauklt: \`container.sif\`"
@@ -71,6 +71,11 @@ for arg in "$@"; do
 done
 
 REST_AT_FLAGS="$session $model $data"
+
+if [[ -n "$session" ]]; then
+    echo "Session not specified. Aborting..."
+    exit 1
+fi
 
 echo "Logfile name set to \`logs/$logfile\`"
 

@@ -7,7 +7,7 @@ ml purge # good practice
 
 SESSION_NAME=$1; MODEL=$2; DATA=$3
 CONTAINER_NAME=$4
-PROFILE_FILEPATH=$5
+PROFILE_FILENAME=$5
 
 PROJ_PATH="/mimer/NOBACKUP/groups/naiss2025-22-104/REST/REST-at"
 QUERY="timestamp,gpu_uuid,utilization.gpu,utilization.memory,memory.used,temperature.gpu"
@@ -21,7 +21,7 @@ __monitor() {
     # Query in CSV format in a loop and continually append to filepath
     nvidia-smi --query-gpu=$QUERY --format=csv,noheader \
         --loop-ms=$PROBE_INTERVAL_MS \
-        >> $PROFILE_FILEPATH
+        >> profiles/$PROFILE_FILENAME.csv
 }
 
 # Spawn process in background
