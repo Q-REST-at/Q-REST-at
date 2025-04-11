@@ -25,6 +25,11 @@ from contextlib import redirect_stdout
 from .core.rest import RESTSpecification
 from .core.stats import Stats
 
+from dotenv import load_dotenv
+load_dotenv()
+
+# Reads the env var as a string; defaults to "0" if not set
+USE_LOG = os.getenv("USE_LOG", "0") == "1"
 
 now: datetime.datetime = datetime.datetime.now()
 
@@ -32,7 +37,7 @@ date: str = str(now.date())
 time: str = str(now.time())
 
 res_dir: str = f"./res/{date}/{time}"
-res_dir = res_dir.replace(":", "-") # TODO remove before merging: this is simply to work with windows file system
+#res_dir = res_dir.replace(":", "-") # Uncomment line to work on Windows filesystems
 log_path: str = f"{res_dir}/eval.log"
 
 # Data cache for easy access
@@ -340,10 +345,10 @@ def main() -> None:
 
 if __name__ == "__main__":
     os.makedirs(res_dir, exist_ok=True)
-    main()
 
-    # TODO: uncomment before merging
-    # Redirect stdout to a log file
-    #with open(log_path, "a+") as out:
-    #    with redirect_stdout(out):
-    #        main()
+    # Redirect stdout to a log file only if .env flag is set
+    if USE_LOG:
+        with open(log_path, "a+") as out, redirect_stdout(out):
+            main()
+    else:
+        main()
