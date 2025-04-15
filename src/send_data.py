@@ -57,6 +57,7 @@ def main() -> None:
     parser.add_argument("--model", "-m", dest="model", type=str, default="mistral", help="Set the model to use")
     parser.add_argument("--data", "-d", dest="data", type=str, default="ENCO", help="Customize the dataset, not case sensitive. Use MIX for the mix dataset, Mix-small for mix-small-dataset, BTHS for the BTHS dataset, and ENCO for the ENCO dataset. Default is ENCO.")
     parser.add_argument("--quant", "-q", dest="quant", type=str, default="AWQ", help="Set the quantization method to use")
+    parser.add_argument("--logDir", "-q", dest="log_dir", type=str, default=None, help="Set the output directory")
     parser.add_argument("--system", "-S", dest="system", type=str, default=None, help="Path to the system prompt used. Falls back on a default if not provided.")
     parser.add_argument("--prompt", "-p", dest="prompt", type=str, default=None, help="Path to the prompt used. Include `{req}` in place of the requirement and `{tests}` in place of the tests. Falls back on a default if not provided.")
 
@@ -70,22 +71,19 @@ def main() -> None:
     system_prompt_path: str = args.system
     prompt_path: str = args.prompt
 
-    if model == "mixtral":
-        model_path = os.getenv("MODEL_PATH")
-        token = int(os.getenv("TOKEN_LIMIT"))
-    elif model == "mixtral22":
-        model_path = os.getenv("MODEL_PATH_MIX22")
-        token = int(os.getenv("TOKEN_LIMIT_MIX22"))
-    elif model == "llama":
-        model_path = os.getenv("MODEL_PATH_LLAMA")
-        token = int(os.getenv("TOKEN_LIMIT_LLAMA"))
-    elif model == "mis":
-	# This is tailored to be used with alvis pipeline. todo: change other if statement cases as well
-        env_key_path = f"MODEL_PATH_{model.upper()}_{quant.upper()}"
-        model_path = os.getenv(env_key_path) or os.getenv("MODEL_PATH_MIS")
-        print(f"MODEL_PATH_KEY: {env_key_path}, Model: {model}, Quant: {quant}")
-        print(f"Resolved Model Path: {model_path}")
-        token = int(os.getenv("TOKEN_LIMIT_MIS"))
+    # Define valid models and quant types
+    valid_models = ["mis", "mixtral", "mixtral22", "llama"]
+    valid_quant = ["awq", "gptq", "gguf"]
+
+    if model in valid_models and quant in valid_quant:
+
+        quantized_model_path = f"MODEL_PATH_{model.upper()}_{quant.upper()}"
+        default_model_path = f"MODEL_PATH_{model.upper()}"
+        model_token_limit = f"TOKEN_LIMIT_{model.upper()}"
+
+        model_path = os.getenv(quantized_model_path) or default_model_path
+        token = int(os.getenv(model_token_limit))
+    
     else:
         model_path = os.getenv("MODEL_PATH_MIS")
         token = int(os.getenv("TOKEN_LIMIT_MIS"))
@@ -96,6 +94,7 @@ def main() -> None:
     test_path: str
     mapping_path: str
 
+    # todo: refactor
     if data == "mix":
         print("Info - Using MIX data")
         req_path = os.getenv("MIX_REQ_PATH")
@@ -224,7 +223,9 @@ def main() -> None:
     date: str = str(now.date())
     time: str = str(now.time())
 
-    log_dir: str = f"./out/{session_name}/{date}/{time}"
+    if not log_dir:
+        log_dir = f"./out/{session_name}/{date}/{time}"
+
     os.makedirs(log_dir, exist_ok=True)
 
     with open(f"{log_dir}/res.json", "w+") as out:

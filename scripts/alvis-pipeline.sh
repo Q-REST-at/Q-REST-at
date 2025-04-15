@@ -7,8 +7,8 @@
 ml purge # good practice; removes all activated modules
 
 dataset=("BTHS" "ENCO" "SNAKE")
-models=("mix")
-quant=("AWQ" "GPTQ" "GGUF")
+models=("mis")
+quant=("awq" "gptq" "gguf")
 
 ITER_PER_SESSION=10
 
@@ -29,26 +29,22 @@ mkdir -p "$./logs" "$./profiles"
 for ds in "${dataset[@]}"; do
   for m in "${models[@]}"; do
       for q in "${quant[@]}"; do
+		echo -e "\n******* Session config *******\nModel:    $m\nQuant:    $q\nDataset:  $ds"
+		echo -e "*****************************\n"
 
-	echo -e "\n******* Session config *******\nModel:    $m\nQuant:    $q\nDataset:  $ds"
-	echo -e "*****************************\n"
+		m_upper="${m^^}"
+		session="${m_upper}__${q}__${ds}"
+		container="container.sif"
+		datetime="$(date '+%Y-%m-%d_%H-%M')"
 
-	m_upper="${m^^}"
-	session="${m_upper}__${q}__${ds}"
-	container="container.sif"
-	datetime="$(date '+%Y-%m-%d_%H-%M')"
+		if [ ! -f "$container" ]; then
+			echo "Container $container does not exist. Skipping.."
+			continue
+		fi
 
-	if [ ! -f "$container" ]; then
-		echo "Container $container does not exist. Skipping.."
-		continue
-	fi
+		REST_AT_FLAGS="$session $m $ds"
 
-	REST_AT_FLAGS="$session $m $ds"
-
-	bash ./scripts/job-prof.bash $REST_AT_FLAGS container.sif $session $q $ITER_PER_SESSION
-	# if ! bash ./scripts/job-prof.bash $REST_AT_FLAGS $container $session $ITER_PER_SESSION; then
-        #		 _log_err "job-pipeline.bash failed for dataset=$ds, model=$m, quant=$q"
-	# fi
+		bash ./scripts/job-prof.bash $REST_AT_FLAGS container.sif $session $q $ITER_PER_SESSION
      done
   done
 done

@@ -55,16 +55,15 @@ if [ "$ITER_PER_SESSION" -gt 0 ]; then
 		# Enable profining for each iteration | Spawn process in background
 		__monitor & MONITOR_PID=$!
 
-		log_dir="./out/${SESSION_NAME}/${datetime}/iter_${iter}"
-		mkdir -p "$log_dir"
+		LOG_DIR="./out/${SESSION_NAME}/${datetime}/iter_${iter}"
+		mkdir -p "$LOG_DIR"
 
 		echo "Running: ds=$DATA, model=$MODEL, iter=$iter"
 
 		#__run_python_script
 
-		output=PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
-		        python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME --quant $QUANT
-		echo "$output" > "$log_dir/res.json"
+		PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
+		        python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME --quant $QUANT --logDir $LOG_DIR
 
 	done
 else
