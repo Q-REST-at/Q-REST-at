@@ -56,6 +56,7 @@ def main() -> None:
     parser.add_argument("--sessionName", "-s", dest="session", type=str, default="MistralAI-REST-at-BTHS-eval", help="Customize the session name")
     parser.add_argument("--model", "-m", dest="model", type=str, default="mistral", help="Set the model to use")
     parser.add_argument("--data", "-d", dest="data", type=str, default="ENCO", help="Customize the dataset, not case sensitive. Use MIX for the mix dataset, Mix-small for mix-small-dataset, BTHS for the BTHS dataset, and ENCO for the ENCO dataset. Default is ENCO.")
+    parser.add_argument("--quant", "-q", dest="quant", type=str, default="AWQ", help="Set the quantization method to use")
     parser.add_argument("--system", "-S", dest="system", type=str, default=None, help="Path to the system prompt used. Falls back on a default if not provided.")
     parser.add_argument("--prompt", "-p", dest="prompt", type=str, default=None, help="Path to the prompt used. Include `{req}` in place of the requirement and `{tests}` in place of the tests. Falls back on a default if not provided.")
 
@@ -65,6 +66,7 @@ def main() -> None:
     session_name = args.session
     model: str = args.model.lower()
     data: str = args.data.lower()
+    quant: str = args.quant.lower()
     system_prompt_path: str = args.system
     prompt_path: str = args.prompt
 
@@ -77,7 +79,14 @@ def main() -> None:
     elif model == "llama":
         model_path = os.getenv("MODEL_PATH_LLAMA")
         token = int(os.getenv("TOKEN_LIMIT_LLAMA"))
-    else: 
+    elif model == "mis":
+	# This is tailored to be used with alvis pipeline. todo: change other if statement cases as well
+        env_key_path = f"MODEL_PATH_{model.upper()}_{quant.upper()}"
+        model_path = os.getenv(env_key_path) or os.getenv("MODEL_PATH_MIS")
+        print(f"MODEL_PATH_KEY: {env_key_path}, Model: {model}, Quant: {quant}")
+        print(f"Resolved Model Path: {model_path}")
+        token = int(os.getenv("TOKEN_LIMIT_MIS"))
+    else:
         model_path = os.getenv("MODEL_PATH_MIS")
         token = int(os.getenv("TOKEN_LIMIT_MIS"))
 
@@ -102,19 +111,29 @@ def main() -> None:
         req_path = os.getenv("BTHS_REQ_PATH")
         test_path = os.getenv("BTHS_TEST_PATH")
         mapping_path = os.getenv("BTHS_MAP_PATH")
+    elif args.data.lower() == "enco":
+        print("Info - Using ENCO data")
+        req_path = os.getenv("ENCO_REQ_PATH")
+        test_path = os.getenv("ENCO_TEST_PATH")
+        mapping_path = os.getenv("ENCO_MAP_PATH")
+    elif args.data.lower() == "snake":
+        print("Info - Using SNAKE data")
+        req_path = os.getenv("SNAKE_REQ_PATH")
+        test_path = os.getenv("SNAKE_TEST_PATH")
+        mapping_path = os.getenv("SNAKE_MAP_PATH")
     else:
         print("Info - Using ENCO data")
         req_path = os.getenv("ENCO_REQ_PATH")
         test_path = os.getenv("ENCO_TEST_PATH")
         mapping_path = os.getenv("ENCO_MAP_PATH")
-    
+
     debug_mode: bool = False
     try:
         mode = int(os.getenv("DEBUG_MODE"))
         debug_mode = mode == 1 # 1 for True/ON
     except Exception:
         pass
-        
+
     print(f"Model path: {model_path}")
     print(f"Token limit: {token}")
     print(f"Requirements path: {req_path}")

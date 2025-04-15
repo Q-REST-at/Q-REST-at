@@ -7,7 +7,9 @@ ml purge # good practice
 
 SESSION_NAME=$1; MODEL=$2; DATA=$3
 CONTAINER_NAME=$4
-PROFILE_FILENAME=$5
+PROFILE_FILEPATH="profiles/$5"
+QUANT=$6
+ITER_PER_SESSION=$7
 
 PROJ_PATH="/mimer/NOBACKUP/groups/naiss2025-22-104/REST/REST-at"
 QUERY="timestamp,gpu_uuid,utilization.gpu,utilization.memory,memory.used,temperature.gpu"
@@ -15,20 +17,66 @@ QUERY="timestamp,gpu_uuid,utilization.gpu,utilization.memory,memory.used,tempera
 PROBE_INTERVAL_MS=1000
 
 __monitor() {
-    # Print raw 'CSV' header 
-    echo $QUERY
-    
+    # Print raw 'CSV' header
+    echo $QUERY > $PROFILE_FILEPATH
+
     # Query in CSV format in a loop and continually append to filepath
     nvidia-smi --query-gpu=$QUERY --format=csv,noheader \
         --loop-ms=$PROBE_INTERVAL_MS \
-        >> profiles/$PROFILE_FILENAME.csv
+        >> $PROFILE_FILEPATH
 }
 
-# Spawn process in background
-__monitor & MONITOR_PID=$!
+# Function to run the Python script
+__run_python_script() {
+    PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
+        python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME
+}
 
-PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
-    python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME
+# Function to ask User's confirmation of the operation
+__ask_confirmation() {
+    read -p "$1 (y/n): " CONFIRM
+    if [[ ! "$CONFIRM" =~ ^[Yy]$ ]]; then
+        echo "Operation aborted."
+        exit 1
+    fi
+}
+
+if [ -z "$ITER_PER_SESSION" ]; then
+    ITER_PER_SESSION=0
+fi
+
+
+if [ "$ITER_PER_SESSION" -gt 0 ]; then
+	#__ask_confirmation "You are about to run $ITER_PER_SESSION iterations with model $MODEL and data $DATA. Do you want to continue?"
+
+	datetime="$(date '+%Y-%m-%d_%H-%M')"
+
+	for iter in $(seq 1 $ITER_PER_SESSION); do
+		# Enable profining for each iteration | Spawn process in background
+		__monitor & MONITOR_PID=$!
+
+		log_dir="./out/${SESSION_NAME}/${datetime}/iter_${iter}"
+		mkdir -p "$log_dir"
+
+		echo "Running: ds=$DATA, model=$MODEL, iter=$iter"
+
+		#__run_python_script
+
+		output=PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
+		        python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME --quant $QUANT
+		echo "$output" > "$log_dir/res.json"
+
+	done
+else
+	#__ask_confirmation "You are about to run the script once with model $MODEL and data $DATA. Do you want to continue?"
+
+
+	# Spawn process in background
+	__monitor & MONITOR_PID=$!
+
+	__run_python_script
+	echo "Done!"
+fi
 
 # Clean up after the script is executed
 kill $MONITOR_PID 2>/dev/null; wait $MONITOR_PID 2>/dev/null

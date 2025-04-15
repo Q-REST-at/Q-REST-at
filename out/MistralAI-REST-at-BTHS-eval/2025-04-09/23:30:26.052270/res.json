@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "req_path": "./data/BTHS/RE.csv",
+    "test_path": "./data/BTHS/ST.csv",
+    "mapping_path": "./data/BTHS/mapping.csv"
+  },
+  "data": {
+    "links": {
+      "4.2": [],
+      "4.2.1": [
+        "HSP/AG/IAC/BV-02-I",
+        "HSP/HS/IAC/BV-02-I"
+      ],
+      "4.2.2": [],
+      "4.3": [],
+      "4.5": [],
+      "4.6.1": [],
+      "4.6.2": [],
+      "4.7": [
+        "HSP/AG/RAV/BV-02-I",
+        "HSP/AG/RAV/BV-03-I",
+        "HSP/HS/RAV/BV-03-I"
+      ]
+    },
+    "err": {},
+    "time-to-analyze": 8.028078755989554
+  }
+}
