@@ -57,7 +57,7 @@ def main() -> None:
     parser.add_argument("--model", "-m", dest="model", type=str, default="mistral", help="Set the model to use")
     parser.add_argument("--data", "-d", dest="data", type=str, default="ENCO", help="Customize the dataset, not case sensitive. Use MIX for the mix dataset, Mix-small for mix-small-dataset, BTHS for the BTHS dataset, and ENCO for the ENCO dataset. Default is ENCO.")
     parser.add_argument("--quant", "-q", dest="quant", type=str, default="AWQ", help="Set the quantization method to use")
-    parser.add_argument("--logDir", "-q", dest="log_dir", type=str, default=None, help="Set the output directory")
+    parser.add_argument("--logDir", "-l", dest="log_dir", type=str, default=None, help="Set the output directory")
     parser.add_argument("--system", "-S", dest="system", type=str, default=None, help="Path to the system prompt used. Falls back on a default if not provided.")
     parser.add_argument("--prompt", "-p", dest="prompt", type=str, default=None, help="Path to the prompt used. Include `{req}` in place of the requirement and `{tests}` in place of the tests. Falls back on a default if not provided.")
 
