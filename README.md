@@ -451,7 +451,9 @@ Make sure that you're in the correct Python environment before you begin!
     - `TEST_PATH` - The relative path to the tests file.
     - `OPENAI_API_KEY` - If using the OpenAI API.
     - `OPENAI_BASE_URL` - If using the OpenAI API.
-1. Run one of two scripts:
+    - `USE_LOG` - A value of `1` redirects terminal output to log files, useful if running scripts in a cloud environment without a console. A value of `0` (or if the variable is missing) preserves default `stdout` behaviour. The following scripts are affected: 
+      - `eval.py`
+2. Run one of two scripts:
     - `python -m src.send_data` - To run on a local model.
     Adjust the `session_name` variable to your desired output directory name.
     - `python -m src.send_data_gpt` - To run on OpenAI's GPT. \
