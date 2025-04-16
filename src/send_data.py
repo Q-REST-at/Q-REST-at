@@ -3,37 +3,19 @@ Script for running REST-at using a local model specified through the command lin
 System prompt and user prompt are also specified through the command line.
 The dataset and session name to use are also specified through the command line.
 
-Requires the following envs to work:
+# Environment variables required for the application to work:
 ```python
 # Paths to local models
-MODEL_PATH: Path
-MODEL_PATH_MIX22: Path
-MODEL_PATH_LLAMA: Path
-MODEL_PATH_MIS: Path
-MODEL_PATH_{MODEL_NAME}_{QUANT_TYPE} Ex: MODEL_PATH_MIS_AWQ
+MODEL_PATH_{MODEL_NAME}_{QUANT_TYPE}    # Path to quantized model, e.g., MODEL_PATH_MIS_AWQ
+MODEL_PATH_{MODEL_NAME}                 # Path to the original model, e.g., MODEL_PATH_MIS
 
-# max_new_tokens variables for models
-TOKEN_LIMIT: int
-TOKEN_LIMIT_MIX22: int
-TOKEN_LIMIT_LLAMA: int
-TOKEN_LIMIT_MIS: int
+# Maximum token limits for different models
+TOKEN_LIMIT_{MODEL_NAME}: int           # Max tokens for the model e.g., TOKEN_LIMIT_MIS
 
-# Data paths to REST spec files
-MIX_REQ_PATH: Path
-S_MIX_REQ_PATH: Path
-BTHS_REQ_PATH: Path
-ENCO_REQ_PATH: Path
-SNAKE_REQ_PATH: Path
-MIX_TEST_PATH: Path
-S_MIX_TEST_PATH: Path
-BTHS_TEST_PATH: Path
-ENCO_TEST_PATH: Path
-SNAKE_TEST_PATH: Path
-MIX_MAP_PATH: Path
-S_MIX_MAP_PATH: Path
-BTHS_MAP_PATH: Path
-ENCO_MAP_PATH: Path
-SNAKE_MAP_PATH: Path
+# Data paths for REST spec files
+{DATASET}_REQ_PATH: Path                # Path to the dataset request file, e.g., ENCO_REQ_PATH
+{DATASET}_TEST_PATH: Path               # Path to the dataset test file, e.g., ENCO_TEST_PATH
+{DATASET}_MAP_PATH: Path                # Path to the dataset map file, e.g., ENCO_MAP_PATH
 ```
 
 Copyright:
@@ -76,6 +58,10 @@ def main() -> None:
     system_prompt_path: str = args.system
     prompt_path: str = args.prompt
 
+    # *************************************************************************
+    # Dynamically construct model path and retrieve a corresponding env variable
+    # *************************************************************************
+
     # Define valid models and quant types
     valid_models = ["mis", "mixtral", "mixtral22", "llama"]
     valid_quant = ["none", "awq", "gptq", "gguf"]
@@ -83,7 +69,7 @@ def main() -> None:
     if model in valid_models and quant in valid_quant:
 
         quantized_model_path = f"MODEL_PATH_{model.upper()}_{quant.upper()}" # Ex. MODEL_PATH_MIS_AWQ
-        default_model_path = f"MODEL_PATH_{model.upper()}"
+        default_model_path = f"MODEL_PATH_{model.upper()}" # Ex. MODEL_PATH_MIS - original model
         model_token_limit = f"TOKEN_LIMIT_{model.upper()}"
 
         if quant.lower() == "none":
@@ -103,38 +89,24 @@ def main() -> None:
     test_path: str
     mapping_path: str
 
-    # todo: refactor
-    if data == "mix":
-        print("Info - Using MIX data")
-        req_path = os.getenv("MIX_REQ_PATH")
-        test_path = os.getenv("MIX_TEST_PATH")
-        mapping_path = os.getenv("MIX_MAP_PATH")
-    elif args.data.lower() == "mix-small":
-        print("Info - Using MIX-small data")
-        req_path = os.getenv("S_MIX_REQ_PATH")
-        test_path = os.getenv("S_MIX_TEST_PATH")
-        mapping_path = os.getenv("S_MIX_MAP_PATH")
-    elif args.data.lower() == "bths":
-        print("Info - Using BTHS data")
-        req_path = os.getenv("BTHS_REQ_PATH")
-        test_path = os.getenv("BTHS_TEST_PATH")
-        mapping_path = os.getenv("BTHS_MAP_PATH")
-    elif args.data.lower() == "enco":
-        print("Info - Using ENCO data")
-        req_path = os.getenv("ENCO_REQ_PATH")
-        test_path = os.getenv("ENCO_TEST_PATH")
-        mapping_path = os.getenv("ENCO_MAP_PATH")
-    elif args.data.lower() == "snake":
-        print("Info - Using SNAKE data")
-        req_path = os.getenv("SNAKE_REQ_PATH")
-        test_path = os.getenv("SNAKE_TEST_PATH")
-        mapping_path = os.getenv("SNAKE_MAP_PATH")
+    # *************************************************************************
+    # Dynamically construct data path and retrieve a corresponding env variable
+    # *************************************************************************
+
+    valid_data = ["mix", "mix-small", "bths", "enco", "snake"]
+
+    if data in valid_data:
+        d_up = data.upper()
+        print(f"Info - Using {d_up} data")
+        req_path = os.getenv(f"{d_up}_REQ_PATH") # Ex. BTHS_REQ_PATH
+        test_path = os.getenv(f"{d_up}_TEST_PATH") #Ex. BTHS_TEST_PATH
+        mapping_path = os.getenv(f"{d_up}_MAP_PATH") #Ex. BTHS_MAP_PATH
     else:
         print("Info - Using ENCO data")
         req_path = os.getenv("ENCO_REQ_PATH")
         test_path = os.getenv("ENCO_TEST_PATH")
         mapping_path = os.getenv("ENCO_MAP_PATH")
-
+  
     debug_mode: bool = False
     try:
         mode = int(os.getenv("DEBUG_MODE"))
@@ -223,7 +195,7 @@ def main() -> None:
         },
         "data": {
             **res.as_dict,           # efficacy data
-            **{"time-to-analyze": t} # .. efficiency data
+            **{"time-to-analyze": t} # efficiency data
         }
     }
 
