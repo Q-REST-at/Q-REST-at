@@ -36,6 +36,68 @@ from dotenv import load_dotenv
 
 from .core.rest import RESTSpecification, Response
 
+# This code was inherited from REST-at-old
+# Encapsulated into a function for better main() readability. todo: Refactor later
+def set_system_prompt(system_prompt_path, specs, prompt_path):
+    
+    # Set system prompt if one was passed
+    if system_prompt_path:
+        try:
+            system_prompt: str
+            # Read the prompt from the specified file
+            with open(system_prompt_path) as f:
+                system_prompt = f.read()
+
+            # Set the system prompt
+            specs.system_prompt = system_prompt
+            print(f"Using the following system prompt:\n{system_prompt}")
+        except Exception:
+            print(f"Error loading system prompt from {system_prompt_path}")
+            traceback.print_exc()
+    # Otherwise, use the default system prompt
+    else:
+        try:
+            system_prompt: str
+            # Read the prompt from the default file
+            with open("./prompts/system/list/default.txt") as f:
+                system_prompt = f.read()
+
+            # Set the system prompt
+            specs.system_prompt = system_prompt
+            print(f"Using the default system prompt:\n{system_prompt}")
+        except Exception:
+            print(f"Error loading default system prompt")
+            traceback.print_exc()
+
+    # Set prompt if one was passed
+    if prompt_path:
+        try:
+            prompt: str
+            # Read the prompt from the specified file
+            with open(prompt_path) as f:
+                prompt = f.read()
+
+            # Set the prompt
+            specs.prompt = prompt
+            print(f"Using the following prompt:\n{prompt}")
+        except Exception:
+            print(f"Error loading prompt")
+            traceback.print_exc()
+    # Otherwise, use the default prompt
+    else:
+        try:
+            prompt: str
+            # Read the prompt from the default file
+            with open("./prompts/user/list/default.txt") as f:
+                prompt = f.read()
+
+            # Set the prompt
+            specs.prompt = prompt
+            print(f"Using the default prompt:\n{prompt}")
+        except Exception:
+            print(f"Error loading default prompt")
+            traceback.print_exc()
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Process file information.")
@@ -115,79 +177,27 @@ def main() -> None:
     except Exception:
         pass
 
+    # Debugging Info
     print(f"Model path: {model_path}")
     print(f"Token limit: {token}")
     print(f"Requirements path: {req_path}")
     print(f"Tests path: {test_path}")
     print(f"Debug mode: {'ON' if debug_mode else 'OFF'}")
 
-    # Load the REST specifications
+    #  Load the REST specifications
     specs: RESTSpecification = RESTSpecification.load_specs(
         req_path,
         test_path
     )
+    #  Set the system prompt for the model
+    set_system_prompt(system_prompt_path, specs, prompt_path)
 
-    # Set system prompt if one was passed
-    if system_prompt_path:
-        try:
-            system_prompt: str
-            # Read the prompt from the specified file
-            with open(system_prompt_path) as f:
-                system_prompt = f.read()
-
-            # Set the system prompt
-            specs.system_prompt = system_prompt
-            print(f"Using the following system prompt:\n{system_prompt}")
-        except Exception:
-            print(f"Error loading system prompt from {system_prompt_path}")
-            traceback.print_exc()
-    # Otherwise, use the default system prompt
-    else:
-        try:
-            system_prompt: str
-            # Read the prompt from the default file
-            with open("./prompts/system/list/default.txt") as f:
-                system_prompt = f.read()
-
-            # Set the system prompt
-            specs.system_prompt = system_prompt
-            print(f"Using the default system prompt:\n{system_prompt}")
-        except Exception:
-            print(f"Error loading default system prompt")
-            traceback.print_exc()
-
-    # Set prompt if one was passed
-    if prompt_path:
-        try:
-            prompt: str
-            # Read the prompt from the specified file
-            with open(prompt_path) as f:
-                prompt = f.read()
-
-            # Set the prompt
-            specs.prompt = prompt
-            print(f"Using the following prompt:\n{prompt}")
-        except Exception:
-            print(f"Error loading prompt")
-            traceback.print_exc()
-    # Otherwise, use the default prompt
-    else:
-        try:
-            prompt: str
-            # Read the prompt from the default file
-            with open("./prompts/user/list/default.txt") as f:
-                prompt = f.read()
-
-            # Set the prompt
-            specs.prompt = prompt
-            print(f"Using the default prompt:\n{prompt}")
-        except Exception:
-            print(f"Error loading default prompt")
-            traceback.print_exc()
-
-    # Send data to local model
+    # *************************************************************************
+    #  Begin interaction with the model
+    # *************************************************************************
     res, t = specs.to_local(model_path, token, debug_mode)
 
+    # Construct Payload
     payload: dict[str, dict] = { # = res.json
         "meta": {
             "req_path": req_path,
@@ -200,7 +210,11 @@ def main() -> None:
         }
     }
 
-    # Log response to a file
+    # *************************************************************************
+    #  Log results
+    # *************************************************************************
+
+    # Save response to res.json file
     now: datetime.datetime = datetime.datetime.now()
     date: str = str(now.date())
     time: str = str(now.time())
