@@ -8,7 +8,7 @@ ml purge # good practice; removes all activated modules
 
 dataset=("BTHS" "ENCO" "SNAKE")
 models=("mis")
-quant=("AWQ" "GPTQ" "GGUF")
+quant=("None" "AWQ")
 
 ITER_PER_SESSION=10
 
@@ -34,7 +34,12 @@ for ds in "${dataset[@]}"; do
 
 		m_upper="${m^^}"
 		session="${m_upper}__${q}__${ds}"
-		container="container.sif"
+
+		if [[ "$q" == "AWQ" ]]; then
+    		container="awq.sif"
+		else
+    		container="container.sif"
+		fi
 		datetime="$(date '+%Y-%m-%d_%H-%M')"
 
 		if [ ! -f "$container" ]; then
@@ -44,7 +49,7 @@ for ds in "${dataset[@]}"; do
 
 		REST_AT_FLAGS="$session $m $ds"
 
-		bash ./scripts/job-prof.bash $REST_AT_FLAGS container.sif $session $q $ITER_PER_SESSION
+		bash ./scripts/job-prof.bash $REST_AT_FLAGS $container $session $q $ITER_PER_SESSION
      done
   done
 done

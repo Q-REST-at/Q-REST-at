@@ -10,6 +10,7 @@ MODEL_PATH: Path
 MODEL_PATH_MIX22: Path
 MODEL_PATH_LLAMA: Path
 MODEL_PATH_MIS: Path
+MODEL_PATH_{MODEL_NAME}_{QUANT_TYPE} Ex: MODEL_PATH_MIS_AWQ
 
 # max_new_tokens variables for models
 TOKEN_LIMIT: int
@@ -22,14 +23,17 @@ MIX_REQ_PATH: Path
 S_MIX_REQ_PATH: Path
 BTHS_REQ_PATH: Path
 ENCO_REQ_PATH: Path
+SNAKE_REQ_PATH: Path
 MIX_TEST_PATH: Path
 S_MIX_TEST_PATH: Path
 BTHS_TEST_PATH: Path
 ENCO_TEST_PATH: Path
+SNAKE_TEST_PATH: Path
 MIX_MAP_PATH: Path
 S_MIX_MAP_PATH: Path
 BTHS_MAP_PATH: Path
 ENCO_MAP_PATH: Path
+SNAKE_MAP_PATH: Path
 ```
 
 Copyright:
@@ -68,20 +72,25 @@ def main() -> None:
     model: str = args.model.lower()
     data: str = args.data.lower()
     quant: str = args.quant.lower()
+    log_dir: str = args.log_dir
     system_prompt_path: str = args.system
     prompt_path: str = args.prompt
 
     # Define valid models and quant types
     valid_models = ["mis", "mixtral", "mixtral22", "llama"]
-    valid_quant = ["awq", "gptq", "gguf"]
+    valid_quant = ["none", "awq", "gptq", "gguf"]
 
     if model in valid_models and quant in valid_quant:
 
-        quantized_model_path = f"MODEL_PATH_{model.upper()}_{quant.upper()}"
+        quantized_model_path = f"MODEL_PATH_{model.upper()}_{quant.upper()}" # Ex. MODEL_PATH_MIS_AWQ
         default_model_path = f"MODEL_PATH_{model.upper()}"
         model_token_limit = f"TOKEN_LIMIT_{model.upper()}"
 
-        model_path = os.getenv(quantized_model_path) or default_model_path
+        if quant.lower() == "none":
+            model_path = os.getenv(default_model_path)
+        else:
+            model_path = os.getenv(quantized_model_path, os.getenv(default_model_path))
+        
         token = int(os.getenv(model_token_limit))
     
     else:
