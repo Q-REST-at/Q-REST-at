@@ -26,28 +26,12 @@ __monitor() {
         >> $PROFILE_FILEPATH
 }
 
-# Function to run the Python script
-__run_python_script() {
-    PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
-        python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME
-}
-
-# Function to ask User's confirmation of the operation
-__ask_confirmation() {
-    read -p "$1 (y/n): " CONFIRM
-    if [[ ! "$CONFIRM" =~ ^[Yy]$ ]]; then
-        echo "Operation aborted."
-        exit 1
-    fi
-}
-
 if [ -z "$ITER_PER_SESSION" ]; then
     ITER_PER_SESSION=0
 fi
 
 
 if [ "$ITER_PER_SESSION" -gt 0 ]; then
-	#__ask_confirmation "You are about to run $ITER_PER_SESSION iterations with model $MODEL and data $DATA. Do you want to continue?"
 
 	datetime="$(date '+%Y-%m-%d_%H-%M')"
 
@@ -60,20 +44,16 @@ if [ "$ITER_PER_SESSION" -gt 0 ]; then
 
 		echo "Running: ds=$DATA, model=$MODEL, iter=$iter"
 
-		#__run_python_script
-
 		PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
 		        python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME --quant $QUANT --logDir $LOG_DIR
 
 	done
 else
-	#__ask_confirmation "You are about to run the script once with model $MODEL and data $DATA. Do you want to continue?"
-
-
 	# Spawn process in background
 	__monitor & MONITOR_PID=$!
 
-	__run_python_script
+	PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
+        python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME
 	echo "Done!"
 fi
 

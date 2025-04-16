@@ -8,7 +8,7 @@ ml purge # good practice; removes all activated modules
 
 dataset=("BTHS" "ENCO" "SNAKE")
 models=("mis")
-quant=("None" "AWQ")
+quant=("NONE" "AWQ")
 
 ITER_PER_SESSION=10
 
