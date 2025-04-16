@@ -71,14 +71,15 @@ def main() -> None:
         quantized_model_path = f"MODEL_PATH_{model.upper()}_{quant.upper()}" # Ex. MODEL_PATH_MIS_AWQ
         default_model_path = f"MODEL_PATH_{model.upper()}" # Ex. MODEL_PATH_MIS - original model
         model_token_limit = f"TOKEN_LIMIT_{model.upper()}"
+        default_token_limit = "TOKEN_LIMIT"
 
         if quant.lower() == "none":
             model_path = os.getenv(default_model_path)
+            token = int(os.getenv(default_token_limit))
         else:
             model_path = os.getenv(quantized_model_path, os.getenv(default_model_path))
-        
-        token = int(os.getenv(model_token_limit))
-    
+            token = int(os.getenv(model_token_limit, os.getenv(default_token_limit)))
+            
     else:
         model_path = os.getenv("MODEL_PATH_MIS")
         token = int(os.getenv("TOKEN_LIMIT_MIS"))
