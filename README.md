@@ -464,9 +464,10 @@ The scripts will output files in the `out/{model}/{date}/{time}/` directory.
 Make sure that you're in the correct Python environment before you begin!
 
 1. Follow the steps in [Running REST-at Scripts](#running-rest-at-scripts)
-1. Add the following variable to the `.env` file:
+1. Add the following variables to the `.env` file:
     - `MAP_PATH` - The relative path to the alignment file.
-1. Run one of two scripts:
+    - `USE_LOG` - Redirects `stdout` to `.log` files when set to `1`; preserves default behaviour when set to `0` (or if variable missing). 
+2. Run one of two scripts:
     - `python -m src.eval` - To evaluate each REST trace link.
     - `python -m src.label_eval` - To evaluate "is tested" labels.
 
