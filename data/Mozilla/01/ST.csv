@@ -1,0 +1,45 @@
+ID,Purpose,Test steps
+TC-082,,"INITIAL CONDITIONS
+1. You must have used the installation of the browser you plan to test.
+2. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+STEPS/DESCRIPTION
+1. Select Go|History.
+2. Click the icon on the far right of the column headers.
+3. Uncheck two of the items (columns).
+4. Recheck an item.
+5. Quit and restart the application.
+
+EXPECTED RESULTS
+1. Step(2) a popup menu should appear listing all of the column headers as menuitems.
+2. Step(3), they should all be checked by default and unchecking should cause that column to disappear from the manage bookmarks window.
+3. Step(4), the columns should reappear upon rechecking its name on the list.
+4. Step(5) the columns should appear just as the did after step(4).
+"
+TC-091,,"INITIAL CONDITIONS
+Disk and memory caches to be cleared. Write access to test case directory required.
+
+STEPS/DESCRIPTION
+1. Copy img-reload.html, foo_master.jpg and bar_master.jpg from the test case directory to your local test case directory.
+2. In your test case directory, copy (but do not rename!) foo_master.jpg to foo.jpg
+3. View img_reload.html.
+4. In the test case directory, copy (but do not rename!) bar_master.jpg to foo.jpg
+5. Hold the shift button down, and press the browser's Reload button
+
+EXPECTED RESULTS:
+After Step 2, a page should appear containing a picture of John Glenn in a Mercury capsule.
+After Step 4, a page should appear containing a picture of a (much older) John Glenn aboard the space shuttle.
+
+LINKS
+img-reload.html
+bar_master.jpg
+foo_master.jpg"
+TC-149,,"STEPS/DESCRIPTION
+1. Launch the browser
+2. Point and click with the mouse on te grippy at the center of the Sidebar border
+3. Clicking once should close the sidebar
+4. Again, point with the mouse on the grippy on the left border of the browser window and click the mouse
+5. This should open the Sidebar with the original width
+
+EXPECTED RESULTS
+Sidebar should open/close properly with grippy"

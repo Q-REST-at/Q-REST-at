@@ -1,0 +1,4 @@
+ID,Feature,Description
+FR01,Query information,This use case allows a citizen to perform queries. The citizem might query which health units take care of a specific specialty or what are the specialties of a particular health unit.
+FR10,Login,This use case allows an employee to have access to restricted operations on the Health-Watcher system.
+FR16,Change logged employee,This use case allows the currently logged employee to be changed.
