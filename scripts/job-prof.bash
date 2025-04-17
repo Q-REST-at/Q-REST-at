@@ -1,12 +1,61 @@
 #!/usr/bin/env bash
 #SBATCH -A NAISS2025-22-104 -p alvis
-#SBATCH --gpus-per-node=A100:2
+#SBATCH --gpus-per-node=A40:1
 #SBATCH -t 0-01:00:00
 
 ml purge # good practice
 
-PROJ_PATH="/mimer/NOBACKUP/groups/naiss2025-22-104/REST/REST-at"
+SESSION_NAME=$1; MODEL=$2; DATA=$3
+CONTAINER_NAME=$4
+PROFILE_FILEPATH="profiles/$5"
+QUANT=$6
+ITER_PER_SESSION=$7
 
-PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$1 \
-    scalene --gpu --memory --outfile profiles/$2 \
-    -m src.send_data --- --model mixtral22 --data bths --sessionName bths
+PROJ_PATH="/mimer/NOBACKUP/groups/naiss2025-22-104/REST/REST-at"
+QUERY="timestamp,gpu_uuid,utilization.gpu,utilization.memory,memory.used,temperature.gpu"
+
+PROBE_INTERVAL_MS=1000
+
+__monitor() {
+    # Print raw 'CSV' header
+    echo $QUERY > $PROFILE_FILEPATH
+
+    # Query in CSV format in a loop and continually append to filepath
+    nvidia-smi --query-gpu=$QUERY --format=csv,noheader \
+        --loop-ms=$PROBE_INTERVAL_MS \
+        >> $PROFILE_FILEPATH
+}
+
+if [ -z "$ITER_PER_SESSION" ]; then
+    ITER_PER_SESSION=0
+fi
+
+
+if [ "$ITER_PER_SESSION" -gt 0 ]; then
+
+	datetime="$(date '+%Y-%m-%d_%H-%M')"
+
+	for iter in $(seq 1 $ITER_PER_SESSION); do
+		# Enable profining for each iteration | Spawn process in background
+		__monitor & MONITOR_PID=$!
+
+		LOG_DIR="./out/${SESSION_NAME}/${datetime}/iter_${iter}"
+		mkdir -p "$LOG_DIR"
+
+		echo "Running: ds=$DATA, model=$MODEL, iter=$iter"
+
+		PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
+		        python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME --quant $QUANT --logDir $LOG_DIR
+
+	done
+else
+	# Spawn process in background
+	__monitor & MONITOR_PID=$!
+
+	PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
+        python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME
+	echo "Done!"
+fi
+
+# Clean up after the script is executed
+kill $MONITOR_PID 2>/dev/null; wait $MONITOR_PID 2>/dev/null
