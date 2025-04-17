@@ -1,0 +1,4 @@
+linters: linters_with_defaults(     # Default settings with 120 line width and ignore commented code warnings
+    line_length_linter(120),        # Note: can't put comments on a separate line or the linter breaks :(
+    commented_code_linter = NULL    # https://lintr.r-lib.org/articles/lintr.html#configuring-linters 
+    )

@@ -445,7 +445,7 @@ Make sure that you're in the correct Python environment before you begin!
 
 1. Create a `.env` file in the project root.
 1. Add the following variables to the `.env` file:
-
+  
     ```
     # Paths to local models
     MODEL_PATH_{MODEL_NAME}_{QUANT_TYPE}    # Path to quantized model, e.g., MODEL_PATH_MIS_AWQ
@@ -462,8 +462,8 @@ Make sure that you're in the correct Python environment before you begin!
     # Set Debug mode ON/OFF
     DEBUG_MODE=1                            # Debug mode enabled
     ```
-
-1. Run one of two scripts:
+  
+2. Run one of two scripts:
     - `python -m src.send_data` - To run on a local model.
     Adjust the `session_name` variable to your desired output directory name.
     - `python -m src.send_data_gpt` - To run on OpenAI's GPT. \
