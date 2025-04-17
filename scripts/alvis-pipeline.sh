@@ -33,7 +33,7 @@ for ds in "${dataset[@]}"; do
 		echo -e "*****************************\n"
 
 		m_upper="${m^^}"
-		session="${m_upper}__${q}__${ds}"
+		session="${m_upper}_${q}_${ds}"
 
 		if [[ "$q" == "AWQ" ]]; then
     		container="awq.sif"

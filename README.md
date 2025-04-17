@@ -458,6 +458,9 @@ Make sure that you're in the correct Python environment before you begin!
     {DATASET}_REQ_PATH: Path                # Path to the dataset request file, e.g., ENCO_REQ_PATH
     {DATASET}_TEST_PATH: Path               # Path to the dataset test file, e.g., ENCO_TEST_PATH
     {DATASET}_MAP_PATH: Path                # Path to the dataset map file, e.g., ENCO_MAP_PATH
+
+    # Set Debug mode ON/OFF
+    DEBUG_MODE=1                            # Debug mode enabled
     ```
 
 1. Run one of two scripts:
@@ -467,6 +470,34 @@ Make sure that you're in the correct Python environment before you begin!
     Adjust the `model` variable to your desired model.
 
 The scripts will output files in the `out/{model}/{date}/{time}/` directory.
+
+> **Note:** You can enable DEBUG_MODE in `.env` to see more detailed logs when running the LLMs. When enabled, the following information will be printed to the console for each model run: `Iteration nr., Raw output, Req. ID, Created links, Parsed response`. This is often helpful for tracking the progress and understanding how the model is processing each request
+<details>
+    <summary>Example output in DEBUG_MODE</summary>
+
+ ```
+ Iteration nr.: 1
+Raw output: []
+Req. ID: 4.2
+Created links: []
+Parsed response {'4.2': []}
+Iteration nr.: 2
+Raw output: ["T-2", "T-3"]
+Req. ID: 4.2.1
+Created links: ['HSP/AG/IAC/BV-02-I', 'HSP/HS/IAC/BV-02-I']
+Parsed response {'4.2': [], '4.2.1': ['HSP/AG/IAC/BV-02-I', 'HSP/HS/IAC/BV-02-I']}
+Iteration nr.: 3
+Raw output: []
+Req. ID: 4.2.2
+Created links: []
+Parsed response {'4.2': [], '4.2.1': ['HSP/AG/IAC/BV-02-I', 'HSP/HS/IAC/BV-02-I'], '4.2.2': []}
+Iteration nr.: 4
+Raw output: []
+Req. ID: 4.3
+Created links: []
+Parsed response {'4.2': [], '4.2.1': ['HSP/AG/IAC/BV-02-I', 'HSP/HS/IAC/BV-02-I'], '4.2.2': [], '4.3': []} ...
+ ```
+</details>
 
 ### Automated experiments on Alvis
 
@@ -499,6 +530,7 @@ Make sure that you're in the correct Python environment before you begin!
 The script will output an `eval.log` or a `label-eval.log` in `out/{model}/{date}/{time}/` for each model, date, and time, depending on the script used. The file contains key metrics of REST-at, such as accuracy and precision.
 
 The script will also output the following files in the `res/{date}/{time}(-label)` directory:
+
 - `eval.log` - The verbose output of the evaluation.
 - `res.log` - All the evaluation results.
 - `{model}.log` for each model in `out/` - The average metrics of all runs with the model.
