@@ -24,7 +24,7 @@ _log_err() {
 echo "Alvis Pipeline Started."
 
 # Ensure logs and profiles folders exist
-mkdir -p "$./logs" "$./profiles"
+mkdir -p "./logs" "./profiles"
 
 for ds in "${dataset[@]}"; do
   for m in "${models[@]}"; do

@@ -29,7 +29,6 @@ The models used are stated in this section and will include the exact snapshot f
 - **Mixtral 8x7B Instruct-v0.1** - [e2d44c05b53516ba61d625448a10c095aa104725](https://huggingface.co/mistralai/Mixtral-8x7B-Instruct-v0.1/tree/e2d44c05b53516ba61d625448a10c095aa104725)
 - **Llama 3 70B** - [e8cf5276ae3e97cfde8a058e64a636f2cde47820](https://huggingface.co/meta-llama/Meta-Llama-3-70B-Instruct/tree/e8cf5276ae3e97cfde8a058e64a636f2cde47820)
 
-
 ## Performance
 
 The average performance metrics for **REST-at** using GPT-3.5, GPT-4, Mistral 7B Instruct-v0.2, Mixtral 8x7B Instruct-v0.1, and Llama 3 70B Instruct are displayed below. The metrics of interest are: recall, precision, and F<sub>1</sub>-score.
@@ -40,9 +39,9 @@ The model-wise model-prompt pairs with the best value in a certain metric has it
 
 ![BTHS performance table](./tables/BTHS_perf_metrics.png "Performance of REST-at using 5 models and 8 prompts on the BTHS dataset")
 
-### En. Co.
-![En. Co. performance table](./tables/En_Co_perf_metrics.png "Performance of REST-at using 5 models and 8 prompts on the En. Co. dataset")
+### En. Co
 
+![En. Co. performance table](./tables/En_Co_perf_metrics.png "Performance of REST-at using 5 models and 8 prompts on the En. Co. dataset")
 
 ## Data
 
@@ -56,7 +55,7 @@ The prompt templates (PTs) used for REST-at are available in the [`prompts`](./p
 
 The substrings `{req}` and `{tests}` are injection points (placeholders) for requirement data and test suite data respectively.
 
-#### BASE (DO) 
+#### BASE (DO)
 
 <details>
     <summary>Show</summary>
@@ -97,7 +96,7 @@ System prompt:
     You are a helpful assistant.
 
 User prompt:
-    
+
     I have this requirement:
 
     {req}
@@ -128,7 +127,7 @@ System prompt:
     You are an expert in finding trace links between software requirements and software tests.
 
 User prompt:
-    
+
     I have this requirement:
 
     {req}
@@ -159,7 +158,7 @@ System prompt:
     You are an expert in finding trace links between software requirements and software tests.
 
 User prompt:
-    
+
     I have this requirement:
 
     {req}
@@ -203,7 +202,7 @@ System prompt:
     []
 
 User prompt:
-    
+
     Your task is to identify and return the test cases that directly validate the requirement
     Here are the requirements:
     {req}
@@ -237,7 +236,7 @@ System prompt:
     {"requirementID": "<insert requirement id>", "tests": ""}
 
 User prompt:
-    
+
     Your task is to identify and return the test cases that directly validate the requirement
     Here are the requirements:
     {req}
@@ -305,7 +304,7 @@ System prompt:
     ```
 
 User prompt:
-    
+
     {
       "requirement": {req},
       "tests": {tests}
@@ -370,7 +369,7 @@ System prompt:
     ```
 
 User prompt:
-    
+
     {
       "requirement": {req},
       "tests": {tests}
@@ -378,22 +377,21 @@ User prompt:
 
 </details>
 
-
 ## Running Scripts
 
 Scripts should be run as modules to ensure that the relative imports work. E.g.:
-```bash
-$ python -m <path.to.module> # Omit the -.py file name extension
-```
 
+```bash
+python -m <path.to.module> # Omit the -.py file name extension
+```
 
 ## Testing Modules
 
 Currently only some of the modules in `src/core/` are partially tested. To run the tests, run the following command from `src/`:
-```bash
-$ python -m unittest discover
-```
 
+```bash
+python -m unittest discover
+```
 
 ## File Structure
 
@@ -403,6 +401,7 @@ be in Comma Separated Value (`.csv`) format.
 ### Requirements Files
 
 Requirements files must have the following rows (case sensitive) in whichever order:
+
 - ID
 - Feature
 - Description
@@ -410,6 +409,7 @@ Requirements files must have the following rows (case sensitive) in whichever or
 ### Test Cases Files
 
 Test cases files must have the following rows (case sensitive) in whichever order:
+
 - ID
 - Purpose
 - Test steps
@@ -418,10 +418,10 @@ Test cases files must have the following rows (case sensitive) in whichever orde
 
 Only for development evaluations.
 Alignment files must have the following rows (case sensitive) in whichever order:
+
 - Req IDs
 - Test ID
-    - This column must consist of a list of Test IDs separated by commas
-
+  - This column must consist of a list of Test IDs separated by commas
 
 ## Getting Started
 
@@ -445,12 +445,21 @@ Make sure that you're in the correct Python environment before you begin!
 
 1. Create a `.env` file in the project root.
 1. Add the following variables to the `.env` file:
-    - `MODEL_PATH` - The relative path to a local model.
-    - `TOKEN_LIMIT` - The `max_new_tokens` to pass to a model.
-    - `REQ_PATH` - The relative path to the requirements file.
-    - `TEST_PATH` - The relative path to the tests file.
-    - `OPENAI_API_KEY` - If using the OpenAI API.
-    - `OPENAI_BASE_URL` - If using the OpenAI API.
+
+    ```
+    # Paths to local models
+    MODEL_PATH_{MODEL_NAME}_{QUANT_TYPE}    # Path to quantized model, e.g., MODEL_PATH_MIS_AWQ
+    MODEL_PATH_{MODEL_NAME}                 # Path to the original model, e.g., MODEL_PATH_MIS
+
+    # Maximum token limits for different models
+    TOKEN_LIMIT_{MODEL_NAME}: int           # Max tokens for the model e.g., TOKEN_LIMIT_MIS
+
+    # Data paths for REST spec files
+    {DATASET}_REQ_PATH: Path                # Path to the dataset request file, e.g., ENCO_REQ_PATH
+    {DATASET}_TEST_PATH: Path               # Path to the dataset test file, e.g., ENCO_TEST_PATH
+    {DATASET}_MAP_PATH: Path                # Path to the dataset map file, e.g., ENCO_MAP_PATH
+    ```
+
 1. Run one of two scripts:
     - `python -m src.send_data` - To run on a local model.
     Adjust the `session_name` variable to your desired output directory name.
@@ -458,6 +467,23 @@ Make sure that you're in the correct Python environment before you begin!
     Adjust the `model` variable to your desired model.
 
 The scripts will output files in the `out/{model}/{date}/{time}/` directory.
+
+### Automated experiments on Alvis
+
+You can run automated experiments using:
+
+`scripts/alvis-pipeline.sh`
+
+This script handles experiment setup with predefined variables: `dataset, models, quant`. Ex: `dataset=("BTHS" "ENCO" "SNAKE") models=("mis") quant=("NONE" "AWQ")`. It automatically iterates over all combinations of these variables and runs each configuration for N iterations (set within the script).
+
+Note: `MODEL_NAME`, `QUANT_TYPE`, `DATASET` variables names set in `.env` (see [Running REST-at Scripts](#running-rest-at-scripts)) must match exactly those defined in `alvis-pipeline`, as paths are constructed dynamically
+
+**To run:**
+
+1. Define all necessary experiment variables in `scripts/alvis-pipeline.sh`
+2. Set up your `.env` file with the required paths
+3. Launch the job on Alvis:
+    - `sbatch scripts/alvis-pipeline.sh`
 
 ### Evaluating REST-at From Scripts
 
