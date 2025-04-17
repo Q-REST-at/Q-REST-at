@@ -46,9 +46,18 @@ The model-wise model-prompt pairs with the best value in a certain metric has it
 
 ## Data
 
-The [`data`](./data/) folder contains the input data of REST-at's experiments. The prefix of each file denotes which dataset it belongs to, i.e., "BTHS" for Bluetooth Headset Profile 1.2 and "ENCO" for the anonymous energy provider company. Files with names containing "RE" contain requirement specifications while files with names containing "ST" contain test case specifications. The mapping files provide a ground truth for the REST mapping.
+The [`data`](./data/) folder contains all the `datasets` used as the input data of REST-at's experiments. Each `dataset` has its own sub-directory (e.g. [`BTHS/`](./data/BTHS/), [`ENCO/`](./data/ENCO/)) that includes the following files: 
+- `RE.csv` - contains requirement specifications. 
+- `ST.csv` - contains test case specifications.
+- `mapping.csv` - contains the ground truth for the REST mappings. 
+
+The `dataset` folders also contains randomly sampled `subsets` in separate sub-directories that are indexed starting from `01`. Each `subset` directory also includes the three types of files mentioned in the list above.
 
 The [`archive`](./archive/) contains the output data from REST-at's experiments. Each directory under `archive` is named after one of the prompt used for REST-at, i.e., BASE and PT{1-7}. Each prompt folder contains an `out` and a `res` folder. The `out` folders contain the mapping that REST-at responded with during the experiments. The `res` folders contain the evaluations of the aforementioned mappings when compared to the ground truth.
+
+### Sampling
+
+The scripts used to randomly sample the `datasets` and store generated `subsets` are found in the [`Jupyter Notebook`](./data/sampling.ipynb) inside the `data` folder.
 
 ### Prompt Templates
 
