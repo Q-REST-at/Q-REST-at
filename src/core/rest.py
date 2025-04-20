@@ -165,7 +165,11 @@ class RESTSpecification:
     @staticmethod
     def load_specs(reqs_path: str | PathLike, tests_path: str | PathLike) -> RESTSpecification:
         reqs: str
-        with open(reqs_path) as f:
+        # The requirements file can't be decoded unless specifying the encoding.
+        # Only encountered locally on Win11 laptop - probably due to files being encoded in a Linux environment.
+        # The issue is likely due to some special characters that are encoded differently between Win and Linux.
+        # Ref. for fix: https://stackoverflow.com/questions/59082843/csv-read-raises-unicodedecodeerror-charmap-codec-cant-decode 
+        with open(reqs_path, encoding="utf-8") as f:
             reqs = f.read()
 
         tests: str
