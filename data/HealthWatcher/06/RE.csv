@@ -1,0 +1,12 @@
+ID,Feature,Description
+FR11,Register tables,"This use case allows the registration of system tables. The following operations are possible: insert, update, delete, search and print.
+The available tables include:
+- Health unit (unit code, unit description).
+- Specialty (code and description).
+- Health unit / Specialty (health unit and specialty).
+- Employee (login, name and password).
+- Type of disease (code, name, description, symptom and duration).
+- Symptom (code and description).
+- Type of disease / Symptom (type of disease and symptom)."
+FR12,Update complaint,This use case allows the state of a complaint to be updated.
+FR14,Update employee,This use case allows of the employee's data to be updated on the system.

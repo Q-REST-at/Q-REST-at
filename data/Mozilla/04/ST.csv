@@ -1,0 +1,43 @@
+ID,Purpose,Test steps
+TC-078,,"INITIAL CONDITIONS
+1. You must have used the installation of the browser you plan to test.
+2. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+STEPS/DESCRIPTION
+1. Select Go|History.
+2. Observe the contents of the Global History Window.
+3. Select Edit|Preferences (from a navigator window)
+4. Browse to the Navigator|History Panel.
+5. Under ""Browsing History"" click the ""Clear History"" button.
+6. Return to observe the contents of the Global History Window.
+
+EXPECTED RESULTS
+1. If you've observed the initial conditions, the History window should be non-empty upon first observation.
+2. After pressing the button, the history window should be empty of individual history items.
+"
+TC-141,,"INITIAL CONDITIONS
+View the below-linked document.
+
+STEPS/DESCRIPTION
+For each numbered item on the page:
+1. double-click where the instructions say ""HERE"" (stems #1-3) [or]
+2. double-click on each text item, and confirm that it is highlighted pursuant to the boldfaced instructions preceeding each numbered section.
+
+EXPECTED RESULTS
+Results pursuant to the instructions preceeding each numbered section on the page.
+
+LINKS
+double-click-text.html"
+TC-182,,"INITIAL CONDITIONS
+1. All of the browser's toolbars(3) must be visible.
+2. Make sure they are all visible by selecting the top level 'View' menu and looking at the Toolbars submenu. The Navigation Toolbar, Personal Toolbar, and Taskbar should all have checks next to their names.
+
+STEPS/DESCRIPTION
+1. Click the small triangle at the far left of the Bookmarks(Personal) Toolbar to collapse it. Click again to expand it.
+2. Click the small triangle at the far left of the Navigation Toolbar to collapse it. Click again to expand it.
+3. Collapse the Bookmarks Toolbar again. Collapse the Navigation Toolbar again.
+4. Expand the Navigation Toolbar once more, expand the Bookmarks Toolbar as well(reverse order).
+
+EXPECTED RESULTS
+1. Each click of the triangle widget should alternately show and hide the corresponding toolbar.
+2. For steps(2 & 3), expanding the toolbars in the reverse order from that in which they were collapsed should not affect their positioning upon expansion."
