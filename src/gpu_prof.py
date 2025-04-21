@@ -15,6 +15,8 @@ if __name__ == '__main__':
     gpu: GPUProfiler = GPUProfiler(profile)
     res: ProfileResponse = gpu.compute() 
 
+    if res is None: exit(1)
+
     with open(logfile, 'r+') as file:
         data = json.load(file)
         data.update(res)

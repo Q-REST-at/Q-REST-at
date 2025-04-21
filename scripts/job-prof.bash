@@ -32,6 +32,7 @@ datetime="$(date '+%Y-%m-%d_%H-%M')"
 LOG_DIR="./out/${SESSION_NAME}/${datetime}"
 PROFILE_DIR="./profiles/${SESSION_NAME}"
 
+mkdir -p "profiles"
 mkdir -p "$LOG_DIR"
 
 if [[ "$ITER_PER_SESSION" -gt 0 ]]; then
