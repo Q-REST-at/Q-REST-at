@@ -49,7 +49,7 @@ for ds in "${dataset[@]}"; do
 
 		REST_AT_FLAGS="$session $m $ds"
 
-		bash ./scripts/job-prof.bash $REST_AT_FLAGS $container $session $q $ITER_PER_SESSION
+		bash ./scripts/job-prof.bash $REST_AT_FLAGS $container $q $ITER_PER_SESSION
      done
   done
 done
