@@ -74,8 +74,6 @@ REST_AT_FLAGS="$session $model $data"
 
 echo "Logfile name set to \`logs/$logfile\`"
 
-echo "Logfile name set to \`logs/$logfile\`"
-
 if [[ -n "$profile" ]]; then
     echo "Profiling ENABLED: \`profiles/$profile\`"
     sbatch -o "logs/$logfile.log" ./scripts/job-prof.bash $REST_AT_FLAGS $container $profile
