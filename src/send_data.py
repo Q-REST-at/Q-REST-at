@@ -205,8 +205,11 @@ def main() -> None:
             "mapping_path": mapping_path
         },
         "data": {
-            **res.as_dict,           # efficacy data
-            **{"time-to-analyze": t} # efficiency data
+            **res.as_dict, # efficacy data
+            **{            # efficiency data
+                "time_to_analyze": t,
+                # FIXME: include GPU metrics.
+            }
         }
     }
 
