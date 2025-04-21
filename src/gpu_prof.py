@@ -18,8 +18,9 @@ if __name__ == '__main__':
     if res is None: exit(1)
 
     with open(logfile, 'r+') as file:
-        data = json.load(file)
-        data.update(res)
+        ctx = json.load(file)
+        ctx['data'].update(res)
+
         file.seek(0)
-        json.dump(data, file, indent=4)
+        json.dump(ctx, file, indent=4)
         file.truncate()
