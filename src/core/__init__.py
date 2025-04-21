@@ -6,7 +6,8 @@ Includes:
 Classes for abstracting pretrained models and conversation sessions.\n
 A function for formatting prompt strings.\n
 A class for abstracting REST specifications.\n
-A class for calculating and formatting statistical data.
+A class for calculating and formatting statistical data.\n
+A class for reading and parsing GPU metrics.
 
 Copyright:
 ----------
@@ -16,11 +17,13 @@ License:
 --------
 MIT (see LICENSE for more information)
 """
+
 __all__ = [
     "model",
     "prompt",
     "rest",
-    "stats"
+    "stats",
+    "gpu_profiler"
 ]
 
 
@@ -28,3 +31,4 @@ from . import model
 from . import prompt
 from . import rest
 from . import stats
+from . import gpu_profiler

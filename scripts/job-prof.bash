@@ -28,29 +28,36 @@ monitor() {
 
 if [[ -z "$ITER_PER_SESSION" ]]; then ITER_PER_SESSION=0; fi
 
+datetime="$(date '+%Y-%m-%d_%H-%M')"
+LOG_DIR="./out/${SESSION_NAME}/${datetime}"
+PROFILE_DIR="./profiles/${SESSION_NAME}"
+
+mkdir -p "$LOG_DIR"
+
 if [[ "$ITER_PER_SESSION" -gt 0 ]]; then
 
-	datetime="$(date '+%Y-%m-%d_%H-%M')"
-
+    mkdir -p "$PROFILE_DIR"
 	for iter in $(seq 1 $ITER_PER_SESSION); do
         iter_padded=$(printf "%02d" $iter)
         
-		LOG_DIR="./out/${SESSION_NAME}/${datetime}/iter_${iter_padded}"
-        PROFILE_DIR="./profiles/${SESSION_NAME}"
+        LOG_DIR_ITER="${LOG_DIR}/${iter_padded}"
         
-        # Ensure dirs exist
-		mkdir -p "$LOG_DIR"
-        mkdir -p "$PROFILE_DIR"
+		mkdir -p "$LOG_DIR_ITER"
 
 		echo "Running: ds=$DATA, model=$MODEL, iter=$iter"
         
         # Attach monitor
         monitor "$PROFILE_DIR/${iter_padded}.csv" &
         MONITOR_PID=$!
-
+            
+        # First call `send_data.py` to prompt the model. This produces `res.json` under LOG_DIR_ITER.
 		PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
 		    python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME \
-                                    --quant $QUANT --logDir $LOG_DIR
+                                    --quant $QUANT --logDir $LOG_DIR_ITER
+        
+        # In the background, GPU metrics have been collected. Process them and update the res.json file.
+		PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
+            python -m src.gpu_prof "$PROFILE_DIR/$iter_padded.csv" "$LOG_DIR_ITER/res.json"
             
         # Detach monitor
         kill $MONITOR_PID 2>/dev/null
@@ -58,13 +65,17 @@ if [[ "$ITER_PER_SESSION" -gt 0 ]]; then
 
 	done
 else
-    PROFILE_DIR="./profiles/${SESSION_NAME}.csv"
+    echo "Running: ds=$DATA, model=$MODEL"
 
 	# Spawn process in background
-	monitor "$PROFILE_DIR" & MONITOR_PID=$!
+	monitor "${PROFILE_DIR}.csv" & MONITOR_PID=$!
 
 	PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
-        python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME
+        python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME \
+                                --quant $QUANT --logDir $LOG_DIR
+
+    PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
+        python -m src.gpu_prof "$PROFILE_DIR.csv" "$LOG_DIR/res.json"
 
     # Detach monitor
     kill $MONITOR_PID 2>/dev/null
