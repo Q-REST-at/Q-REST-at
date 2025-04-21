@@ -28,7 +28,10 @@ monitor() {
 
 if [[ -z "$ITER_PER_SESSION" ]]; then ITER_PER_SESSION=0; fi
 
-datetime="$(date '+%Y-%m-%d_%H-%M')"
+date="$(date '+%Y-%m-%d')"
+time="$(date '+%H:%M:%S')"
+datetime="$date/$time"
+
 LOG_DIR="./out/${SESSION_NAME}/${datetime}"
 PROFILE_DIR="./profiles/${SESSION_NAME}"
 
