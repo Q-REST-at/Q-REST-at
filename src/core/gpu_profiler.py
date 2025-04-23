@@ -65,8 +65,7 @@ class GPUProfiler:
                 "avg_temperature": float(df["temperature.gpu"].mean())
             },
             "vRAM": {
-                # TODO: revisit this if the last is actually the sought after value
-                "max_allocated_MiB": float(df["memory.used"].iloc[-1]),
+                "max_consumed_MiB": float(df["memory.used"].max()),
                 "utilization": {
                     "avg": float(df["utilization.memory"].mean()),
                     "std": float(df["utilization.memory"].std()),

@@ -1,4 +1,4 @@
-# TODO: finish the documentation
+# This is just a simple script. Explain it in more detail.
 
 import json
 from sys import argv

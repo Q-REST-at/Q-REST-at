@@ -16,14 +16,16 @@ QUERY="timestamp,gpu_uuid,utilization.gpu,utilization.memory,memory.used,tempera
 PROBE_INTERVAL_MS=1000
 
 monitor() {
+    local PROFILE_FILEPATH="$1"
+
     # Print raw 'CSV' header
-    echo $QUERY > $1
+    echo $QUERY > $PROFILE_FILEPATH
 
     # Query in CSV format in a loop and continually append to filepath
     nvidia-smi --query-gpu=$QUERY \
                --format=csv,noheader \
                --loop-ms=$PROBE_INTERVAL_MS \
-               >> $1
+               >> $PROFILE_FILEPATH
 }
 
 if [[ -z "$ITER_PER_SESSION" ]]; then ITER_PER_SESSION=0; fi
@@ -49,30 +51,40 @@ if [[ "$ITER_PER_SESSION" -gt 0 ]]; then
 		mkdir -p "$LOG_DIR_ITER"
 
 		echo "Running: ds=$DATA, model=$MODEL, iter=$iter"
-        
+
+        ############################# MONITOR #################################
+
         # Attach monitor
         monitor "$PROFILE_DIR/${iter_padded}.csv" &
         MONITOR_PID=$!
+
+        sleep 0.25 # ensure that monitor is loaded, give it 250ms
             
         # First call `send_data.py` to prompt the model. This produces `res.json` under LOG_DIR_ITER.
 		PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
 		    python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME \
                                     --quant $QUANT --logDir $LOG_DIR_ITER
         
-        # In the background, GPU metrics have been collected. Process them and update the res.json file.
+        # Detach monitor safely
+        if kill "$MONITOR_PID" 2>/dev/null; then
+            wait "$MONITOR_PID" 2>/dev/null
+        fi
+
+        ############################# MONITOR #################################
+
+        # In the background, GPU metrics have been collected. Process them and
+        # update the res.json file.
 		PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
             python -m src.gpu_prof "$PROFILE_DIR/$iter_padded.csv" "$LOG_DIR_ITER/res.json"
-            
-        # Detach monitor
-        kill $MONITOR_PID 2>/dev/null
-        wait $MONITOR_PID 2>/dev/null
-
 	done
 else
     echo "Running: ds=$DATA, model=$MODEL"
 
 	# Spawn process in background
-	monitor "${PROFILE_DIR}.csv" & MONITOR_PID=$!
+	monitor "${PROFILE_DIR}.csv" &
+    MONITOR_PID=$!
+
+    sleep 0.25
 
 	PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
         python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME \
@@ -81,9 +93,10 @@ else
     PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
         python -m src.gpu_prof "$PROFILE_DIR.csv" "$LOG_DIR/res.json"
 
-    # Detach monitor
-    kill $MONITOR_PID 2>/dev/null
-    wait $MONITOR_PID 2>/dev/null
+    # Detach monitor safely
+    if kill "$MONITOR_PID" 2>/dev/null; then
+        wait "$MONITOR_PID" 2>/dev/null
+    fi
 fi
 
 echo "Done!"
