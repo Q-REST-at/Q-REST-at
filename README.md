@@ -470,6 +470,9 @@ Make sure that you're in the correct Python environment before you begin!
 
     # Set Debug mode ON/OFF
     DEBUG_MODE=1                            # Debug mode enabled
+
+    # Set redirect stdout to .log files ON/OFF
+    USE_LOG=1                               # Stdout redirect enabled
     ```
   
 2. Run one of two scripts:
