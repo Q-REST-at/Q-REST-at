@@ -1,15 +1,12 @@
-"""
-TODO: finish the documentation
-"""
-
+# TODO
+# - consider filtering blank entries in the logs. This has a negative impact on
+# the mean, etc. There's always some overhead when using utils like these.
 import pandas as pd
-import matplotlib.pyplot as plt
-from scipy.signal import find_peaks
 from json import dumps
-
 from os import PathLike
 from typing import Final
-
+import matplotlib.pyplot as plt
+from scipy.signal import find_peaks
 
 ProfileDict = dict[str, dict[str, dict[str, float] | float | int]]
 ProfileResponse = None | str | ProfileDict
@@ -17,7 +14,11 @@ ProfileResponse = None | str | ProfileDict
 
 class GPUProfiler:
     """
-    TODO: write
+    A minimalistic abstraction of a GPU 'profiler' used to perform calculations
+    on gathered GPU profile logs based on querying the `nvidia-smi` utility. It
+    allows for reading profile logs from multiple GPU instances (WIP).
+
+    Optionally, the profile may be visualized onto a figure.
     """
 
     __slots__ = "path", "interval", "gpu_count", "df"
@@ -27,9 +28,21 @@ class GPUProfiler:
                  interval  : int                   = 1   ,
                  gpu_count : int                   = 1   ,
                  ) -> None:
+        """
+        Initializes a GPUProfiler object. By default, an empty DataFrame is
+        created with the default columns. Immediately, we attempt to populate
+        the DataFrame with some profile data which will overwrite the empty
+        state upon success.
+
+        Parameters:
+        -----------
+          path      : a path to a selected CSV profile file.
+          interval  : an interval between samples (default: 1s).
+          gpu_count : number of GPUs active during monitor (default: 1).
+        """
         self.path      = path
         self.interval  = interval
-        self.gpu_count = gpu_count
+        self.gpu_count = gpu_count # TODO: not used!
         
         # Empty df, just columns to prevent indexing errors
         self.df: pd.DataFrame = pd.DataFrame(columns=[
@@ -53,6 +66,18 @@ class GPUProfiler:
 
 
     def compute(self, jsonify = False) -> ProfileResponse:
+        """
+        Performs some elementary computations on the profile data.
+
+        Parameters:
+        -----------
+        jsonify : whether to turn the dictionary into a JSON-like instance.
+
+        Returns:
+        --------
+        A `ProfileResponse` is either (i) a `ProfileDict`, a Python `dict` with
+        GPU/vRAM metrics or (ii) the very same `dict` but JSON-ified.
+        """
         df = self.df
 
         result: ProfileDict = {
@@ -81,6 +106,14 @@ class GPUProfiler:
 
 
     def read_csv(self) -> pd.DataFrame | None:
+        """
+        A helper function that reads the selected profile CSV file into memory
+        and converts columns to desired data types.
+
+        Returns:
+        --------
+        A DataFrame if the read and conversion were successful. Otherwise, None.
+        """
         try:
             df: pd.DataFrame = pd.read_csv(self.path)
         except Exception:
@@ -110,14 +143,27 @@ class GPUProfiler:
 
         df = df.sort_values("timestamp").reset_index(drop=True)
 
-        # Average deltas
-        df["gpu_util_rate"]    = df["utilization.gpu"].diff() / self.interval
-        df["memory_util_rate"] = df["utilization.memory"].diff() / self.interval
+        # TODO: Are we interested in average deltas (diff) for either
+        # utilization? The problem becomes that deltas are either +/- because
+        # values can increase/decrease, so making sense of this data without
+        # any processing is unsure.
+
+        # This is left for reference.
+        # 
+        # df["gpu_util_rate"]    = df["utilization.gpu"].diff() / self.interval
+        # df["memory_util_rate"] = df["utilization.memory"].diff() / self.interval
 
         return df
 
 
-    def get_peaks(self):
+    def get_peaks(self) -> tuple[list[int], list[int]]:
+        """
+        Returns:
+        --------
+        A tuple of peaks (i) of GPU utilization and (ii) vRAM utilization. A
+        'peak' is simply a one-dimensional array with indices of sample data
+        points that are (local) peaks.
+        """
         cols: Final[list[str]] = ["utilization.gpu", "utilization.memory"]
         return tuple(
                 find_peaks(self.df[col].fillna(0))[0] # get 1st param
@@ -125,7 +171,12 @@ class GPUProfiler:
         )
 
 
-    def visualize(self):
+    def visualize(self) -> None:
+        """
+        This function visualizes the GPU (vRAM) utilization over the samples.
+        Both figures are displayed onto a single combined figure. All local
+        peaks are labeled with a red color.
+        """
         df = self.df
 
         peaks_gpu, peaks_memory = self.get_peaks()
