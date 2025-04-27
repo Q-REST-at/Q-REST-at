@@ -2,8 +2,8 @@
 Evaluates the performance of different runs by checking the out/
 folder.
 
-Uses the format `out/{model}/{date}/{time}/res.json`, which
-is the outut from `send_data.py` and `send_data_gpt.py`.
+Uses the format `out/{session}/{date}/{time}/res.json`, which
+is the output from `send_data.py` and `send_data_gpt.py`.
 The evaluation requires the files specified by the responses'
 metadata.
 
@@ -33,12 +33,10 @@ USE_LOG = os.getenv("USE_LOG", "0") == "1"
 
 now: datetime.datetime = datetime.datetime.now()
 
-date: str = str(now.date())
-time: str = str(now.time())
+date_str: str = str(now.date())
+time_str: str = str(now.time())
 
-res_dir: str = f"./res/{date}/{time}"
-#res_dir = res_dir.replace(":", "-") # Uncomment line to work on Windows filesystems
-log_path: str = f"{res_dir}/eval.log"
+log_path: str = f"./res/{date_str}/{time_str}/eval.log" # Note: path to stdout redirect log (!log per treatment)
 
 # Data cache for easy access
 req_data: dict[str, set[str]] = {}
@@ -70,7 +68,7 @@ def get_specs(req_path: str, test_path: str, mapping_path: str) -> tuple[
         with open(mapping_path, "r") as f:
             fields: list[str] = [
                 "Req ID",
-                "Test IDs"
+                "Test ID"
             ]
             reader: csv.DictReader = csv.DictReader(f)
 
@@ -81,10 +79,10 @@ def get_specs(req_path: str, test_path: str, mapping_path: str) -> tuple[
             ]
 
             for e in tmp:
-                e["Test IDs"] = e["Test IDs"].replace(" ", "").split(",") if e["Test IDs"] else []
+                e["Test ID"] = e["Test ID"].replace(" ", "").split(",") if e["Test ID"] else []
 
             map_ = {
-                e["Req ID"]: (set(e["Test IDs"]) if e["Test IDs"] else set())
+                e["Req ID"]: (set(e["Test ID"]) if e["Test ID"] else set())
                 for e in tmp
             }
 
@@ -96,9 +94,18 @@ def get_specs(req_path: str, test_path: str, mapping_path: str) -> tuple[
 
 
 def main() -> None:
-    res_path: str = f"{res_dir}/res.log"
     # Evaluate results of every output
-    for m in os.listdir(f"./out"):
+    # Note: each session directory name is composed of: treatment + dataset
+    # TODO: call this "treatment" instead?
+    for session in os.listdir(f"./out"):
+
+        res_dir: str = f"./res/{date_str}/{time_str}/{session}"
+        res_dir = res_dir.replace(":", "-") # Uncomment line to work on Windows filesystems #TODO recomment
+
+        # Create current "session" res directory
+        os.makedirs(res_dir, exist_ok=True) 
+
+
         # Model stats
         all_n: list[int] = []
         all_tp: list[int] = []
@@ -124,9 +131,12 @@ def main() -> None:
         # Accumulates the links over all runs in a session
         frequency_table: dict[bool, dict[str, dict[str, int]]] = {True: {}, False: {}}
 
-        for d in os.listdir(f"./out/{m}"):
-            for t in os.listdir(f"./out/{m}/{d}"):
-                out_path: str = f"./out/{m}/{d}/{t}/res.json"
+
+        for d in os.listdir(f"./out/{session}"):
+            for t in os.listdir(f"./out/{session}/{d}"):
+                current_dir = f"./out/{session}/{d}/{t}"
+
+                out_path: str = f"{current_dir}/res.json"
                 print(f"Info - Evaluating {out_path}")
 
                 # Load the tool output
@@ -140,9 +150,10 @@ def main() -> None:
                 res: dict[str, list[str]] = payload["data"]["links"]
                 err: dict[str, list[str]] = payload["data"]["err"]
 
+                # TODO: update efficiency metrics (nested objects)
                 # Efficiency metrics are single integers
-                time: int = payload["data"]["time_to_analyze"]
-                memory: int = payload["data"]["memory_usage"]
+                time_to_analyze: float = payload["data"]["time_to_analyze"]
+                memory_usage: float = payload["data"]["memory_usage"]
 
                 curr_tests: set[str]
                 curr_mapping: dict[str, set[str]]
@@ -169,10 +180,10 @@ def main() -> None:
                     expected_tests: set[str] = curr_mapping.get(req, None)
                     # Skip if req ID returned None
                     if expected_tests is None:
-                        print(f"Error - ./out/{m}/{d}/{t}: Faulty requirement ID ({req})")
+                        print(f"Error - {current_dir}: Faulty requirement ID ({req})")
                         continue
 
-                    print(f"Info - ./out/{m}/{d}/{t}: {req}:")
+                    print(f"Info - {current_dir}: {req}:")
 
                     # Positives
                     curr_tp_set: set[str] = actual_tests & expected_tests
@@ -256,12 +267,12 @@ def main() -> None:
 
                 all_err.append(len(err))
 
-                all_time_to_analyze.append(time)
-                all_memory_usage.append(memory)
+                all_time_to_analyze.append(time_to_analyze)
+                all_memory_usage.append(memory_usage) # TODO: update
 
                 prevalence: float = (tp + fn) / n
 
-                eval_path = f"{os.path.dirname(out_path)}/eval.json"
+                eval_path = f"{current_dir}/eval.json"
                 data: dict = {
                     "prevalence": prevalence,
                     "n": n,
@@ -276,20 +287,21 @@ def main() -> None:
                     "precision": precision,
                     "specificity": specificity,
                     "err": len(err),
-                    "time_to_analyze": time,
-                    "memory_usage": memory
+                    "time_to_analyze": time_to_analyze,
+                    "memory_usage": memory_usage  # TODO: update
                 }
 
                 with open(eval_path, "w+") as f:
                     json.dump(data, f, indent=2)
 
-                with open(res_path, "a+") as f:
-                    f.write(f"./out/{m}/{d}/{t}\n")
+                # Write current session log file
+                with open(f"{res_dir}/res.log", "a+") as f:
+                    f.write(f"{current_dir}\n")
                     json.dump(data, f, indent=2)
                     f.write("\n")
 
                 data_json: dict = {
-                    "data_path": f"./out/{m}/{d}/{t}",
+                    "data_path": f"{current_dir}",
                     "prevalence": prevalence,
                     "n": n,
                     "tp": tp,
@@ -303,13 +315,13 @@ def main() -> None:
                     "precision": precision,
                     "specificity": specificity,
                     "err": len(err),
-                    "time_to_analyze": time,
-                    "memory_usage": memory
+                    "time_to_analyze": time_to_analyze,
+                    "memory_usage": memory_usage  # TODO: update
                 }
 
                 json_list.append(data_json)
                 
-            res_path_json: str = f"{res_dir}/all_data_{m}.json"
+            res_path_json: str = f"{res_dir}/all_data_{session}.json"
 
             # Write the list of dictionaries to a JSON file
             with open(res_path_json, 'w') as file:
@@ -334,18 +346,16 @@ def main() -> None:
             "frequency_table": frequency_table,
             "all_err": Stats("all_err", all_err).as_dict,
             "all_time_to_analyze": Stats("all_time_to_analyze", all_time_to_analyze).as_dict,
-            "all_memory_usage": Stats("all_memory_usage", all_memory_usage).as_dict
+            "all_memory_usage": Stats("all_memory_usage", all_memory_usage).as_dict # TODO: update
         }
 
-        print(f"Info - Logging total and average metrics for {m}")
-        with open(f"{res_dir}/{m}.json", "w") as f:
+        print(f"Info - Logging total and average metrics for {session}")
+        with open(f"{res_dir}/{session}.json", "w") as f:
             f.write(json.dumps(data, indent=2) + "\n")
 
 
 
 if __name__ == "__main__":
-    os.makedirs(res_dir, exist_ok=True)
-
     # Redirect stdout to a log file only if .env flag is set
     if USE_LOG:
         with open(log_path, "a+") as out, redirect_stdout(out):
