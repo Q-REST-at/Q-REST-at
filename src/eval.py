@@ -21,6 +21,7 @@ import datetime
 import json
 import os
 from contextlib import redirect_stdout
+from typing import Any
 
 from .core.rest import RESTSpecification
 from .core.stats import Stats
@@ -122,8 +123,18 @@ def main() -> None:
 
         all_err: list[int] = []
 
-        all_time_to_analyze: list[int] = []
-        all_memory_usage: list[int] = []
+        all_time_to_analyze: list[float] = []
+
+        # GPU utilization mean and max
+        all_gpu_util_mean: list[float] = []
+        all_gpu_util_max: list[float] = []
+
+        # vRAM utilization mean and max
+        all_vram_util_mean: list[float] = []
+        all_vram_util_max: list[float] = []
+
+        # vRAM maximum allocated memory
+        all_vram_max_alloc: list[float] = []
 
         json_list = []
 
@@ -150,10 +161,11 @@ def main() -> None:
                 res: dict[str, list[str]] = payload["data"]["links"]
                 err: dict[str, list[str]] = payload["data"]["err"]
 
-                # TODO: update efficiency metrics (nested objects)
-                # Efficiency metrics are single integers
                 time_to_analyze: float = payload["data"]["time_to_analyze"]
-                memory_usage: float = payload["data"]["memory_usage"]
+
+                # GPU and vRAM metrics are single nested dictionaries
+                gpu: dict[str, Any] = payload["data"]["GPU"]
+                vram: dict[str, Any] = payload["data"]["vRAM"]
 
                 curr_tests: set[str]
                 curr_mapping: dict[str, set[str]]
@@ -268,7 +280,14 @@ def main() -> None:
                 all_err.append(len(err))
 
                 all_time_to_analyze.append(time_to_analyze)
-                all_memory_usage.append(memory_usage) # TODO: update
+
+                all_gpu_util_mean.append(gpu["utilization"]["avg"])
+                all_gpu_util_max.append(gpu["utilization"]["max"])
+
+                all_vram_util_mean.append(vram["utilization"]["avg"])
+                all_vram_util_max.append(vram["utilization"]["max"])
+
+                all_vram_max_alloc.append(vram["max_allocated_MiB"])
 
                 prevalence: float = (tp + fn) / n
 
@@ -288,7 +307,8 @@ def main() -> None:
                     "specificity": specificity,
                     "err": len(err),
                     "time_to_analyze": time_to_analyze,
-                    "memory_usage": memory_usage  # TODO: update
+                    "GPU": gpu,
+                    "vRAM": vram
                 }
 
                 with open(eval_path, "w+") as f:
@@ -316,7 +336,8 @@ def main() -> None:
                     "specificity": specificity,
                     "err": len(err),
                     "time_to_analyze": time_to_analyze,
-                    "memory_usage": memory_usage  # TODO: update
+                    "GPU": gpu,
+                    "vRAM": vram
                 }
 
                 json_list.append(data_json)
@@ -346,7 +367,11 @@ def main() -> None:
             "frequency_table": frequency_table,
             "all_err": Stats("all_err", all_err).as_dict,
             "all_time_to_analyze": Stats("all_time_to_analyze", all_time_to_analyze).as_dict,
-            "all_memory_usage": Stats("all_memory_usage", all_memory_usage).as_dict # TODO: update
+            "all_gpu_util_mean": Stats("all_gpu_util_mean", all_gpu_util_mean).as_dict,
+            "all_gpu_util_max": Stats("all_gpu_util_max", all_gpu_util_max).as_dict,
+            "all_vram_util_mean": Stats("all_vram_util_mean", all_vram_util_mean).as_dict,
+            "all_vram_util_max": Stats("all_vram_util_max", all_vram_util_max).as_dict,
+            "all_vram_max_alloc": Stats("all_vram_max_alloc", all_vram_max_alloc).as_dict
         }
 
         print(f"Info - Logging total and average metrics for {session}")
