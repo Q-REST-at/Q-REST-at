@@ -124,10 +124,9 @@ class GPUProfiler:
             "utilization.memory",
             # add more if needed
         ]:
-            df[col] = df[col].astype(str).str.replace(" %", "", regex=False)
+            df[col] = df[col].str.replace(" %", "", regex=False)
 
-
-        df["memory.used"] = df["memory.used"].astype(str).\
+        df["memory.used"] = df["memory.used"].str.\
                 replace(" MiB", "", regex=False)
 
         # Cols to convert to numeric datatype
