@@ -12,7 +12,7 @@ if __name__ == '__main__':
     profile = argv[1]
     logfile = argv[2]
 
-    gpu: GPUProfiler = GPUProfiler(profile)
+    gpu: GPUProfiler = GPUProfiler(profile, 0.25)
     res: ProfileResponse = gpu.compute() 
 
     if res is None: exit(1)

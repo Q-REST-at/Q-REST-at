@@ -25,7 +25,7 @@ class GPUProfiler:
 
     def __init__(self,
                  path      : PathLike | str | None = None,
-                 interval  : int                   = 1   ,
+                 interval  : float                 = 1   ,
                  gpu_count : int                   = 1   ,
                  ) -> None:
         """
@@ -105,10 +105,15 @@ class GPUProfiler:
             return result
 
 
-    def read_csv(self) -> pd.DataFrame | None:
+    def read_csv(self, filter_inactive: bool = True) -> pd.DataFrame | None:
         """
         A helper function that reads the selected profile CSV file into memory
         and converts columns to desired data types.
+
+        Parameters:
+        -----------
+        filter_inactive : discard rows where GPU and vRAM utilization are zero
+                          and allocated vRAM > 1 MiB.
 
         Returns:
         --------
@@ -141,6 +146,15 @@ class GPUProfiler:
                 apply(pd.to_numeric, errors="coerce")
 
         df = df.sort_values("timestamp").reset_index(drop=True)
+
+        if filter_inactive:
+            df_filtered = df[
+                (df["utilization.gpu"] > 0)    &
+                (df["utilization.memory"] > 0) &
+                (df["memory.used"] > 1)
+            ]
+
+            return df_filtered
 
         # TODO: Are we interested in average deltas (diff) for either
         # utilization? The problem becomes that deltas are either +/- because

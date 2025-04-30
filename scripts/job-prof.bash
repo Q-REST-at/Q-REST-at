@@ -13,7 +13,7 @@ ITER_PER_SESSION=$6
 PROJ_PATH="/mimer/NOBACKUP/groups/naiss2025-22-104/REST/REST-at"
 QUERY="timestamp,gpu_uuid,utilization.gpu,utilization.memory,memory.used,temperature.gpu"
 
-PROBE_INTERVAL_MS=1000
+PROBE_INTERVAL_MS=250
 
 monitor() {
     local PROFILE_FILEPATH="$1"
