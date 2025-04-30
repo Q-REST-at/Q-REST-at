@@ -59,7 +59,7 @@ if [[ "$ITER_PER_SESSION" -gt 0 ]]; then
 
         MONITOR_PID=$(monitor "$PROFILE_DIR/${iter_padded}.csv")
         sleep 0.1
-        echo "nvidia-smi monitor started on p=$MONITOR_PID"
+        echo "nvidia-smi monitor started on pid=$MONITOR_PID"
 
         # First call `send_data.py` to prompt the model. This produces `res.json` under LOG_DIR_ITER.
         PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
@@ -80,7 +80,7 @@ else
 
     MONITOR_PID=$(monitor "$PROFILE_DIR/${iter_padded}.csv")
     sleep 0.1
-    echo "nvidia-smi monitor started on p=$MONITOR_PID"
+    echo "nvidia-smi monitor started on pid=$MONITOR_PID"
 
     PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
         python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME \
