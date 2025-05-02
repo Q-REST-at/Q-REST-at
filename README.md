@@ -437,7 +437,7 @@ Alignment files must have the following rows (case sensitive) in whichever order
 ### Prerequisites
 
 - [Python 3.10](https://www.python.org/downloads/release/python-31014/) or later
-- Hardware capable of running LLMs (large amounts of vRAM)
+- Hardware capable of running LLMs (large amounts of VRAM)
 - A virtual Python environment (optional but recommended)
 
 ### Setting Up
