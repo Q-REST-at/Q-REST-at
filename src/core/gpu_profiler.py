@@ -89,8 +89,8 @@ class GPUProfiler:
                 },
                 "avg_temperature": float(df["temperature.gpu"].mean())
             },
-            "vRAM": {
-                "max_consumed_MiB": float(df["memory.used"].max()),
+            "VRAM": {
+                "max_usage_MiB": float(df["memory.used"].max()),
                 "utilization": {
                     "avg": float(df["utilization.memory"].mean()),
                     "std": float(df["utilization.memory"].std()),
