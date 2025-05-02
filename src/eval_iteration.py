@@ -96,11 +96,11 @@ def get_specs(req_path: str, test_path: str, mapping_path: str) -> tuple[
 
 def main() -> None:
     # Evaluate results of every output
-    # Note: each session directory name is composed of: treatment + dataset
-    # FIXME: call this "treatment" instead?
-    for session in os.listdir(f"./out"):
+    # Note: each outermost directory name is composed of: treatment + dataset.
+    # However, for simplicity we simply call the variable here "treatment".
+    for treatment in os.listdir(f"./out"):
 
-        res_dir: str = f"./res/{date_str}/{time_str}/{session}"
+        res_dir: str = f"./res/{date_str}/{time_str}/{treatment}"
         res_dir = res_dir.replace(":", "-") # Uncomment line to work on Windows filesystems #TODO recomment
 
         # Create current "session" res directory
@@ -143,10 +143,10 @@ def main() -> None:
         frequency_table: dict[bool, dict[str, dict[str, int]]] = {True: {}, False: {}}
 
 
-        for d in os.listdir(f"./out/{session}"):
-            for t in os.listdir(f"./out/{session}/{d}"):
-                for iteration in os.listdir(f"./out/{session}/{d}/{t}"):
-                    current_dir = f"./out/{session}/{d}/{t}/{iteration}"
+        for d in os.listdir(f"./out/{treatment}"):
+            for t in os.listdir(f"./out/{treatment}/{d}"):
+                for iteration in os.listdir(f"./out/{treatment}/{d}/{t}"):
+                    current_dir = f"./out/{treatment}/{d}/{t}/{iteration}"
 
                     out_path: str = f"{current_dir}/res.json"
                     print(f"Info - Evaluating {out_path}")
@@ -166,7 +166,7 @@ def main() -> None:
 
                     # GPU and VRAM metrics are single nested dictionaries
                     gpu: dict[str, Any] = payload["data"]["GPU"]
-                    vram: dict[str, Any] = payload["data"]["vRAM"] # FIXME: fix key if it is updated
+                    vram: dict[str, Any] = payload["data"]["VRAM"]
 
                     curr_tests: set[str]
                     curr_mapping: dict[str, set[str]]
@@ -288,7 +288,7 @@ def main() -> None:
                     all_vram_util_mean.append(vram["utilization"]["avg"])
                     all_vram_util_max.append(vram["utilization"]["max"])
 
-                    all_vram_max_usage_MiB.append(vram["max_consumed_MiB"]) # FIXME: fix key if it is updated
+                    all_vram_max_usage_MiB.append(vram["max_usage_MiB"])
 
                     prevalence: float = (tp + fn) / n
 
@@ -343,7 +343,7 @@ def main() -> None:
 
                     json_list.append(data_json)
                 
-            res_path_json: str = f"{res_dir}/all_data_{session}.json"
+            res_path_json: str = f"{res_dir}/all_data_{treatment}.json"
 
             # Write the list of dictionaries to a JSON file
             with open(res_path_json, 'w') as file:
@@ -375,8 +375,8 @@ def main() -> None:
             "all_vram_max_usage_MiB": Stats("all_vram_max_usage_MiB", all_vram_max_usage_MiB).as_dict
         }
 
-        print(f"Info - Logging total and average metrics for {session}")
-        with open(f"{res_dir}/{session}.json", "w") as f:
+        print(f"Info - Logging total and average metrics for {treatment}")
+        with open(f"{res_dir}/{treatment}.json", "w") as f:
             f.write(json.dumps(data, indent=2) + "\n")
 
 
