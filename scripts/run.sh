@@ -72,12 +72,12 @@ done
 
 REST_AT_FLAGS="$session $model $data"
 
-if [[ -n "$session" ]]; then
+if [[ -z "$session" ]]; then
     echo "Session not specified. Aborting..."
     exit 1
 fi
 
-echo "Logfile name set to \`logs/$logfile\`"
+echo "Logfile name set to \`logs/$logfile.log\`"
 
 if [[ -n "$profile" ]]; then
     echo "Profiling ENABLED: \`profiles/$profile\`"

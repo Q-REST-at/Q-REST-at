@@ -55,7 +55,6 @@ nvidia-nvjitlink-cu12==12.4.99
 nvidia-nvtx-cu12==12.1.105
 openai==1.14.2
 packaging==23.2
-pandas==2.2.1
 parso==0.8.3
 pexpect==4.9.0
 pfzy==0.3.4
@@ -103,3 +102,6 @@ tzdata==2024.1
 urllib3==2.2.1
 watchdog==4.0.0
 wcwidth==0.2.13
+matplotlib==3.10.1
+pandas==2.2.3
+scipy==1.15.2

@@ -207,8 +207,7 @@ def main() -> None:
         "data": {
             **res.as_dict, # efficacy data
             **{            # efficiency data
-                "time_to_analyze": t,
-                # FIXME: include GPU metrics.
+                "time_to_analyze": t
             }
         }
     }

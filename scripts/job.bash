@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #SBATCH -A NAISS2025-22-104 -p alvis
-#SBATCH --gpus-per-node=A100:2
+#SBATCH --gpus-per-node=A40:1
 #SBATCH -t 0-01:00:00
 
 ml purge # good practice
