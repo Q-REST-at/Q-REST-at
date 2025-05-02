@@ -2,8 +2,8 @@
 Evaluates the performance of different runs by checking the out/
 folder.
 
-Uses the format `out/{session}/{date}/{time}/res.json`, which
-is the output from `send_data.py` and `send_data_gpt.py`.
+Uses the format `out/{session}/{date}/{time}/{iteration}/res.json`, 
+which is the output from `send_data.py`.
 The evaluation requires the files specified by the responses'
 metadata.
 
