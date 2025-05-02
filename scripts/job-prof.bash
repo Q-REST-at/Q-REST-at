@@ -76,9 +76,11 @@ if [[ "$ITER_PER_SESSION" -gt 0 ]]; then
             python -m src.gpu_prof "$PROFILE_DIR/$iter_padded.csv" "$LOG_DIR_ITER/res.json"
     done
 else
+    # TODO: this could technically be part of the loop (with one iteration);
+    # most of it is repeated anyway (with some extra logic).
     echo "Running: ds=$DATA, model=$MODEL"
 
-    MONITOR_PID=$(monitor "$PROFILE_DIR/${iter_padded}.csv")
+    MONITOR_PID=$(monitor "$PROFILE_DIR.csv")
     sleep 0.1
     echo "nvidia-smi monitor started on pid=$MONITOR_PID"
 
