@@ -437,7 +437,7 @@ Alignment files must have the following rows (case sensitive) in whichever order
 ### Prerequisites
 
 - [Python 3.10](https://www.python.org/downloads/release/python-31014/) or later
-- Hardware capable of running LLMs (large amounts of vRAM)
+- Hardware capable of running LLMs (large amounts of VRAM)
 - A virtual Python environment (optional but recommended)
 
 ### Setting Up
@@ -536,8 +536,9 @@ Make sure that you're in the correct Python environment before you begin!
 1. Add the following variables to the `.env` file:
     - `MAP_PATH` - The relative path to the alignment file.
     - `USE_LOG` - Redirects `stdout` to `.log` files when set to `1`; preserves default behaviour when set to `0` (or if variable missing). 
-2. Run one of two scripts:
+2. Run one of three scripts:
     - `python -m src.eval` - To evaluate each REST trace link.
+    - `python -m src.eval_iteration` - Similar functionality to `eval.py` as well as the ability to handle output data with an *iterative* directory structure, i.e., one additional layer of nested sub-directories containing model output — a result of generating multiple responses per treatment using multiple input data subsets.
     - `python -m src.label_eval` - To evaluate "is tested" labels.
 
 The script will output an `eval.log` or a `label-eval.log` in `out/{model}/{date}/{time}/` for each model, date, and time, depending on the script used. The file contains key metrics of REST-at, such as accuracy and precision.
