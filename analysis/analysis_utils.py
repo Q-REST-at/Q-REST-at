@@ -3,7 +3,7 @@ experiment_utils.py
 
 This module contains utility functions for loading and processing experiment data.
 Functions included:
-- load_experiment_data: Loads experiment data from a directory structure.
+- load_experiment_data: Loads experiment data from a `res/` directory.
 - load_treatment_data: Extracts treatment data from specific session directories.
 """
 
@@ -14,7 +14,7 @@ import pandas as pd
 
 # Utility functions: loading data
 
-def load_treatment_data(directory: str):
+def load_treatment_data(directory: str) -> tuple[dict[str, pd.DataFrame], dict[str, pd.DataFrame]]:
     """
     Extracts experiment data from a particular directory filepath given as argument.
 
@@ -33,14 +33,15 @@ def load_treatment_data(directory: str):
     ---
 
     **Notes**:
-        - Omits "prevalence", "population", and "frequency_table" fields from the \<session_name>.json file and extracts only the statistical metrics.
+        - Omits "prevalence", "population", and "frequency_table" fields from the \<session_name>.json \
+            file and extracts only the statistical metrics.
         - This function can identify and handle multiple session files in the same directory.
     """
 
     # Dictionaries to store dataframes 
     # (this function supports loading multiple treatment data files from same dir)
-    summary_dataframes = {}     # Statistical summary (<session_name>.json)
-    detailed_dataframes = {}    # All individual data points (all_data_<session_name>.json)
+    summary_dataframes: dict[str, pd.DataFrame] = {}  # Statistical summary (<session_name>.json)
+    detailed_dataframes: dict[str, pd.DataFrame] = {} # All individual data points (all_data_<session_name>.json)
 
     # Get all files in the given directory
     files = os.listdir(directory)
@@ -97,7 +98,8 @@ def load_treatment_data(directory: str):
 
 
 
-def load_experiment_data(base_dir: str, iteration_structure: bool = True):
+def load_experiment_data(base_dir: str, iteration_structure: bool = True) -> \
+        tuple[dict[str, pd.DataFrame], dict[str, pd.DataFrame]]:
     """
     Loads all the experiment data for each treatment/session inside of the given directory.
 
@@ -113,8 +115,8 @@ def load_experiment_data(base_dir: str, iteration_structure: bool = True):
     """
 
     # Dictionaries to store dataframes per treatment 
-    stat_sum_dfs = {} # statistical summary dataframes
-    all_data_dfs = {} # all individual data points dataframes
+    stat_sum_dfs: dict[str, pd.DataFrame] = {} # statistical summary dataframes
+    all_data_dfs: dict[str, pd.DataFrame] = {} # all individual data points dataframes
 
     # Traverse all the sub-directories
     for day in os.listdir(f"{base_dir}"):
