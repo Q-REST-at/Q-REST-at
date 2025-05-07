@@ -126,7 +126,7 @@ def main() -> None:
 
     # Define valid models and quant types
     valid_models = ["mis", "mixtral", "mixtral22", "llama"]
-    valid_quant = ["none", "awq", "gptq", "gguf"]
+    valid_quant = ["none", "awq", "gptq", "gguf", "aqlm"]
 
     if model in valid_models and quant in valid_quant:
 
