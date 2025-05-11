@@ -142,13 +142,13 @@ class Model:
         )
         model.eval()
 
-	# If loaded a GPTQ model - increase temp buffer size to support longer input sequences
-	is_gptq_model = "gptq" in model_name_or_path.lower()
+	    # If loaded a GPTQ model - increase temp buffer size to support longer input sequences
+        is_gptq_model = "gptq" in model_name_or_path.lower()
 
-	if is_gptq_model:
-    	    SAFE_MAX_IN_LEN = 8192
-	    print(f”Encountered GPTQ model. Setting max input length to {SAFE_MAX_SEQ_LEN} tokens.")
-	    exllama_set_max_input_length(model, max_input_length=SAFE_MAX_IN_LEN)
+        if is_gptq_model:
+            SAFE_MAX_IN_LEN = 8192
+            print(f"Encountered GPTQ model. Setting max input length to {SAFE_MAX_SEQ_LEN} tokens.")
+            exllama_set_max_input_length(model, SAFE_MAX_IN_LEN)
 
         Model._MODELS[model_name_or_path] = m = Model(tokenizer, model, max_new_tokens)
 
