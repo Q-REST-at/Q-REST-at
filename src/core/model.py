@@ -147,7 +147,7 @@ class Model:
 
         if is_gptq_model:
             SAFE_MAX_IN_LEN = 8192
-            print(f"Encountered GPTQ model. Setting max input length to {SAFE_MAX_SEQ_LEN} tokens.")
+            print(f"Encountered GPTQ model. Setting max input length to {SAFE_MAX_IN_LEN} tokens.")
             exllama_set_max_input_length(model, SAFE_MAX_IN_LEN)
 
         Model._MODELS[model_name_or_path] = m = Model(tokenizer, model, max_new_tokens)
