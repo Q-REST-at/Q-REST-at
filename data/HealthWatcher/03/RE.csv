@@ -1,7 +1,0 @@
-ID,Feature,Description
-FR01,Query information,This use case allows a citizen to perform queries. The citizem might query which health units take care of a specific specialty or what are the specialties of a particular health unit.
-FR02,Complaint specification,"This use case allows a citizen to register complaints. Complaints can be:
-- Animal Complaint (Sick animals, Infestations (rodents, scorpions, bats, etc.), Diseases related to mosquitoes (dengue, filariose), Animal maltreatment)
-- Food Complaint (Cases where there is a suspicion infected food being eaten)
-- Special Complaint (Cases related to several reasons, which are not mentioned above (restaurants with hygiene problems, leaking sewerage, suspicious water transporting trucks, etc.))"
-FR15,Update health unit,This use case allows the health unit's data to be updated.
