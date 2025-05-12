@@ -1,0 +1,40 @@
+ID,Feature,Description
+R-1,View Bookmarks,Verify that bookmarks appear at the standard(4) access points
+R-2,Add Bookmark,"Verify that bookmarks are properly added to bookmarks file and appear
+      in all access points."
+R-3,File Bookmark,"Add a new bookmark into a specific location within the bookmarks
+      hierarchy."
+R-4,Create new bookmark,Verify new bookmarks can be created (not added).
+R-5,Delete Bookmark,"Verify that bookmarks are properly deleted from bookmarks file and
+      disappear from all access points."
+R-6,Add/Delete Personal Toolbar bookmark,"Verify that items from the personal toolbar folder are properly
+      added/deleted."
+R-7,Create Folder,Verify new folder creation and nesting of new folders.
+R-8,Surf Bookmark,"Verify that double-clicking on a bookmark causes it to be launched in
+      a browser window"
+R-9,Surf All Bookmarks,Verify that there are no 'dead' default links.
+R-10,Edit item properties,"Verify that changes to an item are saved without loss of item
+      integrity."
+R-11,Delete Folder,Verify folder(s) are correctly deleted.
+R-12,Show/Hide Folder,Verify that disclosure triangles/folder icons are in sync.
+R-13,Create/Delete separator,Verify separators are properly added/deleted.
+R-14,Save State,Verify that changes are saved over restart/crash
+R-15,View item properties,"Verify that view properties works as appropriate for bookmarks,
+      folders, and separators(negative)"
+R-16,Rename bookmark inline - not implemented,"Change the name of a bookmark without use of the bookmark properties
+      dialog."
+R-17,Custom Keywords,surf using user-defined 'custom keyword'.
+R-18,Sort by columns,sort and reverse-sort per column
+R-19,Resize columns,Verify that columns are resizable to show/hide more of entries
+R-20,Show/Hide columns,Show and hide columns.
+R-21,Drag & Drop to reorder columns - not implemented,
+R-22,Drag & Drop to reorder items,
+R-23,Drag & Drop to rearrange item hierarchy,
+R-24,Cut and Undo items,
+R-25,Copy-paste items,
+R-26,Paste items nested inot a folder,
+R-27,Delete multiple bookmarks,Verify that several bookmarks are deleted at one time.
+R-28,Import bookmarks,
+R-29,Export bookmarks,
+R-30,Prevent bad drops,"Verify that it is NOT possible to drop an item onto itself or its
+      immediate parent or child"
