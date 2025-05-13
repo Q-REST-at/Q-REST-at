@@ -27,8 +27,6 @@ import torch
 from typing import Final
 
 from .model import *
-from auto_gptq import exllama_set_max_input_length
-
 
 class ModelLoadingException(Exception):
     def __init__(self, model_name_or_path: str | PathLike, *args):
@@ -146,6 +144,7 @@ class Model:
         is_gptq_model = "gptq" in model_name_or_path.lower()
 
         if is_gptq_model:
+            from auto_gptq import exllama_set_max_input_length
             SAFE_MAX_IN_LEN = 8192
             print(f"Encountered GPTQ model. Setting max input length to {SAFE_MAX_IN_LEN} tokens.")
             exllama_set_max_input_length(model, SAFE_MAX_IN_LEN)
