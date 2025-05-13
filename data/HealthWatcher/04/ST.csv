@@ -1,0 +1,34 @@
+ID,Purpose,Test steps
+T-2,,"1. The citizen selects the kind of complaint.
+2. The system shows the specific screen for each type of complaint.
+3. The system registers the kind, date and time of the complaints.
+4. The citizen provides the complaint specific data.
+5. The system saves the complaint.
+5.1. The information entered by the user is sent to the server.
+5.2. The system parses the data entered by the user.
+5.3. The system creates a new instance of the appropriate complaint type.
+5.4. The system generates a unique identifier and assigns this to the new complaint.
+5.5. The complainers address is parsed and saved.
+5.6. The common complaint information is parsed and stored with the OPENED state.
+5.7. The specific complaint data is then extracted and stored accordingly.
+5.8. The system ensures the data is left in a consistent state.
+6. The unique identifier is returned and presented to the user on their local display."
+T-3,,"1. The employee provides the login and password.
+2. The login and password are sent to the server.
+3. The system retrieves the employee details using the login as a unique identifier.
+4. The system validates the entered password.
+5. The result of the login attempt is presented to the employee on their local display."
+T-8,,"1. The employee chooses the update health unit option.
+2. The system retrieves the list of all health units.
+3. The list of health units is returned to the employee.
+4. The list of health units is formatted and displayed on the employee’s local display.
+5. The employee selects the health unit to be updated.
+6. The unique identifier for the selected health unit is sent to the server.
+7. The system ensures the health unit data is consistent.
+8. The system retrieves the data for the selected health unit.
+9. The data retrieved is returned to the employee.
+10.The health unit data is formatted and presented on the employee’s local display.
+11.The employee alters the necessary data.
+12.The updated information is sent to the server.
+13.The system ensures the health unit data is left in a consistent state. 
+14.The system stores the updated health unit information."

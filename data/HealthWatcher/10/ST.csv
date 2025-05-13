@@ -1,0 +1,27 @@
+ID,Purpose,Test steps
+T-7,,"1. The employee chooses the update employee option.
+2. The employee provides the data to be updated: (Name, New password (with second password field for confirmation), Current password)
+3. The employee confirms the update.
+4. The entered data is sent to the server.
+5. The system verifies the entered data.
+6. The system ensures the employee data is consistent.
+7. The system stores the updated employee information.
+
+Alternative flow
+On step 3, in case the name or the current password is missing/invalid, an error message should be showed."
+T-8,,"1. The employee chooses the update health unit option.
+2. The system retrieves the list of all health units.
+3. The list of health units is returned to the employee.
+4. The list of health units is formatted and displayed on the employee’s local display.
+5. The employee selects the health unit to be updated.
+6. The unique identifier for the selected health unit is sent to the server.
+7. The system ensures the health unit data is consistent.
+8. The system retrieves the data for the selected health unit.
+9. The data retrieved is returned to the employee.
+10.The health unit data is formatted and presented on the employee’s local display.
+11.The employee alters the necessary data.
+12.The updated information is sent to the server.
+13.The system ensures the health unit data is left in a consistent state. 
+14.The system stores the updated health unit information."
+T-9,,"1. The employee chooses the change logged employee option.
+2. The system shows the login screen, and from this point on, the flow will follow the one described in [Login.FR10]."

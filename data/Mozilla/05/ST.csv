@@ -1,0 +1,54 @@
+ID,Purpose,Test steps
+TC-008,,"INITIAL CONDITIONS
+1. You must have a bookmarks file.
+2. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks, which I use. I have also provided the default Mozilla bookmarks file.
+3. You also have the option to use this very large bookmarks file.
+4. You must also customize your sidebar to include a bookmarks panel.
+
+STEPS/DESCRIPTION
+1. Select Bookmarks|Manage Bookmarks.
+2. Select any folder.
+3. Select from the following choices: 
+Select Edit|Delete. Click OK.
+Hit the Backspace key.
+Hit the Delete key
+7. Select 2 or many folders, repeat step (3).
+
+EXPECTED RESULTS
+1. In step (3a) a confirmation dialog should appear, allowing you to cancel the delete operation.
+2. In steps (3b) and (3c), or after clicking ""OK"" in (3a), the folder should be immediately deleted.
+3. In step (4) you should only be presented with one confirmation dialog, clicking ""OK"" should result in all selected folders being deleted.
+4. Folders should immediately disappear (be deleted) from the toplevel bookmarks menu, the bookmarks popup on the personal toolbar, the bookmarks sidepanel, and the manage bookmarks window.
+
+LINKS
+1. netscape-bookmarks.html
+2. mozilla-bookmarks.html
+3. large-bookmarks.html"
+TC-040,,"INITIAL CONDITIONS
+You should have no form data saved
+
+STEPS/DESCRIPTION
+1. Go to a site that needs information, for example mapquest.com<<li> Fill in all the fields for driving directions and click get directions
+2. Click no
+3. From the Tools menu, open the Form Manager sub-menu, and then choose Edit Form Info
+
+EXPECTED RESULTS
+2. A dialog should appear asking if you would like to save the values you filled in
+3. Your data should not be saved to Form Manager
+4. Your saved data should not appear in the Forms Manager"
+TC-132,,"STEPS/DESCRIPTION
+1. Launch the browser
+2. Click here to open a video tests page. Click on the Quicktime movie tests and verify that movies play properly
+3. Click here to visit a page with quicktime movies. Click on all movies one by one to view them.
+4. Click here to view the Apple quicktime trailers page. Click on the images to play the movies. Try the links as well. Try out movies in all sizes (small, medium, large). Move browser scrollbars to see if page paints correctly or not while movie is playing.
+5. Click here to view a page with plugins inside table. Try to play all plugins simultaneously.
+6. In all steps above, press the browser's BACK or FORWARD button and see that the movie unloads/loads properly
+7. Click here. Click on the quicktime logos to watch movies.
+8. Some large quicktime movies on this page.
+9. IFilm website. choose Quicktime to watch movies on this site. To change preferences, click on ""More Options"" in the right pane of the window and select ""Change preferences"" to change player settings.
+10. Green MileVideos.
+11. PlanetOut (Queer Tv) Videos. PlanetOut Archive. Click on ""watch in quicktime for all movies""
+12. Click here. Watch videos in High/Low bandwidth.
+
+EXPECTED RESULTS
+All Quicktime movies should load and play properly."

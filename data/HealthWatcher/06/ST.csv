@@ -1,0 +1,36 @@
+ID,Purpose,Test steps
+T-4,,"1. The employee chooses the option to register (insert/update) in one of the tables.
+2. The employee enters the data. 
+3. The system saves the data."
+T-5,,"1. The employee selects the update complaint option.
+2. The system retrieves the list of all registered complaints.
+2.1. The complaint list is populated with general and complaint type specific data.
+3. The list of complaints is returned to the employee.
+4. The complaints are formatted and presented to the employee on their local display.
+5. The employee selects the complaint they wish to update.
+6. The complaint unique identifier is sent to the server.
+7. The system ensures the complaint data is consistent.
+8. The system retrieves the complaint entry.
+9. The complaint is returned to the employee.
+10.The complaint is formatted and presented to the employee on their local display.
+11.The employee enters the conclusion.
+12.The conclusion is sent to the server.
+13.The complaint status is set to closed; the date the conclusion was entered is set in addition to the employee who dealt with the complaint.
+14.The system ensures the complaint is left in a consistent state. 
+15.The complaint information is updated to store the new information.
+
+Alternative Flow
+2 and 8: An error occurs retrieving the registered complaints. 2. Raise an error message.
+7 and 14: Data consistency cannot be ensured. 1. The complaint changes are rolled-back. 2. Raise an error message.
+3, 6, 9, and 12: A communication error occurs. 1. Raise an error message.
+15: An error occurs storing the updated complaint. 1. The complaint changes are rolled back. 2. Raise an error message."
+T-7,,"1. The employee chooses the update employee option.
+2. The employee provides the data to be updated: (Name, New password (with second password field for confirmation), Current password)
+3. The employee confirms the update.
+4. The entered data is sent to the server.
+5. The system verifies the entered data.
+6. The system ensures the employee data is consistent.
+7. The system stores the updated employee information.
+
+Alternative flow
+On step 3, in case the name or the current password is missing/invalid, an error message should be showed."

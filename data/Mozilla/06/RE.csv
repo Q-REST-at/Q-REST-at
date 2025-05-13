@@ -1,0 +1,4 @@
+ID,Feature,Description
+R-130,Header/footer info shall get printed.,Header/footer info shall get printed.
+R-172,It shall be possible to open local files (both HTML and plain text tested) in a new Navigator window (including the dismiss dialog).,It shall be possible to open local files (both HTML and plain text tested) in a new Navigator window (including the dismiss dialog).
+R-180,"""Classic"" item shall be available under View menu.","""Classic"" item shall be available under View menu."
