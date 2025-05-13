@@ -304,79 +304,6 @@ Step(2) a popup menu should appear listing all of the column headers as
     menuitems. Step(3), they should all be checked by default and unchecking should
     cause that column to disappear from the manage bookmarks window. Step(4), the columns should reappear upon rechecking its name on the
     list. Step(5) the columns should appear just as the did after step(4)."
-T-21,,
-T-22,"Purpose
-This basic testcase is designed to verify that bookmarks, folders and
-  separators can be drag-rearranged within their current container.","Initial Conditions
-You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
-    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
-
-Steps/Description
-Select Bookmarks|Manage Bookmarks. Select an item that is already within a folder Move the cursor (while dragging the item) to several positions (up and
-    down) Drag that item to any other position within the folder. Drop the item. Repeat for all kinds of items(Bookmark, Folder, separator)
-
-Expected Results
-At the moment the drag begins the cursor should change to a drag cursor
-    and a black line marking the drop location should appear. The cursor should change to the international symbol for ""No"" as you
-    pass back over the original location of the item. Upon dropping, the bookmark should appear to immediately move to its
-    new location."
-T-23,"Purpose
-This basic testcase is designed to verify that bookmarks, folders and
-  separators can be drag-rearranged to different containers.","Initial Conditions
-You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which
-    I use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks tab.
-
-Steps/Description
-Open MySidebar to the Bookmarks Tab Select Bookmarks|Manage Bookmarks. Position the window such that both bookmarks trees can be seen (Manage
-    Bookmarks on top) In the Manage Bookmarks window, select an item that is already within a
-    folder Drag that item to any other position within the hierarchy(except its
-    current folder) - in the Bookmarks Sidebar Tab. Drop the item. Repeat for all kinds of items(Bookmark, Folder, separator).
-
-Expected Results
-At the moment the drag begins the cursor should change to a drag cursor
-    and a black line marking the drop location should appear. Upon dropping, the bookmark should appear to immediately move to its
-    new location. The change should be immediately reflected in the 4 standard locations."
-T-24,"Purpose
-This basic testcase is designed to verify that cut, undo and redo
-  function properly.","Initial Conditions
-You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
-    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
-
-Steps/Description
-Select Bookmarks|Manage Bookmarks. Select a bookmark. Select Edit|Cut. Select Edit|Undo. Select Edit|Redo.
-
-Expected Results
-In step(3) the bookmark should disappear. In step(4) the bookmark should reappear. In step(5) the bookmark should disappear again. The bookmark should be disappearing and reappearing from the toplevel
-    bookmarks menu, the bookmarks popup on the personal toolbar, the bookmarks
-    sidepanel and the manage bookmarks window."
-T-25,"Purpose
-This basic testcase is designed to verify that copy and paste function
-  properly.","Initial Conditions
-You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
-    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
-
-Steps/Description
-Select Bookmarks|Manage Bookmarks. Select any item. Select Edit|Copy. Select any item. Select Edit|Paste. Cycle through the 3 possible choices in each of step(2) and step(4).
-    There are nine permutations.
-
-Expected Results
-Every item should be copyable(bookmark, folder, separator). The copied item should be pasted below the selected item in each
-    case. For each paste the newly pasted items should appear in the 4 standard
-    locations."
-T-26,"Purpose
-This basic testcase is designed to verify that pasting into containers
-  works properly.","Initial Conditions
-You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
-    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
-
-Steps/Description
-Select Bookmarks|Manage Bookmarks. Select any item. Select Edit|Copy. Select any closed folder. Select Edit|Paste. Select any open folder (open a folder). Select Edit|Paste Repeat steps(2-7) using the same folder for step(2), step(4) and
-    step(6) ie paste a folder into itself.
-
-Expected Results
-All items should paste below a closed folder. All items except the identical folder should paste into an open
-    folder. Pasting a folder into itself should not be allowed (*Communicator 4.x
-    allows this). Newly pasted items should appear in the 4 standard locations."
 T-27,"Purpose
 This basic testcase is designed to verify that multiple bookmarks can be
   deleted at one time. It also serves to test marquee (multiple) selection in
@@ -392,8 +319,6 @@ Expected Results
 The bookmarks should no longer appear in the Manage Bookmarks window,
     the bookmarks sidebar panel, the top-level ""Bookmarks"" menu and the
     bookmarks popup on the personal toolbar."
-T-28,,
-T-29,,
 T-30,"Purpose
 This basic testcase is designed to verify that bookmarks and folders can't
   be dropped onto themselves, an immediate parent container or any child
@@ -414,7 +339,6 @@ Expected Results
 Nothing should happen! No bookmark or folder should be moved in any of
     these cases. Ideally, one should see the International symbol for ""No""
     cursor."
-T-31,,
 T-32,"Purpose
 Determine whether text copied from a formatted web page (such as within a
   table) has a ""non-annoying"" layout.","Initial Conditions
@@ -827,7 +751,6 @@ Expected Results
 2. The second browser window should also open the image.
 3. The image file should be saved onto the desktop
 5. The image should be copied to the Compose Mail window"
-T-61,,
 T-62,"Purpose
 Verify that you can drag a bookmark from the Bookmarks menu to the
   Personal Toolbar.","Steps/Description
@@ -847,7 +770,6 @@ Minimize a Navigator window and an AIM window so that you can see
 
 Expected Results
 To be written"
-T-64,,
 T-65,"Purpose
 Verify that a form fill popup menu is activated when a field gets accessed
   that has been saved in Form Manager data.","Initial Conditions
@@ -862,7 +784,6 @@ Expected Results
   been captured
 6. A popup list should appear with the choice of selecting what you typed
   in the first time"
-T-66,,
 T-67,"Purpose
 This basic testcase is designed to verify that you can save a form's data
   from the Edit menu","Initial Conditions
@@ -877,7 +798,6 @@ Expected Results
 3. A dialog should appear saying data has been captured and the data from
   this form should be saved to the form manager
 4. Form manager should appear and your saved data should be listed"
-T-68,,
 T-69,"Purpose
 This basic testcase is designed to verify that you can save a form's data
   from the edit menu","Initial Conditions
@@ -1078,14 +998,6 @@ Expected Results
 7. Your data values should not have been changed
 8. Your previously deleted information should still be in Form
   Manager"
-T-80,,
-T-81,,
-T-82,,
-T-83,,
-T-84,,
-T-85,,
-T-86,,
-T-87,,
 T-88,"Purpose
 Verify that there is Troubleshooting Help about the problem ""if you
   can't sign on""","Initial Conditions
@@ -1102,7 +1014,6 @@ Expected Results
 4. The T should expand and you should see Troubleshooting listed
 5. You should be taken to Help information regarding sign on
   issues"
-T-89,,
 T-90,"Purpose
 Verify that there is Troubleshooting Help about the problem ""if you
   can't see anyone in your buddy list window.""","Initial Conditions
@@ -1119,10 +1030,6 @@ Expected Results
 4. The T should expand and you should see Troubleshooting listed
 5. You should be taken to Help information regarding Buddy List Window
   issues"
-T-91,,
-T-92,,
-T-93,,
-T-94,,
 T-95,"Purpose
 This basic testcase is designed to verify that when clicking the
   Forward and Back buttons in help, you are taken to the correct page","Initial Conditions
@@ -1619,7 +1526,6 @@ Expected Results
 If you've observed the initial conditions, the History window should be
     non-empty upon first observation. After pressing the button, the history window should be empty of
     individual history items."
-T-127,,
 T-128,"Purpose
 This testcase is designed to verify that history items appear grouped in
   the new ""by day"" format or the ""old skool"" flat format in the global history
@@ -1682,8 +1588,6 @@ Step(2) a popup menu should appear listing all of the column headers as
     menuitems. Step(3), they should all be checked by default and unchecking should
     cause that column to disappear from the manage bookmarks window. Step(4), the columns should reappear upon rechecking its name on the
     list. Step(5) the columns should appear just as the did after step(4)."
-T-132,,
-T-133,,
 T-134,"Purpose
 This basic testcase is designed to verify that links are properly added to
   the session history and displayed in the browser's Go menu.","Initial Conditions
@@ -1737,7 +1641,6 @@ Expected Results
 Each selection should take you to the appropriate page in your session
     history. After step(4), the Go menu should only contain ""Netcenter"" and the
     title of the page you just surfed to by clicking a link."
-T-137,,
 T-138,"Purpose
 This basic testcase is designed to verify that a new, empty session
   history file is created when appropriate.","Initial Conditions
@@ -1764,7 +1667,6 @@ You'll see the view scroll as you follow each link, the url should be
     updated with the #<anchorname> appended to the url. Step(4) should load the pages in this order; #steps, #purpose, main
     page, #pupose, #steps, #links. The Global History window should list each named anchor as a separate
     entry."
-T-140,,
 T-141,"Purpose
 Determine that large Images can be resized to the browser window and
   will not cause you to scroll in order to view entire image.","Initial Conditions
@@ -1776,7 +1678,6 @@ Open each of the files listed below Right click the image and select resize to w
 
 Expected Results
 Image should resize to the browser window size."
-T-142,,
 T-143,"Purpose
 Determine that it is possible to resize an image to it's original size
   after it has been resized to window size.","Initial Conditions
@@ -1812,7 +1713,6 @@ Open one of the files listed below Right click the image and select save image B
 
 Expected Results
 Image should be saved to local disk."
-T-146,,
 T-147,"Purpose
 Determine that you can right click an image and set as wallpaper.","Initial Conditions
 Have mozilla started up
@@ -1925,7 +1825,6 @@ Launch Netscape 6 View the test page (linked below) Leave the browser operating 
 Expected Results
 The images on the page should continue to auto-refresh every 45
   seconds."
-T-155,,
 T-156,"Purpose
 To determine whether multiple, differing animated images on the same
   page are properly displayed.","Initial Conditions
@@ -2036,8 +1935,6 @@ Test 1 . Observe the clock display the
     stop methods are called in that order in java console. Test 3 . Hit BACK and
     FORWARD button on this page and observe that the init, start and
     stop methods are called in that order in java console."
-T-164,,
-T-165,,
 T-166,"Purpose
 Verify that when you save a username and password for a particular
   website, you can view this information from the preferences panel.","Initial Conditions
@@ -2102,8 +1999,6 @@ Expected Results
 6. The password panel should be displayed on the right hand side
 7. This should disable the password manager
 8. The username and password information should not be prefilled"
-T-170,,
-T-171,,
 T-172,"Purpose
 Verify that when you have saved multiple username's and password's for a
   website, you are later presented with those same choices","Initial Conditions
@@ -2493,7 +2388,6 @@ Launch Apprunner Click here to view a page with various
 
 Expected Results
 After Step 4, the page should be printed as seen on screen"
-T-190,,
 T-191,"Purpose
 Determine that Seamonkey prints pages with alignments properly","Initial Conditions
 None
@@ -2972,8 +2866,6 @@ Expected Results
 A new bookmark folder titled ""Search:(your query string here)"". Should
     appear in the 4 Standard locations . The ""Bookmark this Search"" button should not have become active until
     search results were generated."
-T-226,,
-T-227,,
 T-228,"Purpose
 Determine whether drag-selection of text works, both from dead space, and
   from within text.","Initial Conditions
@@ -3487,7 +3379,6 @@ UI test Steps/Description In the textfield enter the URL http://www.mozilla.org/
 Dismissal test Steps/Description In the textfield enter the URL http://www.mozilla.org/quality/browser/front-end/testcases/xpapps-gui/open-URL/files/boring.html . Select New Composer window from the
           droplist, if it isn't already displayed there. Click the Cancel button (or hit Esc ). Expected Results The dialog should go away and the page in the current browser
       window remain unchanged ."
-T-265,,
 T-266,"Purpose
 Test opening a nonexistent (bogus) web location (URL).","Initial Conditions
 The Open Web Location dialog should already be opened in the
@@ -3592,32 +3483,6 @@ After step #3, the full path and filename should appear in the
         exist on this server. The link you followed is either outdated,
         inaccurate, or the server has been instructed not to let you have
         it."
-T-271,,
-T-272,,
-T-273,,
-T-274,,
-T-275,,
-T-276,,
-T-277,,
-T-278,,
-T-279,,
-T-280,,
-T-281,,
-T-282,,
-T-283,,
-T-284,,
-T-285,,
-T-286,,
-T-287,,
-T-288,,
-T-289,,
-T-290,,
-T-291,,
-T-292,,
-T-293,,
-T-294,,
-T-295,,
-T-296,,
 T-297,"Purpose
 To verify both classic and modern skins exist under themes dialog.","Description
 From the main menu bar, select Edit > Preferences >
@@ -3857,8 +3722,6 @@ Each click of the triangle widget should alternately show and hide
     the corresponding toolbar. For steps(2 & 3), expanding the toolbars in the reverse order
     from that in which they were collapsed should not affect their
     positioning upon expansion."
-T-321,,
-T-322,,
 T-323,"Purpose
 This basic testcase is designed to verify that folders can be added to
   the personal toolbar and their contents will still function as links.","Initial Conditions
@@ -3899,5 +3762,3 @@ While the gif is animating the ""Forward"" and ""Reload"" buttons
     When the gif stops, the ""Reload"" button should be active and the ""Stop""
     button should be inactive. You should go back to the page you were at before. The ""Forward""
     button should become active. The ""Forward"" button should become inactive again. The gif should begin to animate again. The gif should stop mid-animation"
-T-325,,
-T-326,,

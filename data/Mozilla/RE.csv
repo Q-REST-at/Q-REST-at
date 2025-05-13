@@ -27,15 +27,7 @@ R-17,Custom Keywords,surf using user-defined 'custom keyword'.
 R-18,Sort by columns,sort and reverse-sort per column
 R-19,Resize columns,Verify that columns are resizable to show/hide more of entries
 R-20,Show/Hide columns,Show and hide columns.
-R-21,Drag & Drop to reorder columns - not implemented,
-R-22,Drag & Drop to reorder items,
-R-23,Drag & Drop to rearrange item hierarchy,
-R-24,Cut and Undo items,
-R-25,Copy-paste items,
-R-26,Paste items nested inot a folder,
 R-27,Delete multiple bookmarks,Verify that several bookmarks are deleted at one time.
-R-28,Import bookmarks,
-R-29,Export bookmarks,
 R-30,Prevent bad drops,"Verify that it is NOT possible to drop an item onto itself or its
       immediate parent or child"
 R-31,Styled Text,"Currently, it is my understanding that there will be no new features
@@ -228,7 +220,6 @@ R-123,Load recorded url,"Verify that double-clicking on a history link causes it
 R-124,Delete one entry,Delete a History entry
 R-125,Delete multiple entries,Delete multiple History entries
 R-126,Erase all,Clear all of history
-R-127,,
 R-128,Change grouping,Change the History View to Group by Day|Site|None
 R-129,Sort by columns,sort and reverse-sort per column
 R-130,Resize columns,Verify that columns are resizable to show/hide more of entries
@@ -396,7 +387,6 @@ R-223,basic sidebar search,"Verify that a basic search from within the Search ta
       executed"
 R-224,basic sidebar search,Verify that a user can change the search engine
 R-225,Bookmark Search,Verify that a search query/results can be bookmarked
-R-226,Multiple engine search,
 R-227,Drag-selection,"Currently, it is my understanding that there will be no new
         features in this area (can monitor bug list)"
 R-228,Drag-selection,"Determine whether drag-selection of text works, both from dead
