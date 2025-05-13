@@ -156,7 +156,7 @@ def main() -> None:
     # Dynamically construct data path and retrieve a corresponding env variable
     # *************************************************************************
 
-    valid_data = ["mix", "mix-small", "bths", "enco", "snake"]
+    valid_data = ["mix", "mix-small", "bths", "enco", "snake", "mozilla", "hw"] # hw stands for HealthWatcher dataset
 
     if data in valid_data:
         d_up = data.upper()

@@ -1,185 +1,548 @@
 ID,Feature,Description
-R-001,A new bookmark shall be added into a specific location within the bookmarks hierarchy.,A new bookmark shall be added into a specific location within the bookmarks hierarchy.
-R-002,Bookmarks shall be properly deleted from bookmarks file and no longer be displayed  from all access points.,Bookmarks shall be properly deleted from bookmarks file and no longer be displayed  from all access points.
-R-003,Bookmarks shall be added and deleted from the personal toolbar.,Bookmarks shall be added and deleted from the personal toolbar.
-R-004,New bookmark folder shall be inserted into the bookmarks hierarchy.,New bookmark folder shall be inserted into the bookmarks hierarchy.
-R-005,Double-clicking on a bookmark shall cause it to be launched in a browser window.,Double-clicking on a bookmark shall cause it to be launched in a browser window.
-R-006,Bookmarks within the default bookmarks file that is packaged with the browser shall be valid links.,Bookmarks within the default bookmarks file that is packaged with the browser shall be valid links.
-R-007,Changes to a bookmark item shall be saved without loss of item integrity.,Changes to a bookmark item shall be saved without loss of item integrity.
-R-008,Bookmarks folder shall be deleted.,Bookmarks folder shall be deleted.
-R-009,Bookmarks separators shall be added and deleted.,Bookmarks separators shall be added and deleted.
-R-010,Bookmarks changes shall be saved over restart/crash.,Bookmarks changes shall be saved over restart/crash.
-R-011,"View properties shall execute for bookmarks, folders, and separators(negative).","View properties shall execute for bookmarks, folders, and separators(negative)."
-R-012,"Bookmarks shall be renamed ""inline"", i.e. without having to use the bookmarks properties dialog.","Bookmarks shall be renamed ""inline"", i.e. without having to use the bookmarks properties dialog."
-R-013,Bookmarks shall be found using user-defined custom keyword.,Bookmarks shall be found using user-defined custom keyword.
-R-014,Bookmarks shall be sorted and reverse-sorted per column.,Bookmarks shall be sorted and reverse-sorted per column.
-R-015,Bookmark columns shall be resizable to show/hide more of entries.,Bookmark columns shall be resizable to show/hide more of entries.
-R-016,Bookmark columns shall be showed and hidden.,Bookmark columns shall be showed and hidden.
-R-017,Several bookmarks shall be deleted at one time.,Several bookmarks shall be deleted at one time.
-R-018,It shall be not possible to drop a bookmark item onto itself or its immediate parent or child.,It shall be not possible to drop a bookmark item onto itself or its immediate parent or child.
-R-019,Non-copyable page content such as UI widgets shall be correctly omitted from the Clipboard content.,Non-copyable page content such as UI widgets shall be correctly omitted from the Clipboard content.
-R-020,"Text shall be cut, copied and pasted from text fields within a dialog box.","Text shall be cut, copied and pasted from text fields within a dialog box."
-R-021,Dragging a text or image link from one browser window to another shall open the link in the target window.,Dragging a text or image link from one browser window to another shall open the link in the target window.
-R-022,Dragging a link from the browser window onto the desktop shall create a shortcut.,Dragging a link from the browser window onto the desktop shall create a shortcut.
-R-023,Dragging an image across browser windows shall open the image in the target window.,Dragging an image across browser windows shall open the image in the target window.
-R-024,Dragging an image onto the desktop shall save the image.,Dragging an image onto the desktop shall save the image.
-R-025,"Dragging a link or image to a frame-set page properly shall replace the entire window contents, and that dragging from within a frame-set page shall replace the target frame.","Dragging a link or image to a frame-set page properly shall replace the entire window contents, and that dragging from within a frame-set page shall replace the target frame."
-R-026,Images and rich text shall be dragged from a browser window to a editor window.,Images and rich text shall be dragged from a browser window to a editor window.
-R-027,"Text, links, and images shall be dragged to a non-modal dialog.","Text, links, and images shall be dragged to a non-modal dialog."
-R-028,Dragging a directory to the browser window shall display the folder contents.,Dragging a directory to the browser window shall display the folder contents.
-R-029,Dragging an Internet shortcut to the browser window shall open the URL.,Dragging an Internet shortcut to the browser window shall open the URL.
-R-030,Dragging a text file to the browser window shall display the document contents.,Dragging a text file to the browser window shall display the document contents.
-R-031,Dragging a supported image file to the browser window shall display the image.,Dragging a supported image file to the browser window shall display the image.
-R-032,"Files, folders, or shortcuts dragged from a Find File window shall open in the browser window.","Files, folders, or shortcuts dragged from a Find File window shall open in the browser window."
-R-033,Files dragged onto the application icon shall be displayed.,Files dragged onto the application icon shall be displayed.
-R-034,Dragging the URL proxy icon to a browser window shall open that URL in the target window.,Dragging the URL proxy icon to a browser window shall open that URL in the target window.
-R-035,Dragging the URL proxy icon from the location bar onto the desktop shall create a shortcut.,Dragging the URL proxy icon from the location bar onto the desktop shall create a shortcut.
-R-036,The application and OS shall handle items dragged from the Bookmark Manager.,The application and OS shall handle items dragged from the Bookmark Manager.
-R-037,The Bookmark Manager shall handle items dragged onto it.,The Bookmark Manager shall handle items dragged onto it.
-R-038,A form fill popup menu shall be activated when a field gets accessed that has been saved in form manager data.,A form fill popup menu shall be activated when a field gets accessed that has been saved in form manager data.
-R-039,A form's data shall be saved from the edit menu.,A form's data shall be saved from the edit menu.
-R-040,The user shall be able to discard saving a form's data from the dialog box.,The user shall be able to discard saving a form's data from the dialog box.
-R-041,The user shall be able to choose never saving a form's data from the dialog box.,The user shall be able to choose never saving a form's data from the dialog box.
-R-042,"A form's data shall be saved from the popup dialog box, never for this site and never asked again upon returning to the site.","A form's data shall be saved from the popup dialog box, never for this site and never asked again upon returning to the site."
-R-043,"If a new value for a field in Form Manager is added, it shall later be offered as an option when prefilling a form using this field.","If a new value for a field in Form Manager is added, it shall later be offered as an option when prefilling a form using this field."
-R-044,"If data is deleted in the Form Manager, that this data shall not be shown as an option when prefilling a form.","If data is deleted in the Form Manager, that this data shall not be shown as an option when prefilling a form."
-R-045,"If data is deleted in the Form Manager then cancel is clicked, the data shall not have been deleted.","If data is deleted in the Form Manager then cancel is clicked, the data shall not have been deleted."
-R-046,"There shall be Troubleshooting Help about the problem ""if you can't sign on"".","There shall be Troubleshooting Help about the problem ""if you can't sign on""."
-R-047,"There shall be Troubleshooting Help about the problem ""if you can't see anyone in your buddy list window"".","There shall be Troubleshooting Help about the problem ""if you can't see anyone in your buddy list window""."
-R-048,The forward/back buttons shall navigate to the correct page in Help menu.,The forward/back buttons shall navigate to the correct page in Help menu.
-R-049,"Minimize, maximize and close buttons of the toolbar shall be invoke in Help menu.","Minimize, maximize and close buttons of the toolbar shall be invoke in Help menu."
-R-050,Page up and page down keys shall be invoked in Help menu.,Page up and page down keys shall be invoked in Help menu.
-R-051,"The toolbar shall be hidden in Help, as well as reopen it.","The toolbar shall be hidden in Help, as well as reopen it."
-R-052,Pages shall be moved accordingly with the up and down arrow keys in Help menu.,Pages shall be moved accordingly with the up and down arrow keys in Help menu.
-R-053,Files shall not be dragged into the Help window.,Files shall not be dragged into the Help window.
-R-054,Clicking non clickable regions in help shall trigger no behavior.,Clicking non clickable regions in help shall trigger no behavior.
-R-055,Help Contents shall be displayed and printed correctly.,Help Contents shall be displayed and printed correctly.
-R-056,Browsing the web help content shall be displayed and printed.,Browsing the web help content shall be displayed and printed.
-R-057,Mail and News help content shall be displayed and printed correctly.,Mail and News help content shall be displayed and printed correctly.
-R-058,Instant Messenger help content shall be displayed and printed correctly.,Instant Messenger help content shall be displayed and printed correctly.
-R-059,Customizing Netscape 6 help content shall be displayed and printed correctly.,Customizing Netscape 6 help content shall be displayed and printed correctly.
-R-060,Understanding Privacy help content shall be displayed and printed correctly.,Understanding Privacy help content shall be displayed and printed correctly.
-R-061,Creating web pages help content shall be displayed and printed correctly.,Creating web pages help content shall be displayed and printed correctly.
-R-062,What's new in Netscape 6 help content shall be displayed and printed correctly.,What's new in Netscape 6 help content shall be displayed and printed correctly.
-R-063,Security and Privacy help content shall be displayed correctly.,Security and Privacy help content shall be displayed correctly.
-R-064,Same time messaging help content shall be displayed correctly.,Same time messaging help content shall be displayed correctly.
-R-065,Streamlined Interface help content shall be displayed correctly.,Streamlined Interface help content shall be displayed correctly.
-R-066,The Best Standards Support help content shall be displayed correctly.,The Best Standards Support help content shall be displayed correctly.
-R-067,The New to the net tutorial help content shall be displayed correctly.,The New to the net tutorial help content shall be displayed correctly.
-R-068,The Netscape Technical Support help content shall be displayed correctly.,The Netscape Technical Support help content shall be displayed correctly.
-R-069,International Users page shall be displayed correctly.,International Users page shall be displayed correctly.
-R-070,The Feedback Center page shall be displayed correctly.,The Feedback Center page shall be displayed correctly.
-R-071,The About Netscape page shall be displayed correctly.,The About Netscape page shall be displayed correctly.
-R-072,All the selections in the Help drop down menu shall be opened using short cut buttons.,All the selections in the Help drop down menu shall be opened using short cut buttons.
-R-073,Visited links shall be recorded to the Global History.,Visited links shall be recorded to the Global History.
-R-074,The correct link shall be recorded to the Global History after a server redirect.,The correct link shall be recorded to the Global History after a server redirect.
-R-075,Clicking on a history link shall cause it to be launched in a browser window.,Clicking on a history link shall cause it to be launched in a browser window.
-R-076,A History entry shall be deleted.,A History entry shall be deleted.
-R-077,Multiple History entries shall be deleted and no longer be displayed.,Multiple History entries shall be deleted and no longer be displayed.
-R-078,Global History shall be cleared.,Global History shall be cleared.
-R-079,History items shall be grouped by Day / Site / None.,History items shall be grouped by Day / Site / None.
-R-080,History shall be sorted and reverse-sorted per column.,History shall be sorted and reverse-sorted per column.
-R-081,History columns shall be resizable to show/hide more of entries.,History columns shall be resizable to show/hide more of entries.
-R-082,History colmns shall be shown and hidden.,History colmns shall be shown and hidden.
-R-083,Recently visited sites shall be re-visited via Back and Forward button dropdown menu.,Recently visited sites shall be re-visited via Back and Forward button dropdown menu.
-R-084,"A new, empty session history file shall be created for a new browser window or a restart.","A new, empty session history file shall be created for a new browser window or a restart."
-R-085,Large Images shall be resized to the browser window.,Large Images shall be resized to the browser window.
-R-086,It shall be possible to resize an image to it's original size after it has been resized to window size.,It shall be possible to resize an image to it's original size after it has been resized to window size.
-R-087,Saving an image to local drive shall be available through right clicking.,Saving an image to local drive shall be available through right clicking.
-R-088,An image shall be set as wallpaper.,An image shall be set as wallpaper.
-R-089,An image shall be printed without changing the currently loaded page.,An image shall be printed without changing the currently loaded page.
-R-090,Images shall be properly redithered upon system bit-depth changes.,Images shall be properly redithered upon system bit-depth changes.
-R-091,Reloaded web pages shall properly display the images modified since the last load.,Reloaded web pages shall properly display the images modified since the last load.
-R-092,Images shall load directly into the web browser from a networked server.,Images shall load directly into the web browser from a networked server.
-R-093,Images shall load directly into the web browser from a local hard drive.,Images shall load directly into the web browser from a local hard drive.
-R-094,Animated GIFs shall continue to animate after an extended period of 24 hours or greater.,Animated GIFs shall continue to animate after an extended period of 24 hours or greater.
-R-095,Multiple differing animated images on the same page shall be properly displayed.,Multiple differing animated images on the same page shall be properly displayed.
-R-096,GIF 87 images shall be properly displayed across different bit depths.,GIF 87 images shall be properly displayed across different bit depths.
-R-097,GIF 89a images shall be properly displayed across different bit depths.,GIF 89a images shall be properly displayed across different bit depths.
-R-098,"The web browser shall gracefully deal with unusual, corrupted, or invalid GIF images.","The web browser shall gracefully deal with unusual, corrupted, or invalid GIF images."
-R-099,X Bitmap (XBM) format images shall be displayed.,X Bitmap (XBM) format images shall be displayed.
-R-100,Applets shall be run within <applet> and <object> tags.,Applets shall be run within <applet> and <object> tags.
-R-101,Appplets shall have lifecycle.,Appplets shall have lifecycle.
-R-102,The browser shall discard the password after Never For This Site is selected in the save password dialog box.,The browser shall discard the password after Never For This Site is selected in the save password dialog box.
-R-103,"When multiple usernames and passwords for a website are saved, those same choices shall later be available to be presented.","When multiple usernames and passwords for a website are saved, those same choices shall later be available to be presented."
-R-104,"When a username and password for a website is saved and later the password is changed, that password manager shall pick up the new password.","When a username and password for a website is saved and later the password is changed, that password manager shall pick up the new password."
-R-105,"When password manager from the preferences panel is disabled, the browser shall no longer ask to save passwords and no longer get prefilled info on sites.","When password manager from the preferences panel is disabled, the browser shall no longer ask to save passwords and no longer get prefilled info on sites."
-R-106,"When a username and password in password manager is saved, this information shall be viewed in the password manager through preferences.","When a username and password in password manager is saved, this information shall be viewed in the password manager through preferences."
-R-107,It shall be possible to remove a username and password for a given site and it shall no longer autofill on that site nor shall it be listed in password manager.,It shall be possible to remove a username and password for a given site and it shall no longer autofill on that site nor shall it be listed in password manager.
-R-108,It shall be possible to remove all username and password information and it shall no longer autofill nor shall anything be listed in password manager.,It shall be possible to remove all username and password information and it shall no longer autofill nor shall anything be listed in password manager.
-R-109,A page with frames shall print properly on Seamonkey.,A page with frames shall print properly on Seamonkey.
-R-110,A page with various formats shall print properly on Seamonkey.,A page with various formats shall print properly on Seamonkey.
-R-111,A page with aligned text shall print as seen on screen  on Seamonkey.,A page with aligned text shall print as seen on screen  on Seamonkey.
-R-112,A page with indentations shall print as seen on screen  on Seamonkey.,A page with indentations shall print as seen on screen  on Seamonkey.
-R-113,A page with portrait and Landscape settings shall print properly on Seamonkey.,A page with portrait and Landscape settings shall print properly on Seamonkey.
-R-114,HTML widgets shall print properly on Seamonkey.,HTML widgets shall print properly on Seamonkey.
-R-115,Page source shall print as seen on screen of Seamonkey.,Page source shall print as seen on screen of Seamonkey.
-R-116,CSS pages shall print properly on Seamonkey.,CSS pages shall print properly on Seamonkey.
-R-117,Mozillazine Poll results page shall print properly on Seamonkey.,Mozillazine Poll results page shall print properly on Seamonkey.
-R-118,Large page shall print properly on Seamonkey.,Large page shall print properly on Seamonkey.
-R-119,XML pages shall print properly on Seamonkey.,XML pages shall print properly on Seamonkey.
-R-120,Top web sites shall print properly on Seamonkey.,Top web sites shall print properly on Seamonkey.
-R-121,HTML 4.0 pages shall print properly on Seamonkey.,HTML 4.0 pages shall print properly on Seamonkey.
-R-122,Images shall print correctly on Seamonkey.,Images shall print correctly on Seamonkey.
-R-123,Lists shall print correctly on Seamonkey.,Lists shall print correctly on Seamonkey.
-R-124,Tables shal print correctly on Seamonkey.,Tables shal print correctly on Seamonkey.
-R-125,Character styles shall print correctly on Seamonkey.,Character styles shall print correctly on Seamonkey.
-R-126,Paragraph styles shall print correctly on Seamonkey.,Paragraph styles shall print correctly on Seamonkey.
-R-127,Print Preview shall function correctly on Seamonkey.,Print Preview shall function correctly on Seamonkey.
-R-128,Page Setup dialog shall be displayed correctly.,Page Setup dialog shall be displayed correctly.
-R-129,Off-line printing shall function correctly.,Off-line printing shall function correctly.
-R-130,Header/footer info shall get printed.,Header/footer info shall get printed.
-R-131,Files shall be printed with a range of pages numbers.,Files shall be printed with a range of pages numbers.
-R-132,Quicktime movies shall play properly.,Quicktime movies shall play properly.
-R-133,Files with various sound formats shall be played.,Files with various sound formats shall be played.
-R-134,Shockwave movies shall be played.,Shockwave movies shall be played.
-R-135,Clicking search button shall search the text entered in URLBar.,Clicking search button shall search the text entered in URLBar.
-R-136,Starting a URL bar search shall display the search results in the sidebar search tab.,Starting a URL bar search shall display the search results in the sidebar search tab.
-R-137,It shall be possible to start a search from within the sidebar search tab.,It shall be possible to start a search from within the sidebar search tab.
-R-138,A user shall be able to change the search engine.,A user shall be able to change the search engine.
-R-139,A conducted search shall be bookmarked.,A conducted search shall be bookmarked.
-R-140,"Drag-selection of text shall be functional, both from dead space, and from within text.","Drag-selection of text shall be functional, both from dead space, and from within text."
-R-141,The double-click gesture on text shall highlight it.,The double-click gesture on text shall highlight it.
-R-142,Text shall be selected via shift-select gestures.,Text shall be selected via shift-select gestures.
-R-143,Text shall be selected via drag-scrolling gestures.,Text shall be selected via drag-scrolling gestures.
-R-144,Default panels and their contents shall be loaded in Sidebar.,Default panels and their contents shall be loaded in Sidebar.
-R-145,Maximum width of Sidebar shall be be approximately one third of the browser window size.,Maximum width of Sidebar shall be be approximately one third of the browser window size.
-R-146,Non-default width of Sidebar shall retain after new window is opened or browser is restarted.,Non-default width of Sidebar shall retain after new window is opened or browser is restarted.
-R-147,Mouse cursors shall display the right icon when mousing over.,Mouse cursors shall display the right icon when mousing over.
-R-148,Panels shall appear highlighted when mouse is moved over them.,Panels shall appear highlighted when mouse is moved over them.
-R-149,Sidebar shall be opened / closed with grippy.,Sidebar shall be opened / closed with grippy.
-R-150,A panel shall be added to the sidebar.,A panel shall be added to the sidebar.
-R-151,An already added panel shall not be added to the sidebar.,An already added panel shall not be added to the sidebar.
-R-152,A panel shall be deleted from the sidebar.,A panel shall be deleted from the sidebar.
-R-153,All panels shall be deleted from the sidebar.,All panels shall be deleted from the sidebar.
-R-154,All remote panels shall be listed.,All remote panels shall be listed.
-R-155,All local panels shall be listed.,All local panels shall be listed.
-R-156,The panels shall be previewed before addition.,The panels shall be previewed before addition.
-R-157,The panels shall be customized on the sidebar.,The panels shall be customized on the sidebar.
-R-158,The panels shall be reordered on the sidebar.,The panels shall be reordered on the sidebar.
-R-159,Nothing shall change after adding / reordering panels on the sidebar when cancelled.,Nothing shall change after adding / reordering panels on the sidebar when cancelled.
-R-160,The changes in order and panel list shall be reflected when saved.,The changes in order and panel list shall be reflected when saved.
-R-161,The links in What's Related panels shall be opened in the browser.,The links in What's Related panels shall be opened in the browser.
-R-162,The links in Bookmarks panel shall be opened in the browser.,The links in Bookmarks panel shall be opened in the browser.
-R-163,The panel title shall show up in Add menu when panel is added.,The panel title shall show up in Add menu when panel is added.
-R-164,Unselecting panels from Add menu shall remove panels from the Sidebar.,Unselecting panels from Add menu shall remove panels from the Sidebar.
-R-165,A panel shall be added to the sidebar using javascript.,A panel shall be added to the sidebar using javascript.
-R-166,Web location dialog shall be accessed from the menubar and keyboard.,Web location dialog shall be accessed from the menubar and keyboard.
-R-167,It shall be possible to open a web location (URL) in the current Navigator window (including the dismiss dialog).,It shall be possible to open a web location (URL) in the current Navigator window (including the dismiss dialog).
-R-168,It shall be possible to open a web location (URL) in a new Navigator window (including the dismiss dialog).,It shall be possible to open a web location (URL) in a new Navigator window (including the dismiss dialog).
-R-169,It shall be possible to open web location in a Composer window (including the dismiss dialog).,It shall be possible to open web location in a Composer window (including the dismiss dialog).
-R-170,Error shall be displayed while trying to open a nonexistent (bogus) web location.,Error shall be displayed while trying to open a nonexistent (bogus) web location.
-R-171,It shall be possible to open local files (both HTML and plain text tested) in the current Navigator window (including the dismiss dialog).,It shall be possible to open local files (both HTML and plain text tested) in the current Navigator window (including the dismiss dialog).
-R-172,It shall be possible to open local files (both HTML and plain text tested) in a new Navigator window (including the dismiss dialog).,It shall be possible to open local files (both HTML and plain text tested) in a new Navigator window (including the dismiss dialog).
-R-173,ıt shall be possible to open local files (both HTML and plain text tested) in a Composer window (including the dismiss dialog).,ıt shall be possible to open local files (both HTML and plain text tested) in a Composer window (including the dismiss dialog).
-R-174,Error shall be displayed while trying to open a nonexistent (bogus) local file.,Error shall be displayed while trying to open a nonexistent (bogus) local file.
-R-175,Both Classic and Modern themes shall exist under the themes preferences.,Both Classic and Modern themes shall exist under the themes preferences.
-R-176,Classic theme shall be displayed as in the given image.,Classic theme shall be displayed as in the given image.
-R-177,Modern theme shall be displayed as in the given image.,Modern theme shall be displayed as in the given image.
-R-178,"""Theme Preferences"" item shall be available under View menu.","""Theme Preferences"" item shall be available under View menu."
-R-179,"""Get New Themes"" item shall be available under View menu.","""Get New Themes"" item shall be available under View menu."
-R-180,"""Classic"" item shall be available under View menu.","""Classic"" item shall be available under View menu."
-R-181,"""Modern"" item shall be available under View menu.","""Modern"" item shall be available under View menu."
-R-182,Browser toolbars shall be collapsed and expanded.,Browser toolbars shall be collapsed and expanded.
-R-183,Folders shall be added to the personal toolbar and their contents shall still function as links.,Folders shall be added to the personal toolbar and their contents shall still function as links.
-R-184,Browser navigation toolbar buttons shall execute appropriately.,Browser navigation toolbar buttons shall execute appropriately.
+R-1,View Bookmarks,Verify that bookmarks appear at the standard(4) access points
+R-2,Add Bookmark,"Verify that bookmarks are properly added to bookmarks file and appear
+      in all access points."
+R-3,File Bookmark,"Add a new bookmark into a specific location within the bookmarks
+      hierarchy."
+R-4,Create new bookmark,Verify new bookmarks can be created (not added).
+R-5,Delete Bookmark,"Verify that bookmarks are properly deleted from bookmarks file and
+      disappear from all access points."
+R-6,Add/Delete Personal Toolbar bookmark,"Verify that items from the personal toolbar folder are properly
+      added/deleted."
+R-7,Create Folder,Verify new folder creation and nesting of new folders.
+R-8,Surf Bookmark,"Verify that double-clicking on a bookmark causes it to be launched in
+      a browser window"
+R-9,Surf All Bookmarks,Verify that there are no 'dead' default links.
+R-10,Edit item properties,"Verify that changes to an item are saved without loss of item
+      integrity."
+R-11,Delete Folder,Verify folder(s) are correctly deleted.
+R-12,Show/Hide Folder,Verify that disclosure triangles/folder icons are in sync.
+R-13,Create/Delete separator,Verify separators are properly added/deleted.
+R-14,Save State,Verify that changes are saved over restart/crash
+R-15,View item properties,"Verify that view properties works as appropriate for bookmarks,
+      folders, and separators(negative)"
+R-16,Rename bookmark inline - not implemented,"Change the name of a bookmark without use of the bookmark properties
+      dialog."
+R-17,Custom Keywords,surf using user-defined 'custom keyword'.
+R-18,Sort by columns,sort and reverse-sort per column
+R-19,Resize columns,Verify that columns are resizable to show/hide more of entries
+R-20,Show/Hide columns,Show and hide columns.
+R-21,Drag & Drop to reorder columns - not implemented,
+R-22,Drag & Drop to reorder items,
+R-23,Drag & Drop to rearrange item hierarchy,
+R-24,Cut and Undo items,
+R-25,Copy-paste items,
+R-26,Paste items nested inot a folder,
+R-27,Delete multiple bookmarks,Verify that several bookmarks are deleted at one time.
+R-28,Import bookmarks,
+R-29,Export bookmarks,
+R-30,Prevent bad drops,"Verify that it is NOT possible to drop an item onto itself or its
+      immediate parent or child"
+R-31,Styled Text,"Currently, it is my understanding that there will be no new features
+      in this area"
+R-32,Styled Text,"Determine whether text copied from a formatted web page (such as
+      within a table) has a ""non-annoying"" layout."
+R-33,Images,"Determine whether native and non-native images are correctly copied
+      to the system Clipboard."
+R-34,Negative,"Determine whether non-copyable page content such as UI widgets are
+      correctly omitted from the Clipboard content."
+R-35,Overflow,"Determine whether extremely large text blocks can be copied from web
+      pages."
+R-36,Overflow,"Determine whether extremely large images can be copied from web
+      pages."
+R-37,Stress,"Determine whether complicated rich text (such as massively nested
+      tables) can be copied."
+R-38,General,"Determine whether text can be copied and pasted from text fields
+      within a dialog box."
+R-39,General,"Determine whether text outputted by JavaScript is properly
+      copied."
+R-40,General,"Determine whether HTML entities can be properly copied to other
+      applications."
+R-41,D&D Links across browser windows,"Confirm that dragging a link across browser windows
+      opens the link."
+R-42,D&D Links onto the Desktop,"Confirm that dragging a link from the browser window
+      onto the desktop creates a shortcut."
+R-43,D&D Images across browser windows,"Verify that dragging an image across browser windows
+      opens the image"
+R-44,D&D Images onto the Desktop,Vrify that dragging an image onto the desktop saves the image
+R-45,D&D to Frameset page,"Verify that dragging onto a frame-set
+      page loads the dragged content properly."
+R-46,D&D to Composer,"Verify that browser contents can be dragged to
+      a Composer or Compose Mail window."
+R-47,D&D to Dialog,"Confirm that text, links, and images dragged to a
+      non-modal dialog are handled properly"
+R-48,D&D from the desktop – Folders,"Confirm that dragging a directory
+      to the browser window displays the folder contents"
+R-49,D&D from the desktop – Shortcuts,"Confirm that dragging an Internet shortcut to the
+      browser window opens the URL"
+R-50,D&D from the desktop – Text files,"Confirm that dragging a text file to the browser
+      window displays the document contents"
+R-51,D&D from the desktop – Images,"Confirm that dragging a supported image file
+       to the browser window display the file"
+R-52,D&D from the desktop – Plug-in files,"Confirm that dragging a helper-application
+       file to the browser window opens the file
+       properly"
+R-53,D&D from the destkop – Invalid Items,"Confirm that invalid items dragged to the
+      browser window are handled properly"
+R-54,D&D from Find File window,"Verify that items dragged from a
+       Find File window are handled properly
+       (Windows / Mac OS)"
+R-55,D&D onto the Application Icon,"Verify that items dragged onto the
+      application icon are handled properly"
+R-56,D&D URL Proxy Icons,"Verify that dragging the URL proxy icon to a browser
+      window opens that URL in the target window"
+R-57,D&D URL Proxy Icons onto the Desktop,"Verify that dragging the URL proxy icon
+      onto the desktop creates a shortcut"
+R-58,D&D from Bookmark Manager,"Determine if the application and OS properly
+      handle items dragged from the Bookmark Manager"
+R-59,D&D to Bookmark Manager,"Determine if the Bookmark Manager properly handles
+      items dragged onto it."
+R-60,D&D Large Images (stress),"Verify that dragging a large (e.g. 5 MB) image across
+      browser windows, to desktop, and into mail message
+      works properly."
+R-61,"D&D <a href=""/drag-url-browser-toolbar/"">
+      Given link is non-fetchable, non-retrievable Personal Toolbar",Determine if you can drag items to and from the Personal Toolbar
+R-62,D&D Bookmarks menu to toolbar,"Verify that you can drag a bookmark from the Bookmarks menu
+      to the Personal Toolbar."
+R-63,Dragging links to AIM,"Verify that you can drag a URL or page content to
+      an AIM window"
+R-64,Form Manager - Autocomplete,"113893Implement New Form Functionality
+      (waiting on bug status)"
+R-65,Form Manager - Pop-up,"Verify that a form fill popup menu is activated
+      when a field gets accessed that has been saved in form
+      manager data."
+R-66,Form Manager - Permission Zones,"* Longer range:
+      there is discussion about introducing Internet permission zones.
+      Some of the settings shown here may be controlled by such zones
+      (Waiting for Implementation)"
+R-67,Save Form Data - edit menu,Verify that you can save a form's data from the edit menu.
+R-68,Save Form Data - right click,"Verify that you can save a form's data by right clicking on
+      the form itself."
+R-69,Save Form Data - dialog yes,"Verify that you can save a form's data from the
+      popup dialog box and you click yes."
+R-70,Save Form Data - dialog no,"Verify that you can stop a form's data from being saved from
+      the popup dialog box, and you click no."
+R-71,Save Form Data - dialog no,"Verify that you can stop a form's data from being saved from
+      the popup dialog box, and you click no."
+R-72,Save Form Data - never return,"Verify that you can save a form's data from the popup dialog
+      box, never for this site and you are never asked again upon
+      returning to the site."
+R-73,Prefill - OK Dialog,"Verify that when you encounter a Web site that could be prefilled,
+      that you are given the pre-fill dialog and when you click ok, the
+      information is filled into the form."
+R-74,Prefill - cancel dialog,"Verify that when you encounter a Web site that could be prefilled,
+      that you are given the pre-fill dialog and when you click cancel,
+      the information is not filled into the form."
+R-75,Prefill - choose,"Verify that when you encounter a Web site that could be prefilled
+      and have several choices for fields that you are given the pre-fill
+      dialog and can select from the appropriate values and the information
+      is filled into the form."
+R-76,Edit Form Data - new value for field,"Verify that if you add a new value for a field in Form Manager
+      it is later offered as an option when prefilling a form using
+      this field."
+R-77,Edit Form Data - cancel,"Verify that if you enter data in the Form Manager and then
+      click cancel, the data has not been saved"
+R-78,Delete Form Data - remove field value,"Verify that if you delete data in the Form Manager, that this
+      data is not shown as an option when prefilling a form."
+R-79,Delete Form Data - cancel,"Verify that if you delete data in the Form Manager then
+      click cancel, the data has not been deleted"
+R-80,F1 shortcut key,Verify that the F1 key brings up the Help dialog
+R-81,Installation,"Verify that it is possible to install only the needed help files
+        (for components that are actually installed)"
+R-82,Tooltips,"Verify that there are ""Big tooltips"" - Similar to popup help for
+        Windows control panels"
+R-83,Search,"Verify that you have the ability to search by typing keyword
+        synonyms, and verbs to bring up related topics in help content. Verify
+        that if the entered phrase may not actually exist in the help document,
+        but it is related to topic."
+R-84,Sidebar,"Verify that there is a tab for help and you can create a Help
+        Sidebar tab with dynamic information"
+R-85,Index,"Verify that there is an in Index of help content and a list of
+        keywords to links in the help content. (Verify the content is in local
+        documents)"
+R-86,Favorite,"Verify that is it is possible to have favorite help topics -
+        similar to IE help which has a special tab to add favorite help
+        topics."
+R-87,Index,"Verify that there is an in Index of help content and a list of
+        keywords to links in the help content."
+R-88,TS/Sign on,"Verify that there is Troubleshooting Help about the problem ""if you
+        can't sign on"""
+R-89,TS/IM,"Verify that there is Troubleshooting Help about the problem ""if you
+        can't send Instant Messages."""
+R-90,TS/Buddy List,"Verify that there is Troubleshooting Help about the problme ""if you
+        can't see anyone in your buddy list window."""
+R-91,Glossary,"Verify that in the Glossary there includes a section on tips and
+        tricks/tip of the day."
+R-92,Glossary,"Verify that in the Glossary there includes a section for an
+        Intro/tutorial for NS6."
+R-93,Glossary,"Verify that in the Glossary there includes a section for an Upgrade
+        Guide."
+R-94,Glossary,"Verify that in the Glossary there includes a tutorial on how to do
+        better searches"
+R-95,Forward/Back,Verify the functionality of the forward/back buttons in Help
+R-96,Tool bar Minimization,"Verify that minimization, maximize and close buttons of the toolbar
+        invoke the correct behavior"
+R-97,Page up/down,"Verify that page up and down, in fact, page up and down in
+        help"
+R-98,Hide/Show toolbar,"Verify that you can hide the toolbar in help as well as reopen
+        it"
+R-99,Arrow up/down,"Verify that you can move around pages with the up and down arrow
+        keys"
+R-100,Drag Receipt,Verify that you can't drag docs into the help window
+R-101,Non Clickable Regions,"Verify that clicking non clickable regions in help causes no
+        behavior"
+R-102,Help Contents,Determine whether Help Contents displays correctly
+R-103,Browsing the Web,"Determine whether Browsing the web help content displays
+        correctly"
+R-104,Mail and News,"Determine whether Mail and News help content displays
+        correctly"
+R-105,Instant Messenger,"Determine whether Instant Messenger help content displays
+        correctly"
+R-106,Customizing Netscape 6,"Determine whether Customzing Netscape 6 help content displays
+        correctly"
+R-107,Understanding Privacy,"Determine whether Understanding Privacy help content displays
+        correctly"
+R-108,Creating web pages,"Determine whether Creating web pages help content displays
+        correctly"
+R-109,What's new in Netscape 6,Determine whether What's new in Netscape 6 displays correctly
+R-110,Security and Privacy,Determine whether Security and Privacy displays correctly
+R-111,Same time messaging,Determine whether Same time messaging displays correctly
+R-112,Streamlined Interface,Determine whether Streamlined Interface displays correctly
+R-113,The Best Standards Support,"Determine whether the Best Standards Support displays
+        correctly"
+R-114,New to the net tutorial,"Determine whether the New to the net tutorial displays
+        correctly"
+R-115,Netscape Technical Support,"Determine whether Netscape Technical Support displays
+        correctly"
+R-116,Security Center,Determine whether the Security Center displays correctly
+R-117,International Users,Determine whether International Users displays correctly
+R-118,Feedback Center,Determine whether the Feedback Center displays correctly
+R-119,About,Determine whether the About Netscape displays correctly
+R-120,Short Cuts,"Determine that you can open all the selections in the Help drop
+        down menu using short cut buttons."
+R-121,Record sites,Verify that visited links are recorded.
+R-122,Record after redirect,"Verify that the correct link is recorded after a server
+        redirect."
+R-123,Load recorded url,"Verify that double-clicking on a history link causes it to be
+        launched in a browser window."
+R-124,Delete one entry,Delete a History entry
+R-125,Delete multiple entries,Delete multiple History entries
+R-126,Erase all,Clear all of history
+R-127,,
+R-128,Change grouping,Change the History View to Group by Day|Site|None
+R-129,Sort by columns,sort and reverse-sort per column
+R-130,Resize columns,Verify that columns are resizable to show/hide more of entries
+R-131,Show/Hide columns,Show and hide columns.
+R-132,Don't record everything,"Verify that things that aren't supposed to be added to history
+        aren't (eg chorme:/// url's)"
+R-133,Don't show 302 redirect,Don't ever show 302 redirects in history
+R-134,Go menu list,Verify correct recently visited sites are in go menu.
+R-135,Back and Forward button dropdowns,"Verify recently visited sites are in Back and Forward button
+        dropdown menu and work."
+R-136,Surf Go menuitems,Verify browser goes back and forward to recently visited sites
+R-137,Back and forward with frames,"Verify browser goes back and forward correctly from page with
+        frames."
+R-138,New session,"Verify that a new session is started with a new browser window or a
+        restart."
+R-139,Back and forward with named anchors,"Verify browser goes back and forward correctly from sites that use
+        named anchors"
+R-140,Retain scroll position,"Verify that browser remembers scroll state when returning to pages
+        in SH"
+R-141,Resize to window,"Determine that large Images can be resized to the browser window
+        and will not cause you to scroll in order to view entire image."
+R-142,Text and image resize,"Determine that you are not able to resize an image to window when
+        there is also text on the page, this is a stand alone image feature
+        only."
+R-143,Resize to original,"Determine that it is possible to resize an image to it's original
+        size after it has been resized to window size."
+R-144,Resized to window,"Determine that after resizing an image to it's original size, it is
+        possible to resize to window again."
+R-145,Save Image,"Determine that you can right click an image and save to your local
+        drive."
+R-146,Send in mail,"Determine that you can right click an image and send it via
+        email."
+R-147,Set image as wallpaper,Determine that you are able to set image as wallpaper.
+R-148,Print image,"Determine that it is possible to print an image without changing
+        the currently loaded page"
+R-149,Image Display,"Determine whether images are properly redithered upon system
+        bit-depth changes."
+R-150,Cache/Networking,"Determine whether reloaded web pages properly display images
+        modified since the last load."
+R-151,Cache/Networking,"Determine whether images load directly into the web browser from a
+        networked server."
+R-152,Image Display,"Determine whether images load directly into the web browser from a
+        local hard drive."
+R-153,Image Display,"Determine whether animated GIFs continue to animate after an
+        extended period of 24 hours or greater."
+R-154,Animated Images,"Determine whether an automatically updated web cam continues to
+        refresh over an extended (24 hour) period of time."
+R-155,Animated Images,"Determine whether displaying animated GIFs result in single server
+        request for the image, rather than additional requests upon each frame
+        change."
+R-156,Animated Images,"To determine whether multiple differing animated images on the same
+        page are properly displayed"
+R-157,Image Display,"Determine whether X Bitmap (XBM) format images can be displayed.Note: XBM will not be supported in the initial 5.0
+          release."
+R-158,Image Display,"Determine whether GIF 87 images are properly displayed across
+        different bit depths."
+R-159,Image Display,"Determine whether GIF 89a images are properly displayed across
+        different bit depths."
+R-160,Stress,"Determine whether the web brower gracefully deals with unusual,
+        corrupted, or invalid GIF images."
+R-161,Test applets in HTML tags,"Test applets within <embed>, <applet> and 
+  <object> tags"
+R-162,Test Liveconnect functionality with applets,Test applets with liveconnect
+R-163,Test lifecycle of applets,Test lifecycle of applets
+R-164,Master Password prompt,"Verify that the master password is visually distinctive from other
+        password prompts (indicates the functionality and importance of the
+        master password)"
+R-165,Replace Forgotten Master Password,"Verify that the process to replace a forgotten master password is
+      easier/more discoverable (though encrypted information should still be
+      lost to the user who has forgotten their password)."
+R-166,"Save username and password, yes","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-167,"Save username and password, never for this site","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-168,"Save username and password, no","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-169,"Activation, disable after saved","Verify that when the password manager has been disabled, it is no
+      longer in use, even for passwords already saved"
+R-170,"Activiation, Http Authentication","Need a good working case for this, working on
+      it"
+R-171,"Actitvation, ftp","Need a good working case for this, working on
+      it"
+R-172,"Password Manager, multiple users","Verify that when you have saved multiple username's and password's
+      for a website, you are later presented with those same choices"
+R-173,"Password Manager, multiple passwords","Verify that when you have saved a username and password for a website
+      and you later change the password, that password manager picks up the new
+      password"
+R-174,Preferences disable,"Verify that when you disable password manager from the preferences
+      panel, you no longer are asked if you would like to save passwords and
+      longer get prefilled info on sites"
+R-175,Preferences enable,"Verify that when you enable password manager from the preferences
+      panel, you are asked if you would like to save usernames and passwords
+      and get prefilled info on sites"
+R-176,"Preferences, view saved passwords","Verify that when you have saved a username and password in password
+      manager, this information can be viewed in the password manager through
+      preferences"
+R-177,"Preferences, view passwords never saved","Verify that when you have designated not to ever save a username and
+      password in password manager, this information can be viewed in the
+      password manager through preferences (expedia.com)"
+R-178,"Preferences, passwords saved, remove","Verify that you can remove a username and password for a given site
+      and it will no longer autofill on that sight nor will it be listed in
+      password manager (espn.com)"
+R-179,"Preferences, passwords saved, remove all","Verify that you can remove all username and password information and
+      it will no longer autofill nor will anything be listed in password
+      manager"
+R-180,"Preferences, passwords never saved, remove","Verify that you can remove a site and username from the passwords
+      never saved section of password manager (ivillage.com)"
+R-181,"Preferences, passwords never saved, remove all","Verify that you can remove all site and username information from the
+      passwords never saved section of password manager (ivillage.com)"
+R-182,"Tasks, view saved passwords","Verify that when you have saved a username and password in password
+      manager, this information can be viewed in the password manager through
+      tasks"
+R-183,"Tasks, view passwords never saved","Verify that when you have designated not to ever save a username and
+      password in password manager, this information can be viewed in the
+      password manager through tasks (nbci.com)"
+R-184,"Tasks, passwords saved, remove","Verify that you can remove a username and password for a given site
+      and it will no longer autofill on that sight nor will it be listed in
+      password manager (netscape.com)"
+R-185,"Tasks, passwords saved, remove all","Verify that you can remove all username and password information and
+      it will no longer autofill nor will anything be listed in password
+      manager (lycos.com)"
+R-186,"Tasks, passwords never saved, remove","Verify that you can remove a site and username from the passwords
+      never saved section of password manager"
+R-187,"Tasks, passwords never saved, remove all","Verify that you can remove all site and username information from the
+      passwords never saved section of password manager"
+R-188,Print a Page with frames,Determine whether a page with frames prints properly
+R-189,Page with various formats,Determine whether a page with various formats prints properly
+R-190,Test Page,Print a test page and check to see if it prints properly
+R-191,Alignment Test,"Determine if a page with aligned text prints as seen on
+        screen"
+R-192,Indentation Test,Determine if a page with indentations prints as seen on screen
+R-193,Test Portrait and Landscape settings,"Determine if a page with portrait and Landscape settings prints
+        properly"
+R-194,Print HTML forms and widgets,Determine if HTML forms and widgets print properly
+R-195,"Print a ""Page Source""",Determine if page source prints as seen on screen
+R-196,CSS Testcases for printing,Determine if CSS pages print properly
+R-197,Print Mozillazine poll result page,Determine if the Mozillazine Poll results page prints properly
+R-198,Print large complex pages,Determine if  large page print properly
+R-199,Sample XML Pages for printing,Determine if XML pages print properly
+R-200,Top Web Sites,Determine if  top web sites print properly
+R-201,Print some HTML 4.0 pages,Determine if HTML 4.0 pages print properly
+R-202,Print images,Determine if images print correctly
+R-203,Print Lists,Determine if lists print correctly
+R-204,Print Tables,Determine if tables print correctly
+R-205,Print Character Styles,Determine if character styles print correctly
+R-206,Print Paragraph Styles,Determine if paragraph styles print correctly
+R-207,Print Preview,Determine if print Preview works correctly
+R-208,Page Setup(mac only),Determine id Page Setup dialog works correctly
+R-209,Off-Line Printing,Determine that off-line printing works
+R-210,Header/Footer Test,Determine that header/footer info gets printed
+R-211,Print Range,Determine that print range works properly
+R-212,Macromedia Flash plugin,Determine if flash movies play correctly.
+R-213,Realplayer tests,Determine if Realaudio works properly
+R-214,Quicktime tests,Determine if quicktime movies play properly
+R-215,Sound tests,Determine if files with various sound formats play properly
+R-216,Macromedia Shockwave Tests,Determine if Shockwave movies work properly
+R-217,Acrobat Tests,Determine if Acrobat plugin works properly
+R-218,Media Player tests,Determine if windows media player works fine
+R-219,Viewpoint Plugin,Determine if windows media player works fine
+R-220,Search button,Verify that just clicking Search button goes to search page
+R-221,Search button,"Verify that clicking search button will search text entered in
+      URLBar."
+R-222,URL/Sidebar interaction,Verify that starting a URL bar search triggers the sidebar
+R-223,basic sidebar search,"Verify that a basic search from within the Search tab can be
+      executed"
+R-224,basic sidebar search,Verify that a user can change the search engine
+R-225,Bookmark Search,Verify that a search query/results can be bookmarked
+R-226,Multiple engine search,
+R-227,Drag-selection,"Currently, it is my understanding that there will be no new
+        features in this area (can monitor bug list)"
+R-228,Drag-selection,"Determine whether drag-selection of text works, both from dead
+        space, and from within text."
+R-229,Double-click,Determine whether the double-click gesture functions properly.
+R-230,Triple-click,Determine whether the triple-click gesture functions properly.
+R-231,Discontiguous (disjoint) selection,"Determine whether discontiguous selection of table cells function
+        properly."
+R-232,Shift Select,"Determine whether shift-select gestures for text function
+        properly."
+R-233,Drag Scroll,Determine whether drag-scrolling gestures function properly.
+R-234,JavaScript,"Determine whether text from a JavaScript applet is properly
+        selected in conjunction with other page content."
+R-235,Startup,Check default panels and default open panels(content loaded?)
+R-236,Startup,Check default width of Sidebar
+R-237,Constraints,Check for maximum width of Sidebar
+R-238,Width,Retaining non-default size on reopen or new window
+R-239,UI,Cursors should have the right icon when mousing over
+R-240,Mouse Over,"Verify that panels appear highlighted when mouse is moved over
+        them"
+R-241,Opening/Closing,Check Opening/Closing of Sidebar with grippy
+R-242,Add/Remove,Check that addition of a panel works
+R-243,Add/Remove,Adding a already added panel
+R-244,Add/Remove,Delete a panel
+R-245,Add/Remove,Delete all panels
+R-246,Add/Remove,Verify list of available remote panels
+R-247,Add/Remove,Verify list of available local panels
+R-248,Preview,Test the previewing of panels
+R-249,Customization,Test the Customization of panels
+R-250,Re-Order,Verify reordering of panels works
+R-251,Cancel,Verify that nothing changes when you cancel
+R-252,Save,Verify that order and panel list is immediately applied
+R-253,What's Related,Verify that What's Related lists related sites
+R-254,What's Realted,Verify that links in What's Related panels work
+R-255,Bookmarks,Verify that links in Bookmarks work
+R-256,Bookmarks,Verify that changes reflect immediately from Bookmarks Manager
+R-257,Add Menu,"Verify that panel title show up in Add menu when panel is
+        added"
+R-258,Add Menu,"Verify that unselecting panels from Add menu removes panels from
+        the Sidebar"
+R-259,Add Panel using Javascript,Verify that adding of a panel using javascript works
+R-260,Basic access to dialog,Tests to access this dialog from the menubar and keyboard.
+R-261,Basic UI and navigation,"Determine that interface features (buttons, textfield, droplist)
+        appear and behave as expected. Includes tests to dismiss dialog."
+R-262,URL in current browser window,"Open a web location (URL) in the current Navigator window. Includes
+        test to dismiss dialog."
+R-263,URL in new browser window,"Open a web location (URL) in a new Navigator window. Includes test
+        to dismiss dialog."
+R-264,URL in an editor window,"Open web location in a Composer window. Includes test to dismiss
+        dialog."
+R-265,URL autocompletion,"After viewing a file/page or three, test URL
+        autocompletion: test for current browser, new browser and new editor
+        windows."
+R-266,Nonexistent URL,Open a nonexistent (bogus) web location.
+R-267,Local file in current browser window,"Open local files (both HTML and plain text tested) in the current
+        Navigator window. Includes tests to dismiss dialog."
+R-268,Local file in new browser window,"Open local files (both HTML and plain text tested) in a new
+        Navigator window. Includes tests to dismiss dialog."
+R-269,Local file in an editor window,"Open local files (both HTML and plain text tested) in a Composer
+        window. Includes tests to dismiss dialog."
+R-270,Nonexistent local file,Open a nonexistent (bogus) local file.
+R-271,URL to a image files,"Open web locations to various image files, such as.gif,.jpg."
+R-272,Basic access,"Access from main menu, keyboard accelerator, access keys."
+R-273,Use on Win32,"Use of the native Win32 file picker to navigate through directories
+        and open files (html, plaintext, image). Cancellation also tested."
+R-274,Use on Mac OS,"Use of the native Mac OS file picker to navigate through
+        directories and open files (html, plaintext, image). Cancellation also
+        tested."
+R-275,Use on unix,"Use of the XUL file picker on Linux to navigate through 
+        directories and open files (html, plaintext, image). Resizing,
+        selection/scrolling, cancellation also tested. Test last
+        directory-viewed."
+R-276,Basic access of Find and Find Again,"Access from main menu, keyboard accelerator, access keys."
+R-277,Basic find in page and frame content,"Find in html page and html frame documents. Test Find Again and
+        cancellation. Test for NOFRAME content."
+R-278,Find in other document content,"Find in plaintext, xml page, ftp listing."
+R-279,Case sensitivity,Find with and without case sensitivity. Test Find Again.
+R-280,Document wrapping,Find with and without document wrapping. Test Find Again.
+R-281,Find direction,"Find forwards and backwards within a document. Test Find
+        Again."
+R-282,"Whitespace, null","Find using solely whitespace, null, and string with
+        prepended/appended whitespace."
+R-283,Find in input (editable) textfield,Attempt to find strings within an input textfield.
+R-284,Basic access,"Access from main menu, keyboard accelerator, access keys."
+R-285,Context menu access,Viewing page and frame source via context menu.
+R-286,View source of other content,"View source of plaintext, xml page, ftp listing."
+R-287,Navigation/UI,"Scrolling and keyboard navigation within the source window. Also
+        should be able to use keyboard accelerators. Resize source window."
+R-288,Find,Find strings in the source window.
+R-289,Select and copy,Select and copy strings from the source window.
+R-290,Color coding,"Verify the expected displayed color for content, tags/attributes,
+        values, script code, entities, etc."
+R-291,Basic access,Access from main menu and access keys.
+R-292,"Page, frame, frameset","View info for a webpage, frame and frameset."
+R-293,Other content,"Attempt to view page info for plain text, xml, ftp listing,
+        directory listing..."
+R-294,Info window content,Verify these sections:Information on the current pageForms on the current page (if applicable)Images on the current page (if applicable)Screenshot of selected images below grippy.
+R-295,Navigation/UI,"Scrolling and keyboard navigation within the info window. Also
+        should be able to use [applicable] keyboard accelerators. Resize source
+        window. Manipulate the grippy."
+R-296,Select and copy,Select and copy from the info window.
+R-297,Check for Themes,"Verify both Classic and Modern exist under the themes
+        preferences"
+R-298,Testing under Classic theme,Verify Classic theme works as advertised
+R-299,Check the appearance of browser,"Visually inspect menu bar, floating component bar and all the
+        tool bars"
+R-300,Testing under Modern theme,Verify Modern theme works as advertised
+R-301,Check the appearance of browser,"Visually inspect menu bar, floating component bar and all the
+        tool bars"
+R-302,Checking View menu,Verify if themes exist under View menu
+R-303,Verify all the selectable items work under Classic theme,"Click through all the items on menu bar, tool bars, and floating
+        component bar under Classic theme"
+R-304,"Verify all the selectable items on other applications under
+        Classic theme","Click through all the items on menu bar and tool bars under AIM,
+        Composer, Mail and Address book to see all the looks and feel are
+        consistence under Classic theme"
+R-305,Verify all the selectable items work under Modern theme,"Click through all the items on menu bar, tool bars, and floating
+        component bar under Modern theme"
+R-306,"Verify all the selectable items on other applications under
+        Modern theme","Click through all the items on menu bar and tool bars under AIM,
+        Composer, Mail and Address book to see all the looks and feel are
+        consistence under Modern theme"
+R-307,Verify themes under View menu,"Test all the items under ""Apply Theme"" under View menuSelecting ""Theme Preferences""Get New ThemesClassicModern"
+R-308,Window Title,"Verify the title is correct, ""<page title> - Mozilla"""
+R-309,Active/Inactive Window,"The active window is visually distinct, inactive = grey title
+        bar."
+R-310,Maximize Window,Click to maximize (expandto content on Mac)
+R-311,Collapse (mac only),Click to shrink to content
+R-312,Close Wndow,Click upper-right (upper left on Mac) to close
+R-313,Stretch Window Horizontally,"Grab left/right window edge and drag to resize. Not available on
+        Mac."
+R-314,Stretch Window Vertically,"Grab top/bottom window edge and drag to resize. Not available on
+        Mac."
+R-315,Stretch Window Diagonally,"Grab any corner of window and drag to resize. Only bottom-right
+        corner on Mac."
+R-316,Scroll Arrow Up,Click up arrow to scroll page
+R-317,Scroll Arrow Down,Click down arrow to scroll page
+R-318,Thumb Scroll,Click and drag thumb to scroll page
+R-319,Page scroll,Click in the scrollbar area to page up/down.
+R-320,Show and Hide,"Verify that Personal and Navigation bars can be expanded and
+        collapsed"
+R-321,Reorder,"Verify that toolbars can be dragged&dropped to change their
+        order"
+R-322,Correct items on Bookmarks bar.,Verify correct bookmarks are installed in Bookmarks bar.
+R-323,Add a folder,"Verify that a folder added to the personal toolbar functions
+        properly."
+R-324,Buttons,Verify that each buttons executes as appropriate.
+R-325,Correct items/links,Verify that the correct items are in the taskbar.
+R-326,Component buttons,Verify that component buttons work and behave as appropriate.
