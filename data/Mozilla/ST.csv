@@ -1,4 +1,4 @@
-ID,Purpose,TestSteps
+ID,Purpose,Test steps
 T-1,"Purpose
 This basic testcase is designed to verify that a bookmarks file is being
   detected and is being displayed at the appropriate places.","Initial Conditions
