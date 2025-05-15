@@ -5,6 +5,7 @@ This module contains utility functions for loading and processing experiment dat
 Functions included:
 - load_experiment_data: Loads experiment data from a `res/` directory.
 - load_treatment_data: Extracts treatment data from specific session directories.
+- save_dataframe_to_csv: Saves a pandas DataFrame to a CSV file.
 """
 
 import os
@@ -155,4 +156,25 @@ def load_experiment_data(base_dir: str, iteration_structure: bool = True) -> \
 
 # Utility functions: storing data
 
-# TODO: function to save to csv?
+def save_dataframe_to_csv(df: pd.DataFrame, dest_path: str = ".", filename: str = "output", overwrite: bool = False):
+    """
+    Save a pandas DataFrame to a CSV file.
+
+    Args:
+        df (pd.DataFrame): The DataFrame to be saved.
+        dest_path (str, optional): Destination directory path. Defaults to current directory.
+        filename (str, optional): Name of the output file (without extension). Defaults to `"output"`.
+        overwrite (bool, optional): If True, overwrite the file if it already exists. Defaults to False.
+
+    Raises:
+        FileExistsError: If the file already exists and `overwrite` is False.
+    """
+
+    file_path = os.path.join(dest_path, f"{filename}.csv")
+
+    if os.path.exists(file_path) and not overwrite:
+        raise FileExistsError(f"[{filename}.csv] already exists in the specified path: [{dest_path}]")
+
+    os.makedirs(dest_path, exist_ok=True)
+
+    df.to_csv(file_path, index=False)
