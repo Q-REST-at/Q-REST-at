@@ -1,4 +1,166 @@
 ID,Feature,Description
-R-003,Bookmarks shall be added and deleted from the personal toolbar.,Bookmarks shall be added and deleted from the personal toolbar.
-R-156,The panels shall be previewed before addition.,The panels shall be previewed before addition.
-R-183,Folders shall be added to the personal toolbar and their contents shall still function as links.,Folders shall be added to the personal toolbar and their contents shall still function as links.
+R-7,Create Folder,Verify new folder creation and nesting of new folders.
+R-13,Create/Delete separator,Verify separators are properly added/deleted.
+R-14,Save State,Verify that changes are saved over restart/crash
+R-16,Rename bookmark inline - not implemented,"Change the name of a bookmark without use of the bookmark properties
+      dialog."
+R-17,Custom Keywords,surf using user-defined 'custom keyword'.
+R-18,Sort by columns,sort and reverse-sort per column
+R-19,Resize columns,Verify that columns are resizable to show/hide more of entries
+R-32,Styled Text,"Determine whether text copied from a formatted web page (such as
+      within a table) has a ""non-annoying"" layout."
+R-34,Negative,"Determine whether non-copyable page content such as UI widgets are
+      correctly omitted from the Clipboard content."
+R-36,Overflow,"Determine whether extremely large images can be copied from web
+      pages."
+R-37,Stress,"Determine whether complicated rich text (such as massively nested
+      tables) can be copied."
+R-44,D&D Images onto the Desktop,Vrify that dragging an image onto the desktop saves the image
+R-48,D&D from the desktop – Folders,"Confirm that dragging a directory
+      to the browser window displays the folder contents"
+R-49,D&D from the desktop – Shortcuts,"Confirm that dragging an Internet shortcut to the
+      browser window opens the URL"
+R-50,D&D from the desktop – Text files,"Confirm that dragging a text file to the browser
+      window displays the document contents"
+R-55,D&D onto the Application Icon,"Verify that items dragged onto the
+      application icon are handled properly"
+R-56,D&D URL Proxy Icons,"Verify that dragging the URL proxy icon to a browser
+      window opens that URL in the target window"
+R-60,D&D Large Images (stress),"Verify that dragging a large (e.g. 5 MB) image across
+      browser windows, to desktop, and into mail message
+      works properly."
+R-63,Dragging links to AIM,"Verify that you can drag a URL or page content to
+      an AIM window"
+R-72,Save Form Data - never return,"Verify that you can save a form's data from the popup dialog
+      box, never for this site and you are never asked again upon
+      returning to the site."
+R-80,F1 shortcut key,Verify that the F1 key brings up the Help dialog
+R-82,Tooltips,"Verify that there are ""Big tooltips"" - Similar to popup help for
+        Windows control panels"
+R-85,Index,"Verify that there is an in Index of help content and a list of
+        keywords to links in the help content. (Verify the content is in local
+        documents)"
+R-86,Favorite,"Verify that is it is possible to have favorite help topics -
+        similar to IE help which has a special tab to add favorite help
+        topics."
+R-88,TS/Sign on,"Verify that there is Troubleshooting Help about the problem ""if you
+        can't sign on"""
+R-102,Help Contents,Determine whether Help Contents displays correctly
+R-105,Instant Messenger,"Determine whether Instant Messenger help content displays
+        correctly"
+R-107,Understanding Privacy,"Determine whether Understanding Privacy help content displays
+        correctly"
+R-108,Creating web pages,"Determine whether Creating web pages help content displays
+        correctly"
+R-111,Same time messaging,Determine whether Same time messaging displays correctly
+R-115,Netscape Technical Support,"Determine whether Netscape Technical Support displays
+        correctly"
+R-120,Short Cuts,"Determine that you can open all the selections in the Help drop
+        down menu using short cut buttons."
+R-121,Record sites,Verify that visited links are recorded.
+R-124,Delete one entry,Delete a History entry
+R-125,Delete multiple entries,Delete multiple History entries
+R-131,Show/Hide columns,Show and hide columns.
+R-133,Don't show 302 redirect,Don't ever show 302 redirects in history
+R-135,Back and Forward button dropdowns,"Verify recently visited sites are in Back and Forward button
+        dropdown menu and work."
+R-137,Back and forward with frames,"Verify browser goes back and forward correctly from page with
+        frames."
+R-139,Back and forward with named anchors,"Verify browser goes back and forward correctly from sites that use
+        named anchors"
+R-142,Text and image resize,"Determine that you are not able to resize an image to window when
+        there is also text on the page, this is a stand alone image feature
+        only."
+R-145,Save Image,"Determine that you can right click an image and save to your local
+        drive."
+R-156,Animated Images,"To determine whether multiple differing animated images on the same
+        page are properly displayed"
+R-157,Image Display,"Determine whether X Bitmap (XBM) format images can be displayed.Note: XBM will not be supported in the initial 5.0
+          release."
+R-161,Test applets in HTML tags,"Test applets within <embed>, <applet> and 
+  <object> tags"
+R-162,Test Liveconnect functionality with applets,Test applets with liveconnect
+R-164,Master Password prompt,"Verify that the master password is visually distinctive from other
+        password prompts (indicates the functionality and importance of the
+        master password)"
+R-165,Replace Forgotten Master Password,"Verify that the process to replace a forgotten master password is
+      easier/more discoverable (though encrypted information should still be
+      lost to the user who has forgotten their password)."
+R-172,"Password Manager, multiple users","Verify that when you have saved multiple username's and password's
+      for a website, you are later presented with those same choices"
+R-173,"Password Manager, multiple passwords","Verify that when you have saved a username and password for a website
+      and you later change the password, that password manager picks up the new
+      password"
+R-174,Preferences disable,"Verify that when you disable password manager from the preferences
+      panel, you no longer are asked if you would like to save passwords and
+      longer get prefilled info on sites"
+R-178,"Preferences, passwords saved, remove","Verify that you can remove a username and password for a given site
+      and it will no longer autofill on that sight nor will it be listed in
+      password manager (espn.com)"
+R-183,"Tasks, view passwords never saved","Verify that when you have designated not to ever save a username and
+      password in password manager, this information can be viewed in the
+      password manager through tasks (nbci.com)"
+R-184,"Tasks, passwords saved, remove","Verify that you can remove a username and password for a given site
+      and it will no longer autofill on that sight nor will it be listed in
+      password manager (netscape.com)"
+R-192,Indentation Test,Determine if a page with indentations prints as seen on screen
+R-193,Test Portrait and Landscape settings,"Determine if a page with portrait and Landscape settings prints
+        properly"
+R-194,Print HTML forms and widgets,Determine if HTML forms and widgets print properly
+R-196,CSS Testcases for printing,Determine if CSS pages print properly
+R-198,Print large complex pages,Determine if  large page print properly
+R-207,Print Preview,Determine if print Preview works correctly
+R-208,Page Setup(mac only),Determine id Page Setup dialog works correctly
+R-210,Header/Footer Test,Determine that header/footer info gets printed
+R-214,Quicktime tests,Determine if quicktime movies play properly
+R-215,Sound tests,Determine if files with various sound formats play properly
+R-217,Acrobat Tests,Determine if Acrobat plugin works properly
+R-219,Viewpoint Plugin,Determine if windows media player works fine
+R-228,Drag-selection,"Determine whether drag-selection of text works, both from dead
+        space, and from within text."
+R-231,Discontiguous (disjoint) selection,"Determine whether discontiguous selection of table cells function
+        properly."
+R-235,Startup,Check default panels and default open panels(content loaded?)
+R-237,Constraints,Check for maximum width of Sidebar
+R-242,Add/Remove,Check that addition of a panel works
+R-244,Add/Remove,Delete a panel
+R-253,What's Related,Verify that What's Related lists related sites
+R-255,Bookmarks,Verify that links in Bookmarks work
+R-257,Add Menu,"Verify that panel title show up in Add menu when panel is
+        added"
+R-261,Basic UI and navigation,"Determine that interface features (buttons, textfield, droplist)
+        appear and behave as expected. Includes tests to dismiss dialog."
+R-266,Nonexistent URL,Open a nonexistent (bogus) web location.
+R-271,URL to a image files,"Open web locations to various image files, such as.gif,.jpg."
+R-277,Basic find in page and frame content,"Find in html page and html frame documents. Test Find Again and
+        cancellation. Test for NOFRAME content."
+R-278,Find in other document content,"Find in plaintext, xml page, ftp listing."
+R-279,Case sensitivity,Find with and without case sensitivity. Test Find Again.
+R-282,"Whitespace, null","Find using solely whitespace, null, and string with
+        prepended/appended whitespace."
+R-283,Find in input (editable) textfield,Attempt to find strings within an input textfield.
+R-285,Context menu access,Viewing page and frame source via context menu.
+R-289,Select and copy,Select and copy strings from the source window.
+R-290,Color coding,"Verify the expected displayed color for content, tags/attributes,
+        values, script code, entities, etc."
+R-291,Basic access,Access from main menu and access keys.
+R-293,Other content,"Attempt to view page info for plain text, xml, ftp listing,
+        directory listing..."
+R-294,Info window content,Verify these sections:Information on the current pageForms on the current page (if applicable)Images on the current page (if applicable)Screenshot of selected images below grippy.
+R-296,Select and copy,Select and copy from the info window.
+R-297,Check for Themes,"Verify both Classic and Modern exist under the themes
+        preferences"
+R-299,Check the appearance of browser,"Visually inspect menu bar, floating component bar and all the
+        tool bars"
+R-302,Checking View menu,Verify if themes exist under View menu
+R-306,"Verify all the selectable items on other applications under
+        Modern theme","Click through all the items on menu bar and tool bars under AIM,
+        Composer, Mail and Address book to see all the looks and feel are
+        consistence under Modern theme"
+R-307,Verify themes under View menu,"Test all the items under ""Apply Theme"" under View menuSelecting ""Theme Preferences""Get New ThemesClassicModern"
+R-309,Active/Inactive Window,"The active window is visually distinct, inactive = grey title
+        bar."
+R-310,Maximize Window,Click to maximize (expandto content on Mac)
+R-316,Scroll Arrow Up,Click up arrow to scroll page
+R-317,Scroll Arrow Down,Click down arrow to scroll page
+R-319,Page scroll,Click in the scrollbar area to page up/down.

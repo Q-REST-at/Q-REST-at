@@ -1,0 +1,4 @@
+The dataset was initially imported from this source: https://data.mendeley.com/datasets/jw5bgshtvg/1.
+Later, we identified the original source of the data at: https://www-archive.mozilla.org/quality/browser/front-end/testcases/,
+and re-scraped all test case data directly from there, changes are available in this PR: https://github.com/SEM25-BSc/REST-at-upstream/pull/33
+As a result, this previously imported Mozilla dataset has been deprecated.

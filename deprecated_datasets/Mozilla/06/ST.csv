@@ -1,0 +1,67 @@
+ID,Purpose,Test steps
+TC-130,,"STEPS/DESCRIPTION
+1. Launch the browser
+2. Go to Windows Build Prerequisites
+3. Select ""File| Print""
+4. The printed pages should have the webpage name and the url on top left/right
+5. The bottom of the printed pages should show the number of pages printed and date/time (system)
+
+EXPECTED RESULTS
+Header/Footer info should print correctly"
+TC-172,,"INITIAL CONDITIONS
+1. Copy boring.html and dull.txt into a folder on your machine (eg, you desktop).
+2. Then bring up the Open Web Location dialog in the browser.
+
+STEPS/DESCRIPTION - UI test #1 
+1. Click the Choose File... button.
+2. In the resulting file picker dialog, navigate and select the boring.html file.
+3. Click Open in the file picker to dismiss it.
+4. Select New Navigator window from the droplist, if it isn't already displayed there.
+5. Click the Open button (or hit Enter).
+
+EXPECTED RESULTS - UI test #1 
+1. After step #3, the full path and filename should be displayed in the textfield of the Open Web Location dialog.
+2. After the last step, the Open Web Location dialog should be dismissed.
+3. A new browser window should then come up, and boring.html displayed in it.
+
+
+STEPS/DESCRIPTION - Dismissal #1 
+1. Click the Choose File... button.
+2. In the resulting file picker dialog, navigate and select the boring.html file.
+3. Click Open in the file picker to dismiss it.
+4. Select New Navigator window from the droplist, if it isn't already displayed there.
+5. Click the Cancel button (or hit Esc).
+
+EXPECTED RESULTS - Dismissal #1 
+The dialog should go away and the page in the current browser window remain unchanged.
+
+ 
+STEPS/DESCRIPTION - UI test #2
+1. Click the Choose File... button.
+2. In the resulting file picker dialog, navigate and select the dull.txt file.
+3. Click Open in the file picker to dismiss it.
+4. Select New Navigator window from the droplist, if it isn't already displayed there.
+5. Click the Open button (or hit Enter).
+
+EXPECTED RESULTS - UI test #2
+1. After step #3, the full path and filename should be displayed in the textfield of the Open Web Location dialog.
+2. After the last step, the Open Web Location dialog should be dismissed.
+3. A new browser window should then come up, and dull.txt displayed in it.
+
+
+STEPS/DESCRIPTION - Dismissal #2 
+1. Click the Choose File... button.
+2. In the resulting file picker dialog, navigate and select the dull.txt file.
+3. Click Open in the file picker to dismiss it.
+4. Select New Navigator window from the droplist, if it isn't already displayed there.
+5. Click the Cancel button (or hit Esc).
+
+EXPECTED RESULTS - Dismissal #2 
+The dialog should go away and the page in the current browser window remain unchanged."
+TC-180,,"STEPS/DESCRIPTION
+1. From the main menu bar, select View.
+2. Select ""Apply Theme"" and another submenu should pop up.
+3. Select ""Classic Theme"" item.
+
+EXPECTED RESULTS
+The Classic Skin should appear to the browser menu bar."

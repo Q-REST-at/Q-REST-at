@@ -405,8 +405,11 @@ class RESTSpecification:
         """
         if "{" in res and "}" in res:
             return self._parse_json_output(res)
-        
-        return self._parse_list_output(res)
+        elif "[" in res and "]" in res:
+            return self._parse_list_output(res)
+        else:
+            return self._parse_human_output(res)
+
 
     def _parse_json_output(self, res: str) -> list[str]:
         """
@@ -500,4 +503,30 @@ class RESTSpecification:
             for test in links
         ]
 
+        return links
+
+
+    def _parse_human_output(self, res: str) -> list[str]:
+        """
+        Parses a natural language response like:
+        'The test cases "T-2", "T3", "ST-11", or "ST12" are testing ...'
+
+        Parameters:
+        -----------
+        res: str - The raw response string.
+
+        Returns:
+        --------
+        list[str] - A list of test IDs.
+        """
+        import re
+
+        # Match quoted strings of formats: T-<num>, T<num>, ST-<num>, ST<num>
+        matches = re.findall(r'"((?:ST|T)-?\d+)"', res)
+
+        links = [
+            self._tests_index[int(re.sub(r"^(?:ST|T)-?", "", test))]
+            for test in matches
+        ]
+        
         return links
