@@ -6,7 +6,7 @@ library(rstatix)
 library(PMCMRplus)
 
 # Load data
-raw_df <- read.csv("./workshop_data.csv") # has added "made up" GPTQ data
+raw_df <- read.csv("./data/workshop_data.csv") # has added "made up" GPTQ data
 head(raw_df)
 
 # Metrics to test
@@ -61,6 +61,10 @@ significant_results <- friedman_results %>%
 # This test has a reduced type II error-rate, but maybe we want to prioritize
 # minimizing type I errors?
 
+
+temp.df <- data.frame(grouped$data[3])
+pairwise.wilcox.test(temp.df$value, temp.df$quantization, paired = TRUE, p.adjust.method = "bonf")
+
 run_posthoc <- function(df) {
   # I'm too tired, not sure if this is right...
   frdAllPairsExactTest(
@@ -69,7 +73,7 @@ run_posthoc <- function(df) {
     df$iteration, 
     p.adjust.method = "bonferroni"
   )# %>%
-  #tidy() #TODO: doesn't work
+  #tidy() #TODO: doesn't work - uncomment and reproduce stack trace
 }
 
 
@@ -77,7 +81,7 @@ posthoc_results <- grouped %>%
   # Keep only rows where the model+dataset+metric combination exists in significant results
   semi_join(significant_results, by = c("model", "dataset", "metric")) %>%
   # Apply the post-hoc test to all the data tibbles (quant, iteration, value)
-  mutate(posthoc = map(data, run_posthoc)) #%>% # TODO: doesn't work onwards
+  mutate(posthoc = map(data, run_posthoc)) #%>% # TODO: doesn't work onwards - uncomment, reproduce & fix
   # Unpack similarly to the Friedman
   #unnest(posthoc)
   # TODO: drop redundant cols?
