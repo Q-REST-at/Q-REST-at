@@ -133,11 +133,18 @@ class Model:
         # Load the model and its tokenizer
         tokenizer: PreTrainedTokenizer | PreTrainedTokenizerFast = AutoTokenizer.from_pretrained(model_name_or_path)
 
-        model: PreTrainedModel = AutoModelForCausalLM.from_pretrained(
-            model_name_or_path,
-            torch_dtype=torch.float16,
-            device_map="auto"
-        )
+        is_aqlm_model = "aqlm" in model_name_or_path.lower()
+        
+        if is_aqlm_model: 
+            model = AutoModelForCausalLM.from_pretrained(model_name_or_path, device_map = {"": 0}, 
+                                                     low_cpu_mem_usage=True, torch_dtype=torch.float16, trust_remote_code=True)
+        else:
+            model: PreTrainedModel = AutoModelForCausalLM.from_pretrained(
+                model_name_or_path,
+                torch_dtype=torch.float16,
+                device_map="auto"
+            )
+
         model.eval()
 
 	    # If loaded a GPTQ model - increase temp buffer size to support longer input sequences

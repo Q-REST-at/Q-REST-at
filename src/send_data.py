@@ -158,7 +158,7 @@ def main() -> None:
 
     valid_data = ["mix", "mix-small", "bths", "enco", "snake", "mozilla", "hw"] # hw stands for HealthWatcher dataset
 
-    if data in valid_data:
+    if data.lower() in valid_data:
         d_up = data.upper()
         print(f"Info - Using {d_up} data")
         req_path = os.getenv(f"{d_up}_REQ_PATH") # Ex. BTHS_REQ_PATH
