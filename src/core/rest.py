@@ -524,9 +524,17 @@ class RESTSpecification:
         # Match quoted strings of formats: T-<num>, T<num>, ST-<num>, ST<num>
         matches = re.findall(r'"((?:ST|T)-?\d+)"', res)
 
-        links = [
-            self._tests_index[int(re.sub(r"^(?:ST|T)-?", "", test))]
-            for test in matches
-        ]
-        
+        links = []
+        for match in matches:
+            try:
+                index = int(re.sub(r"^(?:ST|T)-?", "", match))
+
+                if 0 <= index < len(self._tests_index):
+                    links.append(self._tests_index[index])
+                else:
+                    print(f"Index {index} out of range")
+            except (ValueError, TypeError):
+                print(f"Skipping malformed test ID: {match}")
+                continue
+
         return links
