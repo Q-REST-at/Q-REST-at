@@ -147,7 +147,7 @@ class Model:
 
         model.eval()
 
-	    # If loaded a GPTQ model - increase temp buffer size to support longer input sequences
+        # If loaded a GPTQ model - increase temp buffer size to support longer input sequences
         is_gptq_model = "gptq" in model_name_or_path.lower()
 
         if is_gptq_model:
