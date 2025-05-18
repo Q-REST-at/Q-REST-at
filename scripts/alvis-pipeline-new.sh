@@ -15,11 +15,12 @@ ml purge
 
 # Define entry vectors. These should correlate to the expected format of the
 # REST-at tool.
-dataset=("BTHS" "ENCO" "SNAKE")
+dataset=("ENCO")
 models=("mis" "mixtral" "llama")
-quant=("NONE" "AWQ" "GPTQ" "AQLM")
+# quant=("NONE" "AWQ" "GPTQ" "AQLM")
+quant=("GPTQ")
 
-ITER_PER_SESSION=10
+ITER_PER_SESSION=2
 
 _log_err() {
     local msg=$1
@@ -30,7 +31,8 @@ _log_err() {
     echo -e "${red}[ERROR]${reset} $msg"
 }
 
-echo "Alvis Pipeline Started."
+echo "Alvis Pipeline Started"
+echo "Iterations per session: ${ITER_PER_SESSION}"
 
 mkdir -p "./logs" "./profiles"
 
@@ -68,7 +70,11 @@ for dataset in "${dataset[@]}"; do
 
             REST_AT_FLAGS="$session $model $dataset"
 
-            bash ./scripts/job-prof.bash $REST_AT_FLAGS $container $quant $ITER_PER_SESSION
+	    echo "Committing job..."
+
+            sbatch -o alvis-logs/${session}.log ./scripts/job-prof.bash $REST_AT_FLAGS $container $quant $ITER_PER_SESSION
+	    sleep 120
+	    echo "Sleeping... until new job"
         done
     done
 done
