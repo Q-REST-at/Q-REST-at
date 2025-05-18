@@ -405,10 +405,8 @@ class RESTSpecification:
         """
         if "{" in res and "}" in res:
             return self._parse_json_output(res)
-        elif "[" in res and "]" in res:
-            return self._parse_list_output(res)
         else:
-            return self._parse_human_output(res)
+            return self._parse_list_output(res)
 
 
     def _parse_json_output(self, res: str) -> list[str]:
