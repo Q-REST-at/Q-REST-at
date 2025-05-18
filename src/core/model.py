@@ -145,7 +145,7 @@ class Model:
 
         if is_gptq_model:
             from auto_gptq import exllama_set_max_input_length
-            SAFE_MAX_IN_LEN = 8192
+            SAFE_MAX_IN_LEN = 30_000 # should be enough; Mozilla needs >=20k
             print(f"Encountered GPTQ model. Setting max input length to {SAFE_MAX_IN_LEN} tokens.")
             exllama_set_max_input_length(model, SAFE_MAX_IN_LEN)
 
