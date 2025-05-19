@@ -107,6 +107,7 @@ def main() -> None:
     parser.add_argument("--quant", "-q", dest="quant", type=str, default="AWQ", help="Set the quantization method to use")
     parser.add_argument("--logDir", "-l", dest="log_dir", type=str, default=None, help="Set the output directory")
     parser.add_argument("--system", "-S", dest="system", type=str, default=None, help="Path to the system prompt used. Falls back on a default if not provided.")
+    parser.add_argument("--subset", "-su", dest="subset", type=int, default=None, help="Subset index given a dataset")
     parser.add_argument("--prompt", "-p", dest="prompt", type=str, default=None, help="Path to the prompt used. Include `{req}` in place of the requirement and `{tests}` in place of the tests. Falls back on a default if not provided.")
 
     args = parser.parse_args()
@@ -115,6 +116,7 @@ def main() -> None:
     session_name = args.session
     model: str = args.model.lower()
     data: str = args.data.lower()
+    subset: int = args.subset
     quant: str = args.quant.lower()
     log_dir: str = args.log_dir
     system_prompt_path: str = args.system
@@ -129,7 +131,6 @@ def main() -> None:
     valid_quant = ["none", "awq", "gptq", "gguf", "aqlm"]
 
     if model in valid_models and quant in valid_quant:
-
         quantized_model_path = f"MODEL_PATH_{model.upper()}_{quant.upper()}" # Ex. MODEL_PATH_MIS_AWQ
         default_model_path = f"MODEL_PATH_{model.upper()}" # Ex. MODEL_PATH_MIS - original model
         model_token_limit = f"TOKEN_LIMIT_{model.upper()}"
@@ -141,8 +142,8 @@ def main() -> None:
         else:
             model_path = os.getenv(quantized_model_path, os.getenv(default_model_path))
             token = int(os.getenv(model_token_limit, os.getenv(default_token_limit)))
-            
     else:
+        # default fallback value
         model_path = os.getenv("MODEL_PATH_MIS")
         token = int(os.getenv("TOKEN_LIMIT_MIS"))
 
@@ -176,6 +177,18 @@ def main() -> None:
         debug_mode = mode == 1 # 1 for True/ON
     except Exception:
         pass
+
+    def add_iteration_to_path(path: str, subset_nr: int, sep: str="/") -> str:
+        subset = str(subset_nr).zfill(2) # pad with 0
+        raw_path: list[str] = path.split(sep)
+        raw_path.insert(len(raw_path)-1, subset) # place before the .csv file
+        return sep.join(raw_path)
+   
+    # Overwrite dataset with a desired sample index
+    if not subset:
+        req_path = add_iteration_to_path(req_path, subset)
+        test_path = add_iteration_to_path(test_path, subset)
+        mapping_path = add_iteration_to_path(mapping_path, subset)
 
     # Debugging Info
     print(f"Model path: {model_path}")
