@@ -1,13 +1,17 @@
 #install.packages("tidyverse")
 #install.packages("rstatix")
-#install.packages("PMCMRplus")
 library(tidyverse)
 library(rstatix)
-library(PMCMRplus)
+
+
+#============================ LOAD EXPERIMENT DATA ===========================#
 
 # Load data
 raw_df <- read.csv("./data/workshop_data.csv") # has added "made up" GPTQ data
 head(raw_df)
+
+
+#=============================== PRE-PROCESSING ==============================#
 
 # Metrics to test
 metrics <- c("balanced_accuracy", "recall", "precision", "f1")
@@ -18,19 +22,23 @@ long_df <- raw_df %>%
   pivot_longer(cols = all_of(metrics), names_to = "metric", values_to = "value")
 
 # Group by: model, dataset, metric
-grouped <- long_df %>%
+grouped_df <- long_df %>%
   group_by(model, dataset, metric) %>%
   nest() # puts the actual data inside a tibble for each row (group)
+
+
+#=============================== FRIEDMAN TEST ===============================#
 
 # Wrapper function for Friedman test
 # This lets us apply the function on the nested data
 run_friedman <- function(df) {
   # TODO: the variable assignment might even be redundant
-  result <- friedman_test(df, value ~ quantization | iteration)
+  #result <- friedman_test(df, value ~ quantization | iteration)
+  friedman_test(df, value ~ quantization | iteration)
 }
 
 # Apply test using the map function
-friedman_results <- grouped %>%
+friedman_results <- grouped_df %>%
   mutate(test_result = map(data, run_friedman)) %>%
   unnest(cols = test_result) %>% # this unpacks the test result tibble
   select(-.y., -method) # remove redundant columns
@@ -40,10 +48,54 @@ significant_results <- friedman_results %>%
   filter(p < 0.05)
 
 
-######################## POST-HOC PAIRWISE TESTING ######################## 
+#========================= POST-HOC PAIRWISE TESTING =========================#
 
-# WIP !!!
-# We get some result but it isn't as tidy as we would want it.
+# TODO list:
+# ============
+# - check for no variance data?
+#   - SNAKE had no variance in the example data, might not be an issue with real data however
+# - evaluate effect size
+
+
+# TODO: REMOVE
+# Filter the SNAKE dataset because groups for this dataset has no variance
+# Meaning that the tests fail (no meaningful stat. analysis to be made)
+no_snake_df <- grouped_df %>%
+  filter(dataset != "SNAKE")
+
+# Wrapper function for Pairwise Wilcox test
+run_posthoc <- function(df) {
+  pairwise_wilcox_test(df, value ~ quantization, p.adjust.method = "holm")
+}
+
+# Guide--Interpreting adjusted P-value column:
+# ***	== Very strong evidence of difference
+# **  == Strong evidence
+# *	  == Moderate evidence
+# ns	== Not significant
+
+# Version evaluating ALL pairs regardless of Friedman results
+posthoc_results <- no_snake_df %>%
+  mutate(posthoc = map(data, run_posthoc))
+
+# Version with filtering to only evaluate significant results
+posthoc_results <- no_snake_df %>%
+  semi_join(significant_results, by = c("model", "dataset", "metric")) %>%
+  mutate(posthoc = map(data, run_posthoc))
+
+
+
+
+
+
+
+
+
+
+
+#==============================================================================#
+
+# OLD STUFF + FRANCISCO CODE FROM MEETING (NOT USED)
 
 ###########################################################################
 
@@ -61,10 +113,13 @@ significant_results <- friedman_results %>%
 # This test has a reduced type II error-rate, but maybe we want to prioritize
 # minimizing type I errors?
 
-
-temp.df <- data.frame(grouped$data[3])
+# THIS IS THE WAY (FROM FRANCISCO / MEETING)
+temp.df <- data.frame(grouped_df$data[3])
 pairwise.wilcox.test(temp.df$value, temp.df$quantization, paired = TRUE, p.adjust.method = "bonf")
 
+
+
+#============================ OLD WITH ???TEST ===============================#
 run_posthoc <- function(df) {
   # I'm too tired, not sure if this is right...
   frdAllPairsExactTest(
