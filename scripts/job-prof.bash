@@ -64,7 +64,7 @@ if [[ "$ITER_PER_SESSION" -gt 0 ]]; then
         # First call `send_data.py` to prompt the model. This produces `res.json` under LOG_DIR_ITER.
         PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
             python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME \
-                                    --quant $QUANT --logDir $LOG_DIR_ITER --iter $iter
+                                    --quant $QUANT --logDir $LOG_DIR_ITER --subset $iter
         kill "$MONITOR_PID"
         sleep 0.1
 

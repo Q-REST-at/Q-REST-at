@@ -107,7 +107,7 @@ def main() -> None:
     parser.add_argument("--quant", "-q", dest="quant", type=str, default="AWQ", help="Set the quantization method to use")
     parser.add_argument("--logDir", "-l", dest="log_dir", type=str, default=None, help="Set the output directory")
     parser.add_argument("--system", "-S", dest="system", type=str, default=None, help="Path to the system prompt used. Falls back on a default if not provided.")
-    parser.add_argument("--iter", "-i", dest="iteration", type=int, default=None, help="Subset index given a dataset")
+    parser.add_argument("--subset", "-su", dest="subset", type=int, default=None, help="Subset index given a dataset")
     parser.add_argument("--prompt", "-p", dest="prompt", type=str, default=None, help="Path to the prompt used. Include `{req}` in place of the requirement and `{tests}` in place of the tests. Falls back on a default if not provided.")
 
     args = parser.parse_args()
@@ -116,7 +116,7 @@ def main() -> None:
     session_name = args.session
     model: str = args.model.lower()
     data: str = args.data.lower()
-    iteration: int = args.iteration
+    subset: int = args.subset
     quant: str = args.quant.lower()
     log_dir: str = args.log_dir
     system_prompt_path: str = args.system
@@ -178,17 +178,17 @@ def main() -> None:
     except Exception:
         pass
 
-    def add_iteration_to_path(path: str, iteration: int, sep: str="/") -> str:
-        f_iteration = str(iteration).zfill(2) # pad with 0
+    def add_iteration_to_path(path: str, subset_nr: int, sep: str="/") -> str:
+        subset = str(subset_nr).zfill(2) # pad with 0
         raw_path: list[str] = path.split(sep)
-        raw_path.insert(len(raw_path)-1, f_iteration) # place before the .csv file
+        raw_path.insert(len(raw_path)-1, subset) # place before the .csv file
         return sep.join(raw_path)
    
     # Overwrite dataset with a desired sample index
-    if not iteration:
-        req_path = add_iteration_to_path(req_path, iteration)
-        test_path = add_iteration_to_path(test_path, iteration)
-        mapping_path = add_iteration_to_path(mapping_path, iteration)
+    if not subset:
+        req_path = add_iteration_to_path(req_path, subset)
+        test_path = add_iteration_to_path(test_path, subset)
+        mapping_path = add_iteration_to_path(mapping_path, subset)
 
     # Debugging Info
     print(f"Model path: {model_path}")
