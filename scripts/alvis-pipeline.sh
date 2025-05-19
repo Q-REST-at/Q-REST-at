@@ -15,9 +15,9 @@ ml purge
 
 # Define entry vectors. These should correlate to the expected format of the
 # REST-at tool.
-dataset=("BTHS" "ENCO" "MOZILLA" "HW")
+datasets=("BTHS" "ENCO" "MOZILLA" "HW")
 models=("mis" "mixtral" "llama")
-quant=("NONE" "AWQ" "GPTQ" "AQLM")
+quants=("NONE" "AWQ" "GPTQ" "AQLM")
 
 ITER_PER_SESSION=10
 
@@ -34,9 +34,9 @@ echo "Alvis Pipeline Started."
 
 mkdir -p "./logs" "./profiles"
 
-for dataset in "${dataset[@]}"; do
+for dataset in "${datasets[@]}"; do
     for model in "${models[@]}"; do
-        for quant in "${quant[@]}"; do
+        for quant in "${quants[@]}"; do
 
             echo ""
             echo "******* Session config *******"

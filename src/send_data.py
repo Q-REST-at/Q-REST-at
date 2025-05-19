@@ -185,7 +185,8 @@ def main() -> None:
         return sep.join(raw_path)
    
     # Overwrite dataset with a desired sample index
-    if not subset:
+    if subset is not None:
+        print(f"Setting subset: {subset}")
         req_path = add_iteration_to_path(req_path, subset)
         test_path = add_iteration_to_path(test_path, subset)
         mapping_path = add_iteration_to_path(mapping_path, subset)
