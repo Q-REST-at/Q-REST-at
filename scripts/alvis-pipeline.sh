@@ -15,7 +15,7 @@ ml purge
 
 # Define entry vectors. These should correlate to the expected format of the
 # REST-at tool.
-dataset=("BTHS" "ENCO" "SNAKE")
+dataset=("BTHS" "ENCO" "MOZILLA" "HW")
 models=("mis" "mixtral" "llama")
 quant=("NONE" "AWQ" "GPTQ" "AQLM")
 
