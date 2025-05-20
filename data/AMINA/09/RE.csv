@@ -1,0 +1,37 @@
+ID,Feature,Description
+S2,Traceable metering devices,"All delivered metering devices, down to component level, shall be traceable and can be linked at least to the manufacturing batch and time of manufacture"
+S12,PQ values to HES within 4h,The PQ values (15-minute values) shall be delivered at the latest within 4 hours from registration in the Metering Units to HES
+S24,Operation of the metering unit after phase loss,The metering unit in a 3-phase installation shall continue to function even if one or two phases are lost.
+S73,Legible labeling,"The marking of the meter's production number must be clearly legible
+- i.e. the font size must not be too small so that the number becomes difficult to read, e.g. for a customer"
+S77,Designed for wall mounting,The metering units shall be designed for wall mounting.
+S111,Exporting reports and data,"Retrieved measurement and structural data as well as completed reports shall be exportable to any standardized text file format, such as csv."
+S147,Display of PQ values,"In HES, it should be possible to analyze and visualize PQ values in e.g. graphs and bar plots."
+S152,Selecting dates with calendar function,"Where there is a need to select dates in HES, this should be possible through a time and calendar function."
+S166,Authorization profiles for user rights,"HES shall have authorization profiles for at least the following user rights:
+- Accessing operating system, starting and stopping the system, updating database, changing authorization profiles, etc.
+- Input/update of structural data, collection of Metering values, etc.
+- Connection and disconnection of the customer installation via the Metering Unit switch
+- Access to Metering Unit meter data and settings
+- Only 'view', not 'edit'"
+S172,Status of switches to other GE system,The HES shall be able to send information to other facility systems if a Metering Unit's circuit breaker is switched on or off.
+S213,Web service calls,HES shall be able to make and receive web service calls.
+S228,Controlling logout time,The client shall be able to control after how many minutes of inactivity a User is automatically logged out of HES.
+S236,Log date and system time,The date and system time shall be recorded for each logged record.
+S237,Logging unique identity,The unique identity of the subject shall be recorded for each logged record.
+B1,Corrected measurement values,"If the Metering Unit corrects measured values of voltage and/or current when calculating energy consumption, these values shall also be those used in the Metering System."
+B15,Measurement and recording / phase,"The metering unit shall be able to measure and record for each phase the minimum, maximum and average value of voltage, current, active and reactive power of the electricity output and input per 5 minutes."
+B24,Record communication errors,"The metering system shall record and store information when the following Events occur:
+8. communication failure"
+B34,Configure records to be stored for events,"For each Event, it shall be possible to optionally configure which registers (OBIS codes) in the Metering Unit are to be stored."
+B42,Communication status,"It shall be possible to view the communication status of the Metering Unit directly, without manual intervention and without opening the meter."
+B61,Response times in the user interface,"Response times in the HES user interface shall not exceed:
+- 0.5 sec from input, keystroke or equivalent to first response on screen
+- 0.5 sec for display of form view including data
+- 5 sec for display of simple report
+- 15 sec for login"
+B71,Help function,The HES user interface shall (LB71) include a help function to assist the User in understanding how to perform tasks using the functionality of the system.
+B85,View last measurement value and time,The last Metric and the time of communication with the Metering Unit shall be displayed in the HES.
+B90,Mass deletion,"In HES, there shall be a function to perform mass deletion of overall structure data objects so that all linked relations are also deleted. E.g. that this is implemented via group membership."
+B105,Database hosting,The HES database must be able to be hosted in the Contracting Authority's database hosting facility.
+S546,The client's test case,The Customer shall have the right to develop own and new test cases based on the Specification. New test cases can be created until Final Acceptance of the Delivery Project.

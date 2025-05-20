@@ -11,13 +11,14 @@ The scripts and files used in our evaluation are in the `analysis/` folder.
 There's two separate branches:
 [`data-archive`](https://github.com/SEM25-BSc/REST-at-upstream/tree/data-archive)
 and [`stable`](https://github.com/SEM25-BSc/REST-at-upstream/tree/stable). The
-former contains all *archived* job runs and produced artifacts, and the latter
+former contains all _archived_ job runs and produced artifacts, and the latter
 contains **Alvis** env. definitions.
+
 > TBD: these may be eventually deleted; used as a handy reference. \=)
 
 ---
 
-*(Written by Nicole \& Bao; used as a reference)*
+_(Written by Nicole \& Bao; used as a reference)_
 
 ## Models Used
 
@@ -45,18 +46,73 @@ The model-wise model-prompt pairs with the best value in a certain metric has it
 
 ## Data
 
-The [`data`](./data/) folder contains all the `datasets` used as the input data of REST-at's experiments. Each `dataset` has its own sub-directory (e.g. [`BTHS/`](./data/BTHS/), [`ENCO/`](./data/ENCO/)) that includes the following files: 
-- `RE.csv` - contains requirement specifications. 
-- `ST.csv` - contains test case specifications.
-- `mapping.csv` - contains the ground truth for the REST mappings. 
+For our experiments, we use four datasets **(ENCO, BTHS, MOZILLA, HW)**. They are located in the `/data` folder.
 
-The `dataset` folders also contains randomly sampled `subsets` in separate sub-directories that are indexed starting from `01`. Each `subset` directory also includes the three types of files mentioned in the list above.
+**The structure of each dataset is as follows:**
 
-The [`archive`](./archive/) contains the output data from REST-at's experiments. Each directory under `archive` is named after one of the prompt used for REST-at, i.e., BASE and PT{1-7}. Each prompt folder contains an `out` and a `res` folder. The `out` folders contain the mapping that REST-at responded with during the experiments. The `res` folders contain the evaluations of the aforementioned mappings when compared to the ground truth.
+```
+/data
+    /<dataset_name>  (e.g., BTHS, ENCO, etc.)
+        - RE.csv (Requirements)
+        - ST.csv (Test Cases)
+        - mapping.csv
+```
 
-### Sampling
+**File Schema**
+The structure of each file is consistent across datasets to adhere to the Rest-at tool formatting requirements:
 
-The scripts used to randomly sample the `datasets` and store generated `subsets` are found in the [`Jupyter Notebook`](./data/sampling.ipynb) inside the `data` folder.
+- `RE.csv` -> `ID, Feature, Description`
+- `ST.csv` -> `ID, Purpose, Test steps`
+- `mapping.csv` ->`Req ID,Test ID`
+
+**Subsets**
+Each dataset comes with randomly generated subsets in subdirectories indexed as `01...10`. The sampling script was introduced in this [PR](https://github.com/SEM25-BSc/REST-at-upstream/pull/14) and can be executed on new datasets by running [`sampling.ipynb` script](https://github.com/SEM25-BSc/REST-at-upstream/blob/main/data/sampling.ipynb)
+
+### Data Sourcing
+
+**ENCO (AMINA)**
+
+We obtained a raw copy of the dataset from Göteborg Energi from [@fgoneto](https://github.com/fgoneto). The `ZIP` file contains two datasets, and we used `AMINA` (the other one was most likely corrupted, because it was unclear how the requirements are *mapped* to test cases).
+
+- Using the `src/clean-AMINA.py` script, we can (i) process the the dataset to the **desired format**, (ii) computed the **mapping** (note that we assume the files to be in `.csv` already, use a viable tool to convert it.
+- Note that the `.xlsx` fileformat is known to be difficult to parse and doing it programatically can result in errors; you can use an application like `Apple Numbers`, `LibreOffice` etc. to do this for you more reliably).
+
+> You can try also `pd.read_excel('ur.xlsx')`, but we simply did `XLSX -> CSV` conversion non-programatically.
+
+- Afterwards, `deepl.py` is applied to translate the full (Swedish) dataset (both RE & STs). Read the comments in the script for details.
+- Afterwards, we set out to ensure the translations are correct manually (thanks, [@erikflind](https://github.com/erikflind)). However, we did not manage to manually check all ~500 test cases, so we only picked 100 (see `./deprecated_datasets/AMINA-100`).
+
+**BTHS**
+
+Bluetooth Headset Dataset was inherited from previous work by Quinstedt and Lindgren BSc Thesis. Dataset was originally sourced from this [website](https://www.bluetooth.com/specifications/specs/headset-profile-1-2/)
+
+**MOZILLA**
+
+We have extended our datasets by web-scraping [MozillaQA website](https://www-archive.mozilla.org/quality/browser/front-end/testcases/). This allowed us to retrieve 326 requirements and 324 test cases. Web-scraping pipeline was introduced in this [PR](https://github.com/SEM25-BSc/REST-at-upstream/pull/33), code implementation and all technical details are fully described there.
+
+**HW (Health Watcher)**
+
+This dataset was sourced from Zenodo research platform. We have extracted requirements and test cases from Health Watcher Product specification. Full pdf is available [here](https://zenodo.org/records/8081523)
+
+### Dataset Organization
+
+We've discovered that having 100 entries per job was simply too much for the models to properly execute and we decided to lower the **sample size to 25**. Hence,
+
+- `./data/AMINA/[01-10]` contains 10 samples of size 25.
+- `./data/MOZILLA/[01-10]` contains 10 samples of size 25.
+
+#### Deprecated Datasets
+
+We also retain the `./deprecated_datasets/*` directory which contains:
+
+- `/AMINA-100` - contains a fully translated and manually verified requirements set; contains a sample of 100 fully translated and manually verified tests -- from `AMINA`
+- `/MOZILLA-100` - contains 10 samples of the full `MOZILLA` dataset with 100 entries each
+- `/SourceTracker` - this dataset was obtained from Zenodo research repository, however we later discovered that the test phrasing is not sufficient for this research purposes. Therefore, this dataset was deprecated.
+
+** We've included the original Göteborg Energi data in `/deprecated_datasets/GE data (AMINA-Diarie) [ORIGINAL].zip` for future reference.
+** Note, the `/data` folder also contains the **SnakeGame** dataset, a toy dataset commonly used to test models on a small, simplified subset of data. It is not used for conducting real experiments.
+
+Useful references for further data sourcing: 1. Trustworthy research repositories: - https://www.msrconf.org - https://zenodo.org/ 2. Other sources - [cucumber.io/](cucumber.io/) - [Bug reports repo](https://github.com/jiwangjie/ChatBR/tree/master/questions/question1/final_sample)
 
 ### Prompt Templates
 
@@ -195,8 +251,8 @@ User prompt:
 
 System prompt:
 
-    Act as a mapping system, that receives a requirement and test cases 
-    and returns a list of the test cases that test that specific requirement. 
+    Act as a mapping system, that receives a requirement and test cases
+    and returns a list of the test cases that test that specific requirement.
 
     It IS CRUCIAL that your response MUST adhere to the exact
     JSON format outlined below. Incorrect formatting may result
@@ -229,8 +285,8 @@ User prompt:
 
 System prompt:
 
-    Act as a mapping system, that receives a requirement and test cases 
-    and returns a list of the test cases that test that specific requirement. 
+    Act as a mapping system, that receives a requirement and test cases
+    and returns a list of the test cases that test that specific requirement.
 
     It IS CRUCIAL that your response MUST adhere to the exact
     JSON format outlined below. Incorrect formatting may result
@@ -454,41 +510,42 @@ Make sure that you're in the correct Python environment before you begin!
 
 1. Create a `.env` file in the project root.
 1. Add the following variables to the `.env` file:
-  
-    ```
-    # Paths to local models
-    MODEL_PATH_{MODEL_NAME}_{QUANT_TYPE}    # Path to quantized model, e.g., MODEL_PATH_MIS_AWQ
-    MODEL_PATH_{MODEL_NAME}                 # Path to the original model, e.g., MODEL_PATH_MIS
 
-    # Maximum token limits for different models
-    TOKEN_LIMIT_{MODEL_NAME}: int           # Max tokens for the model e.g., TOKEN_LIMIT_MIS
+   ```
+   # Paths to local models
+   MODEL_PATH_{MODEL_NAME}_{QUANT_TYPE}    # Path to quantized model, e.g., MODEL_PATH_MIS_AWQ
+   MODEL_PATH_{MODEL_NAME}                 # Path to the original model, e.g., MODEL_PATH_MIS
 
-    # Data paths for REST spec files
-    {DATASET}_REQ_PATH: Path                # Path to the dataset request file, e.g., ENCO_REQ_PATH
-    {DATASET}_TEST_PATH: Path               # Path to the dataset test file, e.g., ENCO_TEST_PATH
-    {DATASET}_MAP_PATH: Path                # Path to the dataset map file, e.g., ENCO_MAP_PATH
+   # Maximum token limits for different models
+   TOKEN_LIMIT_{MODEL_NAME}: int           # Max tokens for the model e.g., TOKEN_LIMIT_MIS
 
-    # Set Debug mode ON/OFF
-    DEBUG_MODE=1                            # Debug mode enabled
+   # Data paths for REST spec files
+   {DATASET}_REQ_PATH: Path                # Path to the dataset request file, e.g., ENCO_REQ_PATH
+   {DATASET}_TEST_PATH: Path               # Path to the dataset test file, e.g., ENCO_TEST_PATH
+   {DATASET}_MAP_PATH: Path                # Path to the dataset map file, e.g., ENCO_MAP_PATH
 
-    # Set redirect stdout to .log files ON/OFF
-    USE_LOG=1                               # Stdout redirect enabled
-    ```
-  
-2. Run one of two scripts:
-    - `python -m src.send_data` - To run on a local model.
-    Adjust the `session_name` variable to your desired output directory name.
-    - `python -m src.send_data_gpt` - To run on OpenAI's GPT. \
-    Adjust the `model` variable to your desired model.
+   # Set Debug mode ON/OFF
+   DEBUG_MODE=1                            # Debug mode enabled
+
+   # Set redirect stdout to .log files ON/OFF
+   USE_LOG=1                               # Stdout redirect enabled
+   ```
+
+1. Run one of two scripts:
+   - `python -m src.send_data` - To run on a local model.
+     Adjust the `session_name` variable to your desired output directory name.
+   - `python -m src.send_data_gpt` - To run on OpenAI's GPT. \
+     Adjust the `model` variable to your desired model.
 
 The scripts will output files in the `out/{model}/{date}/{time}/` directory.
 
 > **Note:** You can enable DEBUG_MODE in `.env` to see more detailed logs when running the LLMs. When enabled, the following information will be printed to the console for each model run: `Iteration nr., Raw output, Req. ID, Created links, Parsed response`. This is often helpful for tracking the progress and understanding how the model is processing each request
+
 <details>
     <summary>Example output in DEBUG_MODE</summary>
 
- ```
- Iteration nr.: 1
+```
+Iteration nr.: 1
 Raw output: []
 Req. ID: 4.2
 Created links: []
@@ -508,7 +565,8 @@ Raw output: []
 Req. ID: 4.3
 Created links: []
 Parsed response {'4.2': [], '4.2.1': ['HSP/AG/IAC/BV-02-I', 'HSP/HS/IAC/BV-02-I'], '4.2.2': [], '4.3': []} ...
- ```
+```
+
 </details>
 
 ### Automated experiments on Alvis
@@ -526,7 +584,7 @@ Note: `MODEL_NAME`, `QUANT_TYPE`, `DATASET` variables names set in `.env` (see [
 1. Define all necessary experiment variables in `scripts/alvis-pipeline.sh`
 2. Set up your `.env` file with the required paths
 3. Launch the job on Alvis:
-    - `sbatch scripts/alvis-pipeline.sh`
+   - `sbatch scripts/alvis-pipeline.sh`
 
 ### Evaluating REST-at From Scripts
 
@@ -534,12 +592,12 @@ Make sure that you're in the correct Python environment before you begin!
 
 1. Follow the steps in [Running REST-at Scripts](#running-rest-at-scripts)
 1. Add the following variables to the `.env` file:
-    - `MAP_PATH` - The relative path to the alignment file.
-    - `USE_LOG` - Redirects `stdout` to `.log` files when set to `1`; preserves default behaviour when set to `0` (or if variable missing). 
-2. Run one of three scripts:
-    - `python -m src.eval` - To evaluate each REST trace link.
-    - `python -m src.eval_iteration` - Similar functionality to `eval.py` as well as the ability to handle output data with an *iterative* directory structure, i.e., one additional layer of nested sub-directories containing model output — a result of generating multiple responses per treatment using multiple input data subsets.
-    - `python -m src.label_eval` - To evaluate "is tested" labels.
+   - `MAP_PATH` - The relative path to the alignment file.
+   - `USE_LOG` - Redirects `stdout` to `.log` files when set to `1`; preserves default behaviour when set to `0` (or if variable missing).
+1. Run one of three scripts:
+   - `python -m src.eval` - To evaluate each REST trace link.
+   - `python -m src.eval_iteration` - Similar functionality to `eval.py` as well as the ability to handle output data with an _iterative_ directory structure, i.e., one additional layer of nested sub-directories containing model output — a result of generating multiple responses per treatment using multiple input data subsets.
+   - `python -m src.label_eval` - To evaluate "is tested" labels.
 
 The script will output an `eval.log` or a `label-eval.log` in `out/{model}/{date}/{time}/` for each model, date, and time, depending on the script used. The file contains key metrics of REST-at, such as accuracy and precision.
 

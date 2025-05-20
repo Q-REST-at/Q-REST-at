@@ -1,0 +1,43 @@
+ID,Purpose,Test steps
+10,Database hosting,Verify that the system documentation describes the databases and database versions used.
+21,Security log,Verify that all relevant information is logged in the security log
+23,Log date and system time,Verify that all entries in the log contain the date and system time
+29,Switching on and off and status of breakers from other GE system,Verify that switching on is not possible by integration from other system. Verify that switching off is not possible by integration from other system. Verify that status of switches is possible to see by integration.
+33,Controlling logout time,Wait for 45 minutes.
+35,Traceable metering devices,Kamstrup demonstrates how components can be traced to batch and time of manufacture
+43,Function of the metering unit after loss of phases on Cat1,Remove voltage on two of three phases
+44,Function of the metering unit after phase loss on Cat2,Remove voltage on two of three phases
+56,Web service calls,Run the export of data.
+87,The client's test case,The customer shall have the right to develop own and new test cases based on the Specification. New test cases can be created until Final Acceptance of the Delivery Project.
+188,Exporting reports and data,"Verify that the retrieved measurement and structural data as well as the finished reports can be exported to any standardized text file format, such as csv."
+218,Help function,Verify that there is a help function in the HES user interface that helps the User to understand how to perform tasks using the functionality of the system.
+238,View last measurement value and time,Verify that the last Measured Value and the time of communication with the Metering Unit are displayed in HES. Verify that the last Measured Value and the time of communication with the Metering Unit are displayed in the HES.
+255,Display of PQ values,Verify that in HES it is possible to analyze and visualize PQ values in e.g. graphs and bars.
+260,Selecting dates with calendar function,"Verify that where there is a need to select dates in HES, this is done through a time and calendar function."
+274,Mass deletion,Verify that in HES there is a function to perform mass deletion of overall structure data objects so that all linked relations are also deleted. E.g. that this is implemented via group membership.
+277,Authorization profiles for user rights,"Verify that HES has authorization profiles for the following user rights:
+- Access operating system, start and stop system, update database, change authorization profiles, etc.
+- Input/update of structural data, collection of Metering values, etc.
+- Connection and disconnection of the customer installation via the Metering Unit switch
+- Access to Metering Unit metering data and settings
+- Only 'view', not edit"
+293,Corrected measurement values,"Verify that the metering device corrects the measured values of voltage and/or current when calculating energy consumption, these values shall also be those used in the Metering System."
+310,Measurement and recording / phase,"Verify that the Metering Unit for each phase is able to measure and record the minimum, maximum and average value of voltage, current, active and reactive power of the electricity output and input per 5 minutes."
+319,Record communication errors,"Verify that the Metering System is able to record and store information when the following Events occur:
+8. communication failure"
+331,Configure records to be stored for events,Verify that for each Event it is possible to optionally configure which registers (OBIS codes) in the Metering Unit should be stored.
+339,Communication status - Cat1 1 phase,"Verify that it is possible to view the communication status of the Metering Unit directly, without manual intervention and without opening the meter."
+340,Communication status - Cat1 3 phase,"Verify that it is possible to view the communication status of the Metering Unit directly, without manual intervention and without opening the meter."
+341,Communication status - Cat2,"Verify that it is possible to view the communication status of the Metering Unit directly, without manual intervention and without opening the meter."
+358,Response times in the user interface,"Verify that HES user interface response times do not exceed:
+- 0.5 s from input, keystroke or equivalent to first response on screen
+- 0.5 s for display of form view including data
+- 5 s for viewing simple report
+- 15 s for login"
+364,PQ values to HES within 4h,Verify that the PQ values (15-minute values) can be delivered at the latest within 4 hours from the registration in the Metering Units to HES
+447,Legible marking - Cat1,"Verify that the marking of the meter's manufacturing number is clearly legible
+- i.e. the font size must not be too small so that the number is difficult to read e.g. for a customer"
+448,Legible marking - Cat2,"Verify that the marking of the meter's manufacturing number is clearly legible
+- i.e. the font size must not be too small so that the number is difficult to read e.g. for a customer"
+455,Designed for wall mounting - Cat1,Verify that the Metering Units are designed for wall mounting.
+456,Designed for wall mounting - Cat2,Verify that the Metering Units are designed for wall mounting.

@@ -237,7 +237,8 @@ def main() -> None:
 
     if not log_dir:
         log_dir = f"./out/{session_name}/{date}/{time}"
-
+    
+    print(f"Writing output to: {log_dir}")
     os.makedirs(log_dir, exist_ok=True)
 
     with open(f"{log_dir}/res.json", "w+") as out:

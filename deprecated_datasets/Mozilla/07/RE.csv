@@ -1,4 +1,0 @@
-ID,Feature,Description
-R-042,"A form's data shall be saved from the popup dialog box, never for this site and never asked again upon returning to the site.","A form's data shall be saved from the popup dialog box, never for this site and never asked again upon returning to the site."
-R-049,"Minimize, maximize and close buttons of the toolbar shall be invoke in Help menu.","Minimize, maximize and close buttons of the toolbar shall be invoke in Help menu."
-R-145,Maximum width of Sidebar shall be be approximately one third of the browser window size.,Maximum width of Sidebar shall be be approximately one third of the browser window size.
