@@ -103,6 +103,11 @@ def main() -> None:
     # Note: each outermost directory name is composed of: treatment + dataset.
     # However, for simplicity we simply call the variable here "treatment".
     for treatment in os.listdir(f"./out"):
+        # Skip current iteration if we encountered a file
+        if not os.path.isdir(f"./out/{treatment}"): 
+            print(f"{treatment} is not a directory - skipping...")
+            continue
+
         # Output directory filepath
         res_dir: str = f"./res/{date_str}/{time_str}/{treatment}"
         # Replace ":" in Windows environement to avoid crashes due to illegal filename characters
