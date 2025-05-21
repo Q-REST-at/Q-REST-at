@@ -1,0 +1,29 @@
+ID,Feature,Description
+R-69,Save Form Data - dialog yes,"Verify that you can save a form's data from the
+      popup dialog box and you click yes."
+R-73,Prefill - OK Dialog,"Verify that when you encounter a Web site that could be prefilled,
+      that you are given the pre-fill dialog and when you click ok, the
+      information is filled into the form."
+R-93,Glossary,"Verify that in the Glossary there includes a section for an Upgrade
+        Guide."
+R-118,Feedback Center,Determine whether the Feedback Center displays correctly
+R-136,Surf Go menuitems,Verify browser goes back and forward to recently visited sites
+R-148,Print image,"Determine that it is possible to print an image without changing
+        the currently loaded page"
+R-157,Image Display,"Determine whether X Bitmap (XBM) format images can be displayed.Note: XBM will not be supported in the initial 5.0
+          release."
+R-191,Alignment Test,"Determine if a page with aligned text prints as seen on
+        screen"
+R-195,"Print a ""Page Source""",Determine if page source prints as seen on screen
+R-262,URL in current browser window,"Open a web location (URL) in the current Navigator window. Includes
+        test to dismiss dialog."
+R-265,URL autocompletion,"After viewing a file/page or three, test URL
+        autocompletion: test for current browser, new browser and new editor
+        windows."
+R-282,"Whitespace, null","Find using solely whitespace, null, and string with
+        prepended/appended whitespace."
+R-287,Navigation/UI,"Scrolling and keyboard navigation within the source window. Also
+        should be able to use keyboard accelerators. Resize source window."
+R-290,Color coding,"Verify the expected displayed color for content, tags/attributes,
+        values, script code, entities, etc."
+R-310,Maximize Window,Click to maximize (expandto content on Mac)

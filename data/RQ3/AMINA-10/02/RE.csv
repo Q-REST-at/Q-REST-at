@@ -1,0 +1,16 @@
+ID,Feature,Description
+S59,Metering unit display,"The display of the metering unit shall be able to show for each phase the instantaneous value of voltage, current, power for the output and input of electricity."
+S60,Correct meter setting,"The meter reading on the Metering Unit shall always match the numerical capacity of the collected Energy Value and the display, even in the event of a rollover."
+S117,50 simultaneous users,The HES in the production environment shall be designed for at least 50 simultaneous Users without affecting the performance of the Metering System.
+S136,Setting the number of decimal places,"In the HES user interface, it shall be possible to set the number of decimal places to be displayed for a Metric Value."
+S234,Security log,Everything of importance to the security of the Metering System shall be recorded in a security log or equivalent.
+S237,Logging unique identity,The unique identity of the subject shall be recorded for each logged record.
+B73,Filtering and sorting in alarm list,A User shall have the possibility to filter and sort the alarm list.
+B87,copy static fields,"It shall be possible for the User to be able to copy static fields in HES such as headers, status, responses to Events in the system."
+S548,Test report,"The Contractor shall prepare a test report for the test phases for which the Contractor is responsible during the Delivery Project, as shown in Figure 1 in clause 3.2."
+S549,Content of the test report,"The test report shall contain at least: 
+-Test cases executed 
+-Results of the tests 
+-Residual errors, if any 
+-Residual test cases, if any 
+-Suggested actions"

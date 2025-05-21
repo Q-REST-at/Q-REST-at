@@ -1,0 +1,45 @@
+ID,Feature,Description
+R-2,Add Bookmark,"Verify that bookmarks are properly added to bookmarks file and appear
+      in all access points."
+R-38,General,"Determine whether text can be copied and pasted from text fields
+      within a dialog box."
+R-56,D&D URL Proxy Icons,"Verify that dragging the URL proxy icon to a browser
+      window opens that URL in the target window"
+R-83,Search,"Verify that you have the ability to search by typing keyword
+        synonyms, and verbs to bring up related topics in help content. Verify
+        that if the entered phrase may not actually exist in the help document,
+        but it is related to topic."
+R-93,Glossary,"Verify that in the Glossary there includes a section for an Upgrade
+        Guide."
+R-94,Glossary,"Verify that in the Glossary there includes a tutorial on how to do
+        better searches"
+R-111,Same time messaging,Determine whether Same time messaging displays correctly
+R-135,Back and Forward button dropdowns,"Verify recently visited sites are in Back and Forward button
+        dropdown menu and work."
+R-147,Set image as wallpaper,Determine that you are able to set image as wallpaper.
+R-155,Animated Images,"Determine whether displaying animated GIFs result in single server
+        request for the image, rather than additional requests upon each frame
+        change."
+R-159,Image Display,"Determine whether GIF 89a images are properly displayed across
+        different bit depths."
+R-171,"Actitvation, ftp","Need a good working case for this, working on
+      it"
+R-189,Page with various formats,Determine whether a page with various formats prints properly
+R-191,Alignment Test,"Determine if a page with aligned text prints as seen on
+        screen"
+R-200,Top Web Sites,Determine if  top web sites print properly
+R-242,Add/Remove,Check that addition of a panel works
+R-243,Add/Remove,Adding a already added panel
+R-247,Add/Remove,Verify list of available local panels
+R-256,Bookmarks,Verify that changes reflect immediately from Bookmarks Manager
+R-274,Use on Mac OS,"Use of the native Mac OS file picker to navigate through
+        directories and open files (html, plaintext, image). Cancellation also
+        tested."
+R-277,Basic find in page and frame content,"Find in html page and html frame documents. Test Find Again and
+        cancellation. Test for NOFRAME content."
+R-284,Basic access,"Access from main menu, keyboard accelerator, access keys."
+R-303,Verify all the selectable items work under Classic theme,"Click through all the items on menu bar, tool bars, and floating
+        component bar under Classic theme"
+R-323,Add a folder,"Verify that a folder added to the personal toolbar functions
+        properly."
+R-326,Component buttons,Verify that component buttons work and behave as appropriate.

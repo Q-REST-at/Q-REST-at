@@ -1,0 +1,90 @@
+ID,Feature,Description
+R-1,View Bookmarks,Verify that bookmarks appear at the standard(4) access points
+R-11,Delete Folder,Verify folder(s) are correctly deleted.
+R-15,View item properties,"Verify that view properties works as appropriate for bookmarks,
+      folders, and separators(negative)"
+R-20,Show/Hide columns,Show and hide columns.
+R-43,D&D Images across browser windows,"Verify that dragging an image across browser windows
+      opens the image"
+R-44,D&D Images onto the Desktop,Vrify that dragging an image onto the desktop saves the image
+R-51,D&D from the desktop – Images,"Confirm that dragging a supported image file
+       to the browser window display the file"
+R-54,D&D from Find File window,"Verify that items dragged from a
+       Find File window are handled properly
+       (Windows / Mac OS)"
+R-55,D&D onto the Application Icon,"Verify that items dragged onto the
+      application icon are handled properly"
+R-60,D&D Large Images (stress),"Verify that dragging a large (e.g. 5 MB) image across
+      browser windows, to desktop, and into mail message
+      works properly."
+R-77,Edit Form Data - cancel,"Verify that if you enter data in the Form Manager and then
+      click cancel, the data has not been saved"
+R-85,Index,"Verify that there is an in Index of help content and a list of
+        keywords to links in the help content. (Verify the content is in local
+        documents)"
+R-88,TS/Sign on,"Verify that there is Troubleshooting Help about the problem ""if you
+        can't sign on"""
+R-91,Glossary,"Verify that in the Glossary there includes a section on tips and
+        tricks/tip of the day."
+R-93,Glossary,"Verify that in the Glossary there includes a section for an Upgrade
+        Guide."
+R-97,Page up/down,"Verify that page up and down, in fact, page up and down in
+        help"
+R-99,Arrow up/down,"Verify that you can move around pages with the up and down arrow
+        keys"
+R-104,Mail and News,"Determine whether Mail and News help content displays
+        correctly"
+R-119,About,Determine whether the About Netscape displays correctly
+R-123,Load recorded url,"Verify that double-clicking on a history link causes it to be
+        launched in a browser window."
+R-138,New session,"Verify that a new session is started with a new browser window or a
+        restart."
+R-142,Text and image resize,"Determine that you are not able to resize an image to window when
+        there is also text on the page, this is a stand alone image feature
+        only."
+R-155,Animated Images,"Determine whether displaying animated GIFs result in single server
+        request for the image, rather than additional requests upon each frame
+        change."
+R-162,Test Liveconnect functionality with applets,Test applets with liveconnect
+R-167,"Save username and password, never for this site","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-176,"Preferences, view saved passwords","Verify that when you have saved a username and password in password
+      manager, this information can be viewed in the password manager through
+      preferences"
+R-179,"Preferences, passwords saved, remove all","Verify that you can remove all username and password information and
+      it will no longer autofill nor will anything be listed in password
+      manager"
+R-184,"Tasks, passwords saved, remove","Verify that you can remove a username and password for a given site
+      and it will no longer autofill on that sight nor will it be listed in
+      password manager (netscape.com)"
+R-185,"Tasks, passwords saved, remove all","Verify that you can remove all username and password information and
+      it will no longer autofill nor will anything be listed in password
+      manager (lycos.com)"
+R-191,Alignment Test,"Determine if a page with aligned text prints as seen on
+        screen"
+R-193,Test Portrait and Landscape settings,"Determine if a page with portrait and Landscape settings prints
+        properly"
+R-194,Print HTML forms and widgets,Determine if HTML forms and widgets print properly
+R-200,Top Web Sites,Determine if  top web sites print properly
+R-205,Print Character Styles,Determine if character styles print correctly
+R-206,Print Paragraph Styles,Determine if paragraph styles print correctly
+R-207,Print Preview,Determine if print Preview works correctly
+R-208,Page Setup(mac only),Determine id Page Setup dialog works correctly
+R-210,Header/Footer Test,Determine that header/footer info gets printed
+R-220,Search button,Verify that just clicking Search button goes to search page
+R-222,URL/Sidebar interaction,Verify that starting a URL bar search triggers the sidebar
+R-232,Shift Select,"Determine whether shift-select gestures for text function
+        properly."
+R-242,Add/Remove,Check that addition of a panel works
+R-258,Add Menu,"Verify that unselecting panels from Add menu removes panels from
+        the Sidebar"
+R-260,Basic access to dialog,Tests to access this dialog from the menubar and keyboard.
+R-265,URL autocompletion,"After viewing a file/page or three, test URL
+        autocompletion: test for current browser, new browser and new editor
+        windows."
+R-271,URL to a image files,"Open web locations to various image files, such as.gif,.jpg."
+R-280,Document wrapping,Find with and without document wrapping. Test Find Again.
+R-303,Verify all the selectable items work under Classic theme,"Click through all the items on menu bar, tool bars, and floating
+        component bar under Classic theme"
+R-310,Maximize Window,Click to maximize (expandto content on Mac)
+R-324,Buttons,Verify that each buttons executes as appropriate.

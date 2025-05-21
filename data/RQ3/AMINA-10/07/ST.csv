@@ -1,0 +1,21 @@
+ID,Purpose,Test steps
+33,Controlling logout time,Wait for 45 minutes.
+35,Traceable metering devices,Kamstrup demonstrates how components can be traced to batch and time of manufacture
+43,Function of the metering unit after loss of phases on Cat1,Remove voltage on two of three phases
+44,Function of the metering unit after phase loss on Cat2,Remove voltage on two of three phases
+98,Scope of UAT,The purchaser's UAT (User Acceptance Test) shall include testing and verification of all requirements of the Specification unless otherwise agreed.
+277,Authorization profiles for user rights,"Verify that HES has authorization profiles for the following user rights:
+- Access operating system, start and stop system, update database, change authorization profiles, etc.
+- Input/update of structural data, collection of Metering values, etc.
+- Connection and disconnection of the customer installation via the Metering Unit switch
+- Access to Metering Unit metering data and settings
+- Only 'view', not edit"
+310,Measurement and recording / phase,"Verify that the Metering Unit for each phase is able to measure and record the minimum, maximum and average value of voltage, current, active and reactive power of the electricity output and input per 5 minutes."
+327,Record when high power exceeds limit value per phase,"Verify that the Metering System is able to record and store information when the following Events occur:
+14. High power exceeds set limit value per phase"
+328,Record when power output exceeds limit value,"Verify that the Metering System is able to record and store information when the following Events occur:
+15. Total power consumption exceeds set limit value"
+465,screw anchors - Cat2,Verify that there are no elevations around the Metering Unit's screw attachments that limit the size of the screw head.
+466,screw anchors - Cat1,Verify that there are no elevations around the Metering Unit's screw attachments that limit the size of the screw head.
+593,Automatic export of energy values,Wait until the time for export occurs.
+594,Manual export of energy values,Start an export from HES.

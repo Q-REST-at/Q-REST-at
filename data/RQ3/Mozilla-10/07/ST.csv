@@ -1,0 +1,109 @@
+ID,Purpose,Test steps
+T-39,"Purpose
+Determine whether text output from a JavaScript applet is properly
+  selected in conjunction with other page content.","Initial Conditions
+None.
+
+Steps/Description
+View the attached test case. Drag-select from ""Browser Javascript Test"" to the bottom of the
+    document. From the Edit menu, select ""Copy"". View the resulting clipboard. (e.g. ""Show Clipboard"" from Finder on
+    Mac, or paste into a text editor on Win32/Linux.)
+
+Expected Results
+After step #3, the entire content of the page should be copied.
+After step #4, the text should be copied reasonably. (use your best
+  discretion, or compare to output of IE 5.)"
+T-96,"Purpose
+This basic testcase is designed to verify that the toolbar acts
+  appropriately when in help","Initial Conditions
+Mozilla should be started up
+
+Steps/Description
+Select the toplevel Help menu. Select Help Contents Click the minimize square in the upper right hand corner Click on the minimized Mozilla in Taskbar Click on the maximize square in the upper right hand corner Click on the x square in the upper right hand corner
+
+Expected Results
+2. Help contents should come up with main topics on the left and
+  detailed information on the right
+3. Help should be minimized and show on your taskbar
+4. Help should be restored to the same size it was in the first
+  place
+5. Help should now be expanded to the entire screen
+6. Mozilla should close"
+T-106,"Purpose
+This basic testcase is designed to verify that Customizing Netscape 6
+  help content comes up when clicked and is displayed correctly and prints
+  correctly.","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
+
+Steps/Description
+Select the toplevel Help menu. Select Customizing Netscape 6 Select all contents on right, copy and paste into your favorite
+    word processor and run spell check 4.Click the printer icon
+
+Expected Results
+2. Customizing Netscape 6 help content should come up with main topics
+  on the left and detailed information on the right
+3. There should be no spelling errors (Besides obvious computer terms
+  and websites)
+4. Customizing Netscape 6 help content should print"
+T-185,"Purpose
+Verify that you can remove all username and password information and it
+  will no longer autofill nor will anything be listed in password manager
+  (lycos.com)","Initial Conditions
+Password manager should be enabled and you should have saved username
+  and password information for several sites
+
+Steps/Description
+From the task drop down menus, select privacy and
+     security->password manager->view stored passwords Click remove all Click cancel From the task drop down menus, select privacy and
+     security->password manager->view stored passwords Click remove all Click ok From the task drop down menus, select privacy and
+     security->password manager->view stored passwords
+
+Expected Results
+1. A list of saved passwords should appear with your saved sights and
+   usernames appearing in the list
+2. All of the saved site and username information should be removed
+   from the list
+4. All of the saved site and username information should again, appear
+   in the list
+5. All of the saved site and username information should be removed
+   from the list
+6. The password manager should close
+7. There should be no information listed under the passwords saved
+   tab"
+T-193,"Purpose
+Determine that Seamonkey prints pages with portrait and landscape settings
+  properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to view a sample page Select menu option ""FILE| PRINT"" Click on the ""Properties"" button. Under the ""Page Setup"" option, in the frame titled ""Orientation"",
+    select the radio button titled ""Portrait"" Press OK twice to print the page Repeat step 1 thru 3 and select the radio button titled ""Landscape""
+    under the ""Orientation"" Frame. Press ""OK"" twice to print the page
+
+Expected Results
+After Step 6, the page should be printed in Portrait setting
+After Step 8, the page should be printed in Landscape setting"
+T-260,"Purpose
+Testing access to the web location dialog","Initial Conditions
+The browser should already be open.
+
+Steps/Description
+Test the following to see if all of these tasks will bring up the Open
+  Web Location dialog:
+From the menubar of the browser, select File > Open Web
+    Location. Use the keyboard shortcut specific to your platform: Win32 and Unix: Control+Shift+L Macintosh: Command+Shift+L
+
+Expected Results
+The Open Web Location should be displayed, regardless of the means you
+  used above."
+T-310,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"

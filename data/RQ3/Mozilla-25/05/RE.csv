@@ -1,0 +1,41 @@
+ID,Feature,Description
+R-52,D&D from the desktop – Plug-in files,"Confirm that dragging a helper-application
+       file to the browser window opens the file
+       properly"
+R-84,Sidebar,"Verify that there is a tab for help and you can create a Help
+        Sidebar tab with dynamic information"
+R-90,TS/Buddy List,"Verify that there is Troubleshooting Help about the problme ""if you
+        can't see anyone in your buddy list window."""
+R-97,Page up/down,"Verify that page up and down, in fact, page up and down in
+        help"
+R-99,Arrow up/down,"Verify that you can move around pages with the up and down arrow
+        keys"
+R-109,What's new in Netscape 6,Determine whether What's new in Netscape 6 displays correctly
+R-126,Erase all,Clear all of history
+R-146,Send in mail,"Determine that you can right click an image and send it via
+        email."
+R-165,Replace Forgotten Master Password,"Verify that the process to replace a forgotten master password is
+      easier/more discoverable (though encrypted information should still be
+      lost to the user who has forgotten their password)."
+R-167,"Save username and password, never for this site","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-193,Test Portrait and Landscape settings,"Determine if a page with portrait and Landscape settings prints
+        properly"
+R-200,Top Web Sites,Determine if  top web sites print properly
+R-213,Realplayer tests,Determine if Realaudio works properly
+R-216,Macromedia Shockwave Tests,Determine if Shockwave movies work properly
+R-222,URL/Sidebar interaction,Verify that starting a URL bar search triggers the sidebar
+R-231,Discontiguous (disjoint) selection,"Determine whether discontiguous selection of table cells function
+        properly."
+R-236,Startup,Check default width of Sidebar
+R-238,Width,Retaining non-default size on reopen or new window
+R-251,Cancel,Verify that nothing changes when you cancel
+R-261,Basic UI and navigation,"Determine that interface features (buttons, textfield, droplist)
+        appear and behave as expected. Includes tests to dismiss dialog."
+R-269,Local file in an editor window,"Open local files (both HTML and plain text tested) in a Composer
+        window. Includes tests to dismiss dialog."
+R-276,Basic access of Find and Find Again,"Access from main menu, keyboard accelerator, access keys."
+R-281,Find direction,"Find forwards and backwards within a document. Test Find
+        Again."
+R-318,Thumb Scroll,Click and drag thumb to scroll page
+R-322,Correct items on Bookmarks bar.,Verify correct bookmarks are installed in Bookmarks bar.

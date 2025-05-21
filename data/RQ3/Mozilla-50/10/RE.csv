@@ -1,0 +1,82 @@
+ID,Feature,Description
+R-1,View Bookmarks,Verify that bookmarks appear at the standard(4) access points
+R-2,Add Bookmark,"Verify that bookmarks are properly added to bookmarks file and appear
+      in all access points."
+R-3,File Bookmark,"Add a new bookmark into a specific location within the bookmarks
+      hierarchy."
+R-9,Surf All Bookmarks,Verify that there are no 'dead' default links.
+R-35,Overflow,"Determine whether extremely large text blocks can be copied from web
+      pages."
+R-43,D&D Images across browser windows,"Verify that dragging an image across browser windows
+      opens the image"
+R-51,D&D from the desktop – Images,"Confirm that dragging a supported image file
+       to the browser window display the file"
+R-59,D&D to Bookmark Manager,"Determine if the Bookmark Manager properly handles
+      items dragged onto it."
+R-65,Form Manager - Pop-up,"Verify that a form fill popup menu is activated
+      when a field gets accessed that has been saved in form
+      manager data."
+R-67,Save Form Data - edit menu,Verify that you can save a form's data from the edit menu.
+R-69,Save Form Data - dialog yes,"Verify that you can save a form's data from the
+      popup dialog box and you click yes."
+R-87,Index,"Verify that there is an in Index of help content and a list of
+        keywords to links in the help content."
+R-88,TS/Sign on,"Verify that there is Troubleshooting Help about the problem ""if you
+        can't sign on"""
+R-97,Page up/down,"Verify that page up and down, in fact, page up and down in
+        help"
+R-105,Instant Messenger,"Determine whether Instant Messenger help content displays
+        correctly"
+R-129,Sort by columns,sort and reverse-sort per column
+R-140,Retain scroll position,"Verify that browser remembers scroll state when returning to pages
+        in SH"
+R-146,Send in mail,"Determine that you can right click an image and send it via
+        email."
+R-152,Image Display,"Determine whether images load directly into the web browser from a
+        local hard drive."
+R-165,Replace Forgotten Master Password,"Verify that the process to replace a forgotten master password is
+      easier/more discoverable (though encrypted information should still be
+      lost to the user who has forgotten their password)."
+R-167,"Save username and password, never for this site","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-174,Preferences disable,"Verify that when you disable password manager from the preferences
+      panel, you no longer are asked if you would like to save passwords and
+      longer get prefilled info on sites"
+R-180,"Preferences, passwords never saved, remove","Verify that you can remove a site and username from the passwords
+      never saved section of password manager (ivillage.com)"
+R-181,"Preferences, passwords never saved, remove all","Verify that you can remove all site and username information from the
+      passwords never saved section of password manager (ivillage.com)"
+R-186,"Tasks, passwords never saved, remove","Verify that you can remove a site and username from the passwords
+      never saved section of password manager"
+R-187,"Tasks, passwords never saved, remove all","Verify that you can remove all site and username information from the
+      passwords never saved section of password manager"
+R-190,Test Page,Print a test page and check to see if it prints properly
+R-207,Print Preview,Determine if print Preview works correctly
+R-212,Macromedia Flash plugin,Determine if flash movies play correctly.
+R-222,URL/Sidebar interaction,Verify that starting a URL bar search triggers the sidebar
+R-224,basic sidebar search,Verify that a user can change the search engine
+R-225,Bookmark Search,Verify that a search query/results can be bookmarked
+R-232,Shift Select,"Determine whether shift-select gestures for text function
+        properly."
+R-236,Startup,Check default width of Sidebar
+R-238,Width,Retaining non-default size on reopen or new window
+R-239,UI,Cursors should have the right icon when mousing over
+R-248,Preview,Test the previewing of panels
+R-251,Cancel,Verify that nothing changes when you cancel
+R-256,Bookmarks,Verify that changes reflect immediately from Bookmarks Manager
+R-259,Add Panel using Javascript,Verify that adding of a panel using javascript works
+R-265,URL autocompletion,"After viewing a file/page or three, test URL
+        autocompletion: test for current browser, new browser and new editor
+        windows."
+R-268,Local file in new browser window,"Open local files (both HTML and plain text tested) in a new
+        Navigator window. Includes tests to dismiss dialog."
+R-270,Nonexistent local file,Open a nonexistent (bogus) local file.
+R-272,Basic access,"Access from main menu, keyboard accelerator, access keys."
+R-273,Use on Win32,"Use of the native Win32 file picker to navigate through directories
+        and open files (html, plaintext, image). Cancellation also tested."
+R-282,"Whitespace, null","Find using solely whitespace, null, and string with
+        prepended/appended whitespace."
+R-296,Select and copy,Select and copy from the info window.
+R-302,Checking View menu,Verify if themes exist under View menu
+R-312,Close Wndow,Click upper-right (upper left on Mac) to close
+R-319,Page scroll,Click in the scrollbar area to page up/down.

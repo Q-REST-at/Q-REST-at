@@ -1,0 +1,229 @@
+ID,Purpose,Test steps
+T-4,"Purpose
+This basic testcase is designed to verify that new bookmarks are properly
+  created. *This testcase will change/evolve as the UI for this feature becomes
+  finalized.*","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which
+    I use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select File|New Bookmark. Type in any name and location (URL) Click Enter.
+
+Expected Results
+A dialog box should appear prompting you for the Name and Location (URL)
+    of the new bookmark. The new bookmark should immediately appear on the toplevel bookmarks
+    menu, the bookmarks popup on the personal toolbar, the bookmarks sidepanel,
+    and the manage bookmarks window."
+T-15,"Purpose
+This testcase is designed to verify that the view properties feature works
+  as prescribed for various items.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select a bookmark. Select File|Bookmark Properties. Verify, click
+    ""OK"". Select a folder. Select File|Bookmark Properties. Verify, click
+    ""OK"". Select a separator. Select File|Bookmark Properties.
+
+Expected Results
+For step(2) the Bookmark Properties dialog should appear. It should
+    have fields for name, location(url), custom keyword, and description. There
+    should also be a section for setting update and notification options. For step(3) the Bookmark Properties dialog should appear. It should
+    have fields for name and description. No other fileds should appear in this
+    dialog. For step(4) no dialog should appear."
+T-19,"Purpose
+This basic testcase is designed to verify that columns are resizable by
+  dragging them to an arbitrary size.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Mouseover the separator between the ""Name"" and ""URL"" columns. Click and drag that separator to the left and right. Repeat this with each of the other column separators.
+
+Expected Results
+In step(2) the mouse pointer should change to a double-arrowed
+    icon (platform specific or XP?). In step(3) the column sizes on either side of the separator should
+    shrink and grow as you drag. The content of the column should move with
+    the column header. Column content that is obscured should be replaced by
+    the ellipsis(?)."
+T-27,"Purpose
+This basic testcase is designed to verify that multiple bookmarks can be
+  deleted at one time. It also serves to test marquee (multiple) selection in
+  the Manage Bookmarks context.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks . You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select the toplevel ""Bookmarks"" menu. Select Bookmarks|Manage
+    Bookmarks. Select any bookmark. Shift+click or drag to select more (at least
+    3). Select Edit|Delete.
+
+Expected Results
+The bookmarks should no longer appear in the Manage Bookmarks window,
+    the bookmarks sidebar panel, the top-level ""Bookmarks"" menu and the
+    bookmarks popup on the personal toolbar."
+T-51,"Purpose
+Confirm that supported image files dragged to the browser window are
+  properly displayed","Steps/Description
+Download each of the image files each below to your computer From your desktop or file manager, drag each downloaded file to the
+    browser window
+
+Expected Results
+2. Each image should be displayed in the browser window."
+T-70,"Purpose
+This basic testcase is designed to verify that you can choose no to save a
+  form's data from the dialog box","Initial Conditions
+You should have no form data saved
+
+Steps/Description
+Go to a site that needs information, for example
+    mapquest.com<<li> Fill in all the fields for driving directions
+    and click get directions Click no From the Tools menu, open the Form Manager sub-menu, and then choose
+    Edit Form Info
+
+Expected Results
+2. A dialog should appear asking if you would like to save the values you
+  filled in
+3. Your data should not be saved to Form Manager
+4. Your saved data should not appear in the Forms Manager"
+T-108,"Purpose
+This basic testcase is designed to verify that Creating web pages help
+  content comes up when clicked, is displayed corectly, and prints
+  correctly","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
+
+Steps/Description
+Select the toplevel Help menu. Select Help Contents Click Creating web pages from the left panel Select all contents on right, copy and paste into your favorite
+    word processor and run spell check Click the printer icon
+
+Expected Results
+3. Creating web pages helpcontent should come up with main topics on
+  the left and detailed information on the right
+4. There should be no spelling errors (Besides obvious computer terms
+  and websites)
+5. Creating web pages content should print"
+T-110,"Purpose
+This basic testcase is designed to verify that Security and Privacy
+  help content comes up when clicked, is displayed corectly, and prints
+  correctly","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
+
+Steps/Description
+Select the toplevel Help menu. Select What's new in Netscape six from the submenu Click Security and Privacy Select all contents of the page, and right click, select copy and
+    then paste into your favorite word processor and run spell check
+
+Expected Results
+3. A new window should open with Easier Security at the top of the
+  page
+4. There should be no spelling errors (Besides obvious computer terms
+  and websites)"
+T-130,"Purpose
+This testcase is designed to verify that columns are resizable by dragging
+  them to an arbitrary size.","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select Go|History. Mouseover the separator between the ""Name"" and ""URL"" columns. Click and drag that separator to the left and right. Repeat this with each of the other column separators.
+
+Expected Results
+In step(2) the mouse pointer should change to a double-arrowed
+    icon(platform specific or XP?). In step(3) the column sizes on either side of the separator should
+    shrink and grow as you drag. The content of the column should move with
+    the column header. Column content that is obscured should be replaced by
+    the ellipsis(?)."
+T-135,"Purpose
+This basic testcase is designed to verify that links are properly added to
+  the global history file.","Initial Conditions
+Your session history needs to be empty for this test so restart the
+    browser or open a new window. To check, the Back/Forward buttons should be
+    inactive and the dropdowns should not appear at all when the session
+    history is empty.
+
+Steps/Description
+Follow this Netscape link. Follow this Netscape
+    People link. Wait for the redirect (15sec). Follow this Mozilla QA link. Follow this Mozilla link. From the ""Back"" button dropdown select the 4th item from the top
+    ""Netscape.com"". From the ""Forward"" button dropdown select the 3rd item from the top
+    ""Mozilla QA Home Page""
+
+Expected Results
+For Step(6), the dropdown menu should be apparent and active, the 4th
+    item should be ""Netscape.com"", the page title, and selecting it should
+    actually load that page For Step(7), the dropdown menu should be apparent and active, the 3rd
+    item should be ""Mozilla QA Home Page"", the page title, and selecting it
+    should actually load that page."
+T-206,"Purpose
+Determine that Seamonkey prints pages with different paragraph styles
+  properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to open first paragraph
+    styles test page. After each test page opens, select ""FILE | PRINT"" menu option to print
+    the test. Click on ""Next Test"" at bottom of the page to proceed to next
+    test.
+
+Expected Results
+All pages should print as they appear on the screen."
+T-238,"Purpose
+Determine that non-default width of Sidebar is retained after new window
+  is opened or browser is restarted","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser Click with the mouse on the Sidebar grippy(mouse pressed) and expand
+    the sidebar Make the width of the Sidebar to whatever you want (upto max
+    allowed) Select File| New Navigator Window to open a new browser window Observe that the Sidebar width should be the same as in the earlier
+    window and should not appear changed Also, after step3, select File|Quit to close the browser Restart the browser
+
+Expected Results
+After step 3 and step 6, sidebar non-default width should be the same as
+  changed earlier"
+T-246,"Purpose
+Determine the list of available remote panels","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar, select ""Tabs | Customize Sidebar"" From the window that opens up, the pane titled
+    ""AvailablePanels"" should list the following folders by default:
+    Favorites, From Netscape, From Others, International. Click and open each folder mentioned above to see that they are
+    not empty and that a listing of panels is available in each
+    folder Verify that the Favourites folder lists these panels: CNN.com,
+    Horoscope, Mozillazine, News, Stocks, Tech News, Weather Verify that the From Netscape folder lists these panels:
+    Calender, Horoscopes, Local Events, Local Movies, Local News, News,
+    Sports, Stocks, Tech News, Weather Verify that the From Others folder lists these panels:
+    BackFlip Buddy, CNET.com, CNN.com, eBay, Kinderview, Mapquest,
+    Mozillazine, Red Herring, Webstakes.com and the folder My Netscape
+    Network The International folder should list the following folders:
+    Brazil, Canada, France, Germany, Japan, Portugal, Spain, Sweden,
+    UK
+
+Expected Results
+All default remote panels should be available"
+T-252,"Purpose
+Determine that order and panel list gets saved","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar, select ""Tabs | Customize Sidebar"" From the window that opens up, add a few panels from the left panel
+    (or delete a few panels) Highlight any of the panels in the right pane and click on the
+    reorder arrows on the right side to move the panel up/down in the
+    panels list Press the ""OK"" button to close the window and apply your changes to
+    the Sidebar
+
+Expected Results
+Verify that the panel changes and reordering gets reflected in the
+  Sidebar when you press the OK button"
+T-306,"Purpose
+To verify all the selectable items in Modern theme work properly on
+  different applications under browser like composer, mail, news, aim,
+  address book, etc.","Description
+From the main menu bar, select Edit > Preferences >
+    Appearance > Themes. Select ""Modern"" theme on the right hand side of the dialog. Click the ""Apply Modern"" button. Close the Preferences dialog. Click through all the items on menu bars and tool bars under
+    composer, mail, news, aim and address book to see all the look and
+    feel are consistent.
+
+Expected Results
+All the selectable items and icons under browser should work as
+  advertised."

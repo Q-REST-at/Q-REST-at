@@ -1,0 +1,6 @@
+ID,Feature,Description
+S177,Interpolation in HES,There should be functionality in HES to perform interpolations where the collected value is missing.
+B11,Possible overheating,The metering unit shall have the capability to detect connections that may cause overheating.
+B45,screw anchors,There shall be no protrusions around the screw fixings of the metering unit that limit the size of the screw head.
+B46,mounting bracket,There shall be a mounting bracket placed on the top of the metering unit for mounting.
+S555,Retesting after modifications,The supplier shall also report the possible consequences and impact on other functions of the modifications made. The customer has the right to require repetition of the tests made in FAT if such modifications are made.

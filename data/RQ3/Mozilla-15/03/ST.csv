@@ -1,0 +1,128 @@
+ID,Purpose,Test steps
+T-69,"Purpose
+This basic testcase is designed to verify that you can save a form's data
+  from the edit menu","Initial Conditions
+You should have no form data saved
+
+Steps/Description
+Go to a site that needs information, for example mapquest.com Fill in all the fields for driving directions and click get
+    directions Click yes From the Tools menu, open the Form Manager sub-menu, and then choose
+    Edit Form Info
+
+Expected Results
+2. A dialog should appear asking if you would like to save the values you
+  filled in
+3. Your data should be saved to Form Manager
+4. Your saved data should appear in the Forms Manager"
+T-73,"Purpose
+Verify that when you encounter a Web site that could be prefilled,
+  that you are given the pre-fill dialog and when you click Ok, the
+  information is filled into the form.","Initial Conditions
+You should have no form data saved
+
+Steps/Description
+1. Go to a site that needs information, for example time.com 2. Click subscribe to Time 3. Enter the Name, Address and e-mail information 4. From the Edit menu, choose Save Form Info 5. Close the application, start it up and return to this same
+    page 6. From the Edit menu, select Fill in Form 7. Click Ok
+
+Expected Results
+2. You should be taken to a page where you can enter address
+  information
+3. Your data should be saved to Form Manager
+6. A dialog box should appear with your previously filled out
+  information listed
+7. The form should be filled with the correct information"
+T-118,"Purpose
+Determine whether the Feedback Center displays correctly","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+From the Help Drop Down Menu, select Feedback Center Click on the Fill out a problem report link Click on the Fill out a suggestion form link Click on the Fill out a survey form link
+
+Expected Results
+1. You should be taken to a page that explains how to send feedback to
+  Netscape about the browser.
+1. You should see links to fill out a problem report, Fill out a
+  suggestion form and Fill out a survey
+2. You should be taken to the Netscape Problem Report Form
+3. You should be taken to the Netscape Suggestion Form
+4. You should be taken to the Netscape Survey"
+T-136,"Purpose
+This basic testcase is designed to verify that links generated from
+  session history in the Go menu function properly.","Initial Conditions
+Execute the gomenu-list.html testcase
+  first.
+
+Steps/Description
+Select Go|Back. Select Go|Forward. Select Go|Netcenter. Click any link on the page.
+
+Expected Results
+Each selection should take you to the appropriate page in your session
+    history. After step(4), the Go menu should only contain ""Netcenter"" and the
+    title of the page you just surfed to by clicking a link."
+T-148,"Purpose
+Determine that you can right click an image and print it.","Initial Conditions
+Have mozilla started up and a printer installed on your machine.
+
+Steps/Description
+Complete these steps for all images below
+Open one of the files listed below Right click the image and select print
+
+Expected Results
+Image should print."
+T-157,"Purpose
+Confirm that X Bitmap (XBM) format images can be displayed.
+XBM will not be supported in the initial 5.0 release.
+  This test case may need to be obsoleted.","Initial Conditions
+None.
+
+Steps/Description
+Launch Netscape 6 View the test page (linked below) Independently view each of the two images files (also linked
+    below)
+
+Expected Results
+After step 1, the web page displayed should exhibit display a black
+  & white fancy bitmap image of a clock, followed below by a black and
+  white bitmap image of a penguin.
+After step 2, both the clock and penguin images should be displayed,
+  identically to their appearance in step 1 (or as viewed by Communicator
+  4.x)."
+T-191,"Purpose
+Determine that Seamonkey prints pages with alignments properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to view a page with
+    aligned text Select menu option ""FILE| PRINT"" Press OK on Print Dialog Box to print the page
+
+Expected Results
+After Step 4, the page should be printed as seen on screen"
+T-195,"Purpose
+Determine that Seamonkey prints page source properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Go to mozilla home page Select menu option ""View | Page Source"" to view the source code A new window with the source opens up. Select menu option ""FILE | PRINT"" Press ""OK"" to print the page
+
+Expected Results
+After Step 6, the page source should print as seen on screen"
+T-262,"Purpose
+Test opening a web location (URL) in the current Navigator window.
+  Includes test to dismiss dialog.","Initial Conditions
+The Open Web Location dialog should already be opened in the
+  browser.
+Steps/Description In the textfield enter the URL http://www.mozillazine.org/ . Select Current Navigator window from the
+          droplist, if it isn't already displayed there. Click the Open button (or hit Enter). Expected Results The dialog should go away and the URL load into the current
+      browser window.
+Steps/Description In the textfield enter the URL http://www.mozillazine.org/ . Select Current Navigator window from the
+          droplist, if it isn't already displayed there. Click the Cancel button (or hit Esc ). Expected Results The dialog should go away and the page in the current browser
+      window remain unchanged ."
+T-310,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"

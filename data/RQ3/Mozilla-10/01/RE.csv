@@ -1,0 +1,16 @@
+ID,Feature,Description
+R-145,Save Image,"Determine that you can right click an image and save to your local
+        drive."
+R-182,"Tasks, view saved passwords","Verify that when you have saved a username and password in password
+      manager, this information can be viewed in the password manager through
+      tasks"
+R-197,Print Mozillazine poll result page,Determine if the Mozillazine Poll results page prints properly
+R-210,Header/Footer Test,Determine that header/footer info gets printed
+R-214,Quicktime tests,Determine if quicktime movies play properly
+R-232,Shift Select,"Determine whether shift-select gestures for text function
+        properly."
+R-246,Add/Remove,Verify list of available remote panels
+R-250,Re-Order,Verify reordering of panels works
+R-279,Case sensitivity,Find with and without case sensitivity. Test Find Again.
+R-309,Active/Inactive Window,"The active window is visually distinct, inactive = grey title
+        bar."

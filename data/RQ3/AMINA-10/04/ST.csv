@@ -1,0 +1,19 @@
+ID,Purpose,Test steps
+56,Web service calls,Run the export of data.
+98,Scope of UAT,The purchaser's UAT (User Acceptance Test) shall include testing and verification of all requirements of the Specification unless otherwise agreed.
+218,Help function,Verify that there is a help function in the HES user interface that helps the User to understand how to perform tasks using the functionality of the system.
+255,Display of PQ values,Verify that in HES it is possible to analyze and visualize PQ values in e.g. graphs and bars.
+302,Possible overheating - Cat1 1 phase,Verify that the metering device has the capability to detect connections that may cause overheating.
+303,Possible overheating - Cat1 3 phase,Verify that the metering device has the capability to detect connections that may cause overheating.
+304,Possible overheating - Cat2,Verify that the metering device has the capability to detect connections that may cause overheating.
+319,Record communication errors,"Verify that the Metering System is able to record and store information when the following Events occur:
+8. communication failure"
+404,View meters with communication problems in map,Verify that in HES it is possible to visualize Metering Units with communication problems in a graphical view/map that can be zoomed in and out.
+445,Resistant marking - Cat1,"Verify that the labeling of the Meter's manufacturing number is durable for the lifetime of the Meter, i.e. no removable tape or print that can be scraped off."
+446,Resistant marking - Cat2,"Verify that the labeling of the Meter's manufacturing number is durable for the lifetime of the Meter, i.e. no removable tape or print that can be scraped off."
+447,Legible marking - Cat1,"Verify that the marking of the meter's manufacturing number is clearly legible
+- i.e. the font size must not be too small so that the number is difficult to read e.g. for a customer"
+448,Legible marking - Cat2,"Verify that the marking of the meter's manufacturing number is clearly legible
+- i.e. the font size must not be too small so that the number is difficult to read e.g. for a customer"
+463,Terminal block - Cat1,Verify that the Metering Unit has terminal covers that cover the connection cable layer.
+464,Terminal block - Cat2,Verify that the Metering Unit has terminal covers that cover the connection cable layer.

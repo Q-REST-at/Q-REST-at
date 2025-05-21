@@ -1,0 +1,40 @@
+ID,Feature,Description
+R-19,Resize columns,Verify that columns are resizable to show/hide more of entries
+R-33,Images,"Determine whether native and non-native images are correctly copied
+      to the system Clipboard."
+R-49,D&D from the desktop – Shortcuts,"Confirm that dragging an Internet shortcut to the
+      browser window opens the URL"
+R-64,Form Manager - Autocomplete,"113893Implement New Form Functionality
+      (waiting on bug status)"
+R-89,TS/IM,"Verify that there is Troubleshooting Help about the problem ""if you
+        can't send Instant Messages."""
+R-104,Mail and News,"Determine whether Mail and News help content displays
+        correctly"
+R-107,Understanding Privacy,"Determine whether Understanding Privacy help content displays
+        correctly"
+R-119,About,Determine whether the About Netscape displays correctly
+R-139,Back and forward with named anchors,"Verify browser goes back and forward correctly from sites that use
+        named anchors"
+R-147,Set image as wallpaper,Determine that you are able to set image as wallpaper.
+R-151,Cache/Networking,"Determine whether images load directly into the web browser from a
+        networked server."
+R-163,Test lifecycle of applets,Test lifecycle of applets
+R-164,Master Password prompt,"Verify that the master password is visually distinctive from other
+        password prompts (indicates the functionality and importance of the
+        master password)"
+R-181,"Preferences, passwords never saved, remove all","Verify that you can remove all site and username information from the
+      passwords never saved section of password manager (ivillage.com)"
+R-187,"Tasks, passwords never saved, remove all","Verify that you can remove all site and username information from the
+      passwords never saved section of password manager"
+R-190,Test Page,Print a test page and check to see if it prints properly
+R-197,Print Mozillazine poll result page,Determine if the Mozillazine Poll results page prints properly
+R-211,Print Range,Determine that print range works properly
+R-215,Sound tests,Determine if files with various sound formats play properly
+R-229,Double-click,Determine whether the double-click gesture functions properly.
+R-230,Triple-click,Determine whether the triple-click gesture functions properly.
+R-242,Add/Remove,Check that addition of a panel works
+R-258,Add Menu,"Verify that unselecting panels from Add menu removes panels from
+        the Sidebar"
+R-263,URL in new browser window,"Open a web location (URL) in a new Navigator window. Includes test
+        to dismiss dialog."
+R-296,Select and copy,Select and copy from the info window.

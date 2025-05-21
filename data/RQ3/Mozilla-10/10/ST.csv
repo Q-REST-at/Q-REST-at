@@ -1,0 +1,145 @@
+ID,Purpose,Test steps
+T-15,"Purpose
+This testcase is designed to verify that the view properties feature works
+  as prescribed for various items.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select a bookmark. Select File|Bookmark Properties. Verify, click
+    ""OK"". Select a folder. Select File|Bookmark Properties. Verify, click
+    ""OK"". Select a separator. Select File|Bookmark Properties.
+
+Expected Results
+For step(2) the Bookmark Properties dialog should appear. It should
+    have fields for name, location(url), custom keyword, and description. There
+    should also be a section for setting update and notification options. For step(3) the Bookmark Properties dialog should appear. It should
+    have fields for name and description. No other fileds should appear in this
+    dialog. For step(4) no dialog should appear."
+T-59,"Purpose
+Determine whether the Bookmark Manager properly handles items dragged onto
+  it.","Initial Conditions
+Download the test archive for your system, linked below, to your computer
+  and decompress it.
+
+Steps/Description
+Download the test archive for your system, linked below, to your
+    computer and decompress it. On Windows, drag the Netcenter file to the to the Bookmark
+    Manager On Mac OS, drag the Mac OS bookmark and Netscape
+    Bookmark files to the Bookmark Manager Drag a disk icon (e.g. Macintosh HD on Mac OS, or C:\ on Windows) to the Bookmark Manager Simultaneously drag the mozilla.gif, mozilla.jpg and OwlAlpha.png files
+    to the Bookmark Manager Drag mozillazine.html file to the
+    Bookmark Manager Drag zinealias.html shortcut (alias) to
+    the Bookmark Manager (Mac OS) Drag the contents of the Stress Tests folder simultaneously to
+    the Bookmark Manager
+
+Expected Results
+2. A URL pointer to the hard drive should be added.
+3. Bookmark links to each of the 3 image files should be created.
+4. A bookmark to the mozillazine.html file should be created
+5. A second bookmark to the mozillazine.html file should be created
+6. (Mac OS) Bookmarks should be created for /. (slashdot.org) and dmoz%3A.org (dmoz.org)."
+T-131,"Purpose
+This testcase is designed to verify that you can pick which columns you
+  would like to show/hide.","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select Go|History. Click the icon on the far right of the column headers. Uncheck two of the items (columns). Recheck an item. Quit and restart the application.
+
+Expected Results
+Step(2) a popup menu should appear listing all of the column headers as
+    menuitems. Step(3), they should all be checked by default and unchecking should
+    cause that column to disappear from the manage bookmarks window. Step(4), the columns should reappear upon rechecking its name on the
+    list. Step(5) the columns should appear just as the did after step(4)."
+T-143,"Purpose
+Determine that it is possible to resize an image to it's original size
+  after it has been resized to window size.","Initial Conditions
+Have mozilla started up
+
+Steps/Description
+Complete these steps for all images below
+Open each of the files listed below Right click the image and select resize to window Right click again and select resize to original
+
+Expected Results
+Image should resize to it's original size."
+T-189,"Purpose
+Determine that Seamonkey prints pages with different formats properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to view a page with various
+    formats Select menu option ""FILE | PRINT"" Press ""OK"" on Print Dialog Box to print the page
+
+Expected Results
+After Step 4, the page should be printed as seen on screen"
+T-191,"Purpose
+Determine that Seamonkey prints pages with alignments properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to view a page with
+    aligned text Select menu option ""FILE| PRINT"" Press OK on Print Dialog Box to print the page
+
+Expected Results
+After Step 4, the page should be printed as seen on screen"
+T-200,"Purpose
+Determine that Seamonkey prints Top web pages properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to open a listing of top web
+    sites.. Click on the first web page link. Select the menu option ""FILE | PRINT"" to print the web page Press ""OK"" to print the page Similarly, try printing all the pages one by one.
+
+Expected Results
+All web pages should print properly."
+T-218,"Purpose
+Determine that Windows Media player works properly","Initial Conditions
+None
+
+Steps/Description
+- Daniel Johns
+    Music - Pop singer/songwriter Daniel Johns combines streaming ASF &
+    MP3... - Tranzor Z
+    Productions - Mixing hard trance and progressive house. Hours of music
+    in Windows Media format. - WindowsMedia.com - Home of
+    ASF-formatted media. Radio Station Guide, music downloads, and... - SoundClick -
+    ASF and MP3. Stars and unsigned artists. Streaming songs and videos
+    in... - Hollywood and Vine -
+    Streaming music and videos from Capitol Records. Some clips, some
+    full-length. - Classical Is Cool - Classical
+    music in ASF (ASX) with performer information. - Listen with
+    iRaMa - Listen to streaming audio and dedicate a song to friends. - CLUAS -
+    Stream or download songs by unsigned acts for free (ASF, ASX, WMA,
+    MP3... - Rev-Radio
+    (Revolution Radio) - Streaming audio files from a variety of indie
+    artist in Windows Media and... - DiscoverMusic.com - Provides song
+    samples via the internet. - IFilm.com - Tons
+    of windows media files. To change player settings, click on ""MoreOptions""
+    and then click on ""Change Preferences"" - MSNBC website
+    videos. More videos here
+
+Expected Results
+All media player files should load/work properly"
+T-248,"Purpose
+Determine that panels can be previewed before addition","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar, select ""Tabs | Customize Sidebar"" From the window that opens up, select and click on any panel from
+    the panel titled ""Available Panels"" The ""Preview..."" button should be highlighted Clicking on the ""Preview..."" button should open up a window titled
+    ""Panel Preview"" and showing how the panel looks Pressing the ""x"" button on top right of the window should close the
+    preview window
+
+Expected Results
+Panels can be previewed"
+T-317,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"

@@ -1,0 +1,19 @@
+ID,Feature,Description
+R-39,General,"Determine whether text outputted by JavaScript is properly
+      copied."
+R-96,Tool bar Minimization,"Verify that minimization, maximize and close buttons of the toolbar
+        invoke the correct behavior"
+R-106,Customizing Netscape 6,"Determine whether Customzing Netscape 6 help content displays
+        correctly"
+R-133,Don't show 302 redirect,Don't ever show 302 redirects in history
+R-142,Text and image resize,"Determine that you are not able to resize an image to window when
+        there is also text on the page, this is a stand alone image feature
+        only."
+R-185,"Tasks, passwords saved, remove all","Verify that you can remove all username and password information and
+      it will no longer autofill nor will anything be listed in password
+      manager (lycos.com)"
+R-193,Test Portrait and Landscape settings,"Determine if a page with portrait and Landscape settings prints
+        properly"
+R-260,Basic access to dialog,Tests to access this dialog from the menubar and keyboard.
+R-276,Basic access of Find and Find Again,"Access from main menu, keyboard accelerator, access keys."
+R-310,Maximize Window,Click to maximize (expandto content on Mac)

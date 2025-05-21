@@ -1,0 +1,27 @@
+ID,Feature,Description
+R-30,Prevent bad drops,"Verify that it is NOT possible to drop an item onto itself or its
+      immediate parent or child"
+R-76,Edit Form Data - new value for field,"Verify that if you add a new value for a field in Form Manager
+      it is later offered as an option when prefilling a form using
+      this field."
+R-142,Text and image resize,"Determine that you are not able to resize an image to window when
+        there is also text on the page, this is a stand alone image feature
+        only."
+R-154,Animated Images,"Determine whether an automatically updated web cam continues to
+        refresh over an extended (24 hour) period of time."
+R-156,Animated Images,"To determine whether multiple differing animated images on the same
+        page are properly displayed"
+R-171,"Actitvation, ftp","Need a good working case for this, working on
+      it"
+R-192,Indentation Test,Determine if a page with indentations prints as seen on screen
+R-208,Page Setup(mac only),Determine id Page Setup dialog works correctly
+R-231,Discontiguous (disjoint) selection,"Determine whether discontiguous selection of table cells function
+        properly."
+R-237,Constraints,Check for maximum width of Sidebar
+R-244,Add/Remove,Delete a panel
+R-247,Add/Remove,Verify list of available local panels
+R-255,Bookmarks,Verify that links in Bookmarks work
+R-261,Basic UI and navigation,"Determine that interface features (buttons, textfield, droplist)
+        appear and behave as expected. Includes tests to dismiss dialog."
+R-321,Reorder,"Verify that toolbars can be dragged&dropped to change their
+        order"

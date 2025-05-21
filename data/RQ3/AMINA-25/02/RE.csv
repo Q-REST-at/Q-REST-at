@@ -1,0 +1,36 @@
+ID,Feature,Description
+S2,Traceable metering devices,"All delivered metering devices, down to component level, shall be traceable and can be linked at least to the manufacturing batch and time of manufacture"
+S12,PQ values to HES within 4h,The PQ values (15-minute values) shall be delivered at the latest within 4 hours from registration in the Metering Units to HES
+S27,type approval,"Extended type approval and certification of Metering Devices shall be carried out according to method SPM 1618, test with 12 kV surge voltage."
+S28,Lifespan,A metering Unit shall have a life expectancy of 15 years from the date of delivery to GE.
+S30,Quantity of faulty meters allowed,"Over the expected lifetime of the Metering Units, the occurrence of failures (requiring meter replacement) shall not exceed 0.75 % per year of the installed volume."
+S38,Events linked to HES,Events and associated records (OBIS codes) shall be sent instantaneously to HES.
+S75,Location of the label,"The manufacturing number of the meter shall be placed on a non-removable part (not connection cover, not communication module cover, etc.)."
+S111,Exporting reports and data,"Retrieved measurement and structural data as well as completed reports shall be exportable to any standardized text file format, such as csv."
+S117,50 simultaneous users,The HES in the production environment shall be designed for at least 50 simultaneous Users without affecting the performance of the Metering System.
+S135,Time interval for metric values,There shall be functionality to select different time intervals and time resolution for the Metrics presented.
+S137,Recording of Metric value,"The metric value recorded and stored in the HES shall be unadulterated, i.e. exactly the same value as recorded by the Metering Unit."
+S143,logging of events,Events in the Metering System shall be logged in an event list in HES.
+S148,Time stamp for metric values,Each Metric shall be time stamped with the current time it was received by HES.
+S152,Selecting dates with calendar function,"Where there is a need to select dates in HES, this should be possible through a time and calendar function."
+S163,Request further confirmation,"Commands, initiated by the User in HES, which may have serious consequences in case of incorrect handling (deletion of stored measurement and structure data and disconnection and reconnection of power) shall require additional confirmation before execution"
+S174,Status of the customer interface,"In HES, it shall be possible to see whether the Customer Interface in a Metering Unit is enabled or disabled for data sending."
+S236,Log date and system time,The date and system time shall be recorded for each logged record.
+B24,Record communication errors,"The metering system shall record and store information when the following Events occur:
+8. communication failure"
+B34,Configure records to be stored for events,"For each Event, it shall be possible to optionally configure which registers (OBIS codes) in the Metering Unit are to be stored."
+B45,screw anchors,There shall be no protrusions around the screw fixings of the metering unit that limit the size of the screw head.
+B61,Response times in the user interface,"Response times in the HES user interface shall not exceed:
+- 0.5 sec from input, keystroke or equivalent to first response on screen
+- 0.5 sec for display of form view including data
+- 5 sec for display of simple report
+- 15 sec for login"
+B90,Mass deletion,"In HES, there shall be a function to perform mass deletion of overall structure data objects so that all linked relations are also deleted. E.g. that this is implemented via group membership."
+B108,Send the same info again,It should be possible to send the same information to HES several times
+S537,Design of the solution,The Supplier shall design and construct the Solution in accordance with the requirements set out in Appendix B.2.1 Technical Solution Requirements Specification.
+S549,Content of the test report,"The test report shall contain at least: 
+-Test cases executed 
+-Results of the tests 
+-Residual errors, if any 
+-Residual test cases, if any 
+-Suggested actions"

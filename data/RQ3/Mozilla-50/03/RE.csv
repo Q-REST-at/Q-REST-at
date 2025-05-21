@@ -1,0 +1,91 @@
+ID,Feature,Description
+R-8,Surf Bookmark,"Verify that double-clicking on a bookmark causes it to be launched in
+      a browser window"
+R-9,Surf All Bookmarks,Verify that there are no 'dead' default links.
+R-38,General,"Determine whether text can be copied and pasted from text fields
+      within a dialog box."
+R-45,D&D to Frameset page,"Verify that dragging onto a frame-set
+      page loads the dragged content properly."
+R-55,D&D onto the Application Icon,"Verify that items dragged onto the
+      application icon are handled properly"
+R-58,D&D from Bookmark Manager,"Determine if the application and OS properly
+      handle items dragged from the Bookmark Manager"
+R-60,D&D Large Images (stress),"Verify that dragging a large (e.g. 5 MB) image across
+      browser windows, to desktop, and into mail message
+      works properly."
+R-61,"D&D <a href=""/drag-url-browser-toolbar/"">
+      Given link is non-fetchable, non-retrievable Personal Toolbar",Determine if you can drag items to and from the Personal Toolbar
+R-72,Save Form Data - never return,"Verify that you can save a form's data from the popup dialog
+      box, never for this site and you are never asked again upon
+      returning to the site."
+R-83,Search,"Verify that you have the ability to search by typing keyword
+        synonyms, and verbs to bring up related topics in help content. Verify
+        that if the entered phrase may not actually exist in the help document,
+        but it is related to topic."
+R-85,Index,"Verify that there is an in Index of help content and a list of
+        keywords to links in the help content. (Verify the content is in local
+        documents)"
+R-89,TS/IM,"Verify that there is Troubleshooting Help about the problem ""if you
+        can't send Instant Messages."""
+R-115,Netscape Technical Support,"Determine whether Netscape Technical Support displays
+        correctly"
+R-117,International Users,Determine whether International Users displays correctly
+R-130,Resize columns,Verify that columns are resizable to show/hide more of entries
+R-132,Don't record everything,"Verify that things that aren't supposed to be added to history
+        aren't (eg chorme:/// url's)"
+R-136,Surf Go menuitems,Verify browser goes back and forward to recently visited sites
+R-137,Back and forward with frames,"Verify browser goes back and forward correctly from page with
+        frames."
+R-142,Text and image resize,"Determine that you are not able to resize an image to window when
+        there is also text on the page, this is a stand alone image feature
+        only."
+R-147,Set image as wallpaper,Determine that you are able to set image as wallpaper.
+R-159,Image Display,"Determine whether GIF 89a images are properly displayed across
+        different bit depths."
+R-163,Test lifecycle of applets,Test lifecycle of applets
+R-167,"Save username and password, never for this site","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-169,"Activation, disable after saved","Verify that when the password manager has been disabled, it is no
+      longer in use, even for passwords already saved"
+R-175,Preferences enable,"Verify that when you enable password manager from the preferences
+      panel, you are asked if you would like to save usernames and passwords
+      and get prefilled info on sites"
+R-176,"Preferences, view saved passwords","Verify that when you have saved a username and password in password
+      manager, this information can be viewed in the password manager through
+      preferences"
+R-183,"Tasks, view passwords never saved","Verify that when you have designated not to ever save a username and
+      password in password manager, this information can be viewed in the
+      password manager through tasks (nbci.com)"
+R-186,"Tasks, passwords never saved, remove","Verify that you can remove a site and username from the passwords
+      never saved section of password manager"
+R-187,"Tasks, passwords never saved, remove all","Verify that you can remove all site and username information from the
+      passwords never saved section of password manager"
+R-204,Print Tables,Determine if tables print correctly
+R-207,Print Preview,Determine if print Preview works correctly
+R-208,Page Setup(mac only),Determine id Page Setup dialog works correctly
+R-215,Sound tests,Determine if files with various sound formats play properly
+R-222,URL/Sidebar interaction,Verify that starting a URL bar search triggers the sidebar
+R-224,basic sidebar search,Verify that a user can change the search engine
+R-231,Discontiguous (disjoint) selection,"Determine whether discontiguous selection of table cells function
+        properly."
+R-251,Cancel,Verify that nothing changes when you cancel
+R-255,Bookmarks,Verify that links in Bookmarks work
+R-259,Add Panel using Javascript,Verify that adding of a panel using javascript works
+R-261,Basic UI and navigation,"Determine that interface features (buttons, textfield, droplist)
+        appear and behave as expected. Includes tests to dismiss dialog."
+R-281,Find direction,"Find forwards and backwards within a document. Test Find
+        Again."
+R-287,Navigation/UI,"Scrolling and keyboard navigation within the source window. Also
+        should be able to use keyboard accelerators. Resize source window."
+R-293,Other content,"Attempt to view page info for plain text, xml, ftp listing,
+        directory listing..."
+R-298,Testing under Classic theme,Verify Classic theme works as advertised
+R-305,Verify all the selectable items work under Modern theme,"Click through all the items on menu bar, tool bars, and floating
+        component bar under Modern theme"
+R-308,Window Title,"Verify the title is correct, ""<page title> - Mozilla"""
+R-309,Active/Inactive Window,"The active window is visually distinct, inactive = grey title
+        bar."
+R-315,Stretch Window Diagonally,"Grab any corner of window and drag to resize. Only bottom-right
+        corner on Mac."
+R-316,Scroll Arrow Up,Click up arrow to scroll page
+R-326,Component buttons,Verify that component buttons work and behave as appropriate.

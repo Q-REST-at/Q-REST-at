@@ -1,0 +1,20 @@
+ID,Purpose,Test steps
+1,Virtual and physical servers,Verify that the documentation describes how to install the application both in a physical and in a virtual environment
+10,Database hosting,Verify that the system documentation describes the databases and database versions used.
+35,Traceable metering devices,Kamstrup demonstrates how components can be traced to batch and time of manufacture
+100,Support under UAT,The supplier shall be present at the purchaser's premises and assist when the purchaser performs UAT.
+263,Calendar in Swedish format,"Verify that the HES calendar is displayed in Swedish format (YYYY-MM-DD, Y=year, M=month, D=day)"
+274,Mass deletion,Verify that in HES there is a function to perform mass deletion of overall structure data objects so that all linked relations are also deleted. E.g. that this is implemented via group membership.
+404,View meters with communication problems in map,Verify that in HES it is possible to visualize Metering Units with communication problems in a graphical view/map that can be zoomed in and out.
+430,Management of both primary and secondary registration - Cat2,Verify that the Metering Units can handle primary registration of Measured Values. Verify that the Metering Units can handle secondary registration of Measured Values.
+434,minimum rated current 5A,Verify that the Metering Unit is rated for at least a current of 5 (Imax 100) A.
+471,sealing device - Cat1,Verify that the sealing device of the Metering Unit is raised and clearly visible for smooth and accessible passage of the sealing wire.
+472,sealing device - Cat2,Verify that the sealing device of the Metering Unit is raised and clearly visible for smooth and accessible passage of the sealing wire.
+478,Management of both primary and secondary registration - Cat1,Verify that the Metering Units can handle both primary and secondary recording of Metering Values.
+480,Life expectancy of communication equipment - Cat1,Verify that communication equipment meets the life expectancy requirement of >=15 years from the date of delivery to GE.
+486,Life expectancy of communication equipment - Cat2,Verify that communication equipment meets the life expectancy requirement of >=15 years from the date of delivery to GE.
+491,Design of the solution,Review installed solution and compare with requirements in 2.1 Technical solution.
+593,Automatic export of energy values,Wait until the time for export occurs.
+594,Manual export of energy values,Start an export from HES.
+642,Hardware for the user interface,"HES shall be designed to be used with different types of computers, tablets and smart phones, with different architectures and operating systems."
+646,Authentication against neighboring systems,Verify that authentication is used when the Metering System interacts with neighboring systems.

@@ -1,0 +1,59 @@
+ID,Purpose,Test steps
+T-27,"Purpose
+This basic testcase is designed to verify that multiple bookmarks can be
+  deleted at one time. It also serves to test marquee (multiple) selection in
+  the Manage Bookmarks context.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks . You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select the toplevel ""Bookmarks"" menu. Select Bookmarks|Manage
+    Bookmarks. Select any bookmark. Shift+click or drag to select more (at least
+    3). Select Edit|Delete.
+
+Expected Results
+The bookmarks should no longer appear in the Manage Bookmarks window,
+    the bookmarks sidebar panel, the top-level ""Bookmarks"" menu and the
+    bookmarks popup on the personal toolbar."
+T-154,"Purpose
+Confirm that an automatically updated web cam continues to refresh
+  over an extended (24 hours) period of time.","Initial Conditions
+System under test must be configured to continue normal operation and
+  not ""sleep"" or power down after an extended period of inactivity.
+
+Steps/Description
+Launch Netscape 6 View the test page (linked below) Leave the browser operating untouched for 24 hours
+
+Expected Results
+The images on the page should continue to auto-refresh every 45
+  seconds."
+T-158,"Purpose
+To confirm that that GIF 87a images are properly
+  displayed across different bit depths.","Initial Conditions
+None.
+
+Steps/Description
+Launch Netscape 6 View the test page (linked below)
+
+Expected Results
+A mozilla.org banner, displayed at a descending bit depth, starting
+    at 8-bit, and ceasing at 3-bit, followed by a grayscale image. A Hubble space image, displayed at a descending bit depth, starting
+    at 8-bit, and ceasing at 3-bit, followed by a grayscale image. 5 rows of a single black pixel."
+T-231,"Purpose
+Determine whether discontiguous selection of table cells function
+  properly.","Initial Conditions
+None.
+
+Steps/Description
+View the enclosed test case. Mac OS:
+Drag-select from (1,1) to (2,2) Hold down the command key, and click on the 7 (at 4,4) Hold down the command key, and click on the 4 (at 2,2)
+Windows:
+Drag-select from (1,1) to (2,2) Hold down the Control key, and click on the 7 (at 4,4) Hold down the Control key, and click on the 4 (at 2,2)
+
+Expected Results
+Step 1: The upper-left hand four cells should be selected.
+Step 2: The cell containing the number 7 should be selected, in addition to the four
+  cells selected in step a. (A total of five cells should be selected.)
+Step 3: On Mac OS, the cell containing the number 4 should be deselected; the other
+  four cells should remain selected. (A total of four cells should be
+  selected.) On Windows, the Interface Guidelines lack a useful specification for this
+  action; any user-friendly outcome is acceptable."

@@ -1,0 +1,15 @@
+ID,Feature,Description
+R-45,D&D to Frameset page,"Verify that dragging onto a frame-set
+      page loads the dragged content properly."
+R-70,Save Form Data - dialog no,"Verify that you can stop a form's data from being saved from
+      the popup dialog box, and you click no."
+R-106,Customizing Netscape 6,"Determine whether Customzing Netscape 6 help content displays
+        correctly"
+R-118,Feedback Center,Determine whether the Feedback Center displays correctly
+R-152,Image Display,"Determine whether images load directly into the web browser from a
+        local hard drive."
+R-216,Macromedia Shockwave Tests,Determine if Shockwave movies work properly
+R-236,Startup,Check default width of Sidebar
+R-279,Case sensitivity,Find with and without case sensitivity. Test Find Again.
+R-289,Select and copy,Select and copy strings from the source window.
+R-325,Correct items/links,Verify that the correct items are in the taskbar.

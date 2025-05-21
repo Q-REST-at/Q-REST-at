@@ -1,0 +1,16 @@
+ID,Feature,Description
+R-18,Sort by columns,sort and reverse-sort per column
+R-42,D&D Links onto the Desktop,"Confirm that dragging a link from the browser window
+      onto the desktop creates a shortcut."
+R-59,D&D to Bookmark Manager,"Determine if the Bookmark Manager properly handles
+      items dragged onto it."
+R-71,Save Form Data - dialog no,"Verify that you can stop a form's data from being saved from
+      the popup dialog box, and you click no."
+R-134,Go menu list,Verify correct recently visited sites are in go menu.
+R-198,Print large complex pages,Determine if  large page print properly
+R-237,Constraints,Check for maximum width of Sidebar
+R-260,Basic access to dialog,Tests to access this dialog from the menubar and keyboard.
+R-274,Use on Mac OS,"Use of the native Mac OS file picker to navigate through
+        directories and open files (html, plaintext, image). Cancellation also
+        tested."
+R-302,Checking View menu,Verify if themes exist under View menu

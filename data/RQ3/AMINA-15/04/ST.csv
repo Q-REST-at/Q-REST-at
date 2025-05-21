@@ -1,0 +1,36 @@
+ID,Purpose,Test steps
+21,Security log,Verify that all relevant information is logged in the security log
+23,Log date and system time,Verify that all entries in the log contain the date and system time
+26,Synchronization with GE controlled NTP,Set wrong time in meter. Synchronize meter with system. Check that server web01 has setting to synchronize time with time server.
+56,Web service calls,Run the export of data.
+99,Training for UAT,The Contractor shall carry out the necessary training and submit the relevant documentation according to point 5 before the start of the Customer's UAT.
+100,Support under UAT,The supplier shall be present at the purchaser's premises and assist when the purchaser performs UAT.
+101,Requirements for delivery and installation in the production environment,"The Supplier shall during installation and commissioning of the Metering System in the Customer's production environment:
+-install,
+-if applicable configure/parameterize,
+-if applicable migrate structure data,
+-commission,
+-verify and test the Metering System including integrations in the production environment, and 
+-perform error corrections and retests"
+141,Metering units in HES,"Verify that it is possible to install new Metering Unit - Cat 1, 1 phase. Verify that it is possible to install new Metering Unit - Cat 1, 3 phase. Verify that it is possible to install new Metering Unit - Cat 2. Replace meter type Cat 1, 1 phase. Replace meter type Cat 1, 3 phase. Replace meter type Cat 2. Take down meter type Cat 1, 1 phase. Take down meter type Cat 1, 3 phase. Take down meter type Cat 2"
+271,copy static fields,"Verify that it is possible to copy static fields in HES such as headers, status, responses to Events in the system."
+279,Configuring the Metering Unit,Verify that configuration of the Metering Device from HES can be performed without downloading new Firmware.
+364,PQ values to HES within 4h,Verify that the PQ values (15-minute values) can be delivered at the latest within 4 hours from the registration in the Metering Units to HES
+404,View meters with communication problems in map,Verify that in HES it is possible to visualize Metering Units with communication problems in a graphical view/map that can be zoomed in and out.
+414,type approval - Cat1,"Verify that the Extended Type Approval and Certification of Metering Units is carried out according to method SPM 1618, test with 12 kV surge voltage."
+415,type approval - Cat2,"Verify that the Extended Type Approval and Certification of Metering Units is carried out according to method SPM 1618, test with 12 kV surge voltage."
+441,Visible manufacturing number - communication module - Cat1,Verify that a serial number on a Communication Module is positioned so that it is not visible on the front of the Metering Unit.
+442,Visible manufacturing number - communication module - Cat2,Verify that a serial number on a Communication Module is positioned so that it is not visible on the front of the Metering Unit.
+451,Location of the marking - Cat1,"Verify that the Meter's serial number is placed on a non-removable part (not connector cover, not Communication Module cover, etc.)."
+452,Location of the label - Cat2,"Verify that the Meter's serial number is placed on a non-removable part (not connector cover, not Communication Module cover, etc.)."
+616,Installation of new metering device via integration,Information regarding structure data for new set-up is sent from the integration interface Mint to Collection Manager. Verify that information entered on the user point in Collection Manager corresponds to what is specified in the Work Order. An acknowledgment is sent to Generis that the meter is set up in Collection Manager. Check that the user point is displayed under the correct coordinates in the map view in Vision. Check that the meter has the correct profile and that Energy values. PQ values and GSM diagnostics are pushed from the meter at the correct interval.
+618,Dismantling of metering unit via integration,Information regarding the structure data for the removal of a metering unit is sent from the integration interface Mint to Collection Manager. Verify that the metering unit is removed in Collection Manager and does not have a connection to the user point.
+619,Update of measurement point in CM,Information regarding the structure data for updating a metering unit is sent from the integration interface Mint to Collection Manager. Verify that the information to be updated via Mint has also been changed at the current user point.
+620,New Metering Unit is set up in CM and taken down in ACM - Take down fails in ACM,Initiate a new set-up of a metering unit in CM and ensure that the metering unit is still in ACM when the new set-up is carried out in CM. A message is sent from CM to Generis stating that the metering unit in ACM is not taken down.
+621,New Metering Unit is set up in CM and taken down in AiMiR - Take down fails in AiMiR,Initiate a new set-up of a metering unit in CM and ensure that the metering unit remains in AiMiR when the new set-up is carried out in CM. Mail is sent to the AiMir box.
+622,New Metering Unit is set up in CM and taken down in ACM - Set-up fails in CM,Initiate a new set-up of a metering unit in CM and make sure that the metering unit is already connected to another facility in CM. Message is sent from CM to Generis stating that the metering unit is not created in CM.
+623,New Metering Unit is set up in CM and taken down in AiMiR - Set-up fails in CM,Initiate a new set-up of a metering unit in CM and ensure that the metering unit is still in AiMir when the new set-up is carried out in CM. A message is sent from CM to Generis stating that the metering unit has not been created in CM.
+624,Existing Metering Unit is changed in CM - Meter change fails in CM,Initiate a meter change of an existing metering unit in CM to a New Metering Unit. Enter incorrect serial number for the existing meter in the Work Order. Message is sent from CM to Generis stating that the metering unit is not created in CM. Verify the status of the work order in Generis.
+625,New metering unit set up in CM - Set up fails in CM,Initiate new installation of a metering unit in CM. Enter a serial number for the metering unit already connected to an installation in the work order. Message is sent from CM to Generis stating that the metering unit is not created in CM. Verify the status of the work order in Generis.
+626,Metering unit is taken down in CM - Take-down fails in CM,Initiate a removal of a metering unit in CM where mandatory information in the work order is not complete. Message is sent from CM to Generis stating that the metering unit is not removed in CM. Verify the status of the work order in Generis.
+646,Authentication against neighboring systems,Verify that authentication is used when the Metering System interacts with neighboring systems.

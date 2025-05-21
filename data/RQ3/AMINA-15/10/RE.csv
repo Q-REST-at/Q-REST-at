@@ -1,0 +1,16 @@
+ID,Feature,Description
+S2,Traceable metering devices,"All delivered metering devices, down to component level, shall be traceable and can be linked at least to the manufacturing batch and time of manufacture"
+S77,Designed for wall mounting,The metering units shall be designed for wall mounting.
+S81,Plinth cap,The metering unit shall have a terminal cover that covers the connection cable layer.
+S119,Energy values are exported within 30 sec,The energy values (15-minute values) shall be exportable from HES via integrations to other systems within 30 seconds after registration in HES
+S143,logging of events,Events in the Metering System shall be logged in an event list in HES.
+S148,Time stamp for metric values,Each Metric shall be time stamped with the current time it was received by HES.
+S172,Status of switches to other GE system,The HES shall be able to send information to other facility systems if a Metering Unit's circuit breaker is switched on or off.
+S174,Status of the customer interface,"In HES, it shall be possible to see whether the Customer Interface in a Metering Unit is enabled or disabled for data sending."
+S177,Interpolation in HES,There should be functionality in HES to perform interpolations where the collected value is missing.
+S215,Integrations via files,HES should be able to handle integrations via files.
+B53,minimum rated current 5A,The metering unit shall be rated for a minimum current of 5 (Imax 100) A.
+B83,View meters with communication problems in map,"In HES, it should be possible to visualize Metering Units with communication problems in a graphical view/map that can be zoomed in and out."
+B85,View last measurement value and time,The last Metric and the time of communication with the Metering Unit shall be displayed in the HES.
+S545,Testing tools,The Contractor shall use a tool designated by the Contracting Authority to follow the Contracting Authority's reporting of test results. The Contractor is responsible for registering its feedback and the status of the Client's reported errors and comments in the tool. The Client currently uses ReQtest in the defect management process.
+S546,The client's test case,The Customer shall have the right to develop own and new test cases based on the Specification. New test cases can be created until Final Acceptance of the Delivery Project.

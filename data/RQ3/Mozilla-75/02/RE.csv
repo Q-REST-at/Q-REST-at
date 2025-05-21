@@ -1,0 +1,129 @@
+ID,Feature,Description
+R-1,View Bookmarks,Verify that bookmarks appear at the standard(4) access points
+R-3,File Bookmark,"Add a new bookmark into a specific location within the bookmarks
+      hierarchy."
+R-8,Surf Bookmark,"Verify that double-clicking on a bookmark causes it to be launched in
+      a browser window"
+R-31,Styled Text,"Currently, it is my understanding that there will be no new features
+      in this area"
+R-36,Overflow,"Determine whether extremely large images can be copied from web
+      pages."
+R-38,General,"Determine whether text can be copied and pasted from text fields
+      within a dialog box."
+R-45,D&D to Frameset page,"Verify that dragging onto a frame-set
+      page loads the dragged content properly."
+R-47,D&D to Dialog,"Confirm that text, links, and images dragged to a
+      non-modal dialog are handled properly"
+R-50,D&D from the desktop – Text files,"Confirm that dragging a text file to the browser
+      window displays the document contents"
+R-57,D&D URL Proxy Icons onto the Desktop,"Verify that dragging the URL proxy icon
+      onto the desktop creates a shortcut"
+R-61,"D&D <a href=""/drag-url-browser-toolbar/"">
+      Given link is non-fetchable, non-retrievable Personal Toolbar",Determine if you can drag items to and from the Personal Toolbar
+R-62,D&D Bookmarks menu to toolbar,"Verify that you can drag a bookmark from the Bookmarks menu
+      to the Personal Toolbar."
+R-64,Form Manager - Autocomplete,"113893Implement New Form Functionality
+      (waiting on bug status)"
+R-67,Save Form Data - edit menu,Verify that you can save a form's data from the edit menu.
+R-71,Save Form Data - dialog no,"Verify that you can stop a form's data from being saved from
+      the popup dialog box, and you click no."
+R-76,Edit Form Data - new value for field,"Verify that if you add a new value for a field in Form Manager
+      it is later offered as an option when prefilling a form using
+      this field."
+R-80,F1 shortcut key,Verify that the F1 key brings up the Help dialog
+R-84,Sidebar,"Verify that there is a tab for help and you can create a Help
+        Sidebar tab with dynamic information"
+R-85,Index,"Verify that there is an in Index of help content and a list of
+        keywords to links in the help content. (Verify the content is in local
+        documents)"
+R-86,Favorite,"Verify that is it is possible to have favorite help topics -
+        similar to IE help which has a special tab to add favorite help
+        topics."
+R-96,Tool bar Minimization,"Verify that minimization, maximize and close buttons of the toolbar
+        invoke the correct behavior"
+R-101,Non Clickable Regions,"Verify that clicking non clickable regions in help causes no
+        behavior"
+R-112,Streamlined Interface,Determine whether Streamlined Interface displays correctly
+R-117,International Users,Determine whether International Users displays correctly
+R-119,About,Determine whether the About Netscape displays correctly
+R-123,Load recorded url,"Verify that double-clicking on a history link causes it to be
+        launched in a browser window."
+R-126,Erase all,Clear all of history
+R-135,Back and Forward button dropdowns,"Verify recently visited sites are in Back and Forward button
+        dropdown menu and work."
+R-137,Back and forward with frames,"Verify browser goes back and forward correctly from page with
+        frames."
+R-140,Retain scroll position,"Verify that browser remembers scroll state when returning to pages
+        in SH"
+R-141,Resize to window,"Determine that large Images can be resized to the browser window
+        and will not cause you to scroll in order to view entire image."
+R-143,Resize to original,"Determine that it is possible to resize an image to it's original
+        size after it has been resized to window size."
+R-161,Test applets in HTML tags,"Test applets within <embed>, <applet> and 
+  <object> tags"
+R-166,"Save username and password, yes","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-171,"Actitvation, ftp","Need a good working case for this, working on
+      it"
+R-175,Preferences enable,"Verify that when you enable password manager from the preferences
+      panel, you are asked if you would like to save usernames and passwords
+      and get prefilled info on sites"
+R-182,"Tasks, view saved passwords","Verify that when you have saved a username and password in password
+      manager, this information can be viewed in the password manager through
+      tasks"
+R-186,"Tasks, passwords never saved, remove","Verify that you can remove a site and username from the passwords
+      never saved section of password manager"
+R-188,Print a Page with frames,Determine whether a page with frames prints properly
+R-190,Test Page,Print a test page and check to see if it prints properly
+R-191,Alignment Test,"Determine if a page with aligned text prints as seen on
+        screen"
+R-204,Print Tables,Determine if tables print correctly
+R-207,Print Preview,Determine if print Preview works correctly
+R-211,Print Range,Determine that print range works properly
+R-214,Quicktime tests,Determine if quicktime movies play properly
+R-216,Macromedia Shockwave Tests,Determine if Shockwave movies work properly
+R-231,Discontiguous (disjoint) selection,"Determine whether discontiguous selection of table cells function
+        properly."
+R-239,UI,Cursors should have the right icon when mousing over
+R-245,Add/Remove,Delete all panels
+R-253,What's Related,Verify that What's Related lists related sites
+R-255,Bookmarks,Verify that links in Bookmarks work
+R-257,Add Menu,"Verify that panel title show up in Add menu when panel is
+        added"
+R-263,URL in new browser window,"Open a web location (URL) in a new Navigator window. Includes test
+        to dismiss dialog."
+R-267,Local file in current browser window,"Open local files (both HTML and plain text tested) in the current
+        Navigator window. Includes tests to dismiss dialog."
+R-272,Basic access,"Access from main menu, keyboard accelerator, access keys."
+R-277,Basic find in page and frame content,"Find in html page and html frame documents. Test Find Again and
+        cancellation. Test for NOFRAME content."
+R-278,Find in other document content,"Find in plaintext, xml page, ftp listing."
+R-280,Document wrapping,Find with and without document wrapping. Test Find Again.
+R-281,Find direction,"Find forwards and backwards within a document. Test Find
+        Again."
+R-282,"Whitespace, null","Find using solely whitespace, null, and string with
+        prepended/appended whitespace."
+R-289,Select and copy,Select and copy strings from the source window.
+R-295,Navigation/UI,"Scrolling and keyboard navigation within the info window. Also
+        should be able to use [applicable] keyboard accelerators. Resize source
+        window. Manipulate the grippy."
+R-300,Testing under Modern theme,Verify Modern theme works as advertised
+R-304,"Verify all the selectable items on other applications under
+        Classic theme","Click through all the items on menu bar and tool bars under AIM,
+        Composer, Mail and Address book to see all the looks and feel are
+        consistence under Classic theme"
+R-309,Active/Inactive Window,"The active window is visually distinct, inactive = grey title
+        bar."
+R-310,Maximize Window,Click to maximize (expandto content on Mac)
+R-311,Collapse (mac only),Click to shrink to content
+R-312,Close Wndow,Click upper-right (upper left on Mac) to close
+R-313,Stretch Window Horizontally,"Grab left/right window edge and drag to resize. Not available on
+        Mac."
+R-316,Scroll Arrow Up,Click up arrow to scroll page
+R-317,Scroll Arrow Down,Click down arrow to scroll page
+R-318,Thumb Scroll,Click and drag thumb to scroll page
+R-321,Reorder,"Verify that toolbars can be dragged&dropped to change their
+        order"
+R-323,Add a folder,"Verify that a folder added to the personal toolbar functions
+        properly."
+R-326,Component buttons,Verify that component buttons work and behave as appropriate.

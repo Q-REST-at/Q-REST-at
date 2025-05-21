@@ -1,0 +1,83 @@
+ID,Feature,Description
+R-27,Delete multiple bookmarks,Verify that several bookmarks are deleted at one time.
+R-38,General,"Determine whether text can be copied and pasted from text fields
+      within a dialog box."
+R-41,D&D Links across browser windows,"Confirm that dragging a link across browser windows
+      opens the link."
+R-42,D&D Links onto the Desktop,"Confirm that dragging a link from the browser window
+      onto the desktop creates a shortcut."
+R-45,D&D to Frameset page,"Verify that dragging onto a frame-set
+      page loads the dragged content properly."
+R-46,D&D to Composer,"Verify that browser contents can be dragged to
+      a Composer or Compose Mail window."
+R-50,D&D from the desktop – Text files,"Confirm that dragging a text file to the browser
+      window displays the document contents"
+R-57,D&D URL Proxy Icons onto the Desktop,"Verify that dragging the URL proxy icon
+      onto the desktop creates a shortcut"
+R-58,D&D from Bookmark Manager,"Determine if the application and OS properly
+      handle items dragged from the Bookmark Manager"
+R-60,D&D Large Images (stress),"Verify that dragging a large (e.g. 5 MB) image across
+      browser windows, to desktop, and into mail message
+      works properly."
+R-63,Dragging links to AIM,"Verify that you can drag a URL or page content to
+      an AIM window"
+R-65,Form Manager - Pop-up,"Verify that a form fill popup menu is activated
+      when a field gets accessed that has been saved in form
+      manager data."
+R-67,Save Form Data - edit menu,Verify that you can save a form's data from the edit menu.
+R-85,Index,"Verify that there is an in Index of help content and a list of
+        keywords to links in the help content. (Verify the content is in local
+        documents)"
+R-100,Drag Receipt,Verify that you can't drag docs into the help window
+R-109,What's new in Netscape 6,Determine whether What's new in Netscape 6 displays correctly
+R-113,The Best Standards Support,"Determine whether the Best Standards Support displays
+        correctly"
+R-114,New to the net tutorial,"Determine whether the New to the net tutorial displays
+        correctly"
+R-121,Record sites,Verify that visited links are recorded.
+R-129,Sort by columns,sort and reverse-sort per column
+R-131,Show/Hide columns,Show and hide columns.
+R-146,Send in mail,"Determine that you can right click an image and send it via
+        email."
+R-151,Cache/Networking,"Determine whether images load directly into the web browser from a
+        networked server."
+R-163,Test lifecycle of applets,Test lifecycle of applets
+R-182,"Tasks, view saved passwords","Verify that when you have saved a username and password in password
+      manager, this information can be viewed in the password manager through
+      tasks"
+R-183,"Tasks, view passwords never saved","Verify that when you have designated not to ever save a username and
+      password in password manager, this information can be viewed in the
+      password manager through tasks (nbci.com)"
+R-185,"Tasks, passwords saved, remove all","Verify that you can remove all username and password information and
+      it will no longer autofill nor will anything be listed in password
+      manager (lycos.com)"
+R-187,"Tasks, passwords never saved, remove all","Verify that you can remove all site and username information from the
+      passwords never saved section of password manager"
+R-193,Test Portrait and Landscape settings,"Determine if a page with portrait and Landscape settings prints
+        properly"
+R-201,Print some HTML 4.0 pages,Determine if HTML 4.0 pages print properly
+R-209,Off-Line Printing,Determine that off-line printing works
+R-216,Macromedia Shockwave Tests,Determine if Shockwave movies work properly
+R-219,Viewpoint Plugin,Determine if windows media player works fine
+R-227,Drag-selection,"Currently, it is my understanding that there will be no new
+        features in this area (can monitor bug list)"
+R-228,Drag-selection,"Determine whether drag-selection of text works, both from dead
+        space, and from within text."
+R-230,Triple-click,Determine whether the triple-click gesture functions properly.
+R-231,Discontiguous (disjoint) selection,"Determine whether discontiguous selection of table cells function
+        properly."
+R-232,Shift Select,"Determine whether shift-select gestures for text function
+        properly."
+R-237,Constraints,Check for maximum width of Sidebar
+R-243,Add/Remove,Adding a already added panel
+R-245,Add/Remove,Delete all panels
+R-246,Add/Remove,Verify list of available remote panels
+R-251,Cancel,Verify that nothing changes when you cancel
+R-253,What's Related,Verify that What's Related lists related sites
+R-255,Bookmarks,Verify that links in Bookmarks work
+R-256,Bookmarks,Verify that changes reflect immediately from Bookmarks Manager
+R-279,Case sensitivity,Find with and without case sensitivity. Test Find Again.
+R-280,Document wrapping,Find with and without document wrapping. Test Find Again.
+R-303,Verify all the selectable items work under Classic theme,"Click through all the items on menu bar, tool bars, and floating
+        component bar under Classic theme"
+R-316,Scroll Arrow Up,Click up arrow to scroll page

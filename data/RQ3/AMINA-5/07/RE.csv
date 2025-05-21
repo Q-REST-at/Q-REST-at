@@ -1,0 +1,6 @@
+ID,Feature,Description
+S30,Quantity of faulty meters allowed,"Over the expected lifetime of the Metering Units, the occurrence of failures (requiring meter replacement) shall not exceed 0.75 % per year of the installed volume."
+S38,Events linked to HES,Events and associated records (OBIS codes) shall be sent instantaneously to HES.
+S116,Scaling of environment,HES shall be scalable so that the required performance can be maintained with increased data volumes.
+S147,Display of PQ values,"In HES, it should be possible to analyze and visualize PQ values in e.g. graphs and bar plots."
+S234,Security log,Everything of importance to the security of the Metering System shall be recorded in a security log or equivalent.

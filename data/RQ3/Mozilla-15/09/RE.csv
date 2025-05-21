@@ -1,0 +1,26 @@
+ID,Feature,Description
+R-45,D&D to Frameset page,"Verify that dragging onto a frame-set
+      page loads the dragged content properly."
+R-55,D&D onto the Application Icon,"Verify that items dragged onto the
+      application icon are handled properly"
+R-61,"D&D <a href=""/drag-url-browser-toolbar/"">
+      Given link is non-fetchable, non-retrievable Personal Toolbar",Determine if you can drag items to and from the Personal Toolbar
+R-119,About,Determine whether the About Netscape displays correctly
+R-141,Resize to window,"Determine that large Images can be resized to the browser window
+        and will not cause you to scroll in order to view entire image."
+R-154,Animated Images,"Determine whether an automatically updated web cam continues to
+        refresh over an extended (24 hour) period of time."
+R-162,Test Liveconnect functionality with applets,Test applets with liveconnect
+R-166,"Save username and password, yes","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-171,"Actitvation, ftp","Need a good working case for this, working on
+      it"
+R-181,"Preferences, passwords never saved, remove all","Verify that you can remove all site and username information from the
+      passwords never saved section of password manager (ivillage.com)"
+R-182,"Tasks, view saved passwords","Verify that when you have saved a username and password in password
+      manager, this information can be viewed in the password manager through
+      tasks"
+R-200,Top Web Sites,Determine if  top web sites print properly
+R-225,Bookmark Search,Verify that a search query/results can be bookmarked
+R-310,Maximize Window,Click to maximize (expandto content on Mac)
+R-324,Buttons,Verify that each buttons executes as appropriate.

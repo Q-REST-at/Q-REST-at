@@ -1,0 +1,13 @@
+ID,Feature,Description
+S72,Resistant labeling,"The marking of the Meter's manufacturing number shall be permanent for the lifetime of the Metering Unit, i.e. no removable tape or print that can be scraped off."
+S73,Legible labeling,"The marking of the meter's production number must be clearly legible
+- i.e. the font size must not be too small so that the number becomes difficult to read, e.g. for a customer"
+S81,Plinth cap,The metering unit shall have a terminal cover that covers the connection cable layer.
+S147,Display of PQ values,"In HES, it should be possible to analyze and visualize PQ values in e.g. graphs and bar plots."
+S213,Web service calls,HES shall be able to make and receive web service calls.
+B11,Possible overheating,The metering unit shall have the capability to detect connections that may cause overheating.
+B24,Record communication errors,"The metering system shall record and store information when the following Events occur:
+8. communication failure"
+B71,Help function,The HES user interface shall (LB71) include a help function to assist the User in understanding how to perform tasks using the functionality of the system.
+B83,View meters with communication problems in map,"In HES, it should be possible to visualize Metering Units with communication problems in a graphical view/map that can be zoomed in and out."
+S557,Scope of UAT,The purchaser's UAT (User Acceptance Test) shall include testing and verification of all requirements according to the Specification unless otherwise agreed.

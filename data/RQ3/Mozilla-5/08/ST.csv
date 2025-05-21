@@ -1,0 +1,65 @@
+ID,Purpose,Test steps
+T-101,"Purpose
+This basic testcase is designed to verify that when clicking
+  non-clickable areas in help, no behavior occurs","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+Select the toplevel Help menu. Select Help Contents Click on the greyed out previous button Click on the greyed out back button Click on the Netscape logo in uppper right
+
+Expected Results
+2. You should be taken to the help contents page
+3. Nothing should happen
+4. Nothing should happen
+5. Nothing should happen"
+T-115,"Purpose
+Determine whether Netscape Technical Support displays correctly","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+From the Help Drop Down Menu, select Help and Support Center Click the Assisted Support Options link Click the Communicator 4.x link Click on the Netscape link Click on the Intertional Browsers link
+
+Expected Results
+1. The Help and Support Center page should come up
+2. You should be taken to the Need some help? page
+2. Help number should be listed 1(800)411-0707 (They
+  will help you for low-cost assistance)
+2. There should be links to Communicator 4.x, Netscape 6,
+  International Browsers
+3. You should be taken to a general Help page for Communicator 4.x
+4. You should be taken to a general Help page for Netscape 6
+4. Verify that the browser mentioned on this page is the correct
+  version of the Netscape 6 browser
+5.You should be taken to a general Help page for International
+  Support"
+T-135,"Purpose
+This basic testcase is designed to verify that links are properly added to
+  the global history file.","Initial Conditions
+Your session history needs to be empty for this test so restart the
+    browser or open a new window. To check, the Back/Forward buttons should be
+    inactive and the dropdowns should not appear at all when the session
+    history is empty.
+
+Steps/Description
+Follow this Netscape link. Follow this Netscape
+    People link. Wait for the redirect (15sec). Follow this Mozilla QA link. Follow this Mozilla link. From the ""Back"" button dropdown select the 4th item from the top
+    ""Netscape.com"". From the ""Forward"" button dropdown select the 3rd item from the top
+    ""Mozilla QA Home Page""
+
+Expected Results
+For Step(6), the dropdown menu should be apparent and active, the 4th
+    item should be ""Netscape.com"", the page title, and selecting it should
+    actually load that page For Step(7), the dropdown menu should be apparent and active, the 3rd
+    item should be ""Mozilla QA Home Page"", the page title, and selecting it
+    should actually load that page."
+T-211,"Purpose
+Determine that printing range works properly","Initial Conditions
+None
+
+Steps/Description
+Launch the browser Go to Windows 
+    Build Prerequisites Do ""File | Print"" Once the ""Print"" dialog comes up, click on the radio button titled
+    ""Pages"" Enter a value for the number of pages to print (say 1 to 3)
+
+Expected Results:
+Only pages 1 to 3 should get printed"

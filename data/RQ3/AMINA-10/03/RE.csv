@@ -1,0 +1,11 @@
+ID,Feature,Description
+S24,Operation of the metering unit after phase loss,The metering unit in a 3-phase installation shall continue to function even if one or two phases are lost.
+S77,Designed for wall mounting,The metering units shall be designed for wall mounting.
+S182,Life expectancy,Communication equipment shall have a life expectancy of >= 15 years from the date of delivery to GE.
+S241,Authentication against neighboring systems,Authentication shall be used when the Metering System interacts with neighboring systems.
+B73,Filtering and sorting in alarm list,A User shall have the possibility to filter and sort the alarm list.
+B90,Mass deletion,"In HES, there shall be a function to perform mass deletion of overall structure data objects so that all linked relations are also deleted. E.g. that this is implemented via group membership."
+B91,Configuring the Metering Unit,Configuration of the Metering Device from HES shall be possible without downloading new Firmware.
+B108,Send the same info again,It should be possible to send the same information to HES several times
+S543,Develop test cases,"The supplier shall prepare test cases based on agreed requirements, i.e. agreed Specification unless otherwise agreed."
+S557,Scope of UAT,The purchaser's UAT (User Acceptance Test) shall include testing and verification of all requirements according to the Specification unless otherwise agreed.

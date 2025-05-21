@@ -1,0 +1,99 @@
+ID,Purpose,Test steps
+T-30,"Purpose
+This basic testcase is designed to verify that bookmarks and folders can't
+  be dropped onto themselves, an immediate parent container or any child
+  container.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel. As part of your bookmarks file you need a folder (lets' call it folder
+    ""A"") that contains bookmarks and another folder (let's call this folder
+    ""A 1 "" (read Asub1)) that contains bookmarks as well.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select folder A 1 then drag&drop it onto or within
+    itself Select folder A 1 then drag&drop it onto or within folder
+    A. Select folder A then drag&drop it onto or within folder
+    A 1 . Select a bookmark within folder A 1 and drop it onto folder
+    A 1 .
+
+Expected Results
+Nothing should happen! No bookmark or folder should be moved in any of
+    these cases. Ideally, one should see the International symbol for ""No""
+    cursor."
+T-60,"Purpose
+Verify that dragging a large (e.g. 5 MB) image across browser windows, to
+  desktop, and into mail message works properly.","Steps/Description
+Open the p43886.jpg image file in the browser window Open a second browser window Drag the image into the second browser window Drag the image onto the desktop Open a HTML Compose Mail window (if the compose window opens in plain
+    text mode, close the window, then in the mail window Ctrl+click ( Cmd+click in Mac OS) the Compose button) Drag the image into the Compose Mail window
+
+Expected Results
+2. The second browser window should also open the image.
+3. The image file should be saved onto the desktop
+5. The image should be copied to the Compose Mail window"
+T-99,"Purpose
+This basic testcase is designed to verify that the up arrow and down arrow Keys function 
+  properly in help","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+Select the toplevel Help menu. Select Technical Support Push the down arrow key on your keyboard Push the up arrow key on your keyboard Click a few random links in help and try using these keys
+    again
+
+Expected Results
+2. You should be taken to http://help.netscape.com/
+4. This should move you down the page until the end
+5. This should move you up the page until you reach the top
+6. Up arrow and down arrow keys 
+  should consistantly move you up and down pages"
+T-131,"Purpose
+This testcase is designed to verify that you can pick which columns you
+  would like to show/hide.","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select Go|History. Click the icon on the far right of the column headers. Uncheck two of the items (columns). Recheck an item. Quit and restart the application.
+
+Expected Results
+Step(2) a popup menu should appear listing all of the column headers as
+    menuitems. Step(3), they should all be checked by default and unchecking should
+    cause that column to disappear from the manage bookmarks window. Step(4), the columns should reappear upon rechecking its name on the
+    list. Step(5) the columns should appear just as the did after step(4)."
+T-174,"Purpose
+Verify that when you disable password manager from the preferences panel,
+  you no longer are asked if you would like to save passwords and longer get
+  prefilled info on sites","Initial Conditions
+Browser should be started and you should have a username and password for
+  a site, such as www.freeride.com
+
+Steps/Description
+From the Edit drop down list, select preferences Click the arrow next to advanced Click passwords Unclick the box next to remember passwords for sites that require me to
+    log in Click ok Go to a sight that requires a password, such as
+    http://www.freeride.com Enter a username and password and click sign in
+
+Expected Results
+1. The preference panel should be displayed
+2. The advanced options should be displayed
+3. The password panel should be displayed on the right hand side
+5. The preferences panel should close
+7. You should not be presented with a dialog asking if you would like to
+  save your username and password"
+T-200,"Purpose
+Determine that Seamonkey prints Top web pages properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to open a listing of top web
+    sites.. Click on the first web page link. Select the menu option ""FILE | PRINT"" to print the web page Press ""OK"" to print the page Similarly, try printing all the pages one by one.
+
+Expected Results
+All web pages should print properly."
+T-236,"Purpose
+Determine that default width of Sidebar is proper","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser In the Sidebar, verify that the default width appears properly and the
+    sidebar does not occupy more that 2 inches(approximately) of the width Quit the browser using File->Quit Restart the browser
+
+Expected Results
+After step 3, the Sidebar default width should remain the same"

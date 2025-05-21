@@ -1,0 +1,7 @@
+ID,Feature,Description
+S72,Resistant labeling,"The marking of the Meter's manufacturing number shall be permanent for the lifetime of the Metering Unit, i.e. no removable tape or print that can be scraped off."
+S117,50 simultaneous users,The HES in the production environment shall be designed for at least 50 simultaneous Users without affecting the performance of the Metering System.
+S213,Web service calls,HES shall be able to make and receive web service calls.
+B24,Record communication errors,"The metering system shall record and store information when the following Events occur:
+8. communication failure"
+S545,Testing tools,The Contractor shall use a tool designated by the Contracting Authority to follow the Contracting Authority's reporting of test results. The Contractor is responsible for registering its feedback and the status of the Client's reported errors and comments in the tool. The Client currently uses ReQtest in the defect management process.

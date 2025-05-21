@@ -1,0 +1,17 @@
+ID,Purpose,Test steps
+49,Scaling of environment,Measure performance during normal reporting operation. Increase CPU & RAM in clusters. Measure performance.
+78,Dependencies with other systems,"For example, turn off the connection between Collection Manager and OMNIA Flex."
+237,Detecting meters with communication problems,Verify that in HES it is possible for the User to detect and see individual Metering Units that have communication problems.
+277,Authorization profiles for user rights,"Verify that HES has authorization profiles for the following user rights:
+- Access operating system, start and stop system, update database, change authorization profiles, etc.
+- Input/update of structural data, collection of Metering values, etc.
+- Connection and disconnection of the customer installation via the Metering Unit switch
+- Access to Metering Unit metering data and settings
+- Only 'view', not edit"
+279,Configuring the Metering Unit,Verify that configuration of the Metering Device from HES can be performed without downloading new Firmware.
+281,Create groups,"Verify that groups can be created dynamically by the User in HES using different parameters, e.g. Facility ID for export of collected data or meter software upgrade where group can be by postcode or meter identity."
+331,Configure records to be stored for events,Verify that for each Event it is possible to optionally configure which registers (OBIS codes) in the Metering Unit should be stored.
+352,Interpolation in HES,Verify that there is functionality in HES to perform interpolations where the collected value is missing.
+593,Automatic export of energy values,Wait until the time for export occurs.
+594,Manual export of energy values,Start an export from HES.
+646,Authentication against neighboring systems,Verify that authentication is used when the Metering System interacts with neighboring systems.

@@ -1,0 +1,9 @@
+ID,Feature,Description
+R-15,View item properties,"Verify that view properties works as appropriate for bookmarks,
+      folders, and separators(negative)"
+R-44,D&D Images onto the Desktop,Vrify that dragging an image onto the desktop saves the image
+R-137,Back and forward with frames,"Verify browser goes back and forward correctly from page with
+        frames."
+R-166,"Save username and password, yes","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-215,Sound tests,Determine if files with various sound formats play properly

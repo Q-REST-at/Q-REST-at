@@ -1,0 +1,160 @@
+ID,Purpose,Test steps
+T-5,"Purpose
+This basic testcase is designed to verify that a bookmark is properly
+  deleted and is no longer displayed at the appropriate places.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks . You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select the toplevel 'Bookmarks' menu then select the 'Manage Bookmarks'
+  menuitem.
+Select (highlight) a bookmark, press the delete key, OR Select (highlight) a bookmark, Select Edit|Delete. Click OK in the
+    dialog that appears.
+
+Expected Results
+The title of and link to the bookmark should now be removed from:
+the toplevel 'Bookmarks' menu the 'Bookmarks' popup menu on the personal toolbar the 'Bookmarks' panel in MySidebar in the Manage Bookmarks view (select Bookmarks| Manage Bookmarks)"
+T-15,"Purpose
+This testcase is designed to verify that the view properties feature works
+  as prescribed for various items.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select a bookmark. Select File|Bookmark Properties. Verify, click
+    ""OK"". Select a folder. Select File|Bookmark Properties. Verify, click
+    ""OK"". Select a separator. Select File|Bookmark Properties.
+
+Expected Results
+For step(2) the Bookmark Properties dialog should appear. It should
+    have fields for name, location(url), custom keyword, and description. There
+    should also be a section for setting update and notification options. For step(3) the Bookmark Properties dialog should appear. It should
+    have fields for name and description. No other fileds should appear in this
+    dialog. For step(4) no dialog should appear."
+T-42,"Purpose
+Confirm that dragging a link from the browser window onto the desktop
+  creates a shortcut, linking to the correct URL.","Steps/Description
+Open the testfile.html test
+    file Drag the Drag Me link onto the desktop Open the shortcut created in the last step Drag the Space Shuttle link onto the desktop Open the shortcut created in the last step
+
+Expected Results
+2. A link to the dragme.html file should be
+  created
+3. The dragme.html file should open the
+  browser window
+4. A link to the large space shuttle image should be created
+5. The large space shuttle image should open in the browser window"
+T-43,"Purpose
+To verify that dragging an image across browser windows opens the image in
+  the target window.","Steps/Description
+Open the testfile.html test file Open a new browser window Drag the Space Shuttle image from the first browser window to the
+    target window.
+
+Expected Results
+3. The target browser window should open the the space shuttle image"
+T-95,"Purpose
+This basic testcase is designed to verify that when clicking the
+  Forward and Back buttons in help, you are taken to the correct page","Initial Conditions
+Mozilla should be started up
+
+Steps/Description
+Select the toplevel Help menu. Select Help Contents Click Browsing the web link on left hand side of help page Click on Copying, Saving and Printing link on the left hand side of
+    help page Click the back button on the help toolbar Click the forward button on the help toolbar Try this on other pages to ensure the behavior is consistant
+    through help
+
+Expected Results
+2. You should be taken to the help contents page
+3. You should now be taken to the appropriate page, navigating web
+  pages
+4. You should now be taken to the appropriate page, copying, saving,
+  and printing
+5. You should return to the first page, navigating web pages
+6. You should return to copying, saving, and printing"
+T-163,"Purpose
+Determine that applet lifecycle works properly (init, start, stop...)","Initial Conditions
+Open the Java console from Tasks | Tools |  Java Console menu While performing every test, hit the BACK button and FORWARD button in
+    the browser and observe results in browser window or console
+
+Steps/Description
+Click the following testcase links
+Test 1 . Observe the clock display the
+    system time on your machine. Hit BACK and FORWARD
+    button and see that time changes and you see a different time with every
+    visit. Test 2 . Hit BACK and
+    FORWARD button on this page and observe that the init, start and
+    stop methods are called in that order in java console. Test 3 . Hit BACK and
+    FORWARD button on this page and observe that the init, start and
+    stop methods are called in that order in java console."
+T-167,"Purpose
+Verify that the browser behaves correctly after the never for this site
+  selection is made in the password dialog box.","Initial Conditions
+Clear stored passwords or use a sight that you have not been to before
+
+Steps/Description
+Go to a sight that requires a password, such as
+    http://www.freeride.com Enter a username and password and click login When presented with the save password dialog, click never for this
+    site Shut down Netscape 6 Open Netscape 6 Return to http://www.freeride.com (or other site, if used) Enter a username and password and click login
+
+Expected Results
+3. No password should be saved in Password Manager
+6. The username and password should not be prefilled
+7. The password dialog box should not appear again"
+T-194,"Purpose
+Determine that Seamonkey prints pages with HTML widgets properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to view a page with HTML
+    widgets Select menu option ""FILE| PRINT"" Press ""OK"" to print the page
+
+Expected Results
+After Step 4, all the HTML widgets should print as seen on screen"
+T-203,"Purpose
+Determine that Seamonkey prints Lists properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to open a page with different types
+    of lists. Select ""FILE | PRINT"" menu option to print the page.
+
+Expected Results
+All lists should print as they appear on the screen."
+T-253,"Purpose
+Determine that What's Related lists lists related sites","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser Visit any url, say, www.yahoo.com From the Sidebar, select the ""What's Related"" tab to open it (This
+    tab gets added by default) Observe that a listing of websites is given in the What's Related
+    tab
+
+Expected Results
+What's Related tab should list a number of related sites to yahoo.com,
+  eg: aol.com, google.com, msn.com, etc."
+T-301,"Purpose
+Visually inspect menu bar, floating component bars and all the tool
+  bars.","Description
+From the main menu bar, select Edit > Preferences >
+    Appearance > Themes. Select ""Modern"" theme on the right hand side of the dialog. Click the ""Apply Modern"" button. Close the Preferences dialog.
+
+Expected Results
+All the menu bars, tool bars, task bars and the widgets are well
+  displayed."
+T-303,"Purpose
+To verify all the selectable items under browser in Classic theme.","Description
+From the main menu bar, select
+    Edit > Preferences > Appearance > Themes. Select ""Classic"" theme on the right hand side of the dialog. Click the ""Apply Classic"" button. Close the Preferences dialog. Click through all the items on menu bars, tool bars, and floating
+    component bars.
+
+Expected Results
+All the selectable items and icons under browser should work as
+  advertised."
+T-317,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"

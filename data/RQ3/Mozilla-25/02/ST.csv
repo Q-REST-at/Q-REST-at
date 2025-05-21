@@ -1,0 +1,211 @@
+ID,Purpose,Test steps
+T-2,"Purpose
+This basic testcase is designed to verify that a bookmark is properly
+  added and is displayed at the appropriate places.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks . You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select the toplevel 'Bookmarks' menu then select the first menuitem
+    'Add Bookmark'.
+
+Expected Results
+The title of the page you selected should appear as a bookmark in:
+the toplevel 'Bookmarks' menu the 'Bookmarks' popup menu on the personal toolbar the 'Bookmarks' panel in MySidebar in the Manage Bookmarks view (select Bookmarks| Manage Bookmarks)"
+T-38,"Purpose
+To determine whether cut/copy/paste works on text fields within dialog
+  boxes and other UI windows.","Steps/Description
+Mac OS With the mouse, select a text string within the browser window, and
+        choose ""Copy"" from the Edit menu. From the Edit menu, choose Find on this Page... Press Command+V to paste the text. Press Command+A to select the just-pasted text Select the first three words of the line: ---> this very line <--- ...and press Command+X to cut the text Press Command+A to select the remaining text, and choose
+        ""Delete"" from the Edit menu to clear the text selection. Repeat steps 1-6, but do so using via control+click context menus,
+        rather than through keyboard shortcuts. Repeat steps 1-6, but do so using Mozilla's menu bar, rather than
+        keyboard shortcuts. (For bonus points, perform this step via a text
+        field in a modal dialog, such as within Preferences.) Windows With the mouse, select a text string within the browser window, and
+        choose ""Copy"" from the Edit menu. From the Edit menu, choose Find on this Page... Press Control+V to paste the text. Press Control+A to select the just-pasted text Select the first three words of the line: ---> this very line <--- ...and press Control+X to cut the text Press Control+A to select the remaining text, and choose
+        Delete from the Edit menu to clear the text selection. Repeat steps 1-6, but do so using via context menus, rather than
+        through keyboard shortcuts. Linux With the mouse, select a text string within the browser window, and
+        choose Copy from the Edit menu. From the Edit menu, choose Find on this Page... Press Alt+V to paste the text. Press Alt+A to select the just-pasted text Select the first three words of the line: ---> this very line <--- ...and press Alt+X to cut the text Press Alt+A to select the remaining text, and click
+        after the right edge of the text selection. Press the middle mouse button to paste the selected text. Presss Alt+A to select the contents of the text
+        field Choose ""Delete"" from the Edit menu to clear the text
+        selection.
+
+Expected Results
+Mac OS & Windows : Step 2: The ""Find on Page"" dialog should appear. Step 3: The copied text "" this very line of text "" should
+      be pasted into the text field. Step 4: The text field contents should now be selected Step 5: The text field should now comprise: "" of
+      text "" Step 6: The text field should now be empty. Linux: Step 2: The ""Find on Page"" dialog should appear. Step 3: The copied text "" this very line of text "" should
+      be pasted into the text field. Step 4: The text field contents should now be selected Step 5: The text field should now comprise: "" of
+      text "" Step 6: The editing caret should exist to the right of the text "" of text "" Step 7: The text field should now contain "" of text this very
+      line "" Step 8: The text field contents should now be selected Step 9: The text field should now be empty."
+T-56,"Purpose
+Verify that dragging the URL proxy icon (in the Location Bar) to a browser
+  window opens that URL in target window.","Steps/Description
+Open a Web site Open a new browser window Drag the URL proxy icon in the Location Bar of the first browser window
+    to the new window
+
+Expected Results
+3. The Web site should open in the target window"
+T-111,"Purpose
+This basic testcase is designed to verify that Security and Privacy
+  help content comes up when clicked and is displayed correctly","Initial Conditions
+Netscape should be started
+
+Steps/Description
+Select the toplevel Help menu. Select What's new in Netscape six from the submenu Click Same time messaging Select all contents of the page, and right click, select copy and
+    then paste into your favorite word processor and run spell check
+
+Expected Results
+3. A new window should open with ""Multiple Mail Accounts &
+  Identities"" at the top of the page
+4. There should be no spelling errors (Besides obvious computer terms
+  and websites)"
+T-135,"Purpose
+This basic testcase is designed to verify that links are properly added to
+  the global history file.","Initial Conditions
+Your session history needs to be empty for this test so restart the
+    browser or open a new window. To check, the Back/Forward buttons should be
+    inactive and the dropdowns should not appear at all when the session
+    history is empty.
+
+Steps/Description
+Follow this Netscape link. Follow this Netscape
+    People link. Wait for the redirect (15sec). Follow this Mozilla QA link. Follow this Mozilla link. From the ""Back"" button dropdown select the 4th item from the top
+    ""Netscape.com"". From the ""Forward"" button dropdown select the 3rd item from the top
+    ""Mozilla QA Home Page""
+
+Expected Results
+For Step(6), the dropdown menu should be apparent and active, the 4th
+    item should be ""Netscape.com"", the page title, and selecting it should
+    actually load that page For Step(7), the dropdown menu should be apparent and active, the 3rd
+    item should be ""Mozilla QA Home Page"", the page title, and selecting it
+    should actually load that page."
+T-147,"Purpose
+Determine that you can right click an image and set as wallpaper.","Initial Conditions
+Have mozilla started up
+
+Steps/Description
+Complete these steps for all images below
+Open one of the files listed below Right click the image and select set as wallpaper Go to your desktop
+
+Expected Results
+Image should now be the wallpaper on your desktop."
+T-159,"Purpose
+To confirm that that GIF 89a images are properly
+  displayed across different bit depths.","Initial Conditions
+None.
+
+Steps/Description
+Launch Netscape 6 View the test page (linked below)
+
+Expected Results
+A mozilla.org banner, displayed at a descending bit depth, starting
+    at 8-bit, and ceasing at 3-bit, followed by a grayscale image. The
+    ""mozilla.org"" text should be transparent, and inherit the green page
+    background. A Hubble space image, displayed at a descending bit depth, starting
+    at 8-bit, and ceasing at 3-bit, followed by a grayscale image. A
+    different portion of the top half of each image should be transparent,
+    and inherit the green page background. 5 rows of a single black pixel."
+T-189,"Purpose
+Determine that Seamonkey prints pages with different formats properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to view a page with various
+    formats Select menu option ""FILE | PRINT"" Press ""OK"" on Print Dialog Box to print the page
+
+Expected Results
+After Step 4, the page should be printed as seen on screen"
+T-191,"Purpose
+Determine that Seamonkey prints pages with alignments properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to view a page with
+    aligned text Select menu option ""FILE| PRINT"" Press OK on Print Dialog Box to print the page
+
+Expected Results
+After Step 4, the page should be printed as seen on screen"
+T-200,"Purpose
+Determine that Seamonkey prints Top web pages properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to open a listing of top web
+    sites.. Click on the first web page link. Select the menu option ""FILE | PRINT"" to print the web page Press ""OK"" to print the page Similarly, try printing all the pages one by one.
+
+Expected Results
+All web pages should print properly."
+T-242,"Purpose
+Determine that a panel can be added sucessfully to the Sidebar","Initial Conditions
+This test works only with the ""Classic"" Theme set for the browser.
+
+Steps/Description
+Launch the browser From the sidebar, select ""Tabs | Customize Sidebar"" From the window titled 'Customize Sidebar', select any panel from any
+    of the folders available and click on the 'Tabs' button to add the panel to
+    the sidebar. Press OK to close the window.
+
+Expected Results
+After step 2, the seleced panel should get added to the pane titled ""My
+  Sidebar"". Pressing the OK button in step3 should close the ""Customize
+  Sidebar"" window and the newly added panel should appear at the bottom of the
+  Sidebar in the navigator window."
+T-243,"Purpose
+Determine that a panel that has been already added cannot be added
+  again.","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the sidebar, select ""Tabs | Customize Sidebar"" From the window that opens up, select ""What's Related"" or ""Search""
+    (already added panels) and click on ""Add"" button.
+
+Expected Results
+After step 2, the panel should only be highlighted in the right pane and
+  should not get added again to the list."
+T-247,"Purpose
+Determine the list of available local panels","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar , select ""Tabs | Customize Sidebar"" From the window that opens up, the pane titled ""AvailablePanels""
+    should list the following local panels by default: What's Related,
+    Search, Bookmarks
+
+Expected Results
+All default local panels should be available"
+T-256,"Purpose
+Determine that changes reflect immediately from bookmarks manager","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser Add the Bookmarks panel to the Sidebar using the ""Customize Sidebar""
+    option Open the Bookmarks panel in the Sidebar Visit any url, say, www.yahoo.com Bookmark that link using ""Bookmarks | Add Current Page""
+
+Expected Results
+As soon as you bookmark the page in step 5, the change should get
+  reflected in the Bookmarks panel in the Sidebar too and you should see
+  the added bookmark in the panel"
+T-303,"Purpose
+To verify all the selectable items under browser in Classic theme.","Description
+From the main menu bar, select
+    Edit > Preferences > Appearance > Themes. Select ""Classic"" theme on the right hand side of the dialog. Click the ""Apply Classic"" button. Close the Preferences dialog. Click through all the items on menu bars, tool bars, and floating
+    component bars.
+
+Expected Results
+All the selectable items and icons under browser should work as
+  advertised."
+T-323,"Purpose
+This basic testcase is designed to verify that folders can be added to
+  the personal toolbar and their contents will still function as links.","Initial Conditions
+All of the browser's toolbars(3) must be visible. Make sure they are all visible by selecting the top level ""View""
+    menu and looking at the Toolbars submenu. The Navigation Toolbar,
+    Personal Toolbar, and Taskbar should all have checks next to their
+    names.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Open the ""Personal Toolbar Folder"". Add a new folder to it,
+    File|New Folder. Open and add a new bookmark, File|New Bookmark to the folder you
+    just created. Select the new bookmark and edit its properties, Edit|Bookmark
+    Properties, changing the url to http://www.mozilla.org. Go back to the browser window and click on the New Folder in the
+    personal toolbar. Click the New Bookmark item.
+
+Expected Results
+The New Folder should appear in the personal toolbar. The link within the New Folder on the personal toolbar should
+    function normally."

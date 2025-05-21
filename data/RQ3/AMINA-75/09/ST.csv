@@ -1,0 +1,132 @@
+ID,Purpose,Test steps
+1,Virtual and physical servers,Verify that the documentation describes how to install the application both in a physical and in a virtual environment
+10,Database hosting,Verify that the system documentation describes the databases and database versions used.
+20,Encryption keys,Verify that the solution description details how encryption keys are managed
+21,Security log,Verify that all relevant information is logged in the security log
+23,Log date and system time,Verify that all entries in the log contain the date and system time
+24,Protection of meters,Verify that the meter is protected against intrusion. Verify that the meter is protected against tampering. Verify that the meter is protected against malware execution
+29,Switching on and off and status of breakers from other GE system,Verify that switching on is not possible by integration from other system. Verify that switching off is not possible by integration from other system. Verify that status of switches is possible to see by integration.
+33,Controlling logout time,Wait for 45 minutes.
+35,Traceable metering devices,Kamstrup demonstrates how components can be traced to batch and time of manufacture
+43,Function of the metering unit after loss of phases on Cat1,Remove voltage on two of three phases
+44,Function of the metering unit after phase loss on Cat2,Remove voltage on two of three phases
+49,Scaling of environment,Measure performance during normal reporting operation. Increase CPU & RAM in clusters. Measure performance.
+56,Web service calls,Run the export of data.
+63,Lifetime Cat1,A Metering Unit shall have a life expectancy of 15 years from the date of delivery to GE.
+71,Grid snapshot - Default values,Provoke an overvoltage on one of the meter's phases and verify that events are sent instantaneously to HES. Verify that the correct register (OBIS codes) is associated with the event. Verify that the Optical Eye shows the grid snapshot for the power misdirection event. Verify that the Optical Eye shows the grid snapshot for the voltage rise event
+78,Dependencies with other systems,"For example, turn off the connection between Collection Manager and OMNIA Flex."
+84,Develop test cases,"The supplier shall prepare test cases based on agreed requirements, i.e. agreed Specification unless otherwise agreed."
+86,Testing tools,The Contractor shall use a tool designated by the Contracting Authority to follow the Contracting Authority's reporting of test results. The Supplier is responsible for registering in the tool its feedback and status on the Customer's reported errors and comments. The Client currently uses ReQtest in the defect management process.
+89,Test report,"The Contractor shall establish a test report for the test phases for which the Contractor is responsible during the Delivery Project, as shown in Figure 1 in clause 3.2."
+90,Content of the test report,"The test report shall contain at least:
+-Test cases executed 
+-Results of the tests 
+-Residual errors, if any 
+-Residual test cases, if any 
+-Suggested actions"
+96,Retesting after modifications,The supplier shall also report possible consequences and impact on other functions from modifications made. The purchaser has the right to require repetition of the tests made in FAT if such modifications are made.
+99,Training for UAT,The Contractor shall carry out the necessary training and submit the relevant documentation according to point 5 before the start of the Customer's UAT.
+101,Requirements for delivery and installation in the production environment,"The Supplier shall during installation and commissioning of the Metering System in the Customer's production environment:
+-install,
+-if applicable configure/parameterize,
+-if applicable migrate structure data,
+-commission,
+-verify and test the Metering System including integrations in the production environment, and 
+-perform error corrections and retests"
+141,Metering units in HES,"Verify that it is possible to install new Metering Unit - Cat 1, 1 phase. Verify that it is possible to install new Metering Unit - Cat 1, 3 phase. Verify that it is possible to install new Metering Unit - Cat 2. Replace meter type Cat 1, 1 phase. Replace meter type Cat 1, 3 phase. Replace meter type Cat 2. Take down meter type Cat 1, 1 phase. Take down meter type Cat 1, 3 phase. Take down meter type Cat 2"
+143,Data in HES,"Verify that structure data can be handled in HES (e.g. Facility ID, Metering Unit). Verify that Metrics can be handled in HES (Metrics with e.g. ID number, status, timestamp). Verify that Events can be handled in HES (Event with e.g. Event ID, times, Alarms)"
+188,Exporting reports and data,"Verify that the retrieved measurement and structural data as well as the finished reports can be exported to any standardized text file format, such as csv."
+194,Energy values to other system within 10 sec,Verify that the goods are delivered from HES according to the agreed export interval
+216,Time interval for measured values,Verify that there is functionality to select different time intervals and time resolution for the Metrics presented.
+218,Help function,Verify that there is a help function in the HES user interface that helps the User to understand how to perform tasks using the functionality of the system.
+219,Setting the number of decimal places,Verify that it is possible to configure the number of decimal places to be displayed for a measurement value.
+220,Recording of measurement value,"Verify that the measured value recorded and stored in the HES is uncorrupted, i.e. exactly the same value as recorded by the Metering Unit.
+Request a timestamped measurement value from the Meter and compare what is displayed on the Meter with the information coming into the HES."
+237,Detecting meters with communication problems,Verify that in HES it is possible for the User to detect and see individual Metering Units that have communication problems.
+238,View last measurement value and time,Verify that the last Measured Value and the time of communication with the Metering Unit are displayed in HES. Verify that the last Measured Value and the time of communication with the Metering Unit are displayed in the HES.
+247,Cumulative calculator,Verify that the metering unit is equipped with a cumulative counter and displays at least 7 integer digits and 3 decimal digits.
+248,Metering unit display - Cat1 1 phase,Verify that the display of the Metering Unit for each phase can show the instantaneous value of voltage. Verify that the display of the Metering Unit for each phase can show the instantaneous value of current. Verify that the display of the Metering Unit for each phase can show the instantaneous value of power for the extraction and input of electricity.
+249,Metering unit display - Cat1 3 phase,Verify that the display of the Metering Unit for each phase can show the instantaneous value of voltage. Verify that the display of the Metering Unit for each phase can show the instantaneous value of current. Verify that the display of the Metering Unit for each phase can show the instantaneous value of power for the extraction and input of electricity.
+250,Metering unit display - Cat2,Verify that the display of the Metering Unit for each phase can show the instantaneous value of voltage. Verify that the display of the Metering Unit for each phase can show the instantaneous value of current. Verify that the display of the Metering Unit for each phase can show the instantaneous value of power for the extraction and input of electricity.
+251,Correct meter setting,"Verify that the Meter Reading on the Metering Unit always matches the numerical capacity of the collected Energy Value and the display, even if the Meter Readings have rolled over."
+255,Display of PQ values,Verify that in HES it is possible to analyze and visualize PQ values in e.g. graphs and bars.
+256,Time stamp for measurement value,Verify that all metrics (PQ) are time-stamped with the Current time when received by HES. Verify that all metrics (energy) are time-stamped with the Current time when received by HES.
+260,Selecting dates with calendar function,"Verify that where there is a need to select dates in HES, this is done through a time and calendar function."
+271,copy static fields,"Verify that it is possible to copy static fields in HES such as headers, status, responses to Events in the system."
+273,Request further confirmation,"Verify that commands, initiated by the User in HES, which may have serious consequences in case of incorrect handling (deletion of stored measurement and structure data and switching off and on of power) require additional confirmation before being executed. Verify that commands which do not have serious consequences do not require additional confirmation before being executed."
+277,Authorization profiles for user rights,"Verify that HES has authorization profiles for the following user rights:
+- Access operating system, start and stop system, update database, change authorization profiles, etc.
+- Input/update of structural data, collection of Metering values, etc.
+- Connection and disconnection of the customer installation via the Metering Unit switch
+- Access to Metering Unit metering data and settings
+- Only 'view', not edit"
+281,Create groups,"Verify that groups can be created dynamically by the User in HES using different parameters, e.g. Facility ID for export of collected data or meter software upgrade where group can be by postcode or meter identity."
+302,Possible overheating - Cat1 1 phase,Verify that the metering device has the capability to detect connections that may cause overheating.
+303,Possible overheating - Cat1 3 phase,Verify that the metering device has the capability to detect connections that may cause overheating.
+304,Possible overheating - Cat2,Verify that the metering device has the capability to detect connections that may cause overheating.
+310,Measurement and recording / phase,"Verify that the Metering Unit for each phase is able to measure and record the minimum, maximum and average value of voltage, current, active and reactive power of the electricity output and input per 5 minutes."
+319,Record communication errors,"Verify that the Metering System is able to record and store information when the following Events occur:
+8. communication failure"
+328,Record when power output exceeds limit value,"Verify that the Metering System is able to record and store information when the following Events occur:
+15. Total power consumption exceeds set limit value"
+330,Register overheating in connection,"Verify that the Metering System is able to record and store information when the following Events occur:
+17. In case of connection overheating"
+331,Configure records to be stored for events,Verify that for each Event it is possible to optionally configure which registers (OBIS codes) in the Metering Unit should be stored.
+332,Disable sending of Events from specific Metering Unit,Verify that it is possible to disable the sending of Events from the designated Metering Unit from HES in order not to have to receive a large amount of Events from a particular Metering Unit.
+339,Communication status - Cat1 1 phase,"Verify that it is possible to view the communication status of the Metering Unit directly, without manual intervention and without opening the meter."
+340,Communication status - Cat1 3 phase,"Verify that it is possible to view the communication status of the Metering Unit directly, without manual intervention and without opening the meter."
+341,Communication status - Cat2,"Verify that it is possible to view the communication status of the Metering Unit directly, without manual intervention and without opening the meter."
+348,Status of the customer interface,Verify that in HES it is possible to see if the Customer Interface in a Metering Unit is enabled or disabled for data sending.
+352,Interpolation in HES,Verify that there is functionality in HES to perform interpolations where the collected value is missing.
+358,Response times in the user interface,"Verify that HES user interface response times do not exceed:
+- 0.5 s from input, keystroke or equivalent to first response on screen
+- 0.5 s for display of form view including data
+- 5 s for viewing simple report
+- 15 s for login"
+430,Management of both primary and secondary registration - Cat2,Verify that the Metering Units can handle primary registration of Measured Values. Verify that the Metering Units can handle secondary registration of Measured Values.
+434,minimum rated current 5A,Verify that the Metering Unit is rated for at least a current of 5 (Imax 100) A.
+441,Visible manufacturing number - communication module - Cat1,Verify that a serial number on a Communication Module is positioned so that it is not visible on the front of the Metering Unit.
+442,Visible manufacturing number - communication module - Cat2,Verify that a serial number on a Communication Module is positioned so that it is not visible on the front of the Metering Unit.
+445,Resistant marking - Cat1,"Verify that the labeling of the Meter's manufacturing number is durable for the lifetime of the Meter, i.e. no removable tape or print that can be scraped off."
+446,Resistant marking - Cat2,"Verify that the labeling of the Meter's manufacturing number is durable for the lifetime of the Meter, i.e. no removable tape or print that can be scraped off."
+447,Legible marking - Cat1,"Verify that the marking of the meter's manufacturing number is clearly legible
+- i.e. the font size must not be too small so that the number is difficult to read e.g. for a customer"
+448,Legible marking - Cat2,"Verify that the marking of the meter's manufacturing number is clearly legible
+- i.e. the font size must not be too small so that the number is difficult to read e.g. for a customer"
+451,Location of the marking - Cat1,"Verify that the Meter's serial number is placed on a non-removable part (not connector cover, not Communication Module cover, etc.)."
+452,Location of the label - Cat2,"Verify that the Meter's serial number is placed on a non-removable part (not connector cover, not Communication Module cover, etc.)."
+455,Designed for wall mounting - Cat1,Verify that the Metering Units are designed for wall mounting.
+456,Designed for wall mounting - Cat2,Verify that the Metering Units are designed for wall mounting.
+463,Terminal block - Cat1,Verify that the Metering Unit has terminal covers that cover the connection cable layer.
+464,Terminal block - Cat2,Verify that the Metering Unit has terminal covers that cover the connection cable layer.
+465,screw anchors - Cat2,Verify that there are no elevations around the Metering Unit's screw attachments that limit the size of the screw head.
+466,screw anchors - Cat1,Verify that there are no elevations around the Metering Unit's screw attachments that limit the size of the screw head.
+467,mounting bracket - Cat1,Verify that there is a mounting bracket placed on the top of the metering unit for mounting.
+468,mounting bracket - Cat2,Verify that there is a mounting bracket placed on the top of the metering unit for mounting.
+471,sealing device - Cat1,Verify that the sealing device of the Metering Unit is raised and clearly visible for smooth and accessible passage of the sealing wire.
+472,sealing device - Cat2,Verify that the sealing device of the Metering Unit is raised and clearly visible for smooth and accessible passage of the sealing wire.
+478,Management of both primary and secondary registration - Cat1,Verify that the Metering Units can handle both primary and secondary recording of Metering Values.
+479,Licensed telecommunications networks,Verify that the licensed telecommunications network complies with Ordinances and Regulations in accordance with PTSFS 2015:2 issued by PTS (Post- och Telestyrelsen).
+480,Life expectancy of communication equipment - Cat1,Verify that communication equipment meets the life expectancy requirement of >=15 years from the date of delivery to GE.
+483,Quantity of allowed faulty meters Cat1 - RISE,"During the expected lifetime of the Metering Units, the occurrence of faults (requiring meter replacement) shall not exceed 0.75 % per year of the installed volume."
+484,Amount of allowed faulty meters Cat2 - RISE,"During the expected lifetime of the Metering Units, the occurrence of faults (requiring meter replacement) shall not exceed 0.75 % per year of the installed volume."
+485,Lifetime Cat2,A Metering Unit shall have a life expectancy of 15 years from the date of delivery to GE.
+486,Life expectancy of communication equipment - Cat2,Verify that communication equipment meets the life expectancy requirement of >=15 years from the date of delivery to GE.
+489,Recovery time after communication breakdown max 60 min,Break the communication link from meter. Voltage is left in meter. Wait one hour and turn on the link again.
+491,Design of the solution,Review installed solution and compare with requirements in 2.1 Technical solution.
+593,Automatic export of energy values,Wait until the time for export occurs.
+594,Manual export of energy values,Start an export from HES.
+596,logging of events,Verify in HES that the events and their attribute values can be displayed in an event list.
+615,Setting the number of decimal places,Verify that the number of decimal places displayed corresponds to the number of decimal places configured to be displayed for a measurement value. Verify that the number of decimal places displayed corresponds to the number of decimal places configured to be displayed for a measurement value.
+616,Installation of new metering device via integration,Information regarding structure data for new set-up is sent from the integration interface Mint to Collection Manager. Verify that information entered on the user point in Collection Manager corresponds to what is specified in the Work Order. An acknowledgment is sent to Generis that the meter is set up in Collection Manager. Check that the user point is displayed under the correct coordinates in the map view in Vision. Check that the meter has the correct profile and that Energy values. PQ values and GSM diagnostics are pushed from the meter at the correct interval.
+618,Dismantling of metering unit via integration,Information regarding the structure data for the removal of a metering unit is sent from the integration interface Mint to Collection Manager. Verify that the metering unit is removed in Collection Manager and does not have a connection to the user point.
+619,Update of measurement point in CM,Information regarding the structure data for updating a metering unit is sent from the integration interface Mint to Collection Manager. Verify that the information to be updated via Mint has also been changed at the current user point.
+620,New Metering Unit is set up in CM and taken down in ACM - Take down fails in ACM,Initiate a new set-up of a metering unit in CM and ensure that the metering unit is still in ACM when the new set-up is carried out in CM. A message is sent from CM to Generis stating that the metering unit in ACM is not taken down.
+621,New Metering Unit is set up in CM and taken down in AiMiR - Take down fails in AiMiR,Initiate a new set-up of a metering unit in CM and ensure that the metering unit remains in AiMiR when the new set-up is carried out in CM. Mail is sent to the AiMir box.
+622,New Metering Unit is set up in CM and taken down in ACM - Set-up fails in CM,Initiate a new set-up of a metering unit in CM and make sure that the metering unit is already connected to another facility in CM. Message is sent from CM to Generis stating that the metering unit is not created in CM.
+623,New Metering Unit is set up in CM and taken down in AiMiR - Set-up fails in CM,Initiate a new set-up of a metering unit in CM and ensure that the metering unit is still in AiMir when the new set-up is carried out in CM. A message is sent from CM to Generis stating that the metering unit has not been created in CM.
+624,Existing Metering Unit is changed in CM - Meter change fails in CM,Initiate a meter change of an existing metering unit in CM to a New Metering Unit. Enter incorrect serial number for the existing meter in the Work Order. Message is sent from CM to Generis stating that the metering unit is not created in CM. Verify the status of the work order in Generis.
+625,New metering unit set up in CM - Set up fails in CM,Initiate new installation of a metering unit in CM. Enter a serial number for the metering unit already connected to an installation in the work order. Message is sent from CM to Generis stating that the metering unit is not created in CM. Verify the status of the work order in Generis.
+626,Metering unit is taken down in CM - Take-down fails in CM,Initiate a removal of a metering unit in CM where mandatory information in the work order is not complete. Message is sent from CM to Generis stating that the metering unit is not removed in CM. Verify the status of the work order in Generis.
+642,Hardware for the user interface,"HES shall be designed to be used with different types of computers, tablets and smart phones, with different architectures and operating systems."
+653,Common Information Model (CIM),Examine the content of the messages from HES.

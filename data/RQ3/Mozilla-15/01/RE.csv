@@ -1,0 +1,29 @@
+ID,Feature,Description
+R-6,Add/Delete Personal Toolbar bookmark,"Verify that items from the personal toolbar folder are properly
+      added/deleted."
+R-8,Surf Bookmark,"Verify that double-clicking on a bookmark causes it to be launched in
+      a browser window"
+R-9,Surf All Bookmarks,Verify that there are no 'dead' default links.
+R-27,Delete multiple bookmarks,Verify that several bookmarks are deleted at one time.
+R-66,Form Manager - Permission Zones,"* Longer range:
+      there is discussion about introducing Internet permission zones.
+      Some of the settings shown here may be controlled by such zones
+      (Waiting for Implementation)"
+R-74,Prefill - cancel dialog,"Verify that when you encounter a Web site that could be prefilled,
+      that you are given the pre-fill dialog and when you click cancel,
+      the information is not filled into the form."
+R-76,Edit Form Data - new value for field,"Verify that if you add a new value for a field in Form Manager
+      it is later offered as an option when prefilling a form using
+      this field."
+R-134,Go menu list,Verify correct recently visited sites are in go menu.
+R-165,Replace Forgotten Master Password,"Verify that the process to replace a forgotten master password is
+      easier/more discoverable (though encrypted information should still be
+      lost to the user who has forgotten their password)."
+R-177,"Preferences, view passwords never saved","Verify that when you have designated not to ever save a username and
+      password in password manager, this information can be viewed in the
+      password manager through preferences (expedia.com)"
+R-192,Indentation Test,Determine if a page with indentations prints as seen on screen
+R-247,Add/Remove,Verify list of available local panels
+R-256,Bookmarks,Verify that changes reflect immediately from Bookmarks Manager
+R-259,Add Panel using Javascript,Verify that adding of a panel using javascript works
+R-326,Component buttons,Verify that component buttons work and behave as appropriate.

@@ -1,0 +1,9 @@
+ID,Feature,Description
+S70,Visible production number - communication module,A serial number on a Communication Module shall be positioned so that it is not visible on the front of the Metering Unit.
+S81,Plinth cap,The metering unit shall have a terminal cover that covers the connection cable layer.
+S91,Data in HES,"The HES shall handle at least the following types of data:
+- Structure data (e.g. Facility ID, Metering Unit)
+- Metrics (Metrics with e.g. ID number, status, timestamp)
+- Events (Event with e.g. Event ID, times, Alarms)"
+S171,Connection and disconnection of breakers from other GE systems,The HES shall be able to receive calls from other business systems within GE for connection and disconnection of customer facilities via the Metering Unit's switch.
+S259,Dependencies with other systems,Solution design should be such that dependencies on other systems do not cause the system to lose protection.

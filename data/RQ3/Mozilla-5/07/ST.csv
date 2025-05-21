@@ -1,0 +1,75 @@
+ID,Purpose,Test steps
+T-11,"Purpose
+This basic testcase is designed to verify that folders are properly
+  deleted.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select any folder. Select from the following choices: Select Edit|Delete. Click OK. Hit the Backspace key. Hit the Delete key Select 2 or many folders, repeat step (3).
+
+Expected Results
+In step (3a) a confirmation dialog should appear, allowing you to
+    cancel the delete operation. In steps (3b) and (3c), or after clicking ""OK"" in (3a), the folder
+    should be immediately deleted. In step (4) you should only be presented with one confirmation dialog,
+    clicking ""OK"" should result in all selected folders being deleted. Folders should immediately disappear (be deleted) from the toplevel
+    bookmarks menu, the bookmarks popup on the personal toolbar, the bookmarks
+    sidepanel, and the manage bookmarks window."
+T-214,"Purpose
+Determine that Quicktime movies play properly","Initial Conditions
+None
+
+Steps/Description
+Launch the browser Click here to open
+    a video tests page. Click on the Quicktime movie tests and verify that
+    movies play properly Click here to
+    visit a page with quicktime movies. Click on all movies one by one to view
+    them. Click here to view the Apple quicktime trailers page. Click on the images to play the
+    movies. Try the links as well. Try out movies in all sizes (small, medium,
+    large). Move browser scrollbars to see if page paints correctly or not
+    while movie is playing. Click here to view a page with plugins
+    inside table. Try to play all plugins simultaneously. In all steps above, press the browser's BACK or FORWARD button and see
+    that the movie unloads/loads properly Click
+    here . Click on the quicktime logos to watch movies. Some large quicktime movies on this page . IFilm website .
+    choose Quicktime to watch movies on this site. To change preferences, click
+    on ""More Options"" in the right pane of the window and select ""Change
+    preferences"" to change player settings. Green Mile Videos . PlanetOut (Queer Tv) Videos .
+    PlanetOut Archive. Click on ""watch in quicktime for all movies"" Click
+    here . Watch videos in High/Low bandwidth.
+
+Expected Results
+All Quicktime movies should load and play properly."
+T-233,"Purpose
+Determine whether drag-scrolling gestures function properly.","Initial Conditions
+None.
+
+Steps/Description
+View the attached drag-scroll-text.html test case If necessary, shrink the window so that the browser window contains
+    both horizontal and vertical scroll bars. Start from the first word (""Currently"") in the upper-left hand corner
+    of the web page, and drag-scroll to the bottom-right hand corner of the
+    page. From the final word (""component"") in the document, drag-scroll from the
+    lower-right hand corner of the web to the upper-left hand corner of the web
+    page. View the drag-scroll-text-frame.html test
+    case. For each the page's two frames, drag-scroll from the top of the page to
+    its bottom. View the drag-scroll-box.html test
+    case. Starting from the first word in the upper-left hand corner of the text
+    area, drag-scroll downwards to the end of the text content.
+
+Expected Results
+After Step #3, the page should be successfully drag-scrolled to the
+  bottom-right hand corner. (despite having to drag-scroll through several
+  table cells, and out of the table)
+After Step #4, the document should be successfully drag-scrolled to its
+  upper-left hand corner.
+After Step #6, drag-scrolling a frame should not impact the contents of
+  its neighbor frame.
+After Step #8, the entire text area should be selected."
+T-298,"Purpose
+To verify the classic theme is displayed.","Description
+From the main menu bar, select Edit > Preferences >
+          Appearances > Themes. Select ""Classic"" theme on the right hand side of the
+          dialog. Click the ""Apply Classic"" button. Close the Preferences dialog.
+
+Expected Results
+The following image for the menu bar of the browser should
+      display as follows:"

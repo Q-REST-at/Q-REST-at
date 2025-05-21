@@ -1,0 +1,175 @@
+ID,Purpose,Test steps
+T-39,"Purpose
+Determine whether text output from a JavaScript applet is properly
+  selected in conjunction with other page content.","Initial Conditions
+None.
+
+Steps/Description
+View the attached test case. Drag-select from ""Browser Javascript Test"" to the bottom of the
+    document. From the Edit menu, select ""Copy"". View the resulting clipboard. (e.g. ""Show Clipboard"" from Finder on
+    Mac, or paste into a text editor on Win32/Linux.)
+
+Expected Results
+After step #3, the entire content of the page should be copied.
+After step #4, the text should be copied reasonably. (use your best
+  discretion, or compare to output of IE 5.)"
+T-108,"Purpose
+This basic testcase is designed to verify that Creating web pages help
+  content comes up when clicked, is displayed corectly, and prints
+  correctly","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
+
+Steps/Description
+Select the toplevel Help menu. Select Help Contents Click Creating web pages from the left panel Select all contents on right, copy and paste into your favorite
+    word processor and run spell check Click the printer icon
+
+Expected Results
+3. Creating web pages helpcontent should come up with main topics on
+  the left and detailed information on the right
+4. There should be no spelling errors (Besides obvious computer terms
+  and websites)
+5. Creating web pages content should print"
+T-145,"Purpose
+Determine that you can right click an image and save to your local
+  drive.","Initial Conditions
+Have mozilla started up
+
+Steps/Description
+Complete these steps for all images below
+Open one of the files listed below Right click the image and select save image Browse to where you want to save on your local disk and save. Open the file in browser (determine the picture has been
+    saved)
+
+Expected Results
+Image should be saved to local disk."
+T-186,"Purpose
+Verify that you can remove a site and username from the passwords never
+  saved section of password manager","Initial Conditions
+Password manager should be enabled, in a different browser create an
+  account at a site that requires a username and password such as
+  http://www.ivillage.com
+
+Steps/Description
+Password manager should be enabled, in a different browser create an
+    account at a site that requires a username and password such as
+    http://www.ivillage.com Go to a site that you have not been to before in Netscape 6, such as
+    http://www.ivillage.com Enter your username and password When a dialog appears asking if you would like to save this
+    information, click never for this site From the task drop down menu select privacy and security->password
+    manager->view stored passwords Click on the passwords never saved tab Highlight this sight and username in the list and click remove Click cancel From the task drop down menu select privacy and security->password
+    manager->view stored passwords Click the passwords never saved tab Highlight this sight and username in the list and click remove Click ok Click View stored passwords Click Passwords never saved tab
+
+Expected Results
+3. Your username and password should be saved to the passwords never saved
+  portion of password manager
+4. A list of saved passwords should appear
+5. The site and username for this site should be listed under the
+  passwords never saved tab
+6. This site's information should no longer appear in the list
+8. A list of saved sites and usernames should appear
+9. This site and username should again appear on the list
+10. This site and username should no longer appear on the list of never
+  saved passwords
+13. This site and username should not appear on the passwords never saved
+  list."
+T-196,"Purpose
+Determine that Seamonkey prints CSS2 pages properly","Steps/Description
+Run the NIST 
+    CSS2 Test Suite Run the NIST 
+    CSS1 Tests Run David
+    Baron's CSS Tests Run W3C's 
+    CSS Tests Suite Run Ian Hickson's Evil
+    Test Suite After visiting each test page, print each test (select Print from the
+    File menu)
+
+Expected Results
+All CSS pages should print as they appear on screen"
+T-203,"Purpose
+Determine that Seamonkey prints Lists properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to open a page with different types
+    of lists. Select ""FILE | PRINT"" menu option to print the page.
+
+Expected Results
+All lists should print as they appear on the screen."
+T-240,"Purpose
+Determine that when the mouse is moved over panels, the panels
+  highlight","Initial Conditions
+This test works only with the ""Classic"" Theme set for the browser.
+
+Steps/Description
+Launch the browser Move the mouse on any of the panels in the Sidebar Each panel should highlight making itself visible when the mouse is
+    over it
+
+Expected Results
+Panels should highlight when mouse is moved over them"
+T-246,"Purpose
+Determine the list of available remote panels","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar, select ""Tabs | Customize Sidebar"" From the window that opens up, the pane titled
+    ""AvailablePanels"" should list the following folders by default:
+    Favorites, From Netscape, From Others, International. Click and open each folder mentioned above to see that they are
+    not empty and that a listing of panels is available in each
+    folder Verify that the Favourites folder lists these panels: CNN.com,
+    Horoscope, Mozillazine, News, Stocks, Tech News, Weather Verify that the From Netscape folder lists these panels:
+    Calender, Horoscopes, Local Events, Local Movies, Local News, News,
+    Sports, Stocks, Tech News, Weather Verify that the From Others folder lists these panels:
+    BackFlip Buddy, CNET.com, CNN.com, eBay, Kinderview, Mapquest,
+    Mozillazine, Red Herring, Webstakes.com and the folder My Netscape
+    Network The International folder should list the following folders:
+    Brazil, Canada, France, Germany, Japan, Portugal, Spain, Sweden,
+    UK
+
+Expected Results
+All default remote panels should be available"
+T-250,"Purpose
+Determine that panels can be reordered","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar , select ""Tabs | Customize Sidebar"" From the window that opens up, add a few panels from the left
+    pane Highlight on any of the panels in the right pane and click on the
+    reorder arrows on the right side Clicking the reorder arrows should move the panel up/down and you
+    should be able to place them wherever you want (top to bottom) Clicking ""OK"" should also reflect the reordering change in the
+    Sidebar in the browser window
+
+Expected Results
+You should be able to reorder panels as you want"
+T-259,"Purpose
+Determine that a panel can be added using javascript to the          
+
+  Sidebar","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser Click here to open a page to add         
+    the bugzilla panel to the Sidebar using javascript Click on the link ""Add Bugzilla panel to your sidebar"" on the page Press ""OK"" on the confirm dialog Bugzilla panel should get added to the Sidebar at the bottom Click on the panel to open it
+
+Expected Results
+Panel should get added by javascript"
+T-260,"Purpose
+Testing access to the web location dialog","Initial Conditions
+The browser should already be open.
+
+Steps/Description
+Test the following to see if all of these tasks will bring up the Open
+  Web Location dialog:
+From the menubar of the browser, select File > Open Web
+    Location. Use the keyboard shortcut specific to your platform: Win32 and Unix: Control+Shift+L Macintosh: Command+Shift+L
+
+Expected Results
+The Open Web Location should be displayed, regardless of the means you
+  used above."
+T-318,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"

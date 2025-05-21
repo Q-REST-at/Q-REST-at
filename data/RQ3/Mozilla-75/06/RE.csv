@@ -1,0 +1,132 @@
+ID,Feature,Description
+R-7,Create Folder,Verify new folder creation and nesting of new folders.
+R-9,Surf All Bookmarks,Verify that there are no 'dead' default links.
+R-10,Edit item properties,"Verify that changes to an item are saved without loss of item
+      integrity."
+R-14,Save State,Verify that changes are saved over restart/crash
+R-15,View item properties,"Verify that view properties works as appropriate for bookmarks,
+      folders, and separators(negative)"
+R-18,Sort by columns,sort and reverse-sort per column
+R-19,Resize columns,Verify that columns are resizable to show/hide more of entries
+R-30,Prevent bad drops,"Verify that it is NOT possible to drop an item onto itself or its
+      immediate parent or child"
+R-35,Overflow,"Determine whether extremely large text blocks can be copied from web
+      pages."
+R-39,General,"Determine whether text outputted by JavaScript is properly
+      copied."
+R-44,D&D Images onto the Desktop,Vrify that dragging an image onto the desktop saves the image
+R-46,D&D to Composer,"Verify that browser contents can be dragged to
+      a Composer or Compose Mail window."
+R-48,D&D from the desktop – Folders,"Confirm that dragging a directory
+      to the browser window displays the folder contents"
+R-61,"D&D <a href=""/drag-url-browser-toolbar/"">
+      Given link is non-fetchable, non-retrievable Personal Toolbar",Determine if you can drag items to and from the Personal Toolbar
+R-63,Dragging links to AIM,"Verify that you can drag a URL or page content to
+      an AIM window"
+R-71,Save Form Data - dialog no,"Verify that you can stop a form's data from being saved from
+      the popup dialog box, and you click no."
+R-72,Save Form Data - never return,"Verify that you can save a form's data from the popup dialog
+      box, never for this site and you are never asked again upon
+      returning to the site."
+R-75,Prefill - choose,"Verify that when you encounter a Web site that could be prefilled
+      and have several choices for fields that you are given the pre-fill
+      dialog and can select from the appropriate values and the information
+      is filled into the form."
+R-77,Edit Form Data - cancel,"Verify that if you enter data in the Form Manager and then
+      click cancel, the data has not been saved"
+R-86,Favorite,"Verify that is it is possible to have favorite help topics -
+        similar to IE help which has a special tab to add favorite help
+        topics."
+R-88,TS/Sign on,"Verify that there is Troubleshooting Help about the problem ""if you
+        can't sign on"""
+R-92,Glossary,"Verify that in the Glossary there includes a section for an
+        Intro/tutorial for NS6."
+R-93,Glossary,"Verify that in the Glossary there includes a section for an Upgrade
+        Guide."
+R-95,Forward/Back,Verify the functionality of the forward/back buttons in Help
+R-97,Page up/down,"Verify that page up and down, in fact, page up and down in
+        help"
+R-101,Non Clickable Regions,"Verify that clicking non clickable regions in help causes no
+        behavior"
+R-108,Creating web pages,"Determine whether Creating web pages help content displays
+        correctly"
+R-111,Same time messaging,Determine whether Same time messaging displays correctly
+R-112,Streamlined Interface,Determine whether Streamlined Interface displays correctly
+R-118,Feedback Center,Determine whether the Feedback Center displays correctly
+R-119,About,Determine whether the About Netscape displays correctly
+R-122,Record after redirect,"Verify that the correct link is recorded after a server
+        redirect."
+R-123,Load recorded url,"Verify that double-clicking on a history link causes it to be
+        launched in a browser window."
+R-125,Delete multiple entries,Delete multiple History entries
+R-128,Change grouping,Change the History View to Group by Day|Site|None
+R-139,Back and forward with named anchors,"Verify browser goes back and forward correctly from sites that use
+        named anchors"
+R-145,Save Image,"Determine that you can right click an image and save to your local
+        drive."
+R-147,Set image as wallpaper,Determine that you are able to set image as wallpaper.
+R-148,Print image,"Determine that it is possible to print an image without changing
+        the currently loaded page"
+R-152,Image Display,"Determine whether images load directly into the web browser from a
+        local hard drive."
+R-159,Image Display,"Determine whether GIF 89a images are properly displayed across
+        different bit depths."
+R-166,"Save username and password, yes","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-167,"Save username and password, never for this site","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-168,"Save username and password, no","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-171,"Actitvation, ftp","Need a good working case for this, working on
+      it"
+R-175,Preferences enable,"Verify that when you enable password manager from the preferences
+      panel, you are asked if you would like to save usernames and passwords
+      and get prefilled info on sites"
+R-176,"Preferences, view saved passwords","Verify that when you have saved a username and password in password
+      manager, this information can be viewed in the password manager through
+      preferences"
+R-185,"Tasks, passwords saved, remove all","Verify that you can remove all username and password information and
+      it will no longer autofill nor will anything be listed in password
+      manager (lycos.com)"
+R-187,"Tasks, passwords never saved, remove all","Verify that you can remove all site and username information from the
+      passwords never saved section of password manager"
+R-195,"Print a ""Page Source""",Determine if page source prints as seen on screen
+R-197,Print Mozillazine poll result page,Determine if the Mozillazine Poll results page prints properly
+R-207,Print Preview,Determine if print Preview works correctly
+R-211,Print Range,Determine that print range works properly
+R-221,Search button,"Verify that clicking search button will search text entered in
+      URLBar."
+R-223,basic sidebar search,"Verify that a basic search from within the Search tab can be
+      executed"
+R-230,Triple-click,Determine whether the triple-click gesture functions properly.
+R-232,Shift Select,"Determine whether shift-select gestures for text function
+        properly."
+R-233,Drag Scroll,Determine whether drag-scrolling gestures function properly.
+R-234,JavaScript,"Determine whether text from a JavaScript applet is properly
+        selected in conjunction with other page content."
+R-245,Add/Remove,Delete all panels
+R-252,Save,Verify that order and panel list is immediately applied
+R-258,Add Menu,"Verify that unselecting panels from Add menu removes panels from
+        the Sidebar"
+R-260,Basic access to dialog,Tests to access this dialog from the menubar and keyboard.
+R-262,URL in current browser window,"Open a web location (URL) in the current Navigator window. Includes
+        test to dismiss dialog."
+R-271,URL to a image files,"Open web locations to various image files, such as.gif,.jpg."
+R-275,Use on unix,"Use of the XUL file picker on Linux to navigate through 
+        directories and open files (html, plaintext, image). Resizing,
+        selection/scrolling, cancellation also tested. Test last
+        directory-viewed."
+R-277,Basic find in page and frame content,"Find in html page and html frame documents. Test Find Again and
+        cancellation. Test for NOFRAME content."
+R-279,Case sensitivity,Find with and without case sensitivity. Test Find Again.
+R-291,Basic access,Access from main menu and access keys.
+R-295,Navigation/UI,"Scrolling and keyboard navigation within the info window. Also
+        should be able to use [applicable] keyboard accelerators. Resize source
+        window. Manipulate the grippy."
+R-301,Check the appearance of browser,"Visually inspect menu bar, floating component bar and all the
+        tool bars"
+R-309,Active/Inactive Window,"The active window is visually distinct, inactive = grey title
+        bar."
+R-310,Maximize Window,Click to maximize (expandto content on Mac)
+R-312,Close Wndow,Click upper-right (upper left on Mac) to close
+R-326,Component buttons,Verify that component buttons work and behave as appropriate.

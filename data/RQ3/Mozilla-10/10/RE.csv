@@ -1,0 +1,15 @@
+ID,Feature,Description
+R-15,View item properties,"Verify that view properties works as appropriate for bookmarks,
+      folders, and separators(negative)"
+R-59,D&D to Bookmark Manager,"Determine if the Bookmark Manager properly handles
+      items dragged onto it."
+R-131,Show/Hide columns,Show and hide columns.
+R-143,Resize to original,"Determine that it is possible to resize an image to it's original
+        size after it has been resized to window size."
+R-189,Page with various formats,Determine whether a page with various formats prints properly
+R-191,Alignment Test,"Determine if a page with aligned text prints as seen on
+        screen"
+R-200,Top Web Sites,Determine if  top web sites print properly
+R-218,Media Player tests,Determine if windows media player works fine
+R-248,Preview,Test the previewing of panels
+R-317,Scroll Arrow Down,Click down arrow to scroll page

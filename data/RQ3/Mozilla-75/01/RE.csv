@@ -1,0 +1,126 @@
+ID,Feature,Description
+R-10,Edit item properties,"Verify that changes to an item are saved without loss of item
+      integrity."
+R-14,Save State,Verify that changes are saved over restart/crash
+R-16,Rename bookmark inline - not implemented,"Change the name of a bookmark without use of the bookmark properties
+      dialog."
+R-17,Custom Keywords,surf using user-defined 'custom keyword'.
+R-19,Resize columns,Verify that columns are resizable to show/hide more of entries
+R-36,Overflow,"Determine whether extremely large images can be copied from web
+      pages."
+R-38,General,"Determine whether text can be copied and pasted from text fields
+      within a dialog box."
+R-39,General,"Determine whether text outputted by JavaScript is properly
+      copied."
+R-43,D&D Images across browser windows,"Verify that dragging an image across browser windows
+      opens the image"
+R-46,D&D to Composer,"Verify that browser contents can be dragged to
+      a Composer or Compose Mail window."
+R-47,D&D to Dialog,"Confirm that text, links, and images dragged to a
+      non-modal dialog are handled properly"
+R-55,D&D onto the Application Icon,"Verify that items dragged onto the
+      application icon are handled properly"
+R-62,D&D Bookmarks menu to toolbar,"Verify that you can drag a bookmark from the Bookmarks menu
+      to the Personal Toolbar."
+R-69,Save Form Data - dialog yes,"Verify that you can save a form's data from the
+      popup dialog box and you click yes."
+R-70,Save Form Data - dialog no,"Verify that you can stop a form's data from being saved from
+      the popup dialog box, and you click no."
+R-75,Prefill - choose,"Verify that when you encounter a Web site that could be prefilled
+      and have several choices for fields that you are given the pre-fill
+      dialog and can select from the appropriate values and the information
+      is filled into the form."
+R-78,Delete Form Data - remove field value,"Verify that if you delete data in the Form Manager, that this
+      data is not shown as an option when prefilling a form."
+R-84,Sidebar,"Verify that there is a tab for help and you can create a Help
+        Sidebar tab with dynamic information"
+R-94,Glossary,"Verify that in the Glossary there includes a tutorial on how to do
+        better searches"
+R-100,Drag Receipt,Verify that you can't drag docs into the help window
+R-104,Mail and News,"Determine whether Mail and News help content displays
+        correctly"
+R-106,Customizing Netscape 6,"Determine whether Customzing Netscape 6 help content displays
+        correctly"
+R-111,Same time messaging,Determine whether Same time messaging displays correctly
+R-114,New to the net tutorial,"Determine whether the New to the net tutorial displays
+        correctly"
+R-115,Netscape Technical Support,"Determine whether Netscape Technical Support displays
+        correctly"
+R-123,Load recorded url,"Verify that double-clicking on a history link causes it to be
+        launched in a browser window."
+R-126,Erase all,Clear all of history
+R-132,Don't record everything,"Verify that things that aren't supposed to be added to history
+        aren't (eg chorme:/// url's)"
+R-133,Don't show 302 redirect,Don't ever show 302 redirects in history
+R-137,Back and forward with frames,"Verify browser goes back and forward correctly from page with
+        frames."
+R-150,Cache/Networking,"Determine whether reloaded web pages properly display images
+        modified since the last load."
+R-153,Image Display,"Determine whether animated GIFs continue to animate after an
+        extended period of 24 hours or greater."
+R-155,Animated Images,"Determine whether displaying animated GIFs result in single server
+        request for the image, rather than additional requests upon each frame
+        change."
+R-157,Image Display,"Determine whether X Bitmap (XBM) format images can be displayed.Note: XBM will not be supported in the initial 5.0
+          release."
+R-158,Image Display,"Determine whether GIF 87 images are properly displayed across
+        different bit depths."
+R-162,Test Liveconnect functionality with applets,Test applets with liveconnect
+R-168,"Save username and password, no","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-173,"Password Manager, multiple passwords","Verify that when you have saved a username and password for a website
+      and you later change the password, that password manager picks up the new
+      password"
+R-176,"Preferences, view saved passwords","Verify that when you have saved a username and password in password
+      manager, this information can be viewed in the password manager through
+      preferences"
+R-179,"Preferences, passwords saved, remove all","Verify that you can remove all username and password information and
+      it will no longer autofill nor will anything be listed in password
+      manager"
+R-182,"Tasks, view saved passwords","Verify that when you have saved a username and password in password
+      manager, this information can be viewed in the password manager through
+      tasks"
+R-193,Test Portrait and Landscape settings,"Determine if a page with portrait and Landscape settings prints
+        properly"
+R-198,Print large complex pages,Determine if  large page print properly
+R-206,Print Paragraph Styles,Determine if paragraph styles print correctly
+R-214,Quicktime tests,Determine if quicktime movies play properly
+R-216,Macromedia Shockwave Tests,Determine if Shockwave movies work properly
+R-218,Media Player tests,Determine if windows media player works fine
+R-222,URL/Sidebar interaction,Verify that starting a URL bar search triggers the sidebar
+R-224,basic sidebar search,Verify that a user can change the search engine
+R-227,Drag-selection,"Currently, it is my understanding that there will be no new
+        features in this area (can monitor bug list)"
+R-230,Triple-click,Determine whether the triple-click gesture functions properly.
+R-235,Startup,Check default panels and default open panels(content loaded?)
+R-238,Width,Retaining non-default size on reopen or new window
+R-244,Add/Remove,Delete a panel
+R-245,Add/Remove,Delete all panels
+R-246,Add/Remove,Verify list of available remote panels
+R-250,Re-Order,Verify reordering of panels works
+R-252,Save,Verify that order and panel list is immediately applied
+R-256,Bookmarks,Verify that changes reflect immediately from Bookmarks Manager
+R-257,Add Menu,"Verify that panel title show up in Add menu when panel is
+        added"
+R-260,Basic access to dialog,Tests to access this dialog from the menubar and keyboard.
+R-261,Basic UI and navigation,"Determine that interface features (buttons, textfield, droplist)
+        appear and behave as expected. Includes tests to dismiss dialog."
+R-263,URL in new browser window,"Open a web location (URL) in a new Navigator window. Includes test
+        to dismiss dialog."
+R-271,URL to a image files,"Open web locations to various image files, such as.gif,.jpg."
+R-275,Use on unix,"Use of the XUL file picker on Linux to navigate through 
+        directories and open files (html, plaintext, image). Resizing,
+        selection/scrolling, cancellation also tested. Test last
+        directory-viewed."
+R-280,Document wrapping,Find with and without document wrapping. Test Find Again.
+R-293,Other content,"Attempt to view page info for plain text, xml, ftp listing,
+        directory listing..."
+R-307,Verify themes under View menu,"Test all the items under ""Apply Theme"" under View menuSelecting ""Theme Preferences""Get New ThemesClassicModern"
+R-310,Maximize Window,Click to maximize (expandto content on Mac)
+R-312,Close Wndow,Click upper-right (upper left on Mac) to close
+R-317,Scroll Arrow Down,Click down arrow to scroll page
+R-321,Reorder,"Verify that toolbars can be dragged&dropped to change their
+        order"
+R-322,Correct items on Bookmarks bar.,Verify correct bookmarks are installed in Bookmarks bar.
+R-324,Buttons,Verify that each buttons executes as appropriate.
+R-325,Correct items/links,Verify that the correct items are in the taskbar.

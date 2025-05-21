@@ -1,0 +1,16 @@
+ID,Purpose,Test steps
+49,Scaling of environment,Measure performance during normal reporting operation. Increase CPU & RAM in clusters. Measure performance.
+78,Dependencies with other systems,"For example, turn off the connection between Collection Manager and OMNIA Flex."
+360,Block switches from HES,"For Cat1 - 1 phase meters, verify that the Meter breaker can be blocked from HES to prevent local connection. For Cat1 - 3 phase meters, verify that the Meter breaker can be blocked from HES to prevent local connection. For Cat2 meters, verify that the Meter breaker cannot be blocked from HES to prevent local connection."
+432,Cat 2 shall meet the requirements for control,"Verify that Metering Units Category 2 meet the requirements for Inspection, according to Regulation STAFS 2009:8, for the first Inspection. However, only for a maximum of 12 years after Final Approval has been given by the Client."
+434,minimum rated current 5A,Verify that the Metering Unit is rated for at least a current of 5 (Imax 100) A.
+445,Resistant marking - Cat1,"Verify that the labeling of the Meter's manufacturing number is durable for the lifetime of the Meter, i.e. no removable tape or print that can be scraped off."
+446,Resistant marking - Cat2,"Verify that the labeling of the Meter's manufacturing number is durable for the lifetime of the Meter, i.e. no removable tape or print that can be scraped off."
+447,Legible marking - Cat1,"Verify that the marking of the meter's manufacturing number is clearly legible
+- i.e. the font size must not be too small so that the number is difficult to read e.g. for a customer"
+448,Legible marking - Cat2,"Verify that the marking of the meter's manufacturing number is clearly legible
+- i.e. the font size must not be too small so that the number is difficult to read e.g. for a customer"
+465,screw anchors - Cat2,Verify that there are no elevations around the Metering Unit's screw attachments that limit the size of the screw head.
+466,screw anchors - Cat1,Verify that there are no elevations around the Metering Unit's screw attachments that limit the size of the screw head.
+479,Licensed telecommunications networks,Verify that the licensed telecommunications network complies with Ordinances and Regulations in accordance with PTSFS 2015:2 issued by PTS (Post- och Telestyrelsen).
+642,Hardware for the user interface,"HES shall be designed to be used with different types of computers, tablets and smart phones, with different architectures and operating systems."

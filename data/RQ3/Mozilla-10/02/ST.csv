@@ -1,0 +1,116 @@
+ID,Purpose,Test steps
+T-45,"Purpose
+Verify that dragging a link or image to a frame-set page properly replaces
+  the entire window contents, and that dragging from within a frame-set page
+  properly replaces the target frame.","Steps/Description
+Open the frame-test.html test file Drag the Drag Me link to the left frame Drag the space shuttle image to the left frame In a new browser window, open the page-test.html test file From the single-page ( page-test.html )
+    window, drag the Drag Me link to a frame in the frame-set ( frame-test.html ) window Press the Back button in the frame-set window From the single-page window, drag the space shuttle image to a frame in
+    the frame-set window
+
+Expected Results
+2. The dragme.html page should open in the target frame (bug 83963 )
+3. The space shuttle image should open in the target frame (bug 83963 )
+5. The dragme.html page should replace the frame-set page
+7. The space shuttle image should replace the frame-set page
+need iframe test cases"
+T-70,"Purpose
+This basic testcase is designed to verify that you can choose no to save a
+  form's data from the dialog box","Initial Conditions
+You should have no form data saved
+
+Steps/Description
+Go to a site that needs information, for example
+    mapquest.com<<li> Fill in all the fields for driving directions
+    and click get directions Click no From the Tools menu, open the Form Manager sub-menu, and then choose
+    Edit Form Info
+
+Expected Results
+2. A dialog should appear asking if you would like to save the values you
+  filled in
+3. Your data should not be saved to Form Manager
+4. Your saved data should not appear in the Forms Manager"
+T-106,"Purpose
+This basic testcase is designed to verify that Customizing Netscape 6
+  help content comes up when clicked and is displayed correctly and prints
+  correctly.","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
+
+Steps/Description
+Select the toplevel Help menu. Select Customizing Netscape 6 Select all contents on right, copy and paste into your favorite
+    word processor and run spell check 4.Click the printer icon
+
+Expected Results
+2. Customizing Netscape 6 help content should come up with main topics
+  on the left and detailed information on the right
+3. There should be no spelling errors (Besides obvious computer terms
+  and websites)
+4. Customizing Netscape 6 help content should print"
+T-118,"Purpose
+Determine whether the Feedback Center displays correctly","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+From the Help Drop Down Menu, select Feedback Center Click on the Fill out a problem report link Click on the Fill out a suggestion form link Click on the Fill out a survey form link
+
+Expected Results
+1. You should be taken to a page that explains how to send feedback to
+  Netscape about the browser.
+1. You should see links to fill out a problem report, Fill out a
+  suggestion form and Fill out a survey
+2. You should be taken to the Netscape Problem Report Form
+3. You should be taken to the Netscape Suggestion Form
+4. You should be taken to the Netscape Survey"
+T-152,"Purpose
+To confirm that images load directly into the web browser from a local
+  hard drive.","Initial Conditions
+Disk and memory caches to be cleared.
+
+Steps/Description
+Copy these below-linked files to your hard drive: vlpan12.gif,
+    vlpan11.jpg and wall_ni.png. View each of those images.
+
+Expected Results
+After loading vlpan12.gif, a 530x462 GIF image of the surface of Mars
+  should display.
+After loading vlpan11.jpg, a 1496x1536 JPEG image of the surface of
+  Mars should display.
+After loading wall_ni.png, a 640x480 PNG image of the Great Wall
+  should display."
+T-216,"Purpose
+Purpose: Determine that Shockwave plugin works properly","Initial Conditions
+
+Steps/Description
+Click
+    here for nick.com Games page (tons of flash and shockwave games) Click here for I-Bench Shockwave test Context Menu Tests Shockwave Test Page.
+    Click on top 3 links on this page to launch pages with shockwave
+    movies. Click here to
+    visit shockwave.com website. Click on links to 'Games' , 'Shows', ""Music',
+    'Greetings' to test shockwave/ flash contents. This website is an
+    exhaustive collection of shockwave/flash movies to test. Shockwave
+    Gallery website. Click on Games, Toys, Project Samples and other links
+    to test shockwave contents Click
+    here to visit the macromedia showcase gallery with plenty of
+    shockwave/flash websites Sanrio Shockwave
+    Gallery . Click and play the games on this page. DogDay's Shockwave Gallery . Click on
+    links under the title 'Visit The Gallery' to load pages with shockwave
+    content. ZeoSphere Shockwave
+    Gallery . Click on banners on this page to view shockwave content Click
+    here to load an extensive testcase suite for shockwave plugin Click
+    here to load an extensive testcase suite for shockwave plugin Perceptive Productions ShockwaveGallery .
+    Click on the clips on this page one by one to load and view shockwave
+    movies CyberMaze Shockwave Gallery . Click
+    on links on this page to see shockwave content.
+
+Expected Results
+All shockwave and /or flash movies should load work properly"
+T-236,"Purpose
+Determine that default width of Sidebar is proper","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser In the Sidebar, verify that the default width appears properly and the
+    sidebar does not occupy more that 2 inches(approximately) of the width Quit the browser using File->Quit Restart the browser
+
+Expected Results
+After step 3, the Sidebar default width should remain the same"

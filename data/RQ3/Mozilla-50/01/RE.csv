@@ -1,0 +1,83 @@
+ID,Feature,Description
+R-31,Styled Text,"Currently, it is my understanding that there will be no new features
+      in this area"
+R-32,Styled Text,"Determine whether text copied from a formatted web page (such as
+      within a table) has a ""non-annoying"" layout."
+R-35,Overflow,"Determine whether extremely large text blocks can be copied from web
+      pages."
+R-36,Overflow,"Determine whether extremely large images can be copied from web
+      pages."
+R-43,D&D Images across browser windows,"Verify that dragging an image across browser windows
+      opens the image"
+R-51,D&D from the desktop – Images,"Confirm that dragging a supported image file
+       to the browser window display the file"
+R-58,D&D from Bookmark Manager,"Determine if the application and OS properly
+      handle items dragged from the Bookmark Manager"
+R-62,D&D Bookmarks menu to toolbar,"Verify that you can drag a bookmark from the Bookmarks menu
+      to the Personal Toolbar."
+R-66,Form Manager - Permission Zones,"* Longer range:
+      there is discussion about introducing Internet permission zones.
+      Some of the settings shown here may be controlled by such zones
+      (Waiting for Implementation)"
+R-68,Save Form Data - right click,"Verify that you can save a form's data by right clicking on
+      the form itself."
+R-74,Prefill - cancel dialog,"Verify that when you encounter a Web site that could be prefilled,
+      that you are given the pre-fill dialog and when you click cancel,
+      the information is not filled into the form."
+R-99,Arrow up/down,"Verify that you can move around pages with the up and down arrow
+        keys"
+R-108,Creating web pages,"Determine whether Creating web pages help content displays
+        correctly"
+R-122,Record after redirect,"Verify that the correct link is recorded after a server
+        redirect."
+R-124,Delete one entry,Delete a History entry
+R-126,Erase all,Clear all of history
+R-132,Don't record everything,"Verify that things that aren't supposed to be added to history
+        aren't (eg chorme:/// url's)"
+R-137,Back and forward with frames,"Verify browser goes back and forward correctly from page with
+        frames."
+R-141,Resize to window,"Determine that large Images can be resized to the browser window
+        and will not cause you to scroll in order to view entire image."
+R-142,Text and image resize,"Determine that you are not able to resize an image to window when
+        there is also text on the page, this is a stand alone image feature
+        only."
+R-172,"Password Manager, multiple users","Verify that when you have saved multiple username's and password's
+      for a website, you are later presented with those same choices"
+R-181,"Preferences, passwords never saved, remove all","Verify that you can remove all site and username information from the
+      passwords never saved section of password manager (ivillage.com)"
+R-187,"Tasks, passwords never saved, remove all","Verify that you can remove all site and username information from the
+      passwords never saved section of password manager"
+R-188,Print a Page with frames,Determine whether a page with frames prints properly
+R-192,Indentation Test,Determine if a page with indentations prints as seen on screen
+R-194,Print HTML forms and widgets,Determine if HTML forms and widgets print properly
+R-196,CSS Testcases for printing,Determine if CSS pages print properly
+R-199,Sample XML Pages for printing,Determine if XML pages print properly
+R-204,Print Tables,Determine if tables print correctly
+R-208,Page Setup(mac only),Determine id Page Setup dialog works correctly
+R-219,Viewpoint Plugin,Determine if windows media player works fine
+R-220,Search button,Verify that just clicking Search button goes to search page
+R-230,Triple-click,Determine whether the triple-click gesture functions properly.
+R-232,Shift Select,"Determine whether shift-select gestures for text function
+        properly."
+R-235,Startup,Check default panels and default open panels(content loaded?)
+R-236,Startup,Check default width of Sidebar
+R-237,Constraints,Check for maximum width of Sidebar
+R-241,Opening/Closing,Check Opening/Closing of Sidebar with grippy
+R-247,Add/Remove,Verify list of available local panels
+R-251,Cancel,Verify that nothing changes when you cancel
+R-267,Local file in current browser window,"Open local files (both HTML and plain text tested) in the current
+        Navigator window. Includes tests to dismiss dialog."
+R-268,Local file in new browser window,"Open local files (both HTML and plain text tested) in a new
+        Navigator window. Includes tests to dismiss dialog."
+R-271,URL to a image files,"Open web locations to various image files, such as.gif,.jpg."
+R-282,"Whitespace, null","Find using solely whitespace, null, and string with
+        prepended/appended whitespace."
+R-284,Basic access,"Access from main menu, keyboard accelerator, access keys."
+R-286,View source of other content,"View source of plaintext, xml page, ftp listing."
+R-288,Find,Find strings in the source window.
+R-290,Color coding,"Verify the expected displayed color for content, tags/attributes,
+        values, script code, entities, etc."
+R-315,Stretch Window Diagonally,"Grab any corner of window and drag to resize. Only bottom-right
+        corner on Mac."
+R-320,Show and Hide,"Verify that Personal and Navigation bars can be expanded and
+        collapsed"

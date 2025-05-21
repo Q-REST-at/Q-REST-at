@@ -1,0 +1,19 @@
+ID,Purpose,Test steps
+1,Virtual and physical servers,Verify that the documentation describes how to install the application both in a physical and in a virtual environment
+20,Encryption keys,Verify that the solution description details how encryption keys are managed
+86,Testing tools,The Contractor shall use a tool designated by the Contracting Authority to follow the Contracting Authority's reporting of test results. The Supplier is responsible for registering in the tool its feedback and status on the Customer's reported errors and comments. The Client currently uses ReQtest in the defect management process.
+143,Data in HES,"Verify that structure data can be handled in HES (e.g. Facility ID, Metering Unit). Verify that Metrics can be handled in HES (Metrics with e.g. ID number, status, timestamp). Verify that Events can be handled in HES (Event with e.g. Event ID, times, Alarms)"
+222,Events to alert list,"Reset the clock in the meter. Trigger self-diagnosis and generate a fault during the diagnosis itself. Disconnect the power on one phase. Disconnect the power on several phases. Connect production to the meter, and the measuring point in HES has a profile for consumption only. Unscrew a voltage fuse on the meter board so that an event is generated in the meter. Unscrew the 'zero' so that an event is generated in the meter. Use super magnet at the meter to cause an event in the meter. Set a low limit value in the meter. For both cat 1 and cat 2 - generate high current at meter to cause event. For both cat 1 and cat 2 - generate high power on meter to cause event. Generate overheating"
+247,Cumulative calculator,Verify that the metering unit is equipped with a cumulative counter and displays at least 7 integer digits and 3 decimal digits.
+255,Display of PQ values,Verify that in HES it is possible to analyze and visualize PQ values in e.g. graphs and bars.
+263,Calendar in Swedish format,"Verify that the HES calendar is displayed in Swedish format (YYYY-MM-DD, Y=year, M=month, D=day)"
+293,Corrected measurement values,"Verify that the metering device corrects the measured values of voltage and/or current when calculating energy consumption, these values shall also be those used in the Metering System."
+310,Measurement and recording / phase,"Verify that the Metering Unit for each phase is able to measure and record the minimum, maximum and average value of voltage, current, active and reactive power of the electricity output and input per 5 minutes."
+319,Record communication errors,"Verify that the Metering System is able to record and store information when the following Events occur:
+8. communication failure"
+328,Record when power output exceeds limit value,"Verify that the Metering System is able to record and store information when the following Events occur:
+15. Total power consumption exceeds set limit value"
+432,Cat 2 shall meet the requirements for control,"Verify that Metering Units Category 2 meet the requirements for Inspection, according to Regulation STAFS 2009:8, for the first Inspection. However, only for a maximum of 12 years after Final Approval has been given by the Client."
+463,Terminal block - Cat1,Verify that the Metering Unit has terminal covers that cover the connection cable layer.
+464,Terminal block - Cat2,Verify that the Metering Unit has terminal covers that cover the connection cable layer.
+653,Common Information Model (CIM),Examine the content of the messages from HES.

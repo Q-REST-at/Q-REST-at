@@ -1,0 +1,65 @@
+ID,Feature,Description
+S2,Traceable metering devices,"All delivered metering devices, down to component level, shall be traceable and can be linked at least to the manufacturing batch and time of manufacture"
+S8,Block switches from HES,The meter switch shall be capable of being blocked from the HES to prevent local switching on of the power.
+S24,Operation of the metering unit after phase loss,The metering unit in a 3-phase installation shall continue to function even if one or two phases are lost.
+S27,type approval,"Extended type approval and certification of Metering Devices shall be carried out according to method SPM 1618, test with 12 kV surge voltage."
+S28,Lifespan,A metering Unit shall have a life expectancy of 15 years from the date of delivery to GE.
+S56,Customer interface is disabled by default,"On delivery from the factory, the Customer Interface of the Metering Unit shall be deactivated."
+S70,Visible production number - communication module,A serial number on a Communication Module shall be positioned so that it is not visible on the front of the Metering Unit.
+S72,Resistant labeling,"The marking of the Meter's manufacturing number shall be permanent for the lifetime of the Metering Unit, i.e. no removable tape or print that can be scraped off."
+S75,Location of the label,"The manufacturing number of the meter shall be placed on a non-removable part (not connection cover, not communication module cover, etc.)."
+S77,Designed for wall mounting,The metering units shall be designed for wall mounting.
+S81,Plinth cap,The metering unit shall have a terminal cover that covers the connection cable layer.
+S86,Management of both primary and secondary registration,"The metering units shall be able to handle both primary and secondary registration of Metrics,"
+S89,Metering unit in HES,"In HES there should be functionality for automatic and manual administration:
+- Installation of new Metering Unit
+- Replacement of the Metering Unit
+- Decommissioning of Metering Unit"
+S91,Data in HES,"The HES shall handle at least the following types of data:
+- Structure data (e.g. Facility ID, Metering Unit)
+- Metrics (Metrics with e.g. ID number, status, timestamp)
+- Events (Event with e.g. Event ID, times, Alarms)"
+S111,Exporting reports and data,"Retrieved measurement and structural data as well as completed reports shall be exportable to any standardized text file format, such as csv."
+S117,50 simultaneous users,The HES in the production environment shall be designed for at least 50 simultaneous Users without affecting the performance of the Metering System.
+S137,Recording of Metric value,"The metric value recorded and stored in the HES shall be unadulterated, i.e. exactly the same value as recorded by the Metering Unit."
+S143,logging of events,Events in the Metering System shall be logged in an event list in HES.
+S152,Selecting dates with calendar function,"Where there is a need to select dates in HES, this should be possible through a time and calendar function."
+S155,Calendar in Swedish format,"HES calendar should be displayed in Swedish format (YYYY-MM-DD, Y=year, M=month, D=day)"
+S172,Status of switches to other GE system,The HES shall be able to send information to other facility systems if a Metering Unit's circuit breaker is switched on or off.
+S174,Status of the customer interface,"In HES, it shall be possible to see whether the Customer Interface in a Metering Unit is enabled or disabled for data sending."
+S182,Life expectancy,Communication equipment shall have a life expectancy of >= 15 years from the date of delivery to GE.
+S186,Recovery time after communication breakdown max 60 min,The recovery time of the infrastructure communication after a communication breakdown shall not exceed 60 minutes.
+S196,Virtual and physical servers,HES should be able to run on virtual servers as well as physical ones.
+S221,Common Information Model (CIM),The HES system shall support the Common Information Model (CIM) and comply with standard IEC 61968-9 or equivalent when exchanging information with e.g. Distribution Management Systems (DMS) and Meter Data Management Systems (MDMS).
+S231,Encryption keys,The metering system shall be able to manage and administer the encryption keys of the metering units.
+S234,Security log,Everything of importance to the security of the Metering System shall be recorded in a security log or equivalent.
+S238,Protection of meters,"The meters shall be protected against intrusion, tampering and execution of unauthorized or malicious code."
+S241,Authentication against neighboring systems,Authentication shall be used when the Metering System interacts with neighboring systems.
+B24,Record communication errors,"The metering system shall record and store information when the following Events occur:
+8. communication failure"
+B30,Record when high power exceeds limit value per phase,"The metering system shall record and store information when the following Events occur:
+14. High power exceeds set limit value per phase"
+B46,mounting bracket,There shall be a mounting bracket placed on the top of the metering unit for mounting.
+B48,sealing device,The sealing device of the metering unit shall be raised and clearly visible for easy and accessible insertion of the sealing wire.
+B73,Filtering and sorting in alarm list,A User shall have the possibility to filter and sort the alarm list.
+B81,Detecting meters with communication problems,"In HES, it shall be possible for the User to detect and view individual Metering Units that have communication problems."
+B83,View meters with communication problems in map,"In HES, it should be possible to visualize Metering Units with communication problems in a graphical view/map that can be zoomed in and out."
+B85,View last measurement value and time,The last Metric and the time of communication with the Metering Unit shall be displayed in the HES.
+B87,copy static fields,"It shall be possible for the User to be able to copy static fields in HES such as headers, status, responses to Events in the system."
+B89,Request further confirmation,"Commands, initiated by the User in HES, which may have serious consequences in case of incorrect handling (deletion of stored measurement and structure data and switching off and on of power) shall require additional confirmation before execution. Other commands shall be executed directly."
+B90,Mass deletion,"In HES, there shall be a function to perform mass deletion of overall structure data objects so that all linked relations are also deleted. E.g. that this is implemented via group membership."
+B93,Create groups,"Groups should be able to be created dynamically by the User in HES using different parameters, e.g. Facility ID for export of collected data or upgrade of the meter's software where group can be by postal code or meter identity."
+B105,Database hosting,The HES database must be able to be hosted in the Contracting Authority's database hosting facility.
+B108,Send the same info again,It should be possible to send the same information to HES several times
+B113,Synchronization with GE controlled NTP,The metering system and surrounding infrastructure located within GE's network shall be synchronized with GE controlled NTP.
+S543,Develop test cases,"The supplier shall prepare test cases based on agreed requirements, i.e. agreed Specification unless otherwise agreed."
+S546,The client's test case,The Customer shall have the right to develop own and new test cases based on the Specification. New test cases can be created until Final Acceptance of the Delivery Project.
+S548,Test report,"The Contractor shall prepare a test report for the test phases for which the Contractor is responsible during the Delivery Project, as shown in Figure 1 in clause 3.2."
+S557,Scope of UAT,The purchaser's UAT (User Acceptance Test) shall include testing and verification of all requirements according to the Specification unless otherwise agreed.
+S560,Requirements for delivery and installation in the production environment,"During installation and commissioning of the Metering System in the Customer's production environment, the Supplier shall: 
+-install, 
+-if necessary configure/parameterize, 
+-if necessary migrate structural data, 
+-commission, 
+-verify and test the Metering System including integrations in the production environment, and 
+-perform error corrections and retests"

@@ -1,0 +1,7 @@
+ID,Purpose,Test steps
+33,Controlling logout time,Wait for 45 minutes.
+247,Cumulative calculator,Verify that the metering unit is equipped with a cumulative counter and displays at least 7 integer digits and 3 decimal digits.
+463,Terminal block - Cat1,Verify that the Metering Unit has terminal covers that cover the connection cable layer.
+464,Terminal block - Cat2,Verify that the Metering Unit has terminal covers that cover the connection cable layer.
+479,Licensed telecommunications networks,Verify that the licensed telecommunications network complies with Ordinances and Regulations in accordance with PTSFS 2015:2 issued by PTS (Post- och Telestyrelsen).
+489,Recovery time after communication breakdown max 60 min,Break the communication link from meter. Voltage is left in meter. Wait one hour and turn on the link again.

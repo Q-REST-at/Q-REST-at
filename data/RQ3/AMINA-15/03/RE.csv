@@ -1,0 +1,21 @@
+ID,Feature,Description
+S58,Cumulative calculator,The metering unit shall be equipped with a cumulative counter and display at least 7 integer digits and 3 decimal digits.
+S81,Plinth cap,The metering unit shall have a terminal cover that covers the connection cable layer.
+S88,Cat 2 shall meet the requirements for control,"Category 2 metering units shall meet the requirements for Inspection, according to Regulation STAFS 2009:8, for the first Inspection, however, a maximum of 12 years after Final Approval has been given by the Client."
+S91,Data in HES,"The HES shall handle at least the following types of data:
+- Structure data (e.g. Facility ID, Metering Unit)
+- Metrics (Metrics with e.g. ID number, status, timestamp)
+- Events (Event with e.g. Event ID, times, Alarms)"
+S139,Events to alert list,Events configured to generate Alarms shall be displayed in an Alarm List.
+S147,Display of PQ values,"In HES, it should be possible to analyze and visualize PQ values in e.g. graphs and bar plots."
+S155,Calendar in Swedish format,"HES calendar should be displayed in Swedish format (YYYY-MM-DD, Y=year, M=month, D=day)"
+S196,Virtual and physical servers,HES should be able to run on virtual servers as well as physical ones.
+S221,Common Information Model (CIM),The HES system shall support the Common Information Model (CIM) and comply with standard IEC 61968-9 or equivalent when exchanging information with e.g. Distribution Management Systems (DMS) and Meter Data Management Systems (MDMS).
+S231,Encryption keys,The metering system shall be able to manage and administer the encryption keys of the metering units.
+B1,Corrected measurement values,"If the Metering Unit corrects measured values of voltage and/or current when calculating energy consumption, these values shall also be those used in the Metering System."
+B15,Measurement and recording / phase,"The metering unit shall be able to measure and record for each phase the minimum, maximum and average value of voltage, current, active and reactive power of the electricity output and input per 5 minutes."
+B24,Record communication errors,"The metering system shall record and store information when the following Events occur:
+8. communication failure"
+B31,Record when power output exceeds limit value,"The metering system shall record and store information when the following Events occur:
+15. Total power consumption exceeds the set limit value"
+S545,Testing tools,The Contractor shall use a tool designated by the Contracting Authority to follow the Contracting Authority's reporting of test results. The Contractor is responsible for registering its feedback and the status of the Client's reported errors and comments in the tool. The Client currently uses ReQtest in the defect management process.

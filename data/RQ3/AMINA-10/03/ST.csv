@@ -1,0 +1,14 @@
+ID,Purpose,Test steps
+32,Send the same info again,Receive same info from file. Receive same info from meter
+43,Function of the metering unit after loss of phases on Cat1,Remove voltage on two of three phases
+44,Function of the metering unit after phase loss on Cat2,Remove voltage on two of three phases
+84,Develop test cases,"The supplier shall prepare test cases based on agreed requirements, i.e. agreed Specification unless otherwise agreed."
+98,Scope of UAT,The purchaser's UAT (User Acceptance Test) shall include testing and verification of all requirements of the Specification unless otherwise agreed.
+224,Filtering and sorting in alarm list,Verify that a User has the ability to filter and sort in the alarm list.
+274,Mass deletion,Verify that in HES there is a function to perform mass deletion of overall structure data objects so that all linked relations are also deleted. E.g. that this is implemented via group membership.
+279,Configuring the Metering Unit,Verify that configuration of the Metering Device from HES can be performed without downloading new Firmware.
+455,Designed for wall mounting - Cat1,Verify that the Metering Units are designed for wall mounting.
+456,Designed for wall mounting - Cat2,Verify that the Metering Units are designed for wall mounting.
+480,Life expectancy of communication equipment - Cat1,Verify that communication equipment meets the life expectancy requirement of >=15 years from the date of delivery to GE.
+486,Life expectancy of communication equipment - Cat2,Verify that communication equipment meets the life expectancy requirement of >=15 years from the date of delivery to GE.
+646,Authentication against neighboring systems,Verify that authentication is used when the Metering System interacts with neighboring systems.

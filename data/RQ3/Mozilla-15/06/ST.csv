@@ -1,0 +1,238 @@
+ID,Purpose,Test steps
+T-7,"Purpose
+This basic testcase is designed to verify that folders are properly
+  created and inserted into the bookmarks hierarchy.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which
+    I use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select any item in your list. Select File|New Folder. Click ""OK"" in the
+    dialog that appears. Select the folder you just created. Select File|New Folder. Click ""OK""
+    in the dialog that appears. Double-click the folder you just created. Select File|New Folder. Click
+    ""OK"" in the dialog that appears.
+
+Expected Results
+For step (2) a folder named ""New Folder"" should have been created and
+    added just below the item you had selected. That item could be a bookmark,
+    a folder, or a separator. For step (3) the folder should have again been created below the item
+    (New Folder). In step (4) however, the folder should be created inside the previous folder. All of the newly created folders should appear with the correct
+    hierarchical structure in the toplevel bookmarks menu, the bookmarks popup
+    on the personal toolbar, the bookmarks panel in the sidebar, and of course
+    the manage bookmarks window."
+T-46,"Purpose
+Verify that links, images and rich text can be dragged from a browser
+  window to a editor window.","Steps/Description
+Open the testfile.html test file Open a Composer window Drag the Drag Me link from the browser window to the Composer
+    window Drag the space shuttle image from the browser window to the Composer
+    window Select the formatted text section, including part or all of the
+    table, and drag the selection from the browser window to the Composer
+    window From the location bar, drag the URL proxy icon to the Composer
+    window. Open a HTML Compose Mail window (if the compose window opens in plain
+    text mode, close the window, then in the mail window Ctrl+click (Cmd+click
+    in Mac OS) the Compose button) Repeat steps 4 to 6 for the Compose Mail window
+
+Expected Results
+3-5: The Composer window should accept each content item without any loss
+  of content, formatting, or other attributes.
+6. The editor should add a link to the URL displayed in the location
+  bar.
+8. The Compose Mail winodw should accept each contents just as Composer
+  would"
+T-47,"Purpose
+To confirm that text, links, and images dragged to a non-modal dialog are
+  handled properly","Steps/Description
+Open the testfile.html test
+    file Open a non-modal dialog (e.g. Edit | Find in This Page...) Make a text selection and drag it onto a text widget in the
+    dialog. Drag a link onto a text wedget in the dialog Drag the selected text a blank area or a non-text wedget in the
+    dialog Drag a link to a blank area or a non-text wedget in the dialog Drag the space shuttle image to the dialog
+
+Expected Results
+3. The selection text should be copied to the text widget
+4. The link URL should be copied to the text widget
+5-7 The drag attempt should be rejected"
+T-58,"Purpose
+Determine whether the application and OS properly handle items dragged
+  from the Bookmark Manager","Steps/Description
+Replace your browser's bookmarks file with the bookmarks.html file.
+Drag the Sample/FTP:URLs folder to your desktop Drag the FTP: Netscape bookmark to your desktop. Open the Personal Toolbar Folder, as well as its enclosed Channels
+    folder Perform a drag-select beginning with Personal Toolbar Folder ,
+    and ending with Computing and Internet Drag these files to your desktop Drag the @vantage bookmark onto invalid or inappropriate OS interface
+    objects, e.g. Network Neighborhood (win32), or a Desktop Printer (Mac
+    OS). Drag the Business and Finance folder to the Trash (or on
+    Windows, to the Recycle Bin)
+
+Expected Results
+1. The Sample/FTP:URLs folder should appear on your desktop
+  (containing the bookmarks). The file name should be converted to properly
+  handle the lack of slashes within file names on Windows, and colons on Mac
+  OS.
+2. The FTP: Netscape bookmark should appear on your desktop (on Mac
+  OS, also with a file name converted to properly handle the lack of colons
+  within file names.)
+5. All dragged files should appear on the desktop, with the same hierarchy
+  that existed within the Bookmarks window.
+6. All inappropriate icons should reject the drag.
+7. The Business and Finance folder should no longer exist within
+  Bookmark Manager, and be deleted."
+T-69,"Purpose
+This basic testcase is designed to verify that you can save a form's data
+  from the edit menu","Initial Conditions
+You should have no form data saved
+
+Steps/Description
+Go to a site that needs information, for example mapquest.com Fill in all the fields for driving directions and click get
+    directions Click yes From the Tools menu, open the Form Manager sub-menu, and then choose
+    Edit Form Info
+
+Expected Results
+2. A dialog should appear asking if you would like to save the values you
+  filled in
+3. Your data should be saved to Form Manager
+4. Your saved data should appear in the Forms Manager"
+T-110,"Purpose
+This basic testcase is designed to verify that Security and Privacy
+  help content comes up when clicked, is displayed corectly, and prints
+  correctly","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
+
+Steps/Description
+Select the toplevel Help menu. Select What's new in Netscape six from the submenu Click Security and Privacy Select all contents of the page, and right click, select copy and
+    then paste into your favorite word processor and run spell check
+
+Expected Results
+3. A new window should open with Easier Security at the top of the
+  page
+4. There should be no spelling errors (Besides obvious computer terms
+  and websites)"
+T-115,"Purpose
+Determine whether Netscape Technical Support displays correctly","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+From the Help Drop Down Menu, select Help and Support Center Click the Assisted Support Options link Click the Communicator 4.x link Click on the Netscape link Click on the Intertional Browsers link
+
+Expected Results
+1. The Help and Support Center page should come up
+2. You should be taken to the Need some help? page
+2. Help number should be listed 1(800)411-0707 (They
+  will help you for low-cost assistance)
+2. There should be links to Communicator 4.x, Netscape 6,
+  International Browsers
+3. You should be taken to a general Help page for Communicator 4.x
+4. You should be taken to a general Help page for Netscape 6
+4. Verify that the browser mentioned on this page is the correct
+  version of the Netscape 6 browser
+5.You should be taken to a general Help page for International
+  Support"
+T-188,"Purpose
+Determine that Seamonkey prints pages with frames properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to view a page with
+    horizontal frames Click here to view a page with
+    vertical frames. Once each page loads, select menu option ""FILE| PRINT"" Press ""OK"" on Print Dialog Box to print the page.
+
+Expected Results
+After Step 5, the page should be printed as seen on screen"
+T-198,"Purpose
+Determine that Seamonkey prints large complex pages properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to open a large page with HTML
+    text Select menu option ""FILE | PRINT"" Press ""OK"" to print the page Click here to 
+    open a large, complex web page Repeat steps 2 & 3.
+
+Expected Results
+After Step 3 & 5, both pages should print properly."
+T-203,"Purpose
+Determine that Seamonkey prints Lists properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to open a page with different types
+    of lists. Select ""FILE | PRINT"" menu option to print the page.
+
+Expected Results
+All lists should print as they appear on the screen."
+T-233,"Purpose
+Determine whether drag-scrolling gestures function properly.","Initial Conditions
+None.
+
+Steps/Description
+View the attached drag-scroll-text.html test case If necessary, shrink the window so that the browser window contains
+    both horizontal and vertical scroll bars. Start from the first word (""Currently"") in the upper-left hand corner
+    of the web page, and drag-scroll to the bottom-right hand corner of the
+    page. From the final word (""component"") in the document, drag-scroll from the
+    lower-right hand corner of the web to the upper-left hand corner of the web
+    page. View the drag-scroll-text-frame.html test
+    case. For each the page's two frames, drag-scroll from the top of the page to
+    its bottom. View the drag-scroll-box.html test
+    case. Starting from the first word in the upper-left hand corner of the text
+    area, drag-scroll downwards to the end of the text content.
+
+Expected Results
+After Step #3, the page should be successfully drag-scrolled to the
+  bottom-right hand corner. (despite having to drag-scroll through several
+  table cells, and out of the table)
+After Step #4, the document should be successfully drag-scrolled to its
+  upper-left hand corner.
+After Step #6, drag-scrolling a frame should not impact the contents of
+  its neighbor frame.
+After Step #8, the entire text area should be selected."
+T-250,"Purpose
+Determine that panels can be reordered","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar , select ""Tabs | Customize Sidebar"" From the window that opens up, add a few panels from the left
+    pane Highlight on any of the panels in the right pane and click on the
+    reorder arrows on the right side Clicking the reorder arrows should move the panel up/down and you
+    should be able to place them wherever you want (top to bottom) Clicking ""OK"" should also reflect the reordering change in the
+    Sidebar in the browser window
+
+Expected Results
+You should be able to reorder panels as you want"
+T-251,"Purpose
+Determine that cancel button does not apply any changes made
+  earlier","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar , select ""Tabs | Customize Sidebar"" From the window that opens up, add a few panels from the left
+    pane Highlight on any of the panels in the right pane and click on the
+    reorder arrows on the right side to move thepanel up/down in the panels
+    list Now, press the CANCEL button
+
+Expected Results
+None of the changes that you made (addition of panels or reordering)
+  should get saved and the Sidebar should be the same as before"
+T-301,"Purpose
+Visually inspect menu bar, floating component bars and all the tool
+  bars.","Description
+From the main menu bar, select Edit > Preferences >
+    Appearance > Themes. Select ""Modern"" theme on the right hand side of the dialog. Click the ""Apply Modern"" button. Close the Preferences dialog.
+
+Expected Results
+All the menu bars, tool bars, task bars and the widgets are well
+  displayed."
+T-323,"Purpose
+This basic testcase is designed to verify that folders can be added to
+  the personal toolbar and their contents will still function as links.","Initial Conditions
+All of the browser's toolbars(3) must be visible. Make sure they are all visible by selecting the top level ""View""
+    menu and looking at the Toolbars submenu. The Navigation Toolbar,
+    Personal Toolbar, and Taskbar should all have checks next to their
+    names.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Open the ""Personal Toolbar Folder"". Add a new folder to it,
+    File|New Folder. Open and add a new bookmark, File|New Bookmark to the folder you
+    just created. Select the new bookmark and edit its properties, Edit|Bookmark
+    Properties, changing the url to http://www.mozilla.org. Go back to the browser window and click on the New Folder in the
+    personal toolbar. Click the New Bookmark item.
+
+Expected Results
+The New Folder should appear in the personal toolbar. The link within the New Folder on the personal toolbar should
+    function normally."

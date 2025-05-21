@@ -1,0 +1,6 @@
+ID,Feature,Description
+S117,50 simultaneous users,The HES in the production environment shall be designed for at least 50 simultaneous Users without affecting the performance of the Metering System.
+S119,Energy values are exported within 30 sec,The energy values (15-minute values) shall be exportable from HES via integrations to other systems within 30 seconds after registration in HES
+S171,Connection and disconnection of breakers from other GE systems,The HES shall be able to receive calls from other business systems within GE for connection and disconnection of customer facilities via the Metering Unit's switch.
+S231,Encryption keys,The metering system shall be able to manage and administer the encryption keys of the metering units.
+S555,Retesting after modifications,The supplier shall also report the possible consequences and impact on other functions of the modifications made. The customer has the right to require repetition of the tests made in FAT if such modifications are made.

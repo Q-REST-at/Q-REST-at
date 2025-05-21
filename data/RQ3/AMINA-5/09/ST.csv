@@ -1,0 +1,8 @@
+ID,Purpose,Test steps
+26,Synchronization with GE controlled NTP,Set wrong time in meter. Synchronize meter with system. Check that server web01 has setting to synchronize time with time server.
+35,Traceable metering devices,Kamstrup demonstrates how components can be traced to batch and time of manufacture
+84,Develop test cases,"The supplier shall prepare test cases based on agreed requirements, i.e. agreed Specification unless otherwise agreed."
+219,Setting the number of decimal places,Verify that it is possible to configure the number of decimal places to be displayed for a measurement value.
+220,Recording of measurement value,"Verify that the measured value recorded and stored in the HES is uncorrupted, i.e. exactly the same value as recorded by the Metering Unit.
+Request a timestamped measurement value from the Meter and compare what is displayed on the Meter with the information coming into the HES."
+615,Setting the number of decimal places,Verify that the number of decimal places displayed corresponds to the number of decimal places configured to be displayed for a measurement value. Verify that the number of decimal places displayed corresponds to the number of decimal places configured to be displayed for a measurement value.

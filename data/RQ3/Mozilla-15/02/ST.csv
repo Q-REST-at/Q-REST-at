@@ -1,0 +1,174 @@
+ID,Purpose,Test steps
+T-30,"Purpose
+This basic testcase is designed to verify that bookmarks and folders can't
+  be dropped onto themselves, an immediate parent container or any child
+  container.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel. As part of your bookmarks file you need a folder (lets' call it folder
+    ""A"") that contains bookmarks and another folder (let's call this folder
+    ""A 1 "" (read Asub1)) that contains bookmarks as well.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select folder A 1 then drag&drop it onto or within
+    itself Select folder A 1 then drag&drop it onto or within folder
+    A. Select folder A then drag&drop it onto or within folder
+    A 1 . Select a bookmark within folder A 1 and drop it onto folder
+    A 1 .
+
+Expected Results
+Nothing should happen! No bookmark or folder should be moved in any of
+    these cases. Ideally, one should see the International symbol for ""No""
+    cursor."
+T-76,"Purpose
+Verify that if you add a new value for a field in Form Manager it is
+  later offered as an option when prefilling a form using this field.","Initial Conditions
+You should have no form data saved.
+
+Steps/Description
+1. From the Tools menu, open the Form Manager sub-menu, then choose
+    Edit Form Info 2. Click the arrow next to Shipping Information 3. Enter the Name, Address and Phone information 4. Click OK 5. Go to a site that will need a shipping address, for example
+    drugstore.com (First you will have to fill out a quick registration
+    form and then edit shipping addresses) 6. From the Edit menu, choose Save Form Info 7. Click Ok
+
+Expected Results
+1. Form Manager should open with fields listed on the left and value
+  fields listed on the right
+2. The Shipping Name, Address and Phone fields should appear below
+  Shipping Information
+5. You will be taken to a shipping address form.
+7. The form should be filled with the correct information."
+T-154,"Purpose
+Confirm that an automatically updated web cam continues to refresh
+  over an extended (24 hours) period of time.","Initial Conditions
+System under test must be configured to continue normal operation and
+  not ""sleep"" or power down after an extended period of inactivity.
+
+Steps/Description
+Launch Netscape 6 View the test page (linked below) Leave the browser operating untouched for 24 hours
+
+Expected Results
+The images on the page should continue to auto-refresh every 45
+  seconds."
+T-156,"Purpose
+To determine whether multiple, differing animated images on the same
+  page are properly displayed.","Initial Conditions
+None.
+
+Steps/Description
+Display the attached web pages (if site still present, visit
+    http://www.animationcity.net/animcity.htm, as an additional stress
+    test case.)
+
+Expected Results
+All animated images should animate smoothly, without stopping, or
+  displaying any glitches. (Communicator 4.6x or IE can be used for a more
+  specific description of the expected results.)
+Animated GIFs off the net occasionally have a
+  pre-specified number of iterations, normally 1000, and will halt
+  animation deliberately."
+T-192,"Purpose
+Determine that Seamonkey prints pages with indentations properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to view a page
+    with indentation Select menu option ""FILE| PRINT"" Press OK on Print Dialog Box to print the page
+
+Expected Results
+After Step 4, the page should be printed as seen on screen"
+T-208,"Purpose
+Determine that Page Setup dialog comes up properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Do ""File | Page Setup""
+
+Expected Results:
+Native Page Setup dialog should come up
+* - This menu option ""Page Setup"" should not be visible on windows/linux
+  platforms."
+T-231,"Purpose
+Determine whether discontiguous selection of table cells function
+  properly.","Initial Conditions
+None.
+
+Steps/Description
+View the enclosed test case. Mac OS:
+Drag-select from (1,1) to (2,2) Hold down the command key, and click on the 7 (at 4,4) Hold down the command key, and click on the 4 (at 2,2)
+Windows:
+Drag-select from (1,1) to (2,2) Hold down the Control key, and click on the 7 (at 4,4) Hold down the Control key, and click on the 4 (at 2,2)
+
+Expected Results
+Step 1: The upper-left hand four cells should be selected.
+Step 2: The cell containing the number 7 should be selected, in addition to the four
+  cells selected in step a. (A total of five cells should be selected.)
+Step 3: On Mac OS, the cell containing the number 4 should be deselected; the other
+  four cells should remain selected. (A total of four cells should be
+  selected.) On Windows, the Interface Guidelines lack a useful specification for this
+  action; any user-friendly outcome is acceptable."
+T-237,"Purpose
+Determine that maximum width of Sidebar is correct","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser Click with the mouse on the Sidebar grippy (mouse pressed) and expand
+    the sidebar Observe that the width of the Sidebar expands The maximum that the Sidebar should expand should be approx 1/3rd of
+    the browser window size
+
+Expected Results
+Sidebar max width should be correct"
+T-244,"Purpose
+Determine that a panel can be deleted sucessfully from the Sidebar","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the sidebar, select ""Tabs | Customize Sidebar"" From the window that opens up, from the pane titled ""My Sidebar"", click
+    on any panel that has been already added Click on ""Remove"" button to remove the panel Press ""OK"" to close the window
+
+Expected Results
+After step 3, the selected panel should be removed from the list in the
+  right pane. After step 4, the panel that was removed should no longer be
+  listed in the Sidebar."
+T-247,"Purpose
+Determine the list of available local panels","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar , select ""Tabs | Customize Sidebar"" From the window that opens up, the pane titled ""AvailablePanels""
+    should list the following local panels by default: What's Related,
+    Search, Bookmarks
+
+Expected Results
+All default local panels should be available"
+T-255,"Purpose
+Determine that links in Bookmarks panel work","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser Visit any url, say, www.yahoo.com Bookmark that link using ""Bookmarks | Add Current Page"" Add theBookmarks panel to the Sidebar using the ""Customize Sidebar""
+    option Open the Bookmarks panel in the Sidebar Double click with the mouse on the bookmark that you just
+    added The selected link should open in the browser window. Try a few more
+    bookmarks from the panel
+
+Expected Results
+Appropriate bookmarks should open in the browser window when clicked
+  from the Bookmarks panel in the Sidebar"
+T-261,"Purpose
+Basic UI & dismissal tests for the Open Web Location dialog.","Initial Conditions
+The Open Web Location dialog should already be opened in the
+  browser.
+UI test #1 Steps/Description and Expected Results Don't enter anything into the textfield. It should appear
+          similar to this
+          image . Verify that these UI elements are present: A text field where you could enter the URL. A Choose File ... button next to the
+            textfield. A droplist whose current selection is Current
+            Navigator window . An Open button which is greyed-out. A Cancel button which is active.
+UI test #2 Steps/Description and Expected Results Enter http://www.mozillazine.org/ into the
+        textfield. It should appear the same as in UI test #1, except that
+        the Open button is now active.
+UI test #3 Steps/Description Click the droplist to expand it and view all the
+            choices. Click the droplist again to collapse it. Expected Results When expanded, you see three choices in this order: Current Navigator window New Navigator window New Composer window After clicking the droplist a second time, it should display
+          only one of the choices.
+Dismissal test #1 Steps/Description Make sure the textfield is empty. Click the Cancel button. Expected Results The dialog should be dismissed (and no change occurring in the
+        current browser window) at step #2.
+Dismissal test #2 Steps/Description Make sure the textfield is empty. Hit the Escape key. Expected Results The dialog should be dismissed (and no change occurring in the
+        current browser window) at step #2."

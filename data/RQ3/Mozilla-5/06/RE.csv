@@ -1,0 +1,11 @@
+ID,Feature,Description
+R-36,Overflow,"Determine whether extremely large images can be copied from web
+      pages."
+R-140,Retain scroll position,"Verify that browser remembers scroll state when returning to pages
+        in SH"
+R-185,"Tasks, passwords saved, remove all","Verify that you can remove all username and password information and
+      it will no longer autofill nor will anything be listed in password
+      manager (lycos.com)"
+R-233,Drag Scroll,Determine whether drag-scrolling gestures function properly.
+R-320,Show and Hide,"Verify that Personal and Navigation bars can be expanded and
+        collapsed"

@@ -1,0 +1,6 @@
+ID,Feature,Description
+S58,Cumulative calculator,The metering unit shall be equipped with a cumulative counter and display at least 7 integer digits and 3 decimal digits.
+S81,Plinth cap,The metering unit shall have a terminal cover that covers the connection cable layer.
+S137,Recording of Metric value,"The metric value recorded and stored in the HES shall be unadulterated, i.e. exactly the same value as recorded by the Metering Unit."
+S236,Log date and system time,The date and system time shall be recorded for each logged record.
+B62,Energy values to other system within 10 sec,The energy values (15-minute values) shall be exportable from HES via integrations to other systems within 10 seconds after registration in HES.

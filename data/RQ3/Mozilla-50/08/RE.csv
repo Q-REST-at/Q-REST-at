@@ -1,0 +1,90 @@
+ID,Feature,Description
+R-18,Sort by columns,sort and reverse-sort per column
+R-27,Delete multiple bookmarks,Verify that several bookmarks are deleted at one time.
+R-33,Images,"Determine whether native and non-native images are correctly copied
+      to the system Clipboard."
+R-49,D&D from the desktop – Shortcuts,"Confirm that dragging an Internet shortcut to the
+      browser window opens the URL"
+R-53,D&D from the destkop – Invalid Items,"Confirm that invalid items dragged to the
+      browser window are handled properly"
+R-59,D&D to Bookmark Manager,"Determine if the Bookmark Manager properly handles
+      items dragged onto it."
+R-66,Form Manager - Permission Zones,"* Longer range:
+      there is discussion about introducing Internet permission zones.
+      Some of the settings shown here may be controlled by such zones
+      (Waiting for Implementation)"
+R-79,Delete Form Data - cancel,"Verify that if you delete data in the Form Manager then
+      click cancel, the data has not been deleted"
+R-82,Tooltips,"Verify that there are ""Big tooltips"" - Similar to popup help for
+        Windows control panels"
+R-83,Search,"Verify that you have the ability to search by typing keyword
+        synonyms, and verbs to bring up related topics in help content. Verify
+        that if the entered phrase may not actually exist in the help document,
+        but it is related to topic."
+R-91,Glossary,"Verify that in the Glossary there includes a section on tips and
+        tricks/tip of the day."
+R-105,Instant Messenger,"Determine whether Instant Messenger help content displays
+        correctly"
+R-106,Customizing Netscape 6,"Determine whether Customzing Netscape 6 help content displays
+        correctly"
+R-113,The Best Standards Support,"Determine whether the Best Standards Support displays
+        correctly"
+R-118,Feedback Center,Determine whether the Feedback Center displays correctly
+R-129,Sort by columns,sort and reverse-sort per column
+R-132,Don't record everything,"Verify that things that aren't supposed to be added to history
+        aren't (eg chorme:/// url's)"
+R-138,New session,"Verify that a new session is started with a new browser window or a
+        restart."
+R-148,Print image,"Determine that it is possible to print an image without changing
+        the currently loaded page"
+R-149,Image Display,"Determine whether images are properly redithered upon system
+        bit-depth changes."
+R-157,Image Display,"Determine whether X Bitmap (XBM) format images can be displayed.Note: XBM will not be supported in the initial 5.0
+          release."
+R-159,Image Display,"Determine whether GIF 89a images are properly displayed across
+        different bit depths."
+R-170,"Activiation, Http Authentication","Need a good working case for this, working on
+      it"
+R-182,"Tasks, view saved passwords","Verify that when you have saved a username and password in password
+      manager, this information can be viewed in the password manager through
+      tasks"
+R-189,Page with various formats,Determine whether a page with various formats prints properly
+R-193,Test Portrait and Landscape settings,"Determine if a page with portrait and Landscape settings prints
+        properly"
+R-200,Top Web Sites,Determine if  top web sites print properly
+R-207,Print Preview,Determine if print Preview works correctly
+R-217,Acrobat Tests,Determine if Acrobat plugin works properly
+R-219,Viewpoint Plugin,Determine if windows media player works fine
+R-227,Drag-selection,"Currently, it is my understanding that there will be no new
+        features in this area (can monitor bug list)"
+R-228,Drag-selection,"Determine whether drag-selection of text works, both from dead
+        space, and from within text."
+R-245,Add/Remove,Delete all panels
+R-253,What's Related,Verify that What's Related lists related sites
+R-255,Bookmarks,Verify that links in Bookmarks work
+R-258,Add Menu,"Verify that unselecting panels from Add menu removes panels from
+        the Sidebar"
+R-264,URL in an editor window,"Open web location in a Composer window. Includes test to dismiss
+        dialog."
+R-267,Local file in current browser window,"Open local files (both HTML and plain text tested) in the current
+        Navigator window. Includes tests to dismiss dialog."
+R-273,Use on Win32,"Use of the native Win32 file picker to navigate through directories
+        and open files (html, plaintext, image). Cancellation also tested."
+R-275,Use on unix,"Use of the XUL file picker on Linux to navigate through 
+        directories and open files (html, plaintext, image). Resizing,
+        selection/scrolling, cancellation also tested. Test last
+        directory-viewed."
+R-277,Basic find in page and frame content,"Find in html page and html frame documents. Test Find Again and
+        cancellation. Test for NOFRAME content."
+R-278,Find in other document content,"Find in plaintext, xml page, ftp listing."
+R-292,"Page, frame, frameset","View info for a webpage, frame and frameset."
+R-299,Check the appearance of browser,"Visually inspect menu bar, floating component bar and all the
+        tool bars"
+R-301,Check the appearance of browser,"Visually inspect menu bar, floating component bar and all the
+        tool bars"
+R-312,Close Wndow,Click upper-right (upper left on Mac) to close
+R-316,Scroll Arrow Up,Click up arrow to scroll page
+R-319,Page scroll,Click in the scrollbar area to page up/down.
+R-320,Show and Hide,"Verify that Personal and Navigation bars can be expanded and
+        collapsed"
+R-324,Buttons,Verify that each buttons executes as appropriate.

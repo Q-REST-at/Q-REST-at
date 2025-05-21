@@ -1,0 +1,10 @@
+ID,Feature,Description
+R-101,Non Clickable Regions,"Verify that clicking non clickable regions in help causes no
+        behavior"
+R-115,Netscape Technical Support,"Determine whether Netscape Technical Support displays
+        correctly"
+R-132,Don't record everything,"Verify that things that aren't supposed to be added to history
+        aren't (eg chorme:/// url's)"
+R-135,Back and Forward button dropdowns,"Verify recently visited sites are in Back and Forward button
+        dropdown menu and work."
+R-211,Print Range,Determine that print range works properly

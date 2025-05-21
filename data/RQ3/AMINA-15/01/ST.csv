@@ -1,0 +1,25 @@
+ID,Purpose,Test steps
+26,Synchronization with GE controlled NTP,Set wrong time in meter. Synchronize meter with system. Check that server web01 has setting to synchronize time with time server.
+29,Switching on and off and status of breakers from other GE system,Verify that switching on is not possible by integration from other system. Verify that switching off is not possible by integration from other system. Verify that status of switches is possible to see by integration.
+71,Grid snapshot - Default values,Provoke an overvoltage on one of the meter's phases and verify that events are sent instantaneously to HES. Verify that the correct register (OBIS codes) is associated with the event. Verify that the Optical Eye shows the grid snapshot for the power misdirection event. Verify that the Optical Eye shows the grid snapshot for the voltage rise event
+99,Training for UAT,The Contractor shall carry out the necessary training and submit the relevant documentation according to point 5 before the start of the Customer's UAT.
+100,Support under UAT,The supplier shall be present at the purchaser's premises and assist when the purchaser performs UAT.
+188,Exporting reports and data,"Verify that the retrieved measurement and structural data as well as the finished reports can be exported to any standardized text file format, such as csv."
+302,Possible overheating - Cat1 1 phase,Verify that the metering device has the capability to detect connections that may cause overheating.
+303,Possible overheating - Cat1 3 phase,Verify that the metering device has the capability to detect connections that may cause overheating.
+304,Possible overheating - Cat2,Verify that the metering device has the capability to detect connections that may cause overheating.
+327,Record when high power exceeds limit value per phase,"Verify that the Metering System is able to record and store information when the following Events occur:
+14. High power exceeds set limit value per phase"
+330,Register overheating in connection,"Verify that the Metering System is able to record and store information when the following Events occur:
+17. In case of connection overheating"
+332,Disable sending of Events from specific Metering Unit,Verify that it is possible to disable the sending of Events from the designated Metering Unit from HES in order not to have to receive a large amount of Events from a particular Metering Unit.
+404,View meters with communication problems in map,Verify that in HES it is possible to visualize Metering Units with communication problems in a graphical view/map that can be zoomed in and out.
+447,Legible marking - Cat1,"Verify that the marking of the meter's manufacturing number is clearly legible
+- i.e. the font size must not be too small so that the number is difficult to read e.g. for a customer"
+448,Legible marking - Cat2,"Verify that the marking of the meter's manufacturing number is clearly legible
+- i.e. the font size must not be too small so that the number is difficult to read e.g. for a customer"
+455,Designed for wall mounting - Cat1,Verify that the Metering Units are designed for wall mounting.
+456,Designed for wall mounting - Cat2,Verify that the Metering Units are designed for wall mounting.
+479,Licensed telecommunications networks,Verify that the licensed telecommunications network complies with Ordinances and Regulations in accordance with PTSFS 2015:2 issued by PTS (Post- och Telestyrelsen).
+593,Automatic export of energy values,Wait until the time for export occurs.
+594,Manual export of energy values,Start an export from HES.
