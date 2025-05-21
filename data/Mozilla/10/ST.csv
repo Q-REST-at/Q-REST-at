@@ -1,33 +1,254 @@
 ID,Purpose,Test steps
-TC-069,,"INITIAL CONDITIONS
-Netscape should be started up
+T-27,"Purpose
+This basic testcase is designed to verify that multiple bookmarks can be
+  deleted at one time. It also serves to test marquee (multiple) selection in
+  the Manage Bookmarks context.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks . You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
 
-STEPS/DESCRIPTION
-1. From the Help Drop Down Menu, select Help and Support Center
-2. Click on the International Link
+Steps/Description
+Select the toplevel ""Bookmarks"" menu. Select Bookmarks|Manage
+    Bookmarks. Select any bookmark. Shift+click or drag to select more (at least
+    3). Select Edit|Delete.
 
-EXPECTED RESULTS
-1. The Help and Support Center should come up
-2. You should be taken to an International Users page
-2. This page should Have Current information for International users"
-TC-119,,"STEPS/DESCRIPTION
-1. Launch Apprunner
-2. Click here to open a XML Test suite.
-3. Open each test page and print the page.
-4. Click here to open a listing of .xml and .css pages.
-5. Select any of the xml files to view them.
-6. Select the menu option ""FILE | PRINT"" to print the xml page
-7. Press ""OK"" to print the page
-8. Try printing other xml pages from the listing
+Expected Results
+The bookmarks should no longer appear in the Manage Bookmarks window,
+    the bookmarks sidebar panel, the top-level ""Bookmarks"" menu and the
+    bookmarks popup on the personal toolbar."
+T-33,"Purpose
+Determine whether native and non-native images are correctly copied.","Initial Conditions
+None.
 
-EXPECTED RESULTS
-XML pages should print as they appear on screen."
-TC-130,,"STEPS/DESCRIPTION
-1. Launch the browser
-2. Go to Windows Build Prerequisites
-3. Select ""File| Print""
-4. The printed pages should have the webpage name and the url on top left/right
-5. The bottom of the printed pages should show the number of pages printed and date/time (system)
+Steps/Description
+For each of the below images:
+Follow the link Copy the image to the Clipboard View the system Clipboard. --- To view the system Clipboard: Mac OS: Select ""Show Clipboard"" from the Finder. Windows: Select ""Clipboard Viewer"" from the Accessories
+    subgroup of the Programs group.
 
-EXPECTED RESULTS
-Header/Footer info should print correctly"
+Expected Results
+The image should appear in the clipboard, identically to how it appeared
+  within the browser window."
+T-49,"Purpose
+Confirm that dragging all types of Internet shortcut to the browser window
+  opens the URL","Steps/Description
+Windows
+Download and decompress the bookmarks.zip archive file Drag each shortcut file (from the archives) to the browser window
+Mac OS
+Download and decompress the bookmarks.sit archive file Drag each shortcut file (from the archives) to the browser window
+Linux
+Create a Web shortcut on your desktop environment Drag the shortcut to the browser window
+
+Expected Results
+Windows
+Dragging Netcenter (Internet Explorer-originated shortcut,
+  with off-line availability) should open www.netscape.com
+Dragging Shortcut to mozilla.org (Communicator 4.7-originated
+  shortcut) should open www.mozilla.org
+Mac OS
+Dragging www.netscape.com/ (Mac OS Internet Shortcut) should
+  open www.netscape.com
+Dragging mozilla.org (Navigator bookmark) should open www.mozilla.org
+Linux
+The browser should load the shortcut URL"
+T-65,"Purpose
+Verify that a form fill popup menu is activated when a field gets accessed
+  that has been saved in Form Manager data.","Initial Conditions
+N/A
+
+Steps/Description
+Go to a site that requires you to fill in data such as ivillage.com
+    (then go to the page to create an account) Fill in data on the form From the Edit drop down menus, select save form data Shut down the browser Start the browser again and return to ivillage.com Click in the first field
+
+Expected Results
+3. A dialog box should appear, alerting you to the fact that the data has
+  been captured
+6. A popup list should appear with the choice of selecting what you typed
+  in the first time"
+T-121,"Purpose
+This basic testcase is designed to verify that links are properly added to
+  the global history file.","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select Go|History. Observe the contents of the Global History Window. Quit and restart the browser. Select Go|History.
+
+Expected Results
+If you've observed the initial conditions, the History window should be
+    non-empty upon first observation. After restart, the History window should still be non-empty."
+T-126,"Purpose
+This basic testcase is designed to verify that all links are properly
+  removed from the global history file.","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select Go|History. Observe the contents of the Global History Window. Select Edit|Preferences (from a navigator window) Browse to the Navigator|History Panel. Under ""Browsing History"" click the ""Clear History"" button. Return to observe the contents of the Global History Window.
+
+Expected Results
+If you've observed the initial conditions, the History window should be
+    non-empty upon first observation. After pressing the button, the history window should be empty of
+    individual history items."
+T-129,"Purpose
+This testcase is designed to verify that the column sorting feature works
+  properly.","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select Go|History. This is most easily tested by using the View|Group
+  By|None setting but not strictly necessary.
+Click on the ""Title"" column once. Click on the ""Title"" column a second time. Click on the ""Title"" column a third time. Click on the ""Location"" column once, and a second time. Click on the ""Last Visited"" column once, and a second time.
+
+Expected Results
+By step:
+The bookmarks should sort into alphabetical order, by Title. The bookmarks should sort into reverse-alphabetical order, by
+    Title. The bookmarks should sort into ""natural"" order (the way they were
+    originally sorted). The bookmarks should sort into order by Location and then the reverse
+    of that order. The bookmarks should sort into order by Last Visited and then the
+    reverse of that order."
+T-153,"Purpose
+Confirm that animated GIFs continue to animate after an extended
+  period of 24 hours or greater.","Initial Conditions
+System under test must be configured to continue normal operation and
+  not ""sleep"" or power down after an extended period of inactivity.
+
+Steps/Description
+Launch Netscape 6 View the test page (linked below) Leave the browser operating untouched for 24 hours
+
+Expected Results
+The image should be animating properly, and at a speed equivalent to
+  that of step #1."
+T-175,"Purpose
+Verify that when you enable password manager from the preferences panel,
+  you are asked if you would like to save usernames and passwords and get
+  prefilled info on sites","Initial Conditions
+Browser should be started and you should have a username and password for
+  a site, such as www.ebay.com
+
+Steps/Description
+From the Edit drop down list, select preferences Click the arrow next to advanced Click passwords Click the box next to remember passwords for sites that require me to
+    log in Click ok Go to a sight that requires a password, such as
+    http://www.ebay.com Enter a username and password and click sign in You should be presented with a dialog box asking if you would like to
+    save your username and password, click yes
+
+Expected Results
+1. The preference panel should be displayed
+2. The advanced options should be displayed
+3. The password panel should be displayed on the right hand side
+5. The preferences panel should close
+7. You should be signed into the sight and the username and password
+  information should be saved in the password manager"
+T-192,"Purpose
+Determine that Seamonkey prints pages with indentations properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to view a page
+    with indentation Select menu option ""FILE| PRINT"" Press OK on Print Dialog Box to print the page
+
+Expected Results
+After Step 4, the page should be printed as seen on screen"
+T-239,"Purpose
+Determine that the mouse cursor should change to the proper icon when
+  moved over links","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar, click on any of the default panel,say, CNN.com and
+    open it Moving the mouse over the links in the panel should change the mouse
+    icon thus making the user understand that the text is clickable Moving the mouse over plain html text should also change the mouse
+    icon Moving the mouse away from the clickable text(to a blank space) should
+    change the mouse icon again
+
+Expected Results
+Mouse icons should change properly"
+T-243,"Purpose
+Determine that a panel that has been already added cannot be added
+  again.","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the sidebar, select ""Tabs | Customize Sidebar"" From the window that opens up, select ""What's Related"" or ""Search""
+    (already added panels) and click on ""Add"" button.
+
+Expected Results
+After step 2, the panel should only be highlighted in the right pane and
+  should not get added again to the list."
+T-244,"Purpose
+Determine that a panel can be deleted sucessfully from the Sidebar","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the sidebar, select ""Tabs | Customize Sidebar"" From the window that opens up, from the pane titled ""My Sidebar"", click
+    on any panel that has been already added Click on ""Remove"" button to remove the panel Press ""OK"" to close the window
+
+Expected Results
+After step 3, the selected panel should be removed from the list in the
+  right pane. After step 4, the panel that was removed should no longer be
+  listed in the Sidebar."
+T-256,"Purpose
+Determine that changes reflect immediately from bookmarks manager","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser Add the Bookmarks panel to the Sidebar using the ""Customize Sidebar""
+    option Open the Bookmarks panel in the Sidebar Visit any url, say, www.yahoo.com Bookmark that link using ""Bookmarks | Add Current Page""
+
+Expected Results
+As soon as you bookmark the page in step 5, the change should get
+  reflected in the Bookmarks panel in the Sidebar too and you should see
+  the added bookmark in the panel"
+T-266,"Purpose
+Test opening a nonexistent (bogus) web location (URL).","Initial Conditions
+The Open Web Location dialog should already be opened in the
+  browser.
+
+Steps/Description
+In the textfield enter the URL http://www.mozilla.org/lizard-eats-all/blarg.html . Select Current Navigator window from the droplist,
+    if it isn't already displayed there. Click the Open button (or hit Enter ).
+
+Expected Results
+The dialog should go away. Since this page doesn't exist (well, it shouldn't ;-), the
+    page that loads should display the typical 404 error: Not Found : The requested object does not
+        exist on this server. The link you followed is either outdated,
+        inaccurate, or the server has been instructed not to let you have
+        it."
+T-312,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"
+T-315,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"
+T-316,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"
+T-319,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"

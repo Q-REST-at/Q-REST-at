@@ -1,0 +1,44 @@
+ID,Feature,Description
+R-3,File Bookmark,"Add a new bookmark into a specific location within the bookmarks
+      hierarchy."
+R-30,Prevent bad drops,"Verify that it is NOT possible to drop an item onto itself or its
+      immediate parent or child"
+R-42,D&D Links onto the Desktop,"Confirm that dragging a link from the browser window
+      onto the desktop creates a shortcut."
+R-55,D&D onto the Application Icon,"Verify that items dragged onto the
+      application icon are handled properly"
+R-107,Understanding Privacy,"Determine whether Understanding Privacy help content displays
+        correctly"
+R-112,Streamlined Interface,Determine whether Streamlined Interface displays correctly
+R-113,The Best Standards Support,"Determine whether the Best Standards Support displays
+        correctly"
+R-116,Security Center,Determine whether the Security Center displays correctly
+R-120,Short Cuts,"Determine that you can open all the selections in the Help drop
+        down menu using short cut buttons."
+R-130,Resize columns,Verify that columns are resizable to show/hide more of entries
+R-149,Image Display,"Determine whether images are properly redithered upon system
+        bit-depth changes."
+R-164,Master Password prompt,"Verify that the master password is visually distinctive from other
+        password prompts (indicates the functionality and importance of the
+        master password)"
+R-169,"Activation, disable after saved","Verify that when the password manager has been disabled, it is no
+      longer in use, even for passwords already saved"
+R-170,"Activiation, Http Authentication","Need a good working case for this, working on
+      it"
+R-176,"Preferences, view saved passwords","Verify that when you have saved a username and password in password
+      manager, this information can be viewed in the password manager through
+      preferences"
+R-185,"Tasks, passwords saved, remove all","Verify that you can remove all username and password information and
+      it will no longer autofill nor will anything be listed in password
+      manager (lycos.com)"
+R-199,Sample XML Pages for printing,Determine if XML pages print properly
+R-214,Quicktime tests,Determine if quicktime movies play properly
+R-223,basic sidebar search,"Verify that a basic search from within the Search tab can be
+      executed"
+R-233,Drag Scroll,Determine whether drag-scrolling gestures function properly.
+R-255,Bookmarks,Verify that links in Bookmarks work
+R-285,Context menu access,Viewing page and frame source via context menu.
+R-309,Active/Inactive Window,"The active window is visually distinct, inactive = grey title
+        bar."
+R-318,Thumb Scroll,Click and drag thumb to scroll page
+R-326,Component buttons,Verify that component buttons work and behave as appropriate.

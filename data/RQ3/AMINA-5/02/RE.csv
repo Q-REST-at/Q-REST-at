@@ -1,0 +1,6 @@
+ID,Feature,Description
+S24,Operation of the metering unit after phase loss,The metering unit in a 3-phase installation shall continue to function even if one or two phases are lost.
+S137,Recording of Metric value,"The metric value recorded and stored in the HES shall be unadulterated, i.e. exactly the same value as recorded by the Metering Unit."
+S186,Recovery time after communication breakdown max 60 min,The recovery time of the infrastructure communication after a communication breakdown shall not exceed 60 minutes.
+S215,Integrations via files,HES should be able to handle integrations via files.
+B83,View meters with communication problems in map,"In HES, it should be possible to visualize Metering Units with communication problems in a graphical view/map that can be zoomed in and out."

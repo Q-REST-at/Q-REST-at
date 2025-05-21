@@ -1,0 +1,23 @@
+ID,Feature,Description
+R-39,General,"Determine whether text outputted by JavaScript is properly
+      copied."
+R-68,Save Form Data - right click,"Verify that you can save a form's data by right clicking on
+      the form itself."
+R-92,Glossary,"Verify that in the Glossary there includes a section for an
+        Intro/tutorial for NS6."
+R-108,Creating web pages,"Determine whether Creating web pages help content displays
+        correctly"
+R-145,Save Image,"Determine that you can right click an image and save to your local
+        drive."
+R-186,"Tasks, passwords never saved, remove","Verify that you can remove a site and username from the passwords
+      never saved section of password manager"
+R-196,CSS Testcases for printing,Determine if CSS pages print properly
+R-203,Print Lists,Determine if lists print correctly
+R-240,Mouse Over,"Verify that panels appear highlighted when mouse is moved over
+        them"
+R-246,Add/Remove,Verify list of available remote panels
+R-250,Re-Order,Verify reordering of panels works
+R-259,Add Panel using Javascript,Verify that adding of a panel using javascript works
+R-260,Basic access to dialog,Tests to access this dialog from the menubar and keyboard.
+R-285,Context menu access,Viewing page and frame source via context menu.
+R-318,Thumb Scroll,Click and drag thumb to scroll page

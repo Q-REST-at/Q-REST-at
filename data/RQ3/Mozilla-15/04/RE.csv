@@ -1,0 +1,24 @@
+ID,Feature,Description
+R-4,Create new bookmark,Verify new bookmarks can be created (not added).
+R-15,View item properties,"Verify that view properties works as appropriate for bookmarks,
+      folders, and separators(negative)"
+R-19,Resize columns,Verify that columns are resizable to show/hide more of entries
+R-27,Delete multiple bookmarks,Verify that several bookmarks are deleted at one time.
+R-51,D&D from the desktop – Images,"Confirm that dragging a supported image file
+       to the browser window display the file"
+R-70,Save Form Data - dialog no,"Verify that you can stop a form's data from being saved from
+      the popup dialog box, and you click no."
+R-108,Creating web pages,"Determine whether Creating web pages help content displays
+        correctly"
+R-110,Security and Privacy,Determine whether Security and Privacy displays correctly
+R-130,Resize columns,Verify that columns are resizable to show/hide more of entries
+R-135,Back and Forward button dropdowns,"Verify recently visited sites are in Back and Forward button
+        dropdown menu and work."
+R-206,Print Paragraph Styles,Determine if paragraph styles print correctly
+R-238,Width,Retaining non-default size on reopen or new window
+R-246,Add/Remove,Verify list of available remote panels
+R-252,Save,Verify that order and panel list is immediately applied
+R-306,"Verify all the selectable items on other applications under
+        Modern theme","Click through all the items on menu bar and tool bars under AIM,
+        Composer, Mail and Address book to see all the looks and feel are
+        consistence under Modern theme"

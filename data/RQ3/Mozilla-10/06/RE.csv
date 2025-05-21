@@ -1,0 +1,18 @@
+ID,Feature,Description
+R-6,Add/Delete Personal Toolbar bookmark,"Verify that items from the personal toolbar folder are properly
+      added/deleted."
+R-40,General,"Determine whether HTML entities can be properly copied to other
+      applications."
+R-59,D&D to Bookmark Manager,"Determine if the Bookmark Manager properly handles
+      items dragged onto it."
+R-155,Animated Images,"Determine whether displaying animated GIFs result in single server
+        request for the image, rather than additional requests upon each frame
+        change."
+R-163,Test lifecycle of applets,Test lifecycle of applets
+R-173,"Password Manager, multiple passwords","Verify that when you have saved a username and password for a website
+      and you later change the password, that password manager picks up the new
+      password"
+R-233,Drag Scroll,Determine whether drag-scrolling gestures function properly.
+R-239,UI,Cursors should have the right icon when mousing over
+R-285,Context menu access,Viewing page and frame source via context menu.
+R-292,"Page, frame, frameset","View info for a webpage, frame and frameset."

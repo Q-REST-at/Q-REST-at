@@ -1,0 +1,6 @@
+ID,Feature,Description
+S70,Visible production number - communication module,A serial number on a Communication Module shall be positioned so that it is not visible on the front of the Metering Unit.
+S143,logging of events,Events in the Metering System shall be logged in an event list in HES.
+S147,Display of PQ values,"In HES, it should be possible to analyze and visualize PQ values in e.g. graphs and bar plots."
+S196,Virtual and physical servers,HES should be able to run on virtual servers as well as physical ones.
+B42,Communication status,"It shall be possible to view the communication status of the Metering Unit directly, without manual intervention and without opening the meter."

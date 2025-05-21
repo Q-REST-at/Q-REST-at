@@ -1,0 +1,16 @@
+ID,Feature,Description
+R-1,View Bookmarks,Verify that bookmarks appear at the standard(4) access points
+R-15,View item properties,"Verify that view properties works as appropriate for bookmarks,
+      folders, and separators(negative)"
+R-58,D&D from Bookmark Manager,"Determine if the application and OS properly
+      handle items dragged from the Bookmark Manager"
+R-117,International Users,Determine whether International Users displays correctly
+R-126,Erase all,Clear all of history
+R-157,Image Display,"Determine whether X Bitmap (XBM) format images can be displayed.Note: XBM will not be supported in the initial 5.0
+          release."
+R-250,Re-Order,Verify reordering of panels works
+R-251,Cancel,Verify that nothing changes when you cancel
+R-269,Local file in an editor window,"Open local files (both HTML and plain text tested) in a Composer
+        window. Includes tests to dismiss dialog."
+R-305,Verify all the selectable items work under Modern theme,"Click through all the items on menu bar, tool bars, and floating
+        component bar under Modern theme"

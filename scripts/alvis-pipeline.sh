@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -A NAISS2025-22-104 -p alvis
-#SBATCH --gpus-per-node=A100:1
-#SBATCH -t 0-02:00:00
+#SBATCH --gpus-per-node=A100:4
+#SBATCH -t 0-04:00:00
 #SBATCH -o alvis-pipeline.log
 
 : '
@@ -15,10 +15,9 @@ ml purge
 
 # Define entry vectors. These should correlate to the expected format of the
 # REST-at tool.
-dataset=("BTHS" "ENCO" "SNAKE")
-models=("mis")
-# models=("mis" "mixtral")
-quant=("NONE" "AWQ")
+datasets=("BTHS" "ENCO" "MOZILLA" "HW")
+models=("mis" "mixtral" "llama")
+quants=("NONE" "AWQ" "GPTQ" "AQLM")
 
 ITER_PER_SESSION=10
 
@@ -35,9 +34,9 @@ echo "Alvis Pipeline Started."
 
 mkdir -p "./logs" "./profiles"
 
-for dataset in "${dataset[@]}"; do
+for dataset in "${datasets[@]}"; do
     for model in "${models[@]}"; do
-        for quant in "${quant[@]}"; do
+        for quant in "${quants[@]}"; do
 
             echo ""
             echo "******* Session config *******"
@@ -49,16 +48,22 @@ for dataset in "${dataset[@]}"; do
 
             session="${model^^}_${quant}_${dataset}"
             
-            # TODO: add support for more containers
             if [[ "$quant" == "AWQ" ]]; then
                 container="awq.sif"
+            elif [[ "$quant" == "GPTQ" ]]; then
+                container="gptq.sif"
+            elif [[ "$quant" == "AQLM" ]]; then
+                container="aqlm.sif"
             else
-                container="container.sif" # default
+                container="container.sif" # default; no quantization
             fi
 
-            if [ ! -f "$container" ]; then
+
+            if [[ ! -f "$container" ]]; then
                 _log_err "Container $container does not exist. Skipping.."
                 continue
+            else
+                echo "Using container: $container"
             fi
 
             REST_AT_FLAGS="$session $model $dataset"

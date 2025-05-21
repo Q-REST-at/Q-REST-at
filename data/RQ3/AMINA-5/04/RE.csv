@@ -1,0 +1,6 @@
+ID,Feature,Description
+S58,Cumulative calculator,The metering unit shall be equipped with a cumulative counter and display at least 7 integer digits and 3 decimal digits.
+S81,Plinth cap,The metering unit shall have a terminal cover that covers the connection cable layer.
+S186,Recovery time after communication breakdown max 60 min,The recovery time of the infrastructure communication after a communication breakdown shall not exceed 60 minutes.
+S192,Licensed telecommunications networks,"If the communication solution includes licensed telecommunications networks, it must comply with Ordinances and Regulations in accordance with PTSFS 2015:2 issued by PTS (Swedish Post and Telecom Authority)."
+S228,Controlling logout time,The client shall be able to control after how many minutes of inactivity a User is automatically logged out of HES.

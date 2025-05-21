@@ -1,0 +1,51 @@
+ID,Feature,Description
+R-3,File Bookmark,"Add a new bookmark into a specific location within the bookmarks
+      hierarchy."
+R-52,D&D from the desktop – Plug-in files,"Confirm that dragging a helper-application
+       file to the browser window opens the file
+       properly"
+R-60,D&D Large Images (stress),"Verify that dragging a large (e.g. 5 MB) image across
+      browser windows, to desktop, and into mail message
+      works properly."
+R-62,D&D Bookmarks menu to toolbar,"Verify that you can drag a bookmark from the Bookmarks menu
+      to the Personal Toolbar."
+R-71,Save Form Data - dialog no,"Verify that you can stop a form's data from being saved from
+      the popup dialog box, and you click no."
+R-73,Prefill - OK Dialog,"Verify that when you encounter a Web site that could be prefilled,
+      that you are given the pre-fill dialog and when you click ok, the
+      information is filled into the form."
+R-76,Edit Form Data - new value for field,"Verify that if you add a new value for a field in Form Manager
+      it is later offered as an option when prefilling a form using
+      this field."
+R-87,Index,"Verify that there is an in Index of help content and a list of
+        keywords to links in the help content."
+R-90,TS/Buddy List,"Verify that there is Troubleshooting Help about the problme ""if you
+        can't see anyone in your buddy list window."""
+R-122,Record after redirect,"Verify that the correct link is recorded after a server
+        redirect."
+R-134,Go menu list,Verify correct recently visited sites are in go menu.
+R-143,Resize to original,"Determine that it is possible to resize an image to it's original
+        size after it has been resized to window size."
+R-145,Save Image,"Determine that you can right click an image and save to your local
+        drive."
+R-147,Set image as wallpaper,Determine that you are able to set image as wallpaper.
+R-151,Cache/Networking,"Determine whether images load directly into the web browser from a
+        networked server."
+R-156,Animated Images,"To determine whether multiple differing animated images on the same
+        page are properly displayed"
+R-167,"Save username and password, never for this site","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-171,"Actitvation, ftp","Need a good working case for this, working on
+      it"
+R-177,"Preferences, view passwords never saved","Verify that when you have designated not to ever save a username and
+      password in password manager, this information can be viewed in the
+      password manager through preferences (expedia.com)"
+R-186,"Tasks, passwords never saved, remove","Verify that you can remove a site and username from the passwords
+      never saved section of password manager"
+R-218,Media Player tests,Determine if windows media player works fine
+R-258,Add Menu,"Verify that unselecting panels from Add menu removes panels from
+        the Sidebar"
+R-264,URL in an editor window,"Open web location in a Composer window. Includes test to dismiss
+        dialog."
+R-292,"Page, frame, frameset","View info for a webpage, frame and frameset."
+R-316,Scroll Arrow Up,Click up arrow to scroll page

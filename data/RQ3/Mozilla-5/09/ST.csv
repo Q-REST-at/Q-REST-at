@@ -1,0 +1,51 @@
+ID,Purpose,Test steps
+T-4,"Purpose
+This basic testcase is designed to verify that new bookmarks are properly
+  created. *This testcase will change/evolve as the UI for this feature becomes
+  finalized.*","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which
+    I use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select File|New Bookmark. Type in any name and location (URL) Click Enter.
+
+Expected Results
+A dialog box should appear prompting you for the Name and Location (URL)
+    of the new bookmark. The new bookmark should immediately appear on the toplevel bookmarks
+    menu, the bookmarks popup on the personal toolbar, the bookmarks sidepanel,
+    and the manage bookmarks window."
+T-101,"Purpose
+This basic testcase is designed to verify that when clicking
+  non-clickable areas in help, no behavior occurs","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+Select the toplevel Help menu. Select Help Contents Click on the greyed out previous button Click on the greyed out back button Click on the Netscape logo in uppper right
+
+Expected Results
+2. You should be taken to the help contents page
+3. Nothing should happen
+4. Nothing should happen
+5. Nothing should happen"
+T-206,"Purpose
+Determine that Seamonkey prints pages with different paragraph styles
+  properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to open first paragraph
+    styles test page. After each test page opens, select ""FILE | PRINT"" menu option to print
+    the test. Click on ""Next Test"" at bottom of the page to proceed to next
+    test.
+
+Expected Results
+All pages should print as they appear on the screen."
+T-303,"Purpose
+To verify all the selectable items under browser in Classic theme.","Description
+From the main menu bar, select
+    Edit > Preferences > Appearance > Themes. Select ""Classic"" theme on the right hand side of the dialog. Click the ""Apply Classic"" button. Close the Preferences dialog. Click through all the items on menu bars, tool bars, and floating
+    component bars.
+
+Expected Results
+All the selectable items and icons under browser should work as
+  advertised."

@@ -405,8 +405,9 @@ class RESTSpecification:
         """
         if "{" in res and "}" in res:
             return self._parse_json_output(res)
-        
-        return self._parse_list_output(res)
+        else:
+            return self._parse_list_output(res)
+
 
     def _parse_json_output(self, res: str) -> list[str]:
         """
@@ -499,5 +500,39 @@ class RESTSpecification:
             self._tests_index[int(test.replace(RESTSpecification._TEST_INDEX_PREFIX, ""))]
             for test in links
         ]
+
+        return links
+
+
+    def _parse_human_output(self, res: str) -> list[str]:
+        """
+        Parses a natural language response like:
+        'The test cases "T-2", "T3", "ST-11", or "ST12" are testing ...'
+
+        Parameters:
+        -----------
+        res: str - The raw response string.
+
+        Returns:
+        --------
+        list[str] - A list of test IDs.
+        """
+        import re
+
+        # Match quoted strings of formats: T-<num>, T<num>, ST-<num>, ST<num>
+        matches = re.findall(r'"((?:ST|T)-?\d+)"', res)
+
+        links = []
+        for match in matches:
+            try:
+                index = int(re.sub(r"^(?:ST|T)-?", "", match))
+
+                if 0 <= index < len(self._tests_index):
+                    links.append(self._tests_index[index])
+                else:
+                    print(f"Index {index} out of range")
+            except (ValueError, TypeError):
+                print(f"Skipping malformed test ID: {match}")
+                continue
 
         return links

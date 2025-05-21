@@ -1,0 +1,12 @@
+ID,Feature,Description
+R-69,Save Form Data - dialog yes,"Verify that you can save a form's data from the
+      popup dialog box and you click yes."
+R-107,Understanding Privacy,"Determine whether Understanding Privacy help content displays
+        correctly"
+R-121,Record sites,Verify that visited links are recorded.
+R-164,Master Password prompt,"Verify that the master password is visually distinctive from other
+        password prompts (indicates the functionality and importance of the
+        master password)"
+R-184,"Tasks, passwords saved, remove","Verify that you can remove a username and password for a given site
+      and it will no longer autofill on that sight nor will it be listed in
+      password manager (netscape.com)"

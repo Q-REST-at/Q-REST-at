@@ -1,0 +1,10 @@
+ID,Feature,Description
+R-104,Mail and News,"Determine whether Mail and News help content displays
+        correctly"
+R-184,"Tasks, passwords saved, remove","Verify that you can remove a username and password for a given site
+      and it will no longer autofill on that sight nor will it be listed in
+      password manager (netscape.com)"
+R-202,Print images,Determine if images print correctly
+R-208,Page Setup(mac only),Determine id Page Setup dialog works correctly
+R-287,Navigation/UI,"Scrolling and keyboard navigation within the source window. Also
+        should be able to use keyboard accelerators. Resize source window."

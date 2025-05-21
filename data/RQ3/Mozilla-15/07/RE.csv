@@ -1,0 +1,26 @@
+ID,Feature,Description
+R-4,Create new bookmark,Verify new bookmarks can be created (not added).
+R-6,Add/Delete Personal Toolbar bookmark,"Verify that items from the personal toolbar folder are properly
+      added/deleted."
+R-38,General,"Determine whether text can be copied and pasted from text fields
+      within a dialog box."
+R-60,D&D Large Images (stress),"Verify that dragging a large (e.g. 5 MB) image across
+      browser windows, to desktop, and into mail message
+      works properly."
+R-68,Save Form Data - right click,"Verify that you can save a form's data by right clicking on
+      the form itself."
+R-94,Glossary,"Verify that in the Glossary there includes a tutorial on how to do
+        better searches"
+R-128,Change grouping,Change the History View to Group by Day|Site|None
+R-132,Don't record everything,"Verify that things that aren't supposed to be added to history
+        aren't (eg chorme:/// url's)"
+R-133,Don't show 302 redirect,Don't ever show 302 redirects in history
+R-172,"Password Manager, multiple users","Verify that when you have saved multiple username's and password's
+      for a website, you are later presented with those same choices"
+R-177,"Preferences, view passwords never saved","Verify that when you have designated not to ever save a username and
+      password in password manager, this information can be viewed in the
+      password manager through preferences (expedia.com)"
+R-188,Print a Page with frames,Determine whether a page with frames prints properly
+R-196,CSS Testcases for printing,Determine if CSS pages print properly
+R-286,View source of other content,"View source of plaintext, xml page, ftp listing."
+R-300,Testing under Modern theme,Verify Modern theme works as advertised

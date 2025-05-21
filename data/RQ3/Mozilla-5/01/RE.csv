@@ -1,0 +1,9 @@
+ID,Feature,Description
+R-27,Delete multiple bookmarks,Verify that several bookmarks are deleted at one time.
+R-154,Animated Images,"Determine whether an automatically updated web cam continues to
+        refresh over an extended (24 hour) period of time."
+R-158,Image Display,"Determine whether GIF 87 images are properly displayed across
+        different bit depths."
+R-231,Discontiguous (disjoint) selection,"Determine whether discontiguous selection of table cells function
+        properly."
+R-289,Select and copy,Select and copy strings from the source window.

@@ -1,0 +1,63 @@
+ID,Purpose,Test steps
+T-70,"Purpose
+This basic testcase is designed to verify that you can choose no to save a
+  form's data from the dialog box","Initial Conditions
+You should have no form data saved
+
+Steps/Description
+Go to a site that needs information, for example
+    mapquest.com<<li> Fill in all the fields for driving directions
+    and click get directions Click no From the Tools menu, open the Form Manager sub-menu, and then choose
+    Edit Form Info
+
+Expected Results
+2. A dialog should appear asking if you would like to save the values you
+  filled in
+3. Your data should not be saved to Form Manager
+4. Your saved data should not appear in the Forms Manager"
+T-150,"Purpose
+To confirm that reloaded web pages properly display images modified
+  since the last load.","Initial Conditions
+Disk and memory caches to be cleared. Write access to test case
+  directory required.
+
+Steps/Description
+Copy img-reload.html, foo_master.jpg and bar_master.jpg from the
+    test case directory to your local test case directory. In your test case directory, copy (but do not rename!)
+    foo_master.jpg to foo.jpg View img_reload.html. In the test case directory, copy (but do not rename!)
+    bar_master.jpg to foo.jpg Hold the shift button down, and press the browser's Reload
+    button
+
+Expected Results:
+After Step 2, a page should appear containing a picture of John Glenn
+  in a Mercury capsule.
+After Step 4, a page should appear containing a picture of a (much
+  older) John Glenn aboard the space shuttle."
+T-218,"Purpose
+Determine that Windows Media player works properly","Initial Conditions
+None
+
+Steps/Description
+- Daniel Johns
+    Music - Pop singer/songwriter Daniel Johns combines streaming ASF &
+    MP3... - Tranzor Z
+    Productions - Mixing hard trance and progressive house. Hours of music
+    in Windows Media format. - WindowsMedia.com - Home of
+    ASF-formatted media. Radio Station Guide, music downloads, and... - SoundClick -
+    ASF and MP3. Stars and unsigned artists. Streaming songs and videos
+    in... - Hollywood and Vine -
+    Streaming music and videos from Capitol Records. Some clips, some
+    full-length. - Classical Is Cool - Classical
+    music in ASF (ASX) with performer information. - Listen with
+    iRaMa - Listen to streaming audio and dedicate a song to friends. - CLUAS -
+    Stream or download songs by unsigned acts for free (ASF, ASX, WMA,
+    MP3... - Rev-Radio
+    (Revolution Radio) - Streaming audio files from a variety of indie
+    artist in Windows Media and... - DiscoverMusic.com - Provides song
+    samples via the internet. - IFilm.com - Tons
+    of windows media files. To change player settings, click on ""MoreOptions""
+    and then click on ""Change Preferences"" - MSNBC website
+    videos. More videos here
+
+Expected Results
+All media player files should load/work properly"

@@ -1,0 +1,1241 @@
+ID,Purpose,Test steps
+T-1,"Purpose
+This basic testcase is designed to verify that a bookmarks file is being
+  detected and is being displayed at the appropriate places.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks . You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select the toplevel ""Bookmarks"" menu. Select any bookmark on the
+    list. Click ""Bookmarks"" on the Bookmarks/personal toolbar. Open the sidebar; click on the ""Bookmarks"" panel. From the toplevel ""Bookmarks"" menu select ""Manage Bookmarks"".
+
+Expected Results
+Bookmarks and folders(including the Personal Toolbar Folder) should
+    appear as menu items. Menuitems that are folders should have a solid
+    triangle indicating a submenu is present. Bookmarks and folders(including the Personal Toolbar Folder) should
+    appear as menu items. Menuitems that are folders should have a solid
+    triangle indicating a submenu is present. Bookmarks should appear with the green ribbon icon. Folders should have
+    a folder icon. The Personal Toolbar Folder should have a combination
+    icon. The Manage Bookmarks window should appear and be populated with
+    bookmarks and folders."
+T-2,"Purpose
+This basic testcase is designed to verify that a bookmark is properly
+  added and is displayed at the appropriate places.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks . You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select the toplevel 'Bookmarks' menu then select the first menuitem
+    'Add Bookmark'.
+
+Expected Results
+The title of the page you selected should appear as a bookmark in:
+the toplevel 'Bookmarks' menu the 'Bookmarks' popup menu on the personal toolbar the 'Bookmarks' panel in MySidebar in the Manage Bookmarks view (select Bookmarks| Manage Bookmarks)"
+T-5,"Purpose
+This basic testcase is designed to verify that a bookmark is properly
+  deleted and is no longer displayed at the appropriate places.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks . You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select the toplevel 'Bookmarks' menu then select the 'Manage Bookmarks'
+  menuitem.
+Select (highlight) a bookmark, press the delete key, OR Select (highlight) a bookmark, Select Edit|Delete. Click OK in the
+    dialog that appears.
+
+Expected Results
+The title of and link to the bookmark should now be removed from:
+the toplevel 'Bookmarks' menu the 'Bookmarks' popup menu on the personal toolbar the 'Bookmarks' panel in MySidebar in the Manage Bookmarks view (select Bookmarks| Manage Bookmarks)"
+T-10,"Purpose
+This basic testcase is designed to verify that the edit properties feature
+  works as prescribed for various items.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select a bookmark. Select File|Bookmark Properties. Change the Name OR the Location. Edit the Description field. Click ""OK"" Surf the link. Select a folder. Select File|Bookmark Properties. Change the Name. Change the description. Click ""OK"".
+
+Expected Results
+For step(2) the changes should take effect upon pressing ""OK"". The
+    changes should be seen in the four standard locations.If the name changed
+    clicking the new bookmark name should go to the same url. If the url
+    changed, clicking the same name should go to the new url. For step(3) the changes should take effect upon pressing ""OK"". The
+    changes should be seen in the four standard locations."
+T-13,"Purpose
+This basic testcase is designed to verify that separators are properly
+  added and deleted.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select a bookmark. Select File|New Separator. Select the separator. Select Edit|Delete, click ""OK"".
+
+Expected Results
+After step (3) separator should immediately appear below the selected
+    item in the toplevel bookmarks menu, the bookmarks popup on the personal
+    toolbar, the bookmarks sidepanel, and the manage bookmarks window. After step (4) the separator should immediately disappear (be deleted)
+    from the toplevel bookmarks menu, the bookmarks popup on the personal
+    toolbar, the bookmarks sidepanel, and the manage bookmarks window."
+T-15,"Purpose
+This testcase is designed to verify that the view properties feature works
+  as prescribed for various items.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select a bookmark. Select File|Bookmark Properties. Verify, click
+    ""OK"". Select a folder. Select File|Bookmark Properties. Verify, click
+    ""OK"". Select a separator. Select File|Bookmark Properties.
+
+Expected Results
+For step(2) the Bookmark Properties dialog should appear. It should
+    have fields for name, location(url), custom keyword, and description. There
+    should also be a section for setting update and notification options. For step(3) the Bookmark Properties dialog should appear. It should
+    have fields for name and description. No other fileds should appear in this
+    dialog. For step(4) no dialog should appear."
+T-19,"Purpose
+This basic testcase is designed to verify that columns are resizable by
+  dragging them to an arbitrary size.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Mouseover the separator between the ""Name"" and ""URL"" columns. Click and drag that separator to the left and right. Repeat this with each of the other column separators.
+
+Expected Results
+In step(2) the mouse pointer should change to a double-arrowed
+    icon (platform specific or XP?). In step(3) the column sizes on either side of the separator should
+    shrink and grow as you drag. The content of the column should move with
+    the column header. Column content that is obscured should be replaced by
+    the ellipsis(?)."
+T-20,"Purpose
+This basic testcase is designed to verify that you can pick which columns
+  you would like to show/hide.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Click the icon on the far right of the column headers. Uncheck two of the items (columns). Recheck an item. Quit and restart the application.
+
+Expected Results
+Step(2) a popup menu should appear listing all of the column headers as
+    menuitems. Step(3), they should all be checked by default and unchecking should
+    cause that column to disappear from the manage bookmarks window. Step(4), the columns should reappear upon rechecking its name on the
+    list. Step(5) the columns should appear just as the did after step(4)."
+T-27,"Purpose
+This basic testcase is designed to verify that multiple bookmarks can be
+  deleted at one time. It also serves to test marquee (multiple) selection in
+  the Manage Bookmarks context.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks . You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select the toplevel ""Bookmarks"" menu. Select Bookmarks|Manage
+    Bookmarks. Select any bookmark. Shift+click or drag to select more (at least
+    3). Select Edit|Delete.
+
+Expected Results
+The bookmarks should no longer appear in the Manage Bookmarks window,
+    the bookmarks sidebar panel, the top-level ""Bookmarks"" menu and the
+    bookmarks popup on the personal toolbar."
+T-30,"Purpose
+This basic testcase is designed to verify that bookmarks and folders can't
+  be dropped onto themselves, an immediate parent container or any child
+  container.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel. As part of your bookmarks file you need a folder (lets' call it folder
+    ""A"") that contains bookmarks and another folder (let's call this folder
+    ""A 1 "" (read Asub1)) that contains bookmarks as well.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select folder A 1 then drag&drop it onto or within
+    itself Select folder A 1 then drag&drop it onto or within folder
+    A. Select folder A then drag&drop it onto or within folder
+    A 1 . Select a bookmark within folder A 1 and drop it onto folder
+    A 1 .
+
+Expected Results
+Nothing should happen! No bookmark or folder should be moved in any of
+    these cases. Ideally, one should see the International symbol for ""No""
+    cursor."
+T-35,"Purpose
+Determine whether extremely large text blocks can be copied from web
+  pages.","Initial Conditions
+None.
+
+Steps/Description
+For each of the below-linked text pages:
+View the page. Select all of the text. From the Edit menu, select Copy. View the System Clipboard (or copy it into a copy/paste enabled text
+    editor, such as BBEdit or WordPad)
+
+Expected Results
+The text should be successfully copied, and displayed in its entirety in
+  the System Clipboard (or within the attempted application)."
+T-36,"Purpose
+Determine whether extremely large images can be copied from web pages.","Initial Conditions
+None.
+
+Steps/Description
+View the below-linked 4.7 MB JPEG image. Copy the image to the system Clipboard. View the system Clipboard, or page the Clipboard contents to an
+    application that supports image display.
+
+Expected Results
+The JPEG file should be properly displayed on the system Clipboard."
+T-38,"Purpose
+To determine whether cut/copy/paste works on text fields within dialog
+  boxes and other UI windows.","Steps/Description
+Mac OS With the mouse, select a text string within the browser window, and
+        choose ""Copy"" from the Edit menu. From the Edit menu, choose Find on this Page... Press Command+V to paste the text. Press Command+A to select the just-pasted text Select the first three words of the line: ---> this very line <--- ...and press Command+X to cut the text Press Command+A to select the remaining text, and choose
+        ""Delete"" from the Edit menu to clear the text selection. Repeat steps 1-6, but do so using via control+click context menus,
+        rather than through keyboard shortcuts. Repeat steps 1-6, but do so using Mozilla's menu bar, rather than
+        keyboard shortcuts. (For bonus points, perform this step via a text
+        field in a modal dialog, such as within Preferences.) Windows With the mouse, select a text string within the browser window, and
+        choose ""Copy"" from the Edit menu. From the Edit menu, choose Find on this Page... Press Control+V to paste the text. Press Control+A to select the just-pasted text Select the first three words of the line: ---> this very line <--- ...and press Control+X to cut the text Press Control+A to select the remaining text, and choose
+        Delete from the Edit menu to clear the text selection. Repeat steps 1-6, but do so using via context menus, rather than
+        through keyboard shortcuts. Linux With the mouse, select a text string within the browser window, and
+        choose Copy from the Edit menu. From the Edit menu, choose Find on this Page... Press Alt+V to paste the text. Press Alt+A to select the just-pasted text Select the first three words of the line: ---> this very line <--- ...and press Alt+X to cut the text Press Alt+A to select the remaining text, and click
+        after the right edge of the text selection. Press the middle mouse button to paste the selected text. Presss Alt+A to select the contents of the text
+        field Choose ""Delete"" from the Edit menu to clear the text
+        selection.
+
+Expected Results
+Mac OS & Windows : Step 2: The ""Find on Page"" dialog should appear. Step 3: The copied text "" this very line of text "" should
+      be pasted into the text field. Step 4: The text field contents should now be selected Step 5: The text field should now comprise: "" of
+      text "" Step 6: The text field should now be empty. Linux: Step 2: The ""Find on Page"" dialog should appear. Step 3: The copied text "" this very line of text "" should
+      be pasted into the text field. Step 4: The text field contents should now be selected Step 5: The text field should now comprise: "" of
+      text "" Step 6: The editing caret should exist to the right of the text "" of text "" Step 7: The text field should now contain "" of text this very
+      line "" Step 8: The text field contents should now be selected Step 9: The text field should now be empty."
+T-42,"Purpose
+Confirm that dragging a link from the browser window onto the desktop
+  creates a shortcut, linking to the correct URL.","Steps/Description
+Open the testfile.html test
+    file Drag the Drag Me link onto the desktop Open the shortcut created in the last step Drag the Space Shuttle link onto the desktop Open the shortcut created in the last step
+
+Expected Results
+2. A link to the dragme.html file should be
+  created
+3. The dragme.html file should open the
+  browser window
+4. A link to the large space shuttle image should be created
+5. The large space shuttle image should open in the browser window"
+T-45,"Purpose
+Verify that dragging a link or image to a frame-set page properly replaces
+  the entire window contents, and that dragging from within a frame-set page
+  properly replaces the target frame.","Steps/Description
+Open the frame-test.html test file Drag the Drag Me link to the left frame Drag the space shuttle image to the left frame In a new browser window, open the page-test.html test file From the single-page ( page-test.html )
+    window, drag the Drag Me link to a frame in the frame-set ( frame-test.html ) window Press the Back button in the frame-set window From the single-page window, drag the space shuttle image to a frame in
+    the frame-set window
+
+Expected Results
+2. The dragme.html page should open in the target frame (bug 83963 )
+3. The space shuttle image should open in the target frame (bug 83963 )
+5. The dragme.html page should replace the frame-set page
+7. The space shuttle image should replace the frame-set page
+need iframe test cases"
+T-47,"Purpose
+To confirm that text, links, and images dragged to a non-modal dialog are
+  handled properly","Steps/Description
+Open the testfile.html test
+    file Open a non-modal dialog (e.g. Edit | Find in This Page...) Make a text selection and drag it onto a text widget in the
+    dialog. Drag a link onto a text wedget in the dialog Drag the selected text a blank area or a non-text wedget in the
+    dialog Drag a link to a blank area or a non-text wedget in the dialog Drag the space shuttle image to the dialog
+
+Expected Results
+3. The selection text should be copied to the text widget
+4. The link URL should be copied to the text widget
+5-7 The drag attempt should be rejected"
+T-50,"Purpose
+Confirm that dragging a text file to the browser window displays the
+  document contents","Steps/Description
+Drag a text file from your desktop to the browser window
+
+Expected Results
+The document content should be displayed in the browser window as if the
+  file were opened from File|Open."
+T-51,"Purpose
+Confirm that supported image files dragged to the browser window are
+  properly displayed","Steps/Description
+Download each of the image files each below to your computer From your desktop or file manager, drag each downloaded file to the
+    browser window
+
+Expected Results
+2. Each image should be displayed in the browser window."
+T-59,"Purpose
+Determine whether the Bookmark Manager properly handles items dragged onto
+  it.","Initial Conditions
+Download the test archive for your system, linked below, to your computer
+  and decompress it.
+
+Steps/Description
+Download the test archive for your system, linked below, to your
+    computer and decompress it. On Windows, drag the Netcenter file to the to the Bookmark
+    Manager On Mac OS, drag the Mac OS bookmark and Netscape
+    Bookmark files to the Bookmark Manager Drag a disk icon (e.g. Macintosh HD on Mac OS, or C:\ on Windows) to the Bookmark Manager Simultaneously drag the mozilla.gif, mozilla.jpg and OwlAlpha.png files
+    to the Bookmark Manager Drag mozillazine.html file to the
+    Bookmark Manager Drag zinealias.html shortcut (alias) to
+    the Bookmark Manager (Mac OS) Drag the contents of the Stress Tests folder simultaneously to
+    the Bookmark Manager
+
+Expected Results
+2. A URL pointer to the hard drive should be added.
+3. Bookmark links to each of the 3 image files should be created.
+4. A bookmark to the mozillazine.html file should be created
+5. A second bookmark to the mozillazine.html file should be created
+6. (Mac OS) Bookmarks should be created for /. (slashdot.org) and dmoz%3A.org (dmoz.org)."
+T-62,"Purpose
+Verify that you can drag a bookmark from the Bookmarks menu to the
+  Personal Toolbar.","Steps/Description
+From the Tasks drop down menu, select Tools-> JavaScript
+    Console Click Clear and close the console From the Bookmarks drop down menu select manage bookmarks Drag a bookmark from the manage bookmarks window to the personal
+    toolbar Verify that a bookmark icon appears on your toolbar and when clicked,
+    it takes you to the appropriate website From the Tasks drop down menu, select Tools-> JavaScript
+    Console Verify that there are no new errors in the console
+
+Expected Results
+To be written"
+T-71,"Purpose
+This basic testcase is designed to verify that you can choose no to save a
+  form's data from the dialog box","Initial Conditions
+You should have no form data saved
+
+Steps/Description
+Go to a site that needs information, for example
+    mapquest.com<<li> Fill in all the fields for driving directions
+    and click get directions Click no From the Tools menu, open the Form Manager sub-menu, and then choose
+    Edit Form Info
+
+Expected Results
+2. A dialog should appear asking if you would like to save the values you
+  filled in
+3. Your data should not be saved to Form Manager
+4. Your saved data should not appear in the Forms Manager"
+T-79,"Purpose
+Verify that if you delete data in the Form Manager then click cancel,
+  the data has not been deleted","Initial Conditions
+You should have no form data saved.
+
+Steps/Description
+Go to a site that needs information, for example tripod.com and
+    then click signup Fill in all the fields on the form From the Edit menu, select Save Form Info From the Tools menu, open the Form Manager sub-menu, then choose
+    Edit Form Info Delete several of the values in the Form Manager (for instance
+    Last: in Name and email in address) Click Cancel From the Tools menu, open the Form Manager sub-menu, then choose
+    Edit Form Info Verify that the previously deleted information is still in Form
+    Manager
+
+Expected Results
+3. A dialog should appear saying data has been captured and the data
+  from this form should be saved to the form manager
+4. Form manager should appear and your saved data should be listed
+7. Your data values should not have been changed
+8. Your previously deleted information should still be in Form
+  Manager"
+T-88,"Purpose
+Verify that there is Troubleshooting Help about the problem ""if you
+  can't sign on""","Initial Conditions
+Mozilla should be started up
+
+Steps/Description
+From the Help drop down menu, select Help and Support Center Open your sidebar if it is not already open (click on the widget to
+    the left hand side of your browser) Click on the Index tab Doubleclick on the T in the index Click the If You Can't sign on link
+
+Expected Results
+1. The Help and Support Center window should open
+3. An alphabetic list should display on the left hand side of the
+  window
+4. The T should expand and you should see Troubleshooting listed
+5. You should be taken to Help information regarding sign on
+  issues"
+T-95,"Purpose
+This basic testcase is designed to verify that when clicking the
+  Forward and Back buttons in help, you are taken to the correct page","Initial Conditions
+Mozilla should be started up
+
+Steps/Description
+Select the toplevel Help menu. Select Help Contents Click Browsing the web link on left hand side of help page Click on Copying, Saving and Printing link on the left hand side of
+    help page Click the back button on the help toolbar Click the forward button on the help toolbar Try this on other pages to ensure the behavior is consistant
+    through help
+
+Expected Results
+2. You should be taken to the help contents page
+3. You should now be taken to the appropriate page, navigating web
+  pages
+4. You should now be taken to the appropriate page, copying, saving,
+  and printing
+5. You should return to the first page, navigating web pages
+6. You should return to copying, saving, and printing"
+T-96,"Purpose
+This basic testcase is designed to verify that the toolbar acts
+  appropriately when in help","Initial Conditions
+Mozilla should be started up
+
+Steps/Description
+Select the toplevel Help menu. Select Help Contents Click the minimize square in the upper right hand corner Click on the minimized Mozilla in Taskbar Click on the maximize square in the upper right hand corner Click on the x square in the upper right hand corner
+
+Expected Results
+2. Help contents should come up with main topics on the left and
+  detailed information on the right
+3. Help should be minimized and show on your taskbar
+4. Help should be restored to the same size it was in the first
+  place
+5. Help should now be expanded to the entire screen
+6. Mozilla should close"
+T-97,"Purpose
+This basic testcase is designed to verify that the Page Up and Page Down Keys function properly in help","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+Select the toplevel Help menu. Select Technical Support Push the Page Down Key on your keyboard Push the Page Up Key on your keyboard Click a few random links in help and try using these keys
+    again
+
+Expected Results
+2. You should be taken to http://help.netscape.com/
+4. This should move you down the page until the end
+5. This should move you up the page until you reach the top
+6. Page up and Page Down keys should 
+  consistantly move you up and down pages"
+T-99,"Purpose
+This basic testcase is designed to verify that the up arrow and down arrow Keys function 
+  properly in help","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+Select the toplevel Help menu. Select Technical Support Push the down arrow key on your keyboard Push the up arrow key on your keyboard Click a few random links in help and try using these keys
+    again
+
+Expected Results
+2. You should be taken to http://help.netscape.com/
+4. This should move you down the page until the end
+5. This should move you up the page until you reach the top
+6. Up arrow and down arrow keys 
+  should consistantly move you up and down pages"
+T-107,"Purpose
+This basic testcase is designed to verify that Understanding privacy
+  content comes up when clicked, is displayed corectly, and prints
+  correctly","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
+
+Steps/Description
+Select the toplevel Help menu. Select Help Contents Click Understanding Privacy from the left panel Select all contents on right, copy and paste into your favorite
+    word processor and run spell check Click the printer icon
+
+Expected Results
+3. Understanding privacy content should come up with main topics on
+  the left and detailed information on the right
+4. There should be no spelling errors (Besides obvious computer terms
+  and websites)
+5. Understanding Privacy content should print"
+T-108,"Purpose
+This basic testcase is designed to verify that Creating web pages help
+  content comes up when clicked, is displayed corectly, and prints
+  correctly","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
+
+Steps/Description
+Select the toplevel Help menu. Select Help Contents Click Creating web pages from the left panel Select all contents on right, copy and paste into your favorite
+    word processor and run spell check Click the printer icon
+
+Expected Results
+3. Creating web pages helpcontent should come up with main topics on
+  the left and detailed information on the right
+4. There should be no spelling errors (Besides obvious computer terms
+  and websites)
+5. Creating web pages content should print"
+T-110,"Purpose
+This basic testcase is designed to verify that Security and Privacy
+  help content comes up when clicked, is displayed corectly, and prints
+  correctly","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
+
+Steps/Description
+Select the toplevel Help menu. Select What's new in Netscape six from the submenu Click Security and Privacy Select all contents of the page, and right click, select copy and
+    then paste into your favorite word processor and run spell check
+
+Expected Results
+3. A new window should open with Easier Security at the top of the
+  page
+4. There should be no spelling errors (Besides obvious computer terms
+  and websites)"
+T-112,"Purpose
+This basic testcase is designed to verify that Streamlined Interface
+  help content comes up when clicked and is displayed correctly","Initial Conditions
+Netscape should be started
+
+Steps/Description
+Select the toplevel Help menu. Select What's new in Netscape six from the submenu Click Streamlined interface Select all contents of the page, and right click, select copy and
+    then paste into your favorite word processor and run spell check There are many links on this page, randomly click several
+    links
+
+Expected Results
+3. A new window should open with ""What's New For Developers?"" at the
+  top of the page
+4. There should be no spelling errors (Besides obvious computer terms
+  and websites)
+5. Verify that you are taken to the appropriate page for links
+  clicked"
+T-117,"Purpose
+Determine whether International Users displays correctly","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+From the Help Drop Down Menu, select Help and Support Center Click on the International Link
+
+Expected Results
+1. The Help and Support Center should come up
+2. You should be taken to an International Users page
+2. This page should Have Current information for International
+  users"
+T-119,"Purpose
+Determine whether the About Netscape displays correctly","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+From the help drop down menu, select About Netscape 6 Click on Contributors link Click on Mozilla Public License and Netscape Public License Click on the license link Click on the Java link Click on the Sun Microsystems link Click on the Copyright Â© 1998-2000 Support.com, Inc. link Click on the Lernout & Hauspie Speech Products N.V. link Click on the Net2Phone, Inc. Hackensack, NJ USA. link
+
+Expected Results
+1. The About Netscape page should come up
+2. Verify that the Contributors page (Terri Preston should be listed)
+  :-)
+3. Verify that you are taken to http://www.mozilla.org/MPL/
+4. Verify that you are taken to
+  jar:resource:///chrome/en-US.jar!/locale/en-US/global/license.txt
+5. & 6. Verify that you are taken to http://java.sun.com/
+7. Verify that you are taken to http://www.support.com/
+8. Verify that you are taken to the Lernout & Hauspie page (this
+  is currently NS bug 12462 )
+9. Verify that you are taken to http://www.net2phone.com/"
+T-120,"Purpose
+Determine that you can open all the selections in the Help drop down
+  menu using short cut buttons.","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+Click Alt+H prior to starting each of these steps
+Click H Click W Click F Click S Click P Click A
+
+Expected Results
+1. Help and Support Center page should open (close the help
+  dialog)
+2. You should be taken to the Welcome page that describes the new
+  features in Netscape
+3. You should be taken to the Feedback page
+4. You should be taken to the Security News page
+5. You should be taken to the Installed plugins page
+6. You should be taken to the About Netscape page"
+T-122,"Purpose
+This basic testcase is designed to verify that the correct link is added
+  to the global history file after a server-side redirect.","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select Go|History. Click this link .
+
+Expected Results
+You should have only one new entry in your history. It should be titled
+  Small Business. The url should be
+  http://home.netscape.com/netcenter/smallbusiness/index.html, NOT
+  http://home.netscape.com/taskbar/6_0b1/bus4.html."
+T-125,"Purpose
+This basic testcase is designed to verify that multiple links are properly
+  deleted and no longer displayed","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select Go|History. Select any history entry. Shift+click or drag to select more (at least
+    3). Select Edit|Delete. Restart the browser. Select Go|History
+
+Expected Results
+After step(3) the titles and links to the history entries should now be
+    removed from the history window. After step(4) they should still be gone."
+T-126,"Purpose
+This basic testcase is designed to verify that all links are properly
+  removed from the global history file.","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select Go|History. Observe the contents of the Global History Window. Select Edit|Preferences (from a navigator window) Browse to the Navigator|History Panel. Under ""Browsing History"" click the ""Clear History"" button. Return to observe the contents of the Global History Window.
+
+Expected Results
+If you've observed the initial conditions, the History window should be
+    non-empty upon first observation. After pressing the button, the history window should be empty of
+    individual history items."
+T-135,"Purpose
+This basic testcase is designed to verify that links are properly added to
+  the global history file.","Initial Conditions
+Your session history needs to be empty for this test so restart the
+    browser or open a new window. To check, the Back/Forward buttons should be
+    inactive and the dropdowns should not appear at all when the session
+    history is empty.
+
+Steps/Description
+Follow this Netscape link. Follow this Netscape
+    People link. Wait for the redirect (15sec). Follow this Mozilla QA link. Follow this Mozilla link. From the ""Back"" button dropdown select the 4th item from the top
+    ""Netscape.com"". From the ""Forward"" button dropdown select the 3rd item from the top
+    ""Mozilla QA Home Page""
+
+Expected Results
+For Step(6), the dropdown menu should be apparent and active, the 4th
+    item should be ""Netscape.com"", the page title, and selecting it should
+    actually load that page For Step(7), the dropdown menu should be apparent and active, the 3rd
+    item should be ""Mozilla QA Home Page"", the page title, and selecting it
+    should actually load that page."
+T-144,"Purpose
+Determine that it is possible to resize an image to it's original size
+  after it has been resized to window size and then you can resize to
+  browser again.","Initial Conditions
+Have mozilla started up
+
+Steps/Description
+Complete these steps for all images below
+Open each of the files listed below Right click the image and select resize to window Right click again and select resize to original Right click and select resize to window
+
+Expected Results
+Image should resize to the browser window."
+T-148,"Purpose
+Determine that you can right click an image and print it.","Initial Conditions
+Have mozilla started up and a printer installed on your machine.
+
+Steps/Description
+Complete these steps for all images below
+Open one of the files listed below Right click the image and select print
+
+Expected Results
+Image should print."
+T-150,"Purpose
+To confirm that reloaded web pages properly display images modified
+  since the last load.","Initial Conditions
+Disk and memory caches to be cleared. Write access to test case
+  directory required.
+
+Steps/Description
+Copy img-reload.html, foo_master.jpg and bar_master.jpg from the
+    test case directory to your local test case directory. In your test case directory, copy (but do not rename!)
+    foo_master.jpg to foo.jpg View img_reload.html. In the test case directory, copy (but do not rename!)
+    bar_master.jpg to foo.jpg Hold the shift button down, and press the browser's Reload
+    button
+
+Expected Results:
+After Step 2, a page should appear containing a picture of John Glenn
+  in a Mercury capsule.
+After Step 4, a page should appear containing a picture of a (much
+  older) John Glenn aboard the space shuttle."
+T-151,"Purpose
+To confirm that images load directly into the web browser from a
+  networked server.","Initial Conditions
+Disk and memory caches to be cleared.
+
+Steps/Description
+View vlpan12.gif. View vlpan11.jpg. View wall_ni.png.
+
+Expected Results
+After step 1, a 530x462 GIF image of the surface of Mars should
+  display.
+After step 2, a 1496x1536 JPEG image of the surface of Mars should
+  display.
+After step 3, a 640x480 PNG image of the Great Wall should
+  display."
+T-152,"Purpose
+To confirm that images load directly into the web browser from a local
+  hard drive.","Initial Conditions
+Disk and memory caches to be cleared.
+
+Steps/Description
+Copy these below-linked files to your hard drive: vlpan12.gif,
+    vlpan11.jpg and wall_ni.png. View each of those images.
+
+Expected Results
+After loading vlpan12.gif, a 530x462 GIF image of the surface of Mars
+  should display.
+After loading vlpan11.jpg, a 1496x1536 JPEG image of the surface of
+  Mars should display.
+After loading wall_ni.png, a 640x480 PNG image of the Great Wall
+  should display."
+T-154,"Purpose
+Confirm that an automatically updated web cam continues to refresh
+  over an extended (24 hours) period of time.","Initial Conditions
+System under test must be configured to continue normal operation and
+  not ""sleep"" or power down after an extended period of inactivity.
+
+Steps/Description
+Launch Netscape 6 View the test page (linked below) Leave the browser operating untouched for 24 hours
+
+Expected Results
+The images on the page should continue to auto-refresh every 45
+  seconds."
+T-158,"Purpose
+To confirm that that GIF 87a images are properly
+  displayed across different bit depths.","Initial Conditions
+None.
+
+Steps/Description
+Launch Netscape 6 View the test page (linked below)
+
+Expected Results
+A mozilla.org banner, displayed at a descending bit depth, starting
+    at 8-bit, and ceasing at 3-bit, followed by a grayscale image. A Hubble space image, displayed at a descending bit depth, starting
+    at 8-bit, and ceasing at 3-bit, followed by a grayscale image. 5 rows of a single black pixel."
+T-160,"Purpose
+To determine whether the web brower gracefully deals with unusual,
+  corrupted, or invalid GIF images. (Test case uses the
+  image library compiled by Pam
+  Nunn .)","Initial Conditions
+None.
+
+Steps/Description
+View each of the below-linked images, and confirm that the web browser
+  does not crash, or display the images in a less-desirable fashion than
+  Communicator 4.5x or IE do.
+
+Expected Results
+(Output equivalent or more desirable than that of Communicator 4.5x or
+  IE.)"
+T-161,"Purpose
+Determine that applets within different html tags work properly","Initial Conditions
+None
+
+Steps/Description
+Testing the <APPLET> tag Testing the <OBJECT> tag
+
+Expected Results
+All applets should load and run properly"
+T-162,"Purpose
+Determine that applets within different html tags work properly","Initial Conditions
+None
+
+Steps/Description
+Run the Java-to-JS tests Run the the JS-to-Java tests
+
+Expected Results
+All tests should load and run properly"
+T-168,"Purpose
+Verify that the browser behaves correctly after the no selection is made
+  in the password dialog box.","Initial Conditions
+Clear stored passwords or use a sight that you have not been to before
+
+Steps/Description
+Go to a sight that requires a password, such as
+    http://www.freeride.com Enter a username and password and click login When presented with the save password dialog, click no Shut down Netscape 6 Open Netscape 6 Return to http://www.freeride.com (or other site, if used) Enter a username and password and click login
+
+Expected Results
+3. No password should be saved in Password Manager
+6. The username and password should not be prefilled
+7. The password dialog box should appear again with choices of yes, never
+  for this site, and no"
+T-169,"Purpose
+Verify that when the password manager has been disabled, it is no longer
+  in use, even for passwords already saved","Initial Conditions
+Browser should be started, password manager should be enabled and you
+  should have a username and password for a site, such as www.ebay.com
+
+Steps/Description
+Go to a sight that requires a password, such as
+    http://www.ebay.com Enter a username and password and click sign in You should be presented with a dialog box asking if you would like to
+    save your username and password, click yes From the Edit drop down list, select preferences Click the arrow next to advanced Click passwords Unclick the box next to Remember passwords for sites that require me to
+    log in Return to http://www.ebay.com (or other site, if used)
+
+Expected Results
+3. Your username and password should be saved to the password manager
+4. The preference panel should be displayed
+5. The advanced options should be displayed
+6. The password panel should be displayed on the right hand side
+7. This should disable the password manager
+8. The username and password information should not be prefilled"
+T-173,"Purpose
+Verify that when you have saved a username and password for a website and
+  you later change the password, that password manager picks up the new
+  password","Initial Conditions
+Password manager should be enable and using a different browser, create a
+  username and passwords for a site such as lycos (http://my.lycos.com) or
+  another of your choice
+
+Steps/Description
+Go to a sight that requires a password, such as
+    http://my.lycos.com Enter a username and password and click sign in When presented with the save password dialog, click yes Shut down Netscape 6 In a different browser, return to the site and change your
+    password Open Netscape 6 Return to http://my.lycos.com (or other site, if used) Delete the prefilled password information and enter the new
+    password Click login Shut down Netscape 6 Open Netscape 6 Return to http://my.lycos.com (or other site, if used) The password and username information should be prefilled, click sign
+    in
+
+Expected Results
+3. The username and password should be saved in Password Manager
+9. You should be logged in to the site
+13. You should be logged in to the site
+9. The username and password should be saved in Password Manager
+12. You should be presented with a dialog box that offers a choice between
+  the two usernames
+13. You should be signed in to the site"
+T-175,"Purpose
+Verify that when you enable password manager from the preferences panel,
+  you are asked if you would like to save usernames and passwords and get
+  prefilled info on sites","Initial Conditions
+Browser should be started and you should have a username and password for
+  a site, such as www.ebay.com
+
+Steps/Description
+From the Edit drop down list, select preferences Click the arrow next to advanced Click passwords Click the box next to remember passwords for sites that require me to
+    log in Click ok Go to a sight that requires a password, such as
+    http://www.ebay.com Enter a username and password and click sign in You should be presented with a dialog box asking if you would like to
+    save your username and password, click yes
+
+Expected Results
+1. The preference panel should be displayed
+2. The advanced options should be displayed
+3. The password panel should be displayed on the right hand side
+5. The preferences panel should close
+7. You should be signed into the sight and the username and password
+  information should be saved in the password manager"
+T-176,"Purpose
+Verify that when you save a username and password for a particular
+  website, you can view this information from the preferences panel .","Initial Conditions
+Password manager should be enabled, in a different browser create an
+  account at a site that requires a username and password such as
+  http://www.ebay.com
+
+Steps/Description
+Go to a site that you have not been to before in Netscape 6, such as
+    http://www.ebay.com Enter your username and password When a dialog appears asking if you would like to save this
+    information, click yes From the edit drop down menus, select preference Click on the arrow next to advanced Click on passwords Click View saved passwords Verify that your saved username and password appear in the list
+
+Expected Results
+4. Preference pane should open
+5. Advanced options should appear
+6. Password manager options should appear on right pane
+7. A list of saved passwords should appear"
+T-184,"Purpose
+Verify that you can remove a username and password for a given site and it
+  will no longer autofill on that sight nor will it be listed in password
+  manager (netscape.com)r","Initial Conditions
+Password manager should be enabled, in a different browser create an
+  account at a site that requires a username and password such as
+  http://www.netscape.com
+
+Steps/Description
+Go to a site that you have not been to before in Netscape 6, such as
+    http://www.netscape.com Enter your username and password When a dialog appears asking if you would like to save this
+    information, click yes From the tasks drop down menu selecet privacy and security->password
+    manager->view stored passwords Highlight this sight and username in the list and click remove Click cancel Click View saved passwords Highlight this sight and username in the list and click remove Click ok Click View saved passwords
+
+Expected Results
+3. Your username and password should be saved to the password manager
+4. A list of saved passwords should appear with your saved sight and
+  username appearing in the list
+5. This site's information should no longer appear in the list
+6. Window should close
+7. This site should once again, be in the list of saved passwords
+8. This site and username should no longer appear on the list of saved
+  passwords
+10. This site should be removed from the list"
+T-185,"Purpose
+Verify that you can remove all username and password information and it
+  will no longer autofill nor will anything be listed in password manager
+  (lycos.com)","Initial Conditions
+Password manager should be enabled and you should have saved username
+  and password information for several sites
+
+Steps/Description
+From the task drop down menus, select privacy and
+     security->password manager->view stored passwords Click remove all Click cancel From the task drop down menus, select privacy and
+     security->password manager->view stored passwords Click remove all Click ok From the task drop down menus, select privacy and
+     security->password manager->view stored passwords
+
+Expected Results
+1. A list of saved passwords should appear with your saved sights and
+   usernames appearing in the list
+2. All of the saved site and username information should be removed
+   from the list
+4. All of the saved site and username information should again, appear
+   in the list
+5. All of the saved site and username information should be removed
+   from the list
+6. The password manager should close
+7. There should be no information listed under the passwords saved
+   tab"
+T-186,"Purpose
+Verify that you can remove a site and username from the passwords never
+  saved section of password manager","Initial Conditions
+Password manager should be enabled, in a different browser create an
+  account at a site that requires a username and password such as
+  http://www.ivillage.com
+
+Steps/Description
+Password manager should be enabled, in a different browser create an
+    account at a site that requires a username and password such as
+    http://www.ivillage.com Go to a site that you have not been to before in Netscape 6, such as
+    http://www.ivillage.com Enter your username and password When a dialog appears asking if you would like to save this
+    information, click never for this site From the task drop down menu select privacy and security->password
+    manager->view stored passwords Click on the passwords never saved tab Highlight this sight and username in the list and click remove Click cancel From the task drop down menu select privacy and security->password
+    manager->view stored passwords Click the passwords never saved tab Highlight this sight and username in the list and click remove Click ok Click View stored passwords Click Passwords never saved tab
+
+Expected Results
+3. Your username and password should be saved to the passwords never saved
+  portion of password manager
+4. A list of saved passwords should appear
+5. The site and username for this site should be listed under the
+  passwords never saved tab
+6. This site's information should no longer appear in the list
+8. A list of saved sites and usernames should appear
+9. This site and username should again appear on the list
+10. This site and username should no longer appear on the list of never
+  saved passwords
+13. This site and username should not appear on the passwords never saved
+  list."
+T-193,"Purpose
+Determine that Seamonkey prints pages with portrait and landscape settings
+  properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to view a sample page Select menu option ""FILE| PRINT"" Click on the ""Properties"" button. Under the ""Page Setup"" option, in the frame titled ""Orientation"",
+    select the radio button titled ""Portrait"" Press OK twice to print the page Repeat step 1 thru 3 and select the radio button titled ""Landscape""
+    under the ""Orientation"" Frame. Press ""OK"" twice to print the page
+
+Expected Results
+After Step 6, the page should be printed in Portrait setting
+After Step 8, the page should be printed in Landscape setting"
+T-206,"Purpose
+Determine that Seamonkey prints pages with different paragraph styles
+  properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to open first paragraph
+    styles test page. After each test page opens, select ""FILE | PRINT"" menu option to print
+    the test. Click on ""Next Test"" at bottom of the page to proceed to next
+    test.
+
+Expected Results
+All pages should print as they appear on the screen."
+T-211,"Purpose
+Determine that printing range works properly","Initial Conditions
+None
+
+Steps/Description
+Launch the browser Go to Windows 
+    Build Prerequisites Do ""File | Print"" Once the ""Print"" dialog comes up, click on the radio button titled
+    ""Pages"" Enter a value for the number of pages to print (say 1 to 3)
+
+Expected Results:
+Only pages 1 to 3 should get printed"
+T-217,"Purpose
+Determine that Acrobat plugin works properly","Initial Conditions
+Acrobat Reader plugin is required to perform these tests
+
+Steps/Description
+Click here to load
+    a pdf test suite from Adobe. Perform all tests as listed on the page Click here to load test
+    suite from Adobe Sample pdf
+    files . Go to the table titled ""Performance Tests"" and click on the
+    pdf's listed. They should open inside the browser window pdf files: (Test if all pdf's load properly or not, pressing BACK/FWD
+    buttons of browser should load previous and current pages in history) Test 1 Test
+        2 Test
+        3 Test 4 Test
+        5 Test
+        6 Test 7 Test 8 Test 9
+
+Expected Results
+All pdf files should load/work properly"
+T-219,"Purpose
+Determine that Viewpoint Plugin works correctly","Initial Conditions
+None
+
+Steps/Description
+http://cole.viewpoint.com/~compuserve/ http://developer.viewpoint.com/ -
+    Click on ""check out our demos"" Viewpoint Home page- Click on the ads on the front page. Also, click on the ""Gallery"" link
+    on home page to check out links/tests there http://auto.viewpoint.com/ http://www.viewpoint.com/medical http://www.viewpoint.com/products/3-11.html http://www.viewpoint.com/company/advertising.jsp http://www.viewpoint.com/zoomview Lots of viewpoint demo tests (Some links might not work/ require username password which we can't
+    access) http://www.viewpoint.com/demos/vpdemos/zoomview/medical/index.html http://www.fordvehicles.com/suvs/explorer/3Dviews/index.asp?flashok=true http://www.viewpoint.com/demos/vpdemos/flashvet/vaio/index.html http://www.viewpoint.com/demos/vpdemos/electronics/aibo/index.html http://www.geometrix.com/facevision/applications/merchandising.html - click on 'Launch demo' http://www.geometrix.com/facevision/technology/face.html# http://www.bikewerx.co.uk/catcage2.htm http://sspp.gsfc.nasa.gov/3d/ - Select
+    models from under ""3D Model Listing"" http://www.nextdimension.de/vetframe.html - Select demos from listing on the left http://www.esterling.co.uk/metastream.asp http://www.softmax.at/zimmer.htm- Select 3d demos from listing on the right http://cole.viewpoint.com/~avinberg/
+
+Expected Results
+All Viewpoint media player files should load/work properly"
+T-221,"Purpose
+This basic testcase is designed to verify that clicking the ""Search""
+  button with an altered URL Bar performs a search on the altered text.","Initial Conditions
+Open a new browser window.
+
+Steps/Description
+Type something into the URL Bar or edit already existing contents. Click the ""Search"" button to the right of the URL Bar.
+
+Expected Results
+Clicking the ""Search"" button with a ""dirty"" URL bar should launch a
+    search on the terms in the URL bar. You should see a page with search results in the browser content
+    window. *there are MySidebar ramifications with this testcase that are
+    treated elsewhere."
+T-223,"Purpose
+This basic testcase is designed to verify that a search initiated from the
+  Sidebar Search tab works as designed.","Initial Conditions
+Open a new browser window. All prefs should be set to their defaults (new profile).
+
+Steps/Description
+Open the Sidebar to the Search tab. Type a search term into the textbox. Anything will do, ""CMaximus"" for
+    example. Click the ""Search"" Button next to the textfield.
+
+Expected Results
+Search results from the default search engine should load in the
+    browser window. Results should load in the Search tab as well. Search results in the search tab should be prefixed by an icon
+    representing the search engine - for each result."
+T-225,"Purpose
+This basic testcase is designed to verify that a user can change the
+  search engine used to conduct searches.","Initial Conditions
+Open a new browser window. All prefs should be set to their defaults (new profile).
+
+Steps/Description
+Run the single-search test first. Click the ""Bookmark this Search"" button below the search results.
+
+Expected Results
+A new bookmark folder titled ""Search:(your query string here)"". Should
+    appear in the 4 Standard locations . The ""Bookmark this Search"" button should not have become active until
+    search results were generated."
+T-229,"Purpose
+Determine whether the double-click gesture functions properly.","Initial Conditions
+View the below-linked test case.
+
+Steps/Description
+For each numbered item on the page:
+double-click where the instructions say ""HERE"" (stems #1-3) [or] double-click on each text item, and confirm that it is highlighted
+    pursuant to the boldfaced instructions preceeding each numbered
+    section.
+
+Expected Results
+Results pursuant to the instructions preceeding each numbered section on
+  the page."
+T-234,"Purpose
+Determine whether text output from a JavaScript applet is properly
+  selected in conjunction with other page content.","Initial Conditions
+None.
+
+Steps/Description
+View the attached test case. Drag-select from ""Browser Javascript Test"" to the bottom of the
+    document. From the Edit menu, select ""Copy"". View the resulting clipboard. (e.g. ""Show Clipboard"" from Finder on
+    Mac, or paste into a text editor on Win32/Linux.)
+
+Expected Results
+After step #3, the entire content of the page should be copied.
+After step #4, the text should be copied reasonably. (use your best
+  discretion, or compare to output of IE 5.)"
+T-246,"Purpose
+Determine the list of available remote panels","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar, select ""Tabs | Customize Sidebar"" From the window that opens up, the pane titled
+    ""AvailablePanels"" should list the following folders by default:
+    Favorites, From Netscape, From Others, International. Click and open each folder mentioned above to see that they are
+    not empty and that a listing of panels is available in each
+    folder Verify that the Favourites folder lists these panels: CNN.com,
+    Horoscope, Mozillazine, News, Stocks, Tech News, Weather Verify that the From Netscape folder lists these panels:
+    Calender, Horoscopes, Local Events, Local Movies, Local News, News,
+    Sports, Stocks, Tech News, Weather Verify that the From Others folder lists these panels:
+    BackFlip Buddy, CNET.com, CNN.com, eBay, Kinderview, Mapquest,
+    Mozillazine, Red Herring, Webstakes.com and the folder My Netscape
+    Network The International folder should list the following folders:
+    Brazil, Canada, France, Germany, Japan, Portugal, Spain, Sweden,
+    UK
+
+Expected Results
+All default remote panels should be available"
+T-247,"Purpose
+Determine the list of available local panels","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar , select ""Tabs | Customize Sidebar"" From the window that opens up, the pane titled ""AvailablePanels""
+    should list the following local panels by default: What's Related,
+    Search, Bookmarks
+
+Expected Results
+All default local panels should be available"
+T-253,"Purpose
+Determine that What's Related lists lists related sites","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser Visit any url, say, www.yahoo.com From the Sidebar, select the ""What's Related"" tab to open it (This
+    tab gets added by default) Observe that a listing of websites is given in the What's Related
+    tab
+
+Expected Results
+What's Related tab should list a number of related sites to yahoo.com,
+  eg: aol.com, google.com, msn.com, etc."
+T-254,"Purpose
+Determine that links in What's Related panel work","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser Visit any url, say, www.yahoo.com From the Sidebar, select the ""What's Related"" tab to open it (This
+    tab gets added by default) Observe that a listing of websites is given in the What's Related
+    tab Double click with the mouse on any of the links The selected link should open in the browser window. Try a few more
+    links from the panel
+
+Expected Results
+Appropriate links should open in the browser window when clicked from
+  the What's Related panel in the Sidebar"
+T-258,"Purpose
+Determine that unselecting panels from Add menu removes panels from
+  the Sidebar","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser Click on the ""Add"" button in the Sidebar to open up a menu that lists
+    all panels in the Sidebar All the panels that are presently in the Sidebar should appear
+    ticked and listed in the menu Now, click on any of the panel titles from the Add menu to remove
+    it from the Sidebar The panel whose title that was just unchecked should not appear in
+    the Sidebar anymore and the panel title should appear unchecked in the
+    Add menu Rechecking the panel title in the Add menu should again make the
+    panel title checked and it should appear in the Sidebar again
+
+Expected Results
+Unselecting panels from Add menu should remove the panel from the
+  Sidebar"
+T-261,"Purpose
+Basic UI & dismissal tests for the Open Web Location dialog.","Initial Conditions
+The Open Web Location dialog should already be opened in the
+  browser.
+UI test #1 Steps/Description and Expected Results Don't enter anything into the textfield. It should appear
+          similar to this
+          image . Verify that these UI elements are present: A text field where you could enter the URL. A Choose File ... button next to the
+            textfield. A droplist whose current selection is Current
+            Navigator window . An Open button which is greyed-out. A Cancel button which is active.
+UI test #2 Steps/Description and Expected Results Enter http://www.mozillazine.org/ into the
+        textfield. It should appear the same as in UI test #1, except that
+        the Open button is now active.
+UI test #3 Steps/Description Click the droplist to expand it and view all the
+            choices. Click the droplist again to collapse it. Expected Results When expanded, you see three choices in this order: Current Navigator window New Navigator window New Composer window After clicking the droplist a second time, it should display
+          only one of the choices.
+Dismissal test #1 Steps/Description Make sure the textfield is empty. Click the Cancel button. Expected Results The dialog should be dismissed (and no change occurring in the
+        current browser window) at step #2.
+Dismissal test #2 Steps/Description Make sure the textfield is empty. Hit the Escape key. Expected Results The dialog should be dismissed (and no change occurring in the
+        current browser window) at step #2."
+T-264,"Purpose
+Test opening a web location (URL) in a Composer window. Includes test
+  to dismiss dialog.","Initial Conditions
+The Open Web Location dialog should already be opened in the
+  browser.
+UI test Steps/Description In the textfield enter the URL http://www.mozilla.org/quality/browser/front-end/testcases/xpapps-gui/open-URL/files/boring.html . Select New Composer window from the
+          droplist, if it isn't already displayed there. Click the Open button (or hit Enter ). Expected Results The dialog should go away. An editor window should appear. The page contents of the URL should load into the editor
+          window.
+Dismissal test Steps/Description In the textfield enter the URL http://www.mozilla.org/quality/browser/front-end/testcases/xpapps-gui/open-URL/files/boring.html . Select New Composer window from the
+          droplist, if it isn't already displayed there. Click the Cancel button (or hit Esc ). Expected Results The dialog should go away and the page in the current browser
+      window remain unchanged ."
+T-297,"Purpose
+To verify both classic and modern skins exist under themes dialog.","Description
+From the main menu bar, select Edit > Preferences >
+  Appearance > Themes
+
+Expected Results
+By default, there should be at least two skins under Themes --
+  Classic and Modern."
+T-298,"Purpose
+To verify the classic theme is displayed.","Description
+From the main menu bar, select Edit > Preferences >
+          Appearances > Themes. Select ""Classic"" theme on the right hand side of the
+          dialog. Click the ""Apply Classic"" button. Close the Preferences dialog.
+
+Expected Results
+The following image for the menu bar of the browser should
+      display as follows:"
+T-302,"Purpose
+Visually inspect menu bar, floating component bars, and all the tool
+  bars.","Description
+From the view menu bar, select ""Apply Theme"" menu item. Check to see if Classic and Modern themes appear.
+
+Expected Results
+The following menu bar should appear:"
+T-303,"Purpose
+To verify all the selectable items under browser in Classic theme.","Description
+From the main menu bar, select
+    Edit > Preferences > Appearance > Themes. Select ""Classic"" theme on the right hand side of the dialog. Click the ""Apply Classic"" button. Close the Preferences dialog. Click through all the items on menu bars, tool bars, and floating
+    component bars.
+
+Expected Results
+All the selectable items and icons under browser should work as
+  advertised."
+T-304,"Purpose
+To verify all the selectable items in Classic theme work properly on
+  different applications under browser like composer, mail, news, aim,
+  address book, etc.","Description
+From the main menu bar, select Edit > Preferences >
+    Appearance > Themes. Select ""Classic"" theme on the right hand side of the dialog. Click the ""Apply Classic"" button. Close the Preferences dialog. Click through all the items on menu bars and tool bars under
+    composer, mail, news, aim, and address book to see all the look and
+    feel are consistent.
+
+Expected Results
+All the selectable items and icon under browser should work as
+  advertised"
+T-307,"Purpose
+To verify ""Theme Preferences"" works under View menu","Description
+From the main menu bar, select View. Select  ""Apply Theme"" and another submenu should pop up. Select ""Theme Preferences...""
+
+Expected Results
+The following Theme preferences dialog should appear:"
+T-312,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"
+T-313,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"
+T-319,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"
+T-320,"Purpose
+This basic testcase is designed to verify that browser toolbars can be
+  easily collapsed and expanded.","Initial Conditions
+All of the browser's toolbars(3) must be visible. Make sure they are all visible by selecting the top level 'View'
+    menu and looking at the Toolbars submenu. The Navigation Toolbar,
+    Personal Toolbar, and Taskbar should all have checks next to their
+    names.
+
+Steps/Description
+Click the small triangle at the far left of the Bookmarks(Personal)
+    Toolbar to collapse it. Click again to expand it. Click the small triangle at the far left of the Navigation Toolbar
+    to collapse it. Click again to expand it. Collapse the Bookmarks Toolbar again. Collapse the Navigation
+    Toolbar again. Expand the Navigation Toolbar once more, expand the Bookmarks
+    Toolbar as well(reverse order).
+
+Expected Results
+Each click of the triangle widget should alternately show and hide
+    the corresponding toolbar. For steps(2 & 3), expanding the toolbars in the reverse order
+    from that in which they were collapsed should not affect their
+    positioning upon expansion."
+T-324,"Purpose
+This basic testcase is designed to verify that browser navigation
+  toolbar buttons execute appropriately.","Initial Conditions
+All of the browser's toolbars(3) must be visible. Make sure they are all visible by selecting the top level ""View""
+    menu and looking at the Toolbars submenu. The Navigation Toolbar,
+    Personal Toolbar and Taskbar should all have checks next to their
+    names.
+
+Steps/Description
+Click here to load a
+    page with an animated gif. Wait for it to stop. Click the ""Back"" button on the Navigation toolbar. It looks like a
+    left-pointing arrow. Click the ""Forward"" button on the Navigation toolbar. It looks like
+    a right-pointing arrow. Wait for the gif to stop. Click the ""Reload"" button on the Navigation toolbar. It looks like
+    a curved arrow. Click the ""Reload"" button again, then quickly click the ""Stop""
+    button on the Navigation toolbar. It looks like an ""X""
+
+Expected Results
+While the gif is animating the ""Forward"" and ""Reload"" buttons
+    should be inactive and the ""Back"" and ""Stop"" buttons should be active.
+    When the gif stops, the ""Reload"" button should be active and the ""Stop""
+    button should be inactive. You should go back to the page you were at before. The ""Forward""
+    button should become active. The ""Forward"" button should become inactive again. The gif should begin to animate again. The gif should stop mid-animation"

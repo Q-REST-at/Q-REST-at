@@ -1,0 +1,595 @@
+ID,Purpose,Test steps
+T-1,"Purpose
+This basic testcase is designed to verify that a bookmarks file is being
+  detected and is being displayed at the appropriate places.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks . You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select the toplevel ""Bookmarks"" menu. Select any bookmark on the
+    list. Click ""Bookmarks"" on the Bookmarks/personal toolbar. Open the sidebar; click on the ""Bookmarks"" panel. From the toplevel ""Bookmarks"" menu select ""Manage Bookmarks"".
+
+Expected Results
+Bookmarks and folders(including the Personal Toolbar Folder) should
+    appear as menu items. Menuitems that are folders should have a solid
+    triangle indicating a submenu is present. Bookmarks and folders(including the Personal Toolbar Folder) should
+    appear as menu items. Menuitems that are folders should have a solid
+    triangle indicating a submenu is present. Bookmarks should appear with the green ribbon icon. Folders should have
+    a folder icon. The Personal Toolbar Folder should have a combination
+    icon. The Manage Bookmarks window should appear and be populated with
+    bookmarks and folders."
+T-2,"Purpose
+This basic testcase is designed to verify that a bookmark is properly
+  added and is displayed at the appropriate places.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks . You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select the toplevel 'Bookmarks' menu then select the first menuitem
+    'Add Bookmark'.
+
+Expected Results
+The title of the page you selected should appear as a bookmark in:
+the toplevel 'Bookmarks' menu the 'Bookmarks' popup menu on the personal toolbar the 'Bookmarks' panel in MySidebar in the Manage Bookmarks view (select Bookmarks| Manage Bookmarks)"
+T-8,"Purpose
+This basic testcase is designed to verify that the fundamental bookmark
+  function is in place, i.e. clicking on a bookmark takes you to that page.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks . You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select the toplevel ""Bookmarks"" menu. Select any bookmark on the
+    list. Click ""Bookmarks"" on the Bookmarks/personal toolbar. Select any
+    bookmark on the list. Open the sidebar; click on the ""Bookmarks"" panel. Double-click any
+    bookmark on the list. From the toplevel ""Bookmarks"" menu select ""Manage Bookmarks"".
+    Double-click any bookmark in the window.
+
+Expected Results
+In all cases, the url corresponding to the bookmark you selected should be
+  loaded in the browser window."
+T-10,"Purpose
+This basic testcase is designed to verify that the edit properties feature
+  works as prescribed for various items.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select a bookmark. Select File|Bookmark Properties. Change the Name OR the Location. Edit the Description field. Click ""OK"" Surf the link. Select a folder. Select File|Bookmark Properties. Change the Name. Change the description. Click ""OK"".
+
+Expected Results
+For step(2) the changes should take effect upon pressing ""OK"". The
+    changes should be seen in the four standard locations.If the name changed
+    clicking the new bookmark name should go to the same url. If the url
+    changed, clicking the same name should go to the new url. For step(3) the changes should take effect upon pressing ""OK"". The
+    changes should be seen in the four standard locations."
+T-13,"Purpose
+This basic testcase is designed to verify that separators are properly
+  added and deleted.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select a bookmark. Select File|New Separator. Select the separator. Select Edit|Delete, click ""OK"".
+
+Expected Results
+After step (3) separator should immediately appear below the selected
+    item in the toplevel bookmarks menu, the bookmarks popup on the personal
+    toolbar, the bookmarks sidepanel, and the manage bookmarks window. After step (4) the separator should immediately disappear (be deleted)
+    from the toplevel bookmarks menu, the bookmarks popup on the personal
+    toolbar, the bookmarks sidepanel, and the manage bookmarks window."
+T-19,"Purpose
+This basic testcase is designed to verify that columns are resizable by
+  dragging them to an arbitrary size.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Mouseover the separator between the ""Name"" and ""URL"" columns. Click and drag that separator to the left and right. Repeat this with each of the other column separators.
+
+Expected Results
+In step(2) the mouse pointer should change to a double-arrowed
+    icon (platform specific or XP?). In step(3) the column sizes on either side of the separator should
+    shrink and grow as you drag. The content of the column should move with
+    the column header. Column content that is obscured should be replaced by
+    the ellipsis(?)."
+T-30,"Purpose
+This basic testcase is designed to verify that bookmarks and folders can't
+  be dropped onto themselves, an immediate parent container or any child
+  container.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel. As part of your bookmarks file you need a folder (lets' call it folder
+    ""A"") that contains bookmarks and another folder (let's call this folder
+    ""A 1 "" (read Asub1)) that contains bookmarks as well.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select folder A 1 then drag&drop it onto or within
+    itself Select folder A 1 then drag&drop it onto or within folder
+    A. Select folder A then drag&drop it onto or within folder
+    A 1 . Select a bookmark within folder A 1 and drop it onto folder
+    A 1 .
+
+Expected Results
+Nothing should happen! No bookmark or folder should be moved in any of
+    these cases. Ideally, one should see the International symbol for ""No""
+    cursor."
+T-33,"Purpose
+Determine whether native and non-native images are correctly copied.","Initial Conditions
+None.
+
+Steps/Description
+For each of the below images:
+Follow the link Copy the image to the Clipboard View the system Clipboard. --- To view the system Clipboard: Mac OS: Select ""Show Clipboard"" from the Finder. Windows: Select ""Clipboard Viewer"" from the Accessories
+    subgroup of the Programs group.
+
+Expected Results
+The image should appear in the clipboard, identically to how it appeared
+  within the browser window."
+T-35,"Purpose
+Determine whether extremely large text blocks can be copied from web
+  pages.","Initial Conditions
+None.
+
+Steps/Description
+For each of the below-linked text pages:
+View the page. Select all of the text. From the Edit menu, select Copy. View the System Clipboard (or copy it into a copy/paste enabled text
+    editor, such as BBEdit or WordPad)
+
+Expected Results
+The text should be successfully copied, and displayed in its entirety in
+  the System Clipboard (or within the attempted application)."
+T-54,"Purpose
+Verify that files, folders, or shortcuts dragged from a Find File window
+  opens properly in the browser window (Windows / Mac OS)","Steps/Description
+Download the test archive for your system, linked below, to your
+    computer and decompress it. Open your system's find application. In Windows, open the Start menu, open the Find sub-menu, and choose
+      Files and Folders. In Mac OS, switch to Finder, and choose Find from the File menu. Search the disk volume for file mozqahome.html . Drag the file icon from the Find window
+    to your browser window. Search the disk volume for find-folder .
+    Drag the folder icon from the Find window to your browser window. Search the disk volume for dmozBookmark .
+    Drag the shortcut file icon from the Find window to your browser
+    window.
+
+Expected Results
+3. The browser should display the text of the Mozilla QA Home Page.
+4. The browser should display the directory contents of find-folder .
+5. The browser should display the dmoz.org site."
+T-69,"Purpose
+This basic testcase is designed to verify that you can save a form's data
+  from the edit menu","Initial Conditions
+You should have no form data saved
+
+Steps/Description
+Go to a site that needs information, for example mapquest.com Fill in all the fields for driving directions and click get
+    directions Click yes From the Tools menu, open the Form Manager sub-menu, and then choose
+    Edit Form Info
+
+Expected Results
+2. A dialog should appear asking if you would like to save the values you
+  filled in
+3. Your data should be saved to Form Manager
+4. Your saved data should appear in the Forms Manager"
+T-75,"Purpose
+Verify that when you encounter a Web site that could be prefilled and
+  have several choices for fields that you are given the pre-fill dialog
+  and can select from the appropriate values and the information is filled
+  into the form","Initial Conditions
+You should have several values for several data fields saved.
+
+Steps/Description
+Go to a site that needs information, for example time.com Click subscribe to Time Enter the Name, Address and e-mail information From the Edit menu, choose Save Form Info Go to another site that requires the same information (Name,
+    address, and e-mail) such as wired.com and click on subscribe to wired
+    (Enter in different values) From the Edit menu, choose Save Form Info Now go to a third site which requires this same information, such
+    as marthastewart.com and click on subscribe to Martha Stewart
+    Living From the Edit menu, choose Fill in Form Verify that the different values entered on steps 3 and 5 are
+    options for the fields to be prefilled Verify that you can select different values in this dialog and the
+    appropriate values are entered on the form
+
+Expected Results
+2. You should be taken to a page where you can enter name, address and
+  e-mail information
+4. Your data should be saved to Form Manager
+6. You should be taken to a page where you can enter name, address and
+  e-mail information
+7. You should be taken to a page where you can enter name, address and
+  e-mail information
+8. A dialog box should appear with your previously saved field values
+  as choices in drop down menus"
+T-78,"Purpose
+Verify that if you delete data in the Form Manager, that this data is
+  not shown as an option when prefilling a form.","Initial Conditions
+You should have no form data saved.
+
+Steps/Description
+Go to a site that needs information, for example tripod.com and
+    then click signup Fill in all the fields on the form From the Edit menu, select Save Form Info From the Tools menu, open the Form Manager sub-menu, then choose
+    Edit Form Info Delete several of the values in the Form Manager (for instance
+    Last: in Name and email in address) Click Ok Close the application, start it up and return to this same
+    page From the Edit menu, select Fill in Form
+
+Expected Results
+3. A dialog should appear saying data has been captured and the data
+  from this form should be saved to the form manager
+4. Form manager should appear and your saved data should be listed
+8. Your previously deleted information should not be filled in"
+T-97,"Purpose
+This basic testcase is designed to verify that the Page Up and Page Down Keys function properly in help","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+Select the toplevel Help menu. Select Technical Support Push the Page Down Key on your keyboard Push the Page Up Key on your keyboard Click a few random links in help and try using these keys
+    again
+
+Expected Results
+2. You should be taken to http://help.netscape.com/
+4. This should move you down the page until the end
+5. This should move you up the page until you reach the top
+6. Page up and Page Down keys should 
+  consistantly move you up and down pages"
+T-101,"Purpose
+This basic testcase is designed to verify that when clicking
+  non-clickable areas in help, no behavior occurs","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+Select the toplevel Help menu. Select Help Contents Click on the greyed out previous button Click on the greyed out back button Click on the Netscape logo in uppper right
+
+Expected Results
+2. You should be taken to the help contents page
+3. Nothing should happen
+4. Nothing should happen
+5. Nothing should happen"
+T-117,"Purpose
+Determine whether International Users displays correctly","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+From the Help Drop Down Menu, select Help and Support Center Click on the International Link
+
+Expected Results
+1. The Help and Support Center should come up
+2. You should be taken to an International Users page
+2. This page should Have Current information for International
+  users"
+T-126,"Purpose
+This basic testcase is designed to verify that all links are properly
+  removed from the global history file.","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select Go|History. Observe the contents of the Global History Window. Select Edit|Preferences (from a navigator window) Browse to the Navigator|History Panel. Under ""Browsing History"" click the ""Clear History"" button. Return to observe the contents of the Global History Window.
+
+Expected Results
+If you've observed the initial conditions, the History window should be
+    non-empty upon first observation. After pressing the button, the history window should be empty of
+    individual history items."
+T-152,"Purpose
+To confirm that images load directly into the web browser from a local
+  hard drive.","Initial Conditions
+Disk and memory caches to be cleared.
+
+Steps/Description
+Copy these below-linked files to your hard drive: vlpan12.gif,
+    vlpan11.jpg and wall_ni.png. View each of those images.
+
+Expected Results
+After loading vlpan12.gif, a 530x462 GIF image of the surface of Mars
+  should display.
+After loading vlpan11.jpg, a 1496x1536 JPEG image of the surface of
+  Mars should display.
+After loading wall_ni.png, a 640x480 PNG image of the Great Wall
+  should display."
+T-166,"Purpose
+Verify that when you save a username and password for a particular
+  website, you can view this information from the preferences panel.","Initial Conditions
+Password manager should be enabled, in a different browser create an
+  account at a site that requires a username and password such as
+  http://www.ebay.com
+
+Steps/Description
+Go to a site that you have not been to before in Netscape 6, such as
+    http://www.ebay.com Enter your username and password When a dialog appears asking if you would like to save this
+    information, click yes From the edit drop down menus, select preference Click on the arrow next to advanced Click on passwords Click View saved passwords Verify that your saved username and password appear in the list
+
+Expected Results
+4. Preference pane should open
+5. Advanced options should appear
+6. Password manager options should appear on right pane
+7. A list of saved passwords should appear"
+T-172,"Purpose
+Verify that when you have saved multiple username's and password's for a
+  website, you are later presented with those same choices","Initial Conditions
+Password manager should be enable and using a different browser, create
+  two different usernames and passwords for a site such as yahoo
+  (http://mail.yahoo.com)or another of your choice
+
+Steps/Description
+Go to a sight that requires a password, such as
+    http://mail.yahoo.com Enter a username and password and click sign in When presented with the save password dialog, click yes Shut down Netscape 6 Open Netscape 6 Return to http://mail.yahoo.com (or other site, if used) Delete the prefilled information and enter the second username and
+    password Click login When presented with the save password dialog, click yes Shut down Netscape 6 Open Netscape 6 Return to http://mail.yahoo.com (or other site, if used) Select one of these choices and click sign in
+
+Expected Results
+3. The username and password should be saved in Password Manager
+6. The username and password should be prefilled
+8. You should be logged in to the site
+9. The username and password should be saved in Password Manager
+12. You should be presented with a dialog box that offers a choice between
+  the two usernames
+13. You should be signed in to the site"
+T-173,"Purpose
+Verify that when you have saved a username and password for a website and
+  you later change the password, that password manager picks up the new
+  password","Initial Conditions
+Password manager should be enable and using a different browser, create a
+  username and passwords for a site such as lycos (http://my.lycos.com) or
+  another of your choice
+
+Steps/Description
+Go to a sight that requires a password, such as
+    http://my.lycos.com Enter a username and password and click sign in When presented with the save password dialog, click yes Shut down Netscape 6 In a different browser, return to the site and change your
+    password Open Netscape 6 Return to http://my.lycos.com (or other site, if used) Delete the prefilled password information and enter the new
+    password Click login Shut down Netscape 6 Open Netscape 6 Return to http://my.lycos.com (or other site, if used) The password and username information should be prefilled, click sign
+    in
+
+Expected Results
+3. The username and password should be saved in Password Manager
+9. You should be logged in to the site
+13. You should be logged in to the site
+9. The username and password should be saved in Password Manager
+12. You should be presented with a dialog box that offers a choice between
+  the two usernames
+13. You should be signed in to the site"
+T-174,"Purpose
+Verify that when you disable password manager from the preferences panel,
+  you no longer are asked if you would like to save passwords and longer get
+  prefilled info on sites","Initial Conditions
+Browser should be started and you should have a username and password for
+  a site, such as www.freeride.com
+
+Steps/Description
+From the Edit drop down list, select preferences Click the arrow next to advanced Click passwords Unclick the box next to remember passwords for sites that require me to
+    log in Click ok Go to a sight that requires a password, such as
+    http://www.freeride.com Enter a username and password and click sign in
+
+Expected Results
+1. The preference panel should be displayed
+2. The advanced options should be displayed
+3. The password panel should be displayed on the right hand side
+5. The preferences panel should close
+7. You should not be presented with a dialog asking if you would like to
+  save your username and password"
+T-178,"Purpose
+Verify that you can remove a username and password for a given site and it
+  will no longer autofill on that sight nor will it be listed in password
+  manager","Initial Conditions
+Password manager should be enabled, in a different browser create an
+  account at a site that requires a username and password such as
+  http://www.espn.com
+
+Steps/Description
+Go to a site that you have not been to before in Netscape 6, such as
+    http://www.espn.com Enter your username and password When a dialog appears asking if you would like to save this
+    information, click yes From the edit drop down menus, select preference Click on the arrow next to advanced Click on passwords Click View saved passwords Highlight this sight and username in the list and click remove Click cancel Click View saved passwords Highlight this sight and username in the list and click remove Click ok Click View saved passwords
+
+Expected Results
+3. Your username and password should be saved to the password manager
+4. Preference pane should open
+5. Advanced options should appear
+6. Password manager options should appear on right pane
+7. A list of saved passwords should appear with your saved sight and
+  username appearing in the list
+8. This site's information should no longer appear in the list
+9. Window should close
+10. This site should once again, be in the list of saved passwords
+11. This site and username should no longer appear on the list of saved
+  passwords
+13. This site should be removed from the list"
+T-186,"Purpose
+Verify that you can remove a site and username from the passwords never
+  saved section of password manager","Initial Conditions
+Password manager should be enabled, in a different browser create an
+  account at a site that requires a username and password such as
+  http://www.ivillage.com
+
+Steps/Description
+Password manager should be enabled, in a different browser create an
+    account at a site that requires a username and password such as
+    http://www.ivillage.com Go to a site that you have not been to before in Netscape 6, such as
+    http://www.ivillage.com Enter your username and password When a dialog appears asking if you would like to save this
+    information, click never for this site From the task drop down menu select privacy and security->password
+    manager->view stored passwords Click on the passwords never saved tab Highlight this sight and username in the list and click remove Click cancel From the task drop down menu select privacy and security->password
+    manager->view stored passwords Click the passwords never saved tab Highlight this sight and username in the list and click remove Click ok Click View stored passwords Click Passwords never saved tab
+
+Expected Results
+3. Your username and password should be saved to the passwords never saved
+  portion of password manager
+4. A list of saved passwords should appear
+5. The site and username for this site should be listed under the
+  passwords never saved tab
+6. This site's information should no longer appear in the list
+8. A list of saved sites and usernames should appear
+9. This site and username should again appear on the list
+10. This site and username should no longer appear on the list of never
+  saved passwords
+13. This site and username should not appear on the passwords never saved
+  list."
+T-193,"Purpose
+Determine that Seamonkey prints pages with portrait and landscape settings
+  properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to view a sample page Select menu option ""FILE| PRINT"" Click on the ""Properties"" button. Under the ""Page Setup"" option, in the frame titled ""Orientation"",
+    select the radio button titled ""Portrait"" Press OK twice to print the page Repeat step 1 thru 3 and select the radio button titled ""Landscape""
+    under the ""Orientation"" Frame. Press ""OK"" twice to print the page
+
+Expected Results
+After Step 6, the page should be printed in Portrait setting
+After Step 8, the page should be printed in Landscape setting"
+T-206,"Purpose
+Determine that Seamonkey prints pages with different paragraph styles
+  properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to open first paragraph
+    styles test page. After each test page opens, select ""FILE | PRINT"" menu option to print
+    the test. Click on ""Next Test"" at bottom of the page to proceed to next
+    test.
+
+Expected Results
+All pages should print as they appear on the screen."
+T-218,"Purpose
+Determine that Windows Media player works properly","Initial Conditions
+None
+
+Steps/Description
+- Daniel Johns
+    Music - Pop singer/songwriter Daniel Johns combines streaming ASF &
+    MP3... - Tranzor Z
+    Productions - Mixing hard trance and progressive house. Hours of music
+    in Windows Media format. - WindowsMedia.com - Home of
+    ASF-formatted media. Radio Station Guide, music downloads, and... - SoundClick -
+    ASF and MP3. Stars and unsigned artists. Streaming songs and videos
+    in... - Hollywood and Vine -
+    Streaming music and videos from Capitol Records. Some clips, some
+    full-length. - Classical Is Cool - Classical
+    music in ASF (ASX) with performer information. - Listen with
+    iRaMa - Listen to streaming audio and dedicate a song to friends. - CLUAS -
+    Stream or download songs by unsigned acts for free (ASF, ASX, WMA,
+    MP3... - Rev-Radio
+    (Revolution Radio) - Streaming audio files from a variety of indie
+    artist in Windows Media and... - DiscoverMusic.com - Provides song
+    samples via the internet. - IFilm.com - Tons
+    of windows media files. To change player settings, click on ""MoreOptions""
+    and then click on ""Change Preferences"" - MSNBC website
+    videos. More videos here
+
+Expected Results
+All media player files should load/work properly"
+T-220,"Purpose
+This basic testcase is designed to verify that simply clicking the
+  ""Search"" button behaves as designed.","Initial Conditions
+Open a new browser window.
+
+Steps/Description
+Without editing anything in the URL Bar, click the ""Search"" button to the
+  right of the URL bar.
+
+Expected Results
+Clicking the ""Search"" button with a ""clean"" URL bar should just go to
+    the default search page. The current default search page for Netscape commercial builds is
+    http://home.netscape.com/escapes/search."
+T-235,"Purpose
+Determine that default panels and their contents load in Sidebar","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser In the Sidebar, verify that the following default panels appear: *Search *Buddy List *Stocks *News (open) Shopping Today's Tips Bookmarks Also verify the content in each default panel appears by selecting them
+    one by one
+*: Default open panels.
+
+Expected Results
+All the default panels listed above should appear in the Sidebar and their
+  content should be proper."
+T-238,"Purpose
+Determine that non-default width of Sidebar is retained after new window
+  is opened or browser is restarted","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser Click with the mouse on the Sidebar grippy(mouse pressed) and expand
+    the sidebar Make the width of the Sidebar to whatever you want (upto max
+    allowed) Select File| New Navigator Window to open a new browser window Observe that the Sidebar width should be the same as in the earlier
+    window and should not appear changed Also, after step3, select File|Quit to close the browser Restart the browser
+
+Expected Results
+After step 3 and step 6, sidebar non-default width should be the same as
+  changed earlier"
+T-241,"Purpose
+Determine that Sidebar opens and closes properly.","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser Point and click with the mouse on te grippy at the center of the
+    Sidebar border Clicking once should close the sidebar Again, point with the mouse on the grippy on the left border of the
+    browser window and click the mouse This should open the Sidebar with the original width
+
+Expected Results
+Sidebar should open/close properly with grippy"
+T-262,"Purpose
+Test opening a web location (URL) in the current Navigator window.
+  Includes test to dismiss dialog.","Initial Conditions
+The Open Web Location dialog should already be opened in the
+  browser.
+Steps/Description In the textfield enter the URL http://www.mozillazine.org/ . Select Current Navigator window from the
+          droplist, if it isn't already displayed there. Click the Open button (or hit Enter). Expected Results The dialog should go away and the URL load into the current
+      browser window.
+Steps/Description In the textfield enter the URL http://www.mozillazine.org/ . Select Current Navigator window from the
+          droplist, if it isn't already displayed there. Click the Cancel button (or hit Esc ). Expected Results The dialog should go away and the page in the current browser
+      window remain unchanged ."
+T-298,"Purpose
+To verify the classic theme is displayed.","Description
+From the main menu bar, select Edit > Preferences >
+          Appearances > Themes. Select ""Classic"" theme on the right hand side of the
+          dialog. Click the ""Apply Classic"" button. Close the Preferences dialog.
+
+Expected Results
+The following image for the menu bar of the browser should
+      display as follows:"
+T-299,"Purpose
+Visually inspect menu bar, floating component bar, and all the tool
+  bars.","Description
+From the main menu bar, select Edit >
+     Preferences > Appearance > Themes. Select ""Classic"" theme on the right hand side of the
+     dialog. Click the ""Apply Classic"" button. Close the Preferences dialog.
+
+Expected Results
+All the menu bars, tool bars, task bars, and the widgets are well
+      displayed."
+T-312,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"
+T-323,"Purpose
+This basic testcase is designed to verify that folders can be added to
+  the personal toolbar and their contents will still function as links.","Initial Conditions
+All of the browser's toolbars(3) must be visible. Make sure they are all visible by selecting the top level ""View""
+    menu and looking at the Toolbars submenu. The Navigation Toolbar,
+    Personal Toolbar, and Taskbar should all have checks next to their
+    names.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Open the ""Personal Toolbar Folder"". Add a new folder to it,
+    File|New Folder. Open and add a new bookmark, File|New Bookmark to the folder you
+    just created. Select the new bookmark and edit its properties, Edit|Bookmark
+    Properties, changing the url to http://www.mozilla.org. Go back to the browser window and click on the New Folder in the
+    personal toolbar. Click the New Bookmark item.
+
+Expected Results
+The New Folder should appear in the personal toolbar. The link within the New Folder on the personal toolbar should
+    function normally."
+T-324,"Purpose
+This basic testcase is designed to verify that browser navigation
+  toolbar buttons execute appropriately.","Initial Conditions
+All of the browser's toolbars(3) must be visible. Make sure they are all visible by selecting the top level ""View""
+    menu and looking at the Toolbars submenu. The Navigation Toolbar,
+    Personal Toolbar and Taskbar should all have checks next to their
+    names.
+
+Steps/Description
+Click here to load a
+    page with an animated gif. Wait for it to stop. Click the ""Back"" button on the Navigation toolbar. It looks like a
+    left-pointing arrow. Click the ""Forward"" button on the Navigation toolbar. It looks like
+    a right-pointing arrow. Wait for the gif to stop. Click the ""Reload"" button on the Navigation toolbar. It looks like
+    a curved arrow. Click the ""Reload"" button again, then quickly click the ""Stop""
+    button on the Navigation toolbar. It looks like an ""X""
+
+Expected Results
+While the gif is animating the ""Forward"" and ""Reload"" buttons
+    should be inactive and the ""Back"" and ""Stop"" buttons should be active.
+    When the gif stops, the ""Reload"" button should be active and the ""Stop""
+    button should be inactive. You should go back to the page you were at before. The ""Forward""
+    button should become active. The ""Forward"" button should become inactive again. The gif should begin to animate again. The gif should stop mid-animation"

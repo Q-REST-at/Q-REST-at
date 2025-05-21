@@ -1,0 +1,6 @@
+ID,Feature,Description
+S2,Traceable metering devices,"All delivered metering devices, down to component level, shall be traceable and can be linked at least to the manufacturing batch and time of manufacture"
+S136,Setting the number of decimal places,"In the HES user interface, it shall be possible to set the number of decimal places to be displayed for a Metric Value."
+S137,Recording of Metric value,"The metric value recorded and stored in the HES shall be unadulterated, i.e. exactly the same value as recorded by the Metering Unit."
+B113,Synchronization with GE controlled NTP,The metering system and surrounding infrastructure located within GE's network shall be synchronized with GE controlled NTP.
+S543,Develop test cases,"The supplier shall prepare test cases based on agreed requirements, i.e. agreed Specification unless otherwise agreed."

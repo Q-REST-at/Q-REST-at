@@ -1,0 +1,9 @@
+ID,Feature,Description
+R-4,Create new bookmark,Verify new bookmarks can be created (not added).
+R-101,Non Clickable Regions,"Verify that clicking non clickable regions in help causes no
+        behavior"
+R-132,Don't record everything,"Verify that things that aren't supposed to be added to history
+        aren't (eg chorme:/// url's)"
+R-206,Print Paragraph Styles,Determine if paragraph styles print correctly
+R-303,Verify all the selectable items work under Classic theme,"Click through all the items on menu bar, tool bars, and floating
+        component bar under Classic theme"

@@ -1,0 +1,20 @@
+ID,Feature,Description
+R-30,Prevent bad drops,"Verify that it is NOT possible to drop an item onto itself or its
+      immediate parent or child"
+R-60,D&D Large Images (stress),"Verify that dragging a large (e.g. 5 MB) image across
+      browser windows, to desktop, and into mail message
+      works properly."
+R-99,Arrow up/down,"Verify that you can move around pages with the up and down arrow
+        keys"
+R-131,Show/Hide columns,Show and hide columns.
+R-133,Don't show 302 redirect,Don't ever show 302 redirects in history
+R-174,Preferences disable,"Verify that when you disable password manager from the preferences
+      panel, you no longer are asked if you would like to save passwords and
+      longer get prefilled info on sites"
+R-190,Test Page,Print a test page and check to see if it prints properly
+R-200,Top Web Sites,Determine if  top web sites print properly
+R-236,Startup,Check default width of Sidebar
+R-275,Use on unix,"Use of the XUL file picker on Linux to navigate through 
+        directories and open files (html, plaintext, image). Resizing,
+        selection/scrolling, cancellation also tested. Test last
+        directory-viewed."

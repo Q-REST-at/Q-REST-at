@@ -1,0 +1,134 @@
+ID,Feature,Description
+R-3,File Bookmark,"Add a new bookmark into a specific location within the bookmarks
+      hierarchy."
+R-10,Edit item properties,"Verify that changes to an item are saved without loss of item
+      integrity."
+R-15,View item properties,"Verify that view properties works as appropriate for bookmarks,
+      folders, and separators(negative)"
+R-17,Custom Keywords,surf using user-defined 'custom keyword'.
+R-38,General,"Determine whether text can be copied and pasted from text fields
+      within a dialog box."
+R-40,General,"Determine whether HTML entities can be properly copied to other
+      applications."
+R-44,D&D Images onto the Desktop,Vrify that dragging an image onto the desktop saves the image
+R-46,D&D to Composer,"Verify that browser contents can be dragged to
+      a Composer or Compose Mail window."
+R-48,D&D from the desktop – Folders,"Confirm that dragging a directory
+      to the browser window displays the folder contents"
+R-49,D&D from the desktop – Shortcuts,"Confirm that dragging an Internet shortcut to the
+      browser window opens the URL"
+R-58,D&D from Bookmark Manager,"Determine if the application and OS properly
+      handle items dragged from the Bookmark Manager"
+R-59,D&D to Bookmark Manager,"Determine if the Bookmark Manager properly handles
+      items dragged onto it."
+R-60,D&D Large Images (stress),"Verify that dragging a large (e.g. 5 MB) image across
+      browser windows, to desktop, and into mail message
+      works properly."
+R-61,"D&D <a href=""/drag-url-browser-toolbar/"">
+      Given link is non-fetchable, non-retrievable Personal Toolbar",Determine if you can drag items to and from the Personal Toolbar
+R-65,Form Manager - Pop-up,"Verify that a form fill popup menu is activated
+      when a field gets accessed that has been saved in form
+      manager data."
+R-70,Save Form Data - dialog no,"Verify that you can stop a form's data from being saved from
+      the popup dialog box, and you click no."
+R-71,Save Form Data - dialog no,"Verify that you can stop a form's data from being saved from
+      the popup dialog box, and you click no."
+R-74,Prefill - cancel dialog,"Verify that when you encounter a Web site that could be prefilled,
+      that you are given the pre-fill dialog and when you click cancel,
+      the information is not filled into the form."
+R-75,Prefill - choose,"Verify that when you encounter a Web site that could be prefilled
+      and have several choices for fields that you are given the pre-fill
+      dialog and can select from the appropriate values and the information
+      is filled into the form."
+R-86,Favorite,"Verify that is it is possible to have favorite help topics -
+        similar to IE help which has a special tab to add favorite help
+        topics."
+R-92,Glossary,"Verify that in the Glossary there includes a section for an
+        Intro/tutorial for NS6."
+R-93,Glossary,"Verify that in the Glossary there includes a section for an Upgrade
+        Guide."
+R-98,Hide/Show toolbar,"Verify that you can hide the toolbar in help as well as reopen
+        it"
+R-101,Non Clickable Regions,"Verify that clicking non clickable regions in help causes no
+        behavior"
+R-104,Mail and News,"Determine whether Mail and News help content displays
+        correctly"
+R-111,Same time messaging,Determine whether Same time messaging displays correctly
+R-115,Netscape Technical Support,"Determine whether Netscape Technical Support displays
+        correctly"
+R-119,About,Determine whether the About Netscape displays correctly
+R-124,Delete one entry,Delete a History entry
+R-130,Resize columns,Verify that columns are resizable to show/hide more of entries
+R-132,Don't record everything,"Verify that things that aren't supposed to be added to history
+        aren't (eg chorme:/// url's)"
+R-134,Go menu list,Verify correct recently visited sites are in go menu.
+R-140,Retain scroll position,"Verify that browser remembers scroll state when returning to pages
+        in SH"
+R-141,Resize to window,"Determine that large Images can be resized to the browser window
+        and will not cause you to scroll in order to view entire image."
+R-148,Print image,"Determine that it is possible to print an image without changing
+        the currently loaded page"
+R-149,Image Display,"Determine whether images are properly redithered upon system
+        bit-depth changes."
+R-151,Cache/Networking,"Determine whether images load directly into the web browser from a
+        networked server."
+R-154,Animated Images,"Determine whether an automatically updated web cam continues to
+        refresh over an extended (24 hour) period of time."
+R-157,Image Display,"Determine whether X Bitmap (XBM) format images can be displayed.Note: XBM will not be supported in the initial 5.0
+          release."
+R-158,Image Display,"Determine whether GIF 87 images are properly displayed across
+        different bit depths."
+R-159,Image Display,"Determine whether GIF 89a images are properly displayed across
+        different bit depths."
+R-164,Master Password prompt,"Verify that the master password is visually distinctive from other
+        password prompts (indicates the functionality and importance of the
+        master password)"
+R-165,Replace Forgotten Master Password,"Verify that the process to replace a forgotten master password is
+      easier/more discoverable (though encrypted information should still be
+      lost to the user who has forgotten their password)."
+R-171,"Actitvation, ftp","Need a good working case for this, working on
+      it"
+R-175,Preferences enable,"Verify that when you enable password manager from the preferences
+      panel, you are asked if you would like to save usernames and passwords
+      and get prefilled info on sites"
+R-178,"Preferences, passwords saved, remove","Verify that you can remove a username and password for a given site
+      and it will no longer autofill on that sight nor will it be listed in
+      password manager (espn.com)"
+R-181,"Preferences, passwords never saved, remove all","Verify that you can remove all site and username information from the
+      passwords never saved section of password manager (ivillage.com)"
+R-186,"Tasks, passwords never saved, remove","Verify that you can remove a site and username from the passwords
+      never saved section of password manager"
+R-192,Indentation Test,Determine if a page with indentations prints as seen on screen
+R-195,"Print a ""Page Source""",Determine if page source prints as seen on screen
+R-209,Off-Line Printing,Determine that off-line printing works
+R-213,Realplayer tests,Determine if Realaudio works properly
+R-223,basic sidebar search,"Verify that a basic search from within the Search tab can be
+      executed"
+R-225,Bookmark Search,Verify that a search query/results can be bookmarked
+R-245,Add/Remove,Delete all panels
+R-249,Customization,Test the Customization of panels
+R-251,Cancel,Verify that nothing changes when you cancel
+R-252,Save,Verify that order and panel list is immediately applied
+R-253,What's Related,Verify that What's Related lists related sites
+R-254,What's Realted,Verify that links in What's Related panels work
+R-255,Bookmarks,Verify that links in Bookmarks work
+R-267,Local file in current browser window,"Open local files (both HTML and plain text tested) in the current
+        Navigator window. Includes tests to dismiss dialog."
+R-277,Basic find in page and frame content,"Find in html page and html frame documents. Test Find Again and
+        cancellation. Test for NOFRAME content."
+R-280,Document wrapping,Find with and without document wrapping. Test Find Again.
+R-292,"Page, frame, frameset","View info for a webpage, frame and frameset."
+R-296,Select and copy,Select and copy from the info window.
+R-297,Check for Themes,"Verify both Classic and Modern exist under the themes
+        preferences"
+R-299,Check the appearance of browser,"Visually inspect menu bar, floating component bar and all the
+        tool bars"
+R-301,Check the appearance of browser,"Visually inspect menu bar, floating component bar and all the
+        tool bars"
+R-310,Maximize Window,Click to maximize (expandto content on Mac)
+R-314,Stretch Window Vertically,"Grab top/bottom window edge and drag to resize. Not available on
+        Mac."
+R-317,Scroll Arrow Down,Click down arrow to scroll page
+R-319,Page scroll,Click in the scrollbar area to page up/down.
+R-322,Correct items on Bookmarks bar.,Verify correct bookmarks are installed in Bookmarks bar.
+R-324,Buttons,Verify that each buttons executes as appropriate.

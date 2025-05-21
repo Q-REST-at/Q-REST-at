@@ -1,0 +1,169 @@
+ID,Purpose,Test steps
+T-18,"Purpose
+This basic testcase is designed to verify that the column sorting feature
+  works properly.","Initial Conditions
+Install this bookmarks file.( abcdbookmarks.html ) You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Click on the ""Name"" column once. Click on the ""Name"" column a second time. Click on the ""Name"" column a third time. Click on the ""URL"" column once, and a second time. Click on the ""Custom Keyword"" column once, and a second time. Click on the ""Description"" column once, and a second time. Click on the ""Last Visit"" column once, and a second time. Click on the ""Added On"" column once, and a second time. Click on the ""Last Modified"" column once, and a second time.
+
+Expected ResultsBy step
+The bookmarks should sort into alphabetical order. (a-b-c-d-e) The bookmarks should sort into reverse-alphabetical order.
+    (e-d-c-b-a) The bookmarks should sort into ""natural"" order (the way they were
+    originally sorted). (a-d-e-b-c) The bookmarks should sort into order by URL and then the reverse of
+    that order. (d-a-b-c-e) The bookmarks should sort into order by Custom Keyword and then the
+    reverse of that order. (c-d-a-b-e) The bookmarks should sort into order by Description and then the
+    reverse of that order. (b-c-d-a-e) The bookmarks should sort into order by Last Visited time and then the
+    reverse of that order. The bookmarks should sort into order by Added On date and then the
+    reverse of that order. The bookmarks should sort into order by Last Modified date and then the
+    reverse of that order. Separators should separate the sort as well, ie step one should result
+    in a-b-c-d-e|aa-bb-cc-dd-ee, not a-aa-b-bb-c-cc-d-dd-e|."
+T-75,"Purpose
+Verify that when you encounter a Web site that could be prefilled and
+  have several choices for fields that you are given the pre-fill dialog
+  and can select from the appropriate values and the information is filled
+  into the form","Initial Conditions
+You should have several values for several data fields saved.
+
+Steps/Description
+Go to a site that needs information, for example time.com Click subscribe to Time Enter the Name, Address and e-mail information From the Edit menu, choose Save Form Info Go to another site that requires the same information (Name,
+    address, and e-mail) such as wired.com and click on subscribe to wired
+    (Enter in different values) From the Edit menu, choose Save Form Info Now go to a third site which requires this same information, such
+    as marthastewart.com and click on subscribe to Martha Stewart
+    Living From the Edit menu, choose Fill in Form Verify that the different values entered on steps 3 and 5 are
+    options for the fields to be prefilled Verify that you can select different values in this dialog and the
+    appropriate values are entered on the form
+
+Expected Results
+2. You should be taken to a page where you can enter name, address and
+  e-mail information
+4. Your data should be saved to Form Manager
+6. You should be taken to a page where you can enter name, address and
+  e-mail information
+7. You should be taken to a page where you can enter name, address and
+  e-mail information
+8. A dialog box should appear with your previously saved field values
+  as choices in drop down menus"
+T-77,"Purpose
+Verify that if you add a new value for a field in Form Manager it is
+  later offered as an option when prefilling a form using this field.","Initial Conditions
+You should have no form data saved.
+
+Steps/Description
+1. From the Tools menu, open the Form Manager sub-menu, then choose
+    Edit Form Info 2. Click the arrow next to Shipping Information 3. Enter the Name, Address and Phone information 4. Click cancel 5. Go to a site that will need a shipping address, for example
+    drugstore.com (First you will have to fill out a quick registration
+    form and then edit shipping addresses) 6. From the Edit menu, choose Fill in Form
+
+Expected Results
+1. Form Manager should open with fields listed on the left and value
+  fields listed on the right
+2. The Shipping Name, Address and Phone fields should appear below
+  Shipping Information
+5. You will be taken to a shipping address form.
+6. There should be no field values to fill in"
+T-119,"Purpose
+Determine whether the About Netscape displays correctly","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+From the help drop down menu, select About Netscape 6 Click on Contributors link Click on Mozilla Public License and Netscape Public License Click on the license link Click on the Java link Click on the Sun Microsystems link Click on the Copyright Â© 1998-2000 Support.com, Inc. link Click on the Lernout & Hauspie Speech Products N.V. link Click on the Net2Phone, Inc. Hackensack, NJ USA. link
+
+Expected Results
+1. The About Netscape page should come up
+2. Verify that the Contributors page (Terri Preston should be listed)
+  :-)
+3. Verify that you are taken to http://www.mozilla.org/MPL/
+4. Verify that you are taken to
+  jar:resource:///chrome/en-US.jar!/locale/en-US/global/license.txt
+5. & 6. Verify that you are taken to http://java.sun.com/
+7. Verify that you are taken to http://www.support.com/
+8. Verify that you are taken to the Lernout & Hauspie page (this
+  is currently NS bug 12462 )
+9. Verify that you are taken to http://www.net2phone.com/"
+T-156,"Purpose
+To determine whether multiple, differing animated images on the same
+  page are properly displayed.","Initial Conditions
+None.
+
+Steps/Description
+Display the attached web pages (if site still present, visit
+    http://www.animationcity.net/animcity.htm, as an additional stress
+    test case.)
+
+Expected Results
+All animated images should animate smoothly, without stopping, or
+  displaying any glitches. (Communicator 4.6x or IE can be used for a more
+  specific description of the expected results.)
+Animated GIFs off the net occasionally have a
+  pre-specified number of iterations, normally 1000, and will halt
+  animation deliberately."
+T-172,"Purpose
+Verify that when you have saved multiple username's and password's for a
+  website, you are later presented with those same choices","Initial Conditions
+Password manager should be enable and using a different browser, create
+  two different usernames and passwords for a site such as yahoo
+  (http://mail.yahoo.com)or another of your choice
+
+Steps/Description
+Go to a sight that requires a password, such as
+    http://mail.yahoo.com Enter a username and password and click sign in When presented with the save password dialog, click yes Shut down Netscape 6 Open Netscape 6 Return to http://mail.yahoo.com (or other site, if used) Delete the prefilled information and enter the second username and
+    password Click login When presented with the save password dialog, click yes Shut down Netscape 6 Open Netscape 6 Return to http://mail.yahoo.com (or other site, if used) Select one of these choices and click sign in
+
+Expected Results
+3. The username and password should be saved in Password Manager
+6. The username and password should be prefilled
+8. You should be logged in to the site
+9. The username and password should be saved in Password Manager
+12. You should be presented with a dialog box that offers a choice between
+  the two usernames
+13. You should be signed in to the site"
+T-218,"Purpose
+Determine that Windows Media player works properly","Initial Conditions
+None
+
+Steps/Description
+- Daniel Johns
+    Music - Pop singer/songwriter Daniel Johns combines streaming ASF &
+    MP3... - Tranzor Z
+    Productions - Mixing hard trance and progressive house. Hours of music
+    in Windows Media format. - WindowsMedia.com - Home of
+    ASF-formatted media. Radio Station Guide, music downloads, and... - SoundClick -
+    ASF and MP3. Stars and unsigned artists. Streaming songs and videos
+    in... - Hollywood and Vine -
+    Streaming music and videos from Capitol Records. Some clips, some
+    full-length. - Classical Is Cool - Classical
+    music in ASF (ASX) with performer information. - Listen with
+    iRaMa - Listen to streaming audio and dedicate a song to friends. - CLUAS -
+    Stream or download songs by unsigned acts for free (ASF, ASX, WMA,
+    MP3... - Rev-Radio
+    (Revolution Radio) - Streaming audio files from a variety of indie
+    artist in Windows Media and... - DiscoverMusic.com - Provides song
+    samples via the internet. - IFilm.com - Tons
+    of windows media files. To change player settings, click on ""MoreOptions""
+    and then click on ""Change Preferences"" - MSNBC website
+    videos. More videos here
+
+Expected Results
+All media player files should load/work properly"
+T-237,"Purpose
+Determine that maximum width of Sidebar is correct","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser Click with the mouse on the Sidebar grippy (mouse pressed) and expand
+    the sidebar Observe that the width of the Sidebar expands The maximum that the Sidebar should expand should be approx 1/3rd of
+    the browser window size
+
+Expected Results
+Sidebar max width should be correct"
+T-309,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"

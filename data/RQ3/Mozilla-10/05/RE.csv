@@ -1,0 +1,18 @@
+ID,Feature,Description
+R-18,Sort by columns,sort and reverse-sort per column
+R-75,Prefill - choose,"Verify that when you encounter a Web site that could be prefilled
+      and have several choices for fields that you are given the pre-fill
+      dialog and can select from the appropriate values and the information
+      is filled into the form."
+R-77,Edit Form Data - cancel,"Verify that if you enter data in the Form Manager and then
+      click cancel, the data has not been saved"
+R-119,About,Determine whether the About Netscape displays correctly
+R-156,Animated Images,"To determine whether multiple differing animated images on the same
+        page are properly displayed"
+R-172,"Password Manager, multiple users","Verify that when you have saved multiple username's and password's
+      for a website, you are later presented with those same choices"
+R-218,Media Player tests,Determine if windows media player works fine
+R-237,Constraints,Check for maximum width of Sidebar
+R-280,Document wrapping,Find with and without document wrapping. Test Find Again.
+R-309,Active/Inactive Window,"The active window is visually distinct, inactive = grey title
+        bar."

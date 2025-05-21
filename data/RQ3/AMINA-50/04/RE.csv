@@ -1,0 +1,59 @@
+ID,Feature,Description
+S12,PQ values to HES within 4h,The PQ values (15-minute values) shall be delivered at the latest within 4 hours from registration in the Metering Units to HES
+S58,Cumulative calculator,The metering unit shall be equipped with a cumulative counter and display at least 7 integer digits and 3 decimal digits.
+S72,Resistant labeling,"The marking of the Meter's manufacturing number shall be permanent for the lifetime of the Metering Unit, i.e. no removable tape or print that can be scraped off."
+S75,Location of the label,"The manufacturing number of the meter shall be placed on a non-removable part (not connection cover, not communication module cover, etc.)."
+S86,Management of both primary and secondary registration,"The metering units shall be able to handle both primary and secondary registration of Metrics,"
+S88,Cat 2 shall meet the requirements for control,"Category 2 metering units shall meet the requirements for Inspection, according to Regulation STAFS 2009:8, for the first Inspection, however, a maximum of 12 years after Final Approval has been given by the Client."
+S89,Metering unit in HES,"In HES there should be functionality for automatic and manual administration:
+- Installation of new Metering Unit
+- Replacement of the Metering Unit
+- Decommissioning of Metering Unit"
+S91,Data in HES,"The HES shall handle at least the following types of data:
+- Structure data (e.g. Facility ID, Metering Unit)
+- Metrics (Metrics with e.g. ID number, status, timestamp)
+- Events (Event with e.g. Event ID, times, Alarms)"
+S94,Automatic collection of Measured values,The Metering system shall be configurable for regular automatic collection of Metric Values from Metering Units to HES.
+S111,Exporting reports and data,"Retrieved measurement and structural data as well as completed reports shall be exportable to any standardized text file format, such as csv."
+S119,Energy values are exported within 30 sec,The energy values (15-minute values) shall be exportable from HES via integrations to other systems within 30 seconds after registration in HES
+S135,Time interval for metric values,There shall be functionality to select different time intervals and time resolution for the Metrics presented.
+S136,Setting the number of decimal places,"In the HES user interface, it shall be possible to set the number of decimal places to be displayed for a Metric Value."
+S139,Events to alert list,Events configured to generate Alarms shall be displayed in an Alarm List.
+S143,logging of events,Events in the Metering System shall be logged in an event list in HES.
+S163,Request further confirmation,"Commands, initiated by the User in HES, which may have serious consequences in case of incorrect handling (deletion of stored measurement and structure data and disconnection and reconnection of power) shall require additional confirmation before execution"
+S172,Status of switches to other GE system,The HES shall be able to send information to other facility systems if a Metering Unit's circuit breaker is switched on or off.
+S177,Interpolation in HES,There should be functionality in HES to perform interpolations where the collected value is missing.
+S182,Life expectancy,Communication equipment shall have a life expectancy of >= 15 years from the date of delivery to GE.
+S186,Recovery time after communication breakdown max 60 min,The recovery time of the infrastructure communication after a communication breakdown shall not exceed 60 minutes.
+S192,Licensed telecommunications networks,"If the communication solution includes licensed telecommunications networks, it must comply with Ordinances and Regulations in accordance with PTSFS 2015:2 issued by PTS (Swedish Post and Telecom Authority)."
+S196,Virtual and physical servers,HES should be able to run on virtual servers as well as physical ones.
+S221,Common Information Model (CIM),The HES system shall support the Common Information Model (CIM) and comply with standard IEC 61968-9 or equivalent when exchanging information with e.g. Distribution Management Systems (DMS) and Meter Data Management Systems (MDMS).
+S228,Controlling logout time,The client shall be able to control after how many minutes of inactivity a User is automatically logged out of HES.
+S234,Security log,Everything of importance to the security of the Metering System shall be recorded in a security log or equivalent.
+S236,Log date and system time,The date and system time shall be recorded for each logged record.
+B1,Corrected measurement values,"If the Metering Unit corrects measured values of voltage and/or current when calculating energy consumption, these values shall also be those used in the Metering System."
+B15,Measurement and recording / phase,"The metering unit shall be able to measure and record for each phase the minimum, maximum and average value of voltage, current, active and reactive power of the electricity output and input per 5 minutes."
+B30,Record when high power exceeds limit value per phase,"The metering system shall record and store information when the following Events occur:
+14. High power exceeds set limit value per phase"
+B33,Register overheating in connection,"The metering system shall record and store information when the following Events occur:
+17. In case of a overheating in connection"
+B34,Configure records to be stored for events,"For each Event, it shall be possible to optionally configure which registers (OBIS codes) in the Metering Unit are to be stored."
+B35,Disable sending of Events from specific Metering Unit,It shall be possible to disable the sending of Events from the designated Metering Unit from HES in order not to have to receive a large amount of Events from a particular Metering Unit.
+B42,Communication status,"It shall be possible to view the communication status of the Metering Unit directly, without manual intervention and without opening the meter."
+B45,screw anchors,There shall be no protrusions around the screw fixings of the metering unit that limit the size of the screw head.
+B46,mounting bracket,There shall be a mounting bracket placed on the top of the metering unit for mounting.
+B53,minimum rated current 5A,The metering unit shall be rated for a minimum current of 5 (Imax 100) A.
+B62,Energy values to other system within 10 sec,The energy values (15-minute values) shall be exportable from HES via integrations to other systems within 10 seconds after registration in HES.
+B71,Help function,The HES user interface shall (LB71) include a help function to assist the User in understanding how to perform tasks using the functionality of the system.
+B81,Detecting meters with communication problems,"In HES, it shall be possible for the User to detect and view individual Metering Units that have communication problems."
+B83,View meters with communication problems in map,"In HES, it should be possible to visualize Metering Units with communication problems in a graphical view/map that can be zoomed in and out."
+B85,View last measurement value and time,The last Metric and the time of communication with the Metering Unit shall be displayed in the HES.
+B87,copy static fields,"It shall be possible for the User to be able to copy static fields in HES such as headers, status, responses to Events in the system."
+B89,Request further confirmation,"Commands, initiated by the User in HES, which may have serious consequences in case of incorrect handling (deletion of stored measurement and structure data and switching off and on of power) shall require additional confirmation before execution. Other commands shall be executed directly."
+B91,Configuring the Metering Unit,Configuration of the Metering Device from HES shall be possible without downloading new Firmware.
+B105,Database hosting,The HES database must be able to be hosted in the Contracting Authority's database hosting facility.
+B108,Send the same info again,It should be possible to send the same information to HES several times
+S543,Develop test cases,"The supplier shall prepare test cases based on agreed requirements, i.e. agreed Specification unless otherwise agreed."
+S545,Testing tools,The Contractor shall use a tool designated by the Contracting Authority to follow the Contracting Authority's reporting of test results. The Contractor is responsible for registering its feedback and the status of the Client's reported errors and comments in the tool. The Client currently uses ReQtest in the defect management process.
+S548,Test report,"The Contractor shall prepare a test report for the test phases for which the Contractor is responsible during the Delivery Project, as shown in Figure 1 in clause 3.2."
+S559,Support under UAT,The Supplier shall be present at the Purchaser's premises and assist the Purchaser in carrying out the UAT.

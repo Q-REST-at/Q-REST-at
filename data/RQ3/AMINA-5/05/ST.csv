@@ -1,0 +1,9 @@
+ID,Purpose,Test steps
+21,Security log,Verify that all relevant information is logged in the security log
+23,Log date and system time,Verify that all entries in the log contain the date and system time
+194,Energy values to other system within 10 sec,Verify that the goods are delivered from HES according to the agreed export interval
+220,Recording of measurement value,"Verify that the measured value recorded and stored in the HES is uncorrupted, i.e. exactly the same value as recorded by the Metering Unit.
+Request a timestamped measurement value from the Meter and compare what is displayed on the Meter with the information coming into the HES."
+247,Cumulative calculator,Verify that the metering unit is equipped with a cumulative counter and displays at least 7 integer digits and 3 decimal digits.
+463,Terminal block - Cat1,Verify that the Metering Unit has terminal covers that cover the connection cable layer.
+464,Terminal block - Cat2,Verify that the Metering Unit has terminal covers that cover the connection cable layer.

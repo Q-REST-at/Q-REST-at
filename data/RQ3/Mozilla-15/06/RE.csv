@@ -1,0 +1,23 @@
+ID,Feature,Description
+R-7,Create Folder,Verify new folder creation and nesting of new folders.
+R-46,D&D to Composer,"Verify that browser contents can be dragged to
+      a Composer or Compose Mail window."
+R-47,D&D to Dialog,"Confirm that text, links, and images dragged to a
+      non-modal dialog are handled properly"
+R-58,D&D from Bookmark Manager,"Determine if the application and OS properly
+      handle items dragged from the Bookmark Manager"
+R-69,Save Form Data - dialog yes,"Verify that you can save a form's data from the
+      popup dialog box and you click yes."
+R-110,Security and Privacy,Determine whether Security and Privacy displays correctly
+R-115,Netscape Technical Support,"Determine whether Netscape Technical Support displays
+        correctly"
+R-188,Print a Page with frames,Determine whether a page with frames prints properly
+R-198,Print large complex pages,Determine if  large page print properly
+R-203,Print Lists,Determine if lists print correctly
+R-233,Drag Scroll,Determine whether drag-scrolling gestures function properly.
+R-250,Re-Order,Verify reordering of panels works
+R-251,Cancel,Verify that nothing changes when you cancel
+R-301,Check the appearance of browser,"Visually inspect menu bar, floating component bar and all the
+        tool bars"
+R-323,Add a folder,"Verify that a folder added to the personal toolbar functions
+        properly."

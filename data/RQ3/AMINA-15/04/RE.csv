@@ -1,0 +1,25 @@
+ID,Feature,Description
+S12,PQ values to HES within 4h,The PQ values (15-minute values) shall be delivered at the latest within 4 hours from registration in the Metering Units to HES
+S27,type approval,"Extended type approval and certification of Metering Devices shall be carried out according to method SPM 1618, test with 12 kV surge voltage."
+S70,Visible production number - communication module,A serial number on a Communication Module shall be positioned so that it is not visible on the front of the Metering Unit.
+S75,Location of the label,"The manufacturing number of the meter shall be placed on a non-removable part (not connection cover, not communication module cover, etc.)."
+S89,Metering unit in HES,"In HES there should be functionality for automatic and manual administration:
+- Installation of new Metering Unit
+- Replacement of the Metering Unit
+- Decommissioning of Metering Unit"
+S213,Web service calls,HES shall be able to make and receive web service calls.
+S236,Log date and system time,The date and system time shall be recorded for each logged record.
+S241,Authentication against neighboring systems,Authentication shall be used when the Metering System interacts with neighboring systems.
+B83,View meters with communication problems in map,"In HES, it should be possible to visualize Metering Units with communication problems in a graphical view/map that can be zoomed in and out."
+B87,copy static fields,"It shall be possible for the User to be able to copy static fields in HES such as headers, status, responses to Events in the system."
+B91,Configuring the Metering Unit,Configuration of the Metering Device from HES shall be possible without downloading new Firmware.
+B113,Synchronization with GE controlled NTP,The metering system and surrounding infrastructure located within GE's network shall be synchronized with GE controlled NTP.
+S558,Training for UAT,The Contractor shall carry out the necessary training and submit the relevant documentation in accordance with Clause 5 prior to the commencement of the Purchaser's UAT.
+S559,Support under UAT,The Supplier shall be present at the Purchaser's premises and assist the Purchaser in carrying out the UAT.
+S560,Requirements for delivery and installation in the production environment,"During installation and commissioning of the Metering System in the Customer's production environment, the Supplier shall: 
+-install, 
+-if necessary configure/parameterize, 
+-if necessary migrate structural data, 
+-commission, 
+-verify and test the Metering System including integrations in the production environment, and 
+-perform error corrections and retests"

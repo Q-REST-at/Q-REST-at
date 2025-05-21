@@ -1,0 +1,47 @@
+ID,Feature,Description
+R-33,Images,"Determine whether native and non-native images are correctly copied
+      to the system Clipboard."
+R-34,Negative,"Determine whether non-copyable page content such as UI widgets are
+      correctly omitted from the Clipboard content."
+R-36,Overflow,"Determine whether extremely large images can be copied from web
+      pages."
+R-37,Stress,"Determine whether complicated rich text (such as massively nested
+      tables) can be copied."
+R-43,D&D Images across browser windows,"Verify that dragging an image across browser windows
+      opens the image"
+R-62,D&D Bookmarks menu to toolbar,"Verify that you can drag a bookmark from the Bookmarks menu
+      to the Personal Toolbar."
+R-73,Prefill - OK Dialog,"Verify that when you encounter a Web site that could be prefilled,
+      that you are given the pre-fill dialog and when you click ok, the
+      information is filled into the form."
+R-78,Delete Form Data - remove field value,"Verify that if you delete data in the Form Manager, that this
+      data is not shown as an option when prefilling a form."
+R-84,Sidebar,"Verify that there is a tab for help and you can create a Help
+        Sidebar tab with dynamic information"
+R-88,TS/Sign on,"Verify that there is Troubleshooting Help about the problem ""if you
+        can't sign on"""
+R-107,Understanding Privacy,"Determine whether Understanding Privacy help content displays
+        correctly"
+R-109,What's new in Netscape 6,Determine whether What's new in Netscape 6 displays correctly
+R-114,New to the net tutorial,"Determine whether the New to the net tutorial displays
+        correctly"
+R-128,Change grouping,Change the History View to Group by Day|Site|None
+R-155,Animated Images,"Determine whether displaying animated GIFs result in single server
+        request for the image, rather than additional requests upon each frame
+        change."
+R-159,Image Display,"Determine whether GIF 89a images are properly displayed across
+        different bit depths."
+R-177,"Preferences, view passwords never saved","Verify that when you have designated not to ever save a username and
+      password in password manager, this information can be viewed in the
+      password manager through preferences (expedia.com)"
+R-180,"Preferences, passwords never saved, remove","Verify that you can remove a site and username from the passwords
+      never saved section of password manager (ivillage.com)"
+R-225,Bookmark Search,Verify that a search query/results can be bookmarked
+R-227,Drag-selection,"Currently, it is my understanding that there will be no new
+        features in this area (can monitor bug list)"
+R-256,Bookmarks,Verify that changes reflect immediately from Bookmarks Manager
+R-266,Nonexistent URL,Open a nonexistent (bogus) web location.
+R-302,Checking View menu,Verify if themes exist under View menu
+R-309,Active/Inactive Window,"The active window is visually distinct, inactive = grey title
+        bar."
+R-318,Thumb Scroll,Click and drag thumb to scroll page

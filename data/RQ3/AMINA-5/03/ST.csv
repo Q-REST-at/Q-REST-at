@@ -1,0 +1,9 @@
+ID,Purpose,Test steps
+1,Virtual and physical servers,Verify that the documentation describes how to install the application both in a physical and in a virtual environment
+255,Display of PQ values,Verify that in HES it is possible to analyze and visualize PQ values in e.g. graphs and bars.
+339,Communication status - Cat1 1 phase,"Verify that it is possible to view the communication status of the Metering Unit directly, without manual intervention and without opening the meter."
+340,Communication status - Cat1 3 phase,"Verify that it is possible to view the communication status of the Metering Unit directly, without manual intervention and without opening the meter."
+341,Communication status - Cat2,"Verify that it is possible to view the communication status of the Metering Unit directly, without manual intervention and without opening the meter."
+441,Visible manufacturing number - communication module - Cat1,Verify that a serial number on a Communication Module is positioned so that it is not visible on the front of the Metering Unit.
+442,Visible manufacturing number - communication module - Cat2,Verify that a serial number on a Communication Module is positioned so that it is not visible on the front of the Metering Unit.
+596,logging of events,Verify in HES that the events and their attribute values can be displayed in an event list.

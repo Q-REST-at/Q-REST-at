@@ -1,0 +1,154 @@
+ID,Purpose,Test steps
+T-2,"Purpose
+This basic testcase is designed to verify that a bookmark is properly
+  added and is displayed at the appropriate places.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks . You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select the toplevel 'Bookmarks' menu then select the first menuitem
+    'Add Bookmark'.
+
+Expected Results
+The title of the page you selected should appear as a bookmark in:
+the toplevel 'Bookmarks' menu the 'Bookmarks' popup menu on the personal toolbar the 'Bookmarks' panel in MySidebar in the Manage Bookmarks view (select Bookmarks| Manage Bookmarks)"
+T-15,"Purpose
+This testcase is designed to verify that the view properties feature works
+  as prescribed for various items.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select a bookmark. Select File|Bookmark Properties. Verify, click
+    ""OK"". Select a folder. Select File|Bookmark Properties. Verify, click
+    ""OK"". Select a separator. Select File|Bookmark Properties.
+
+Expected Results
+For step(2) the Bookmark Properties dialog should appear. It should
+    have fields for name, location(url), custom keyword, and description. There
+    should also be a section for setting update and notification options. For step(3) the Bookmark Properties dialog should appear. It should
+    have fields for name and description. No other fileds should appear in this
+    dialog. For step(4) no dialog should appear."
+T-51,"Purpose
+Confirm that supported image files dragged to the browser window are
+  properly displayed","Steps/Description
+Download each of the image files each below to your computer From your desktop or file manager, drag each downloaded file to the
+    browser window
+
+Expected Results
+2. Each image should be displayed in the browser window."
+T-110,"Purpose
+This basic testcase is designed to verify that Security and Privacy
+  help content comes up when clicked, is displayed corectly, and prints
+  correctly","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
+
+Steps/Description
+Select the toplevel Help menu. Select What's new in Netscape six from the submenu Click Security and Privacy Select all contents of the page, and right click, select copy and
+    then paste into your favorite word processor and run spell check
+
+Expected Results
+3. A new window should open with Easier Security at the top of the
+  page
+4. There should be no spelling errors (Besides obvious computer terms
+  and websites)"
+T-114,"Purpose
+This basic testcase is designed to verify that the New to the net help
+  content comes up when clicked, is displayed corectly, and prints
+  correctly","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
+
+Steps/Description
+Select the toplevel Help menu. Select ""What's new in Netscape 6"" Click ""My sidebar is yours"" Close the window created in 3 and click on ""Search from anywhere,
+    anytime"" Close the window created in 4 and click on ""Convenient
+    Services"" Close the window created in 5 and click on Start using
+    Netscape
+
+Expected Results
+2. Verify that a screen describing new features in Netscape 6 comes
+  up
+3. Verify that a window describing ""My sidebar"" appears in a new
+  window
+4. Verify that ""Fast and Convenient Search from the Location Bar"" page
+  comes up
+5. Verify that ""A host of Services"" window comes up
+6. Verify that you are taken to http://home.netscape.com/?cp=wn6"
+T-126,"Purpose
+This basic testcase is designed to verify that all links are properly
+  removed from the global history file.","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select Go|History. Observe the contents of the Global History Window. Select Edit|Preferences (from a navigator window) Browse to the Navigator|History Panel. Under ""Browsing History"" click the ""Clear History"" button. Return to observe the contents of the Global History Window.
+
+Expected Results
+If you've observed the initial conditions, the History window should be
+    non-empty upon first observation. After pressing the button, the history window should be empty of
+    individual history items."
+T-184,"Purpose
+Verify that you can remove a username and password for a given site and it
+  will no longer autofill on that sight nor will it be listed in password
+  manager (netscape.com)r","Initial Conditions
+Password manager should be enabled, in a different browser create an
+  account at a site that requires a username and password such as
+  http://www.netscape.com
+
+Steps/Description
+Go to a site that you have not been to before in Netscape 6, such as
+    http://www.netscape.com Enter your username and password When a dialog appears asking if you would like to save this
+    information, click yes From the tasks drop down menu selecet privacy and security->password
+    manager->view stored passwords Highlight this sight and username in the list and click remove Click cancel Click View saved passwords Highlight this sight and username in the list and click remove Click ok Click View saved passwords
+
+Expected Results
+3. Your username and password should be saved to the password manager
+4. A list of saved passwords should appear with your saved sight and
+  username appearing in the list
+5. This site's information should no longer appear in the list
+6. Window should close
+7. This site should once again, be in the list of saved passwords
+8. This site and username should no longer appear on the list of saved
+  passwords
+10. This site should be removed from the list"
+T-206,"Purpose
+Determine that Seamonkey prints pages with different paragraph styles
+  properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to open first paragraph
+    styles test page. After each test page opens, select ""FILE | PRINT"" menu option to print
+    the test. Click on ""Next Test"" at bottom of the page to proceed to next
+    test.
+
+Expected Results
+All pages should print as they appear on the screen."
+T-260,"Purpose
+Testing access to the web location dialog","Initial Conditions
+The browser should already be open.
+
+Steps/Description
+Test the following to see if all of these tasks will bring up the Open
+  Web Location dialog:
+From the menubar of the browser, select File > Open Web
+    Location. Use the keyboard shortcut specific to your platform: Win32 and Unix: Control+Shift+L Macintosh: Command+Shift+L
+
+Expected Results
+The Open Web Location should be displayed, regardless of the means you
+  used above."
+T-266,"Purpose
+Test opening a nonexistent (bogus) web location (URL).","Initial Conditions
+The Open Web Location dialog should already be opened in the
+  browser.
+
+Steps/Description
+In the textfield enter the URL http://www.mozilla.org/lizard-eats-all/blarg.html . Select Current Navigator window from the droplist,
+    if it isn't already displayed there. Click the Open button (or hit Enter ).
+
+Expected Results
+The dialog should go away. Since this page doesn't exist (well, it shouldn't ;-), the
+    page that loads should display the typical 404 error: Not Found : The requested object does not
+        exist on this server. The link you followed is either outdated,
+        inaccurate, or the server has been instructed not to let you have
+        it."

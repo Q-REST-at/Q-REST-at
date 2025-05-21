@@ -1,0 +1,24 @@
+ID,Feature,Description
+S1,Legal requirements,"Laws, Regulations and standards applicable at the time of signing the contract with regard to function and safety shall be fulfilled for all parts of the Measuring System in accordance with points 1-13 below.
+1. Ellag SFS 1997:857.
+2. The Ordinance (SFS 1999:716) on metering, calculation and reporting of transmitted electricity.
+3. EIFS 2016:2 - The Swedish Energy Markets Inspectorate's Regulations and General Advice on Metering, Calculation and Reporting of Transmitted Electricity.
+4. STAFS 2016:1 - Swedac's Regulations on measuring instruments.
+5. STAFS 2016:4 - Swedac's Regulations and general guidelines on meters for active electrical energy.
+6. STAFS 2009:8 - Swedac's Regulations and general advice on metering systems for the measurement of transmitted electricity.
+7. STAFS 2009:9 - Swedac's Regulations and general advice on periodic inspection of meters for active electrical energy.
+8. EU MID Directive 2014/32/EU.
+9. Extended type approval and certification of Category 1 and 2 meters according to method SPM 1618, test with 12kV surge voltage.
+10. Standards: SS-EN61869-1, SS-EN61869-2, SS-EN50470 and IEC 62056 (DLMS/COSEM suite).
+11. EU Regulation 2016/679 of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).
+12. The EU Declaration of Conformity shall be available for the Metering System if it or parts thereof are manufactured in a country outside the EU.
+13. Law (2003:389) on electronic communications."
+S30,Quantity of faulty meters allowed,"Over the expected lifetime of the Metering Units, the occurrence of failures (requiring meter replacement) shall not exceed 0.75 % per year of the installed volume."
+S88,Cat 2 shall meet the requirements for control,"Category 2 metering units shall meet the requirements for Inspection, according to Regulation STAFS 2009:8, for the first Inspection, however, a maximum of 12 years after Final Approval has been given by the Client."
+S186,Recovery time after communication breakdown max 60 min,The recovery time of the infrastructure communication after a communication breakdown shall not exceed 60 minutes.
+B34,Configure records to be stored for events,"For each Event, it shall be possible to optionally configure which registers (OBIS codes) in the Metering Unit are to be stored."
+B71,Help function,The HES user interface shall (LB71) include a help function to assist the User in understanding how to perform tasks using the functionality of the system.
+B83,View meters with communication problems in map,"In HES, it should be possible to visualize Metering Units with communication problems in a graphical view/map that can be zoomed in and out."
+B90,Mass deletion,"In HES, there shall be a function to perform mass deletion of overall structure data objects so that all linked relations are also deleted. E.g. that this is implemented via group membership."
+S537,Design of the solution,The Supplier shall design and construct the Solution in accordance with the requirements set out in Appendix B.2.1 Technical Solution Requirements Specification.
+S559,Support under UAT,The Supplier shall be present at the Purchaser's premises and assist the Purchaser in carrying out the UAT.

@@ -1,0 +1,19 @@
+ID,Feature,Description
+S38,Events linked to HES,Events and associated records (OBIS codes) shall be sent instantaneously to HES.
+S73,Legible labeling,"The marking of the meter's production number must be clearly legible
+- i.e. the font size must not be too small so that the number becomes difficult to read, e.g. for a customer"
+S77,Designed for wall mounting,The metering units shall be designed for wall mounting.
+S111,Exporting reports and data,"Retrieved measurement and structural data as well as completed reports shall be exportable to any standardized text file format, such as csv."
+S119,Energy values are exported within 30 sec,The energy values (15-minute values) shall be exportable from HES via integrations to other systems within 30 seconds after registration in HES
+S172,Status of switches to other GE system,The HES shall be able to send information to other facility systems if a Metering Unit's circuit breaker is switched on or off.
+S192,Licensed telecommunications networks,"If the communication solution includes licensed telecommunications networks, it must comply with Ordinances and Regulations in accordance with PTSFS 2015:2 issued by PTS (Swedish Post and Telecom Authority)."
+B11,Possible overheating,The metering unit shall have the capability to detect connections that may cause overheating.
+B30,Record when high power exceeds limit value per phase,"The metering system shall record and store information when the following Events occur:
+14. High power exceeds set limit value per phase"
+B33,Register overheating in connection,"The metering system shall record and store information when the following Events occur:
+17. In case of a overheating in connection"
+B35,Disable sending of Events from specific Metering Unit,It shall be possible to disable the sending of Events from the designated Metering Unit from HES in order not to have to receive a large amount of Events from a particular Metering Unit.
+B83,View meters with communication problems in map,"In HES, it should be possible to visualize Metering Units with communication problems in a graphical view/map that can be zoomed in and out."
+B113,Synchronization with GE controlled NTP,The metering system and surrounding infrastructure located within GE's network shall be synchronized with GE controlled NTP.
+S558,Training for UAT,The Contractor shall carry out the necessary training and submit the relevant documentation in accordance with Clause 5 prior to the commencement of the Purchaser's UAT.
+S559,Support under UAT,The Supplier shall be present at the Purchaser's premises and assist the Purchaser in carrying out the UAT.

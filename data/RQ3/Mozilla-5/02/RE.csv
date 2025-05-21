@@ -1,0 +1,11 @@
+ID,Feature,Description
+R-70,Save Form Data - dialog no,"Verify that you can stop a form's data from being saved from
+      the popup dialog box, and you click no."
+R-137,Back and forward with frames,"Verify browser goes back and forward correctly from page with
+        frames."
+R-150,Cache/Networking,"Determine whether reloaded web pages properly display images
+        modified since the last load."
+R-155,Animated Images,"Determine whether displaying animated GIFs result in single server
+        request for the image, rather than additional requests upon each frame
+        change."
+R-218,Media Player tests,Determine if windows media player works fine

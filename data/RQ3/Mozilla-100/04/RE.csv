@@ -1,0 +1,168 @@
+ID,Feature,Description
+R-3,File Bookmark,"Add a new bookmark into a specific location within the bookmarks
+      hierarchy."
+R-8,Surf Bookmark,"Verify that double-clicking on a bookmark causes it to be launched in
+      a browser window"
+R-11,Delete Folder,Verify folder(s) are correctly deleted.
+R-12,Show/Hide Folder,Verify that disclosure triangles/folder icons are in sync.
+R-16,Rename bookmark inline - not implemented,"Change the name of a bookmark without use of the bookmark properties
+      dialog."
+R-17,Custom Keywords,surf using user-defined 'custom keyword'.
+R-32,Styled Text,"Determine whether text copied from a formatted web page (such as
+      within a table) has a ""non-annoying"" layout."
+R-37,Stress,"Determine whether complicated rich text (such as massively nested
+      tables) can be copied."
+R-38,General,"Determine whether text can be copied and pasted from text fields
+      within a dialog box."
+R-41,D&D Links across browser windows,"Confirm that dragging a link across browser windows
+      opens the link."
+R-43,D&D Images across browser windows,"Verify that dragging an image across browser windows
+      opens the image"
+R-48,D&D from the desktop – Folders,"Confirm that dragging a directory
+      to the browser window displays the folder contents"
+R-55,D&D onto the Application Icon,"Verify that items dragged onto the
+      application icon are handled properly"
+R-56,D&D URL Proxy Icons,"Verify that dragging the URL proxy icon to a browser
+      window opens that URL in the target window"
+R-57,D&D URL Proxy Icons onto the Desktop,"Verify that dragging the URL proxy icon
+      onto the desktop creates a shortcut"
+R-61,"D&D <a href=""/drag-url-browser-toolbar/"">
+      Given link is non-fetchable, non-retrievable Personal Toolbar",Determine if you can drag items to and from the Personal Toolbar
+R-62,D&D Bookmarks menu to toolbar,"Verify that you can drag a bookmark from the Bookmarks menu
+      to the Personal Toolbar."
+R-63,Dragging links to AIM,"Verify that you can drag a URL or page content to
+      an AIM window"
+R-67,Save Form Data - edit menu,Verify that you can save a form's data from the edit menu.
+R-77,Edit Form Data - cancel,"Verify that if you enter data in the Form Manager and then
+      click cancel, the data has not been saved"
+R-78,Delete Form Data - remove field value,"Verify that if you delete data in the Form Manager, that this
+      data is not shown as an option when prefilling a form."
+R-79,Delete Form Data - cancel,"Verify that if you delete data in the Form Manager then
+      click cancel, the data has not been deleted"
+R-85,Index,"Verify that there is an in Index of help content and a list of
+        keywords to links in the help content. (Verify the content is in local
+        documents)"
+R-89,TS/IM,"Verify that there is Troubleshooting Help about the problem ""if you
+        can't send Instant Messages."""
+R-92,Glossary,"Verify that in the Glossary there includes a section for an
+        Intro/tutorial for NS6."
+R-93,Glossary,"Verify that in the Glossary there includes a section for an Upgrade
+        Guide."
+R-95,Forward/Back,Verify the functionality of the forward/back buttons in Help
+R-97,Page up/down,"Verify that page up and down, in fact, page up and down in
+        help"
+R-103,Browsing the Web,"Determine whether Browsing the web help content displays
+        correctly"
+R-110,Security and Privacy,Determine whether Security and Privacy displays correctly
+R-111,Same time messaging,Determine whether Same time messaging displays correctly
+R-114,New to the net tutorial,"Determine whether the New to the net tutorial displays
+        correctly"
+R-119,About,Determine whether the About Netscape displays correctly
+R-120,Short Cuts,"Determine that you can open all the selections in the Help drop
+        down menu using short cut buttons."
+R-126,Erase all,Clear all of history
+R-128,Change grouping,Change the History View to Group by Day|Site|None
+R-129,Sort by columns,sort and reverse-sort per column
+R-131,Show/Hide columns,Show and hide columns.
+R-134,Go menu list,Verify correct recently visited sites are in go menu.
+R-140,Retain scroll position,"Verify that browser remembers scroll state when returning to pages
+        in SH"
+R-141,Resize to window,"Determine that large Images can be resized to the browser window
+        and will not cause you to scroll in order to view entire image."
+R-145,Save Image,"Determine that you can right click an image and save to your local
+        drive."
+R-149,Image Display,"Determine whether images are properly redithered upon system
+        bit-depth changes."
+R-155,Animated Images,"Determine whether displaying animated GIFs result in single server
+        request for the image, rather than additional requests upon each frame
+        change."
+R-156,Animated Images,"To determine whether multiple differing animated images on the same
+        page are properly displayed"
+R-159,Image Display,"Determine whether GIF 89a images are properly displayed across
+        different bit depths."
+R-161,Test applets in HTML tags,"Test applets within <embed>, <applet> and 
+  <object> tags"
+R-162,Test Liveconnect functionality with applets,Test applets with liveconnect
+R-164,Master Password prompt,"Verify that the master password is visually distinctive from other
+        password prompts (indicates the functionality and importance of the
+        master password)"
+R-166,"Save username and password, yes","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-167,"Save username and password, never for this site","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-170,"Activiation, Http Authentication","Need a good working case for this, working on
+      it"
+R-176,"Preferences, view saved passwords","Verify that when you have saved a username and password in password
+      manager, this information can be viewed in the password manager through
+      preferences"
+R-180,"Preferences, passwords never saved, remove","Verify that you can remove a site and username from the passwords
+      never saved section of password manager (ivillage.com)"
+R-186,"Tasks, passwords never saved, remove","Verify that you can remove a site and username from the passwords
+      never saved section of password manager"
+R-189,Page with various formats,Determine whether a page with various formats prints properly
+R-190,Test Page,Print a test page and check to see if it prints properly
+R-197,Print Mozillazine poll result page,Determine if the Mozillazine Poll results page prints properly
+R-199,Sample XML Pages for printing,Determine if XML pages print properly
+R-202,Print images,Determine if images print correctly
+R-203,Print Lists,Determine if lists print correctly
+R-204,Print Tables,Determine if tables print correctly
+R-205,Print Character Styles,Determine if character styles print correctly
+R-206,Print Paragraph Styles,Determine if paragraph styles print correctly
+R-209,Off-Line Printing,Determine that off-line printing works
+R-212,Macromedia Flash plugin,Determine if flash movies play correctly.
+R-221,Search button,"Verify that clicking search button will search text entered in
+      URLBar."
+R-222,URL/Sidebar interaction,Verify that starting a URL bar search triggers the sidebar
+R-231,Discontiguous (disjoint) selection,"Determine whether discontiguous selection of table cells function
+        properly."
+R-232,Shift Select,"Determine whether shift-select gestures for text function
+        properly."
+R-235,Startup,Check default panels and default open panels(content loaded?)
+R-238,Width,Retaining non-default size on reopen or new window
+R-244,Add/Remove,Delete a panel
+R-246,Add/Remove,Verify list of available remote panels
+R-248,Preview,Test the previewing of panels
+R-249,Customization,Test the Customization of panels
+R-250,Re-Order,Verify reordering of panels works
+R-260,Basic access to dialog,Tests to access this dialog from the menubar and keyboard.
+R-264,URL in an editor window,"Open web location in a Composer window. Includes test to dismiss
+        dialog."
+R-265,URL autocompletion,"After viewing a file/page or three, test URL
+        autocompletion: test for current browser, new browser and new editor
+        windows."
+R-266,Nonexistent URL,Open a nonexistent (bogus) web location.
+R-269,Local file in an editor window,"Open local files (both HTML and plain text tested) in a Composer
+        window. Includes tests to dismiss dialog."
+R-272,Basic access,"Access from main menu, keyboard accelerator, access keys."
+R-274,Use on Mac OS,"Use of the native Mac OS file picker to navigate through
+        directories and open files (html, plaintext, image). Cancellation also
+        tested."
+R-275,Use on unix,"Use of the XUL file picker on Linux to navigate through 
+        directories and open files (html, plaintext, image). Resizing,
+        selection/scrolling, cancellation also tested. Test last
+        directory-viewed."
+R-277,Basic find in page and frame content,"Find in html page and html frame documents. Test Find Again and
+        cancellation. Test for NOFRAME content."
+R-281,Find direction,"Find forwards and backwards within a document. Test Find
+        Again."
+R-283,Find in input (editable) textfield,Attempt to find strings within an input textfield.
+R-284,Basic access,"Access from main menu, keyboard accelerator, access keys."
+R-285,Context menu access,Viewing page and frame source via context menu.
+R-286,View source of other content,"View source of plaintext, xml page, ftp listing."
+R-290,Color coding,"Verify the expected displayed color for content, tags/attributes,
+        values, script code, entities, etc."
+R-297,Check for Themes,"Verify both Classic and Modern exist under the themes
+        preferences"
+R-300,Testing under Modern theme,Verify Modern theme works as advertised
+R-301,Check the appearance of browser,"Visually inspect menu bar, floating component bar and all the
+        tool bars"
+R-304,"Verify all the selectable items on other applications under
+        Classic theme","Click through all the items on menu bar and tool bars under AIM,
+        Composer, Mail and Address book to see all the looks and feel are
+        consistence under Classic theme"
+R-314,Stretch Window Vertically,"Grab top/bottom window edge and drag to resize. Not available on
+        Mac."
+R-321,Reorder,"Verify that toolbars can be dragged&dropped to change their
+        order"
+R-324,Buttons,Verify that each buttons executes as appropriate.
+R-325,Correct items/links,Verify that the correct items are in the taskbar.

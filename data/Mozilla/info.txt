@@ -1,0 +1,3 @@
+This folder contains:
+- RE.csv & ST.csv > the full Mozilla dataset files
+- 10 randomly sampled subset directories with sample size = 25

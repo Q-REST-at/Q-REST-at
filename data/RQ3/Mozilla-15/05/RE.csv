@@ -1,0 +1,28 @@
+ID,Feature,Description
+R-2,Add Bookmark,"Verify that bookmarks are properly added to bookmarks file and appear
+      in all access points."
+R-15,View item properties,"Verify that view properties works as appropriate for bookmarks,
+      folders, and separators(negative)"
+R-51,D&D from the desktop – Images,"Confirm that dragging a supported image file
+       to the browser window display the file"
+R-87,Index,"Verify that there is an in Index of help content and a list of
+        keywords to links in the help content."
+R-91,Glossary,"Verify that in the Glossary there includes a section on tips and
+        tricks/tip of the day."
+R-110,Security and Privacy,Determine whether Security and Privacy displays correctly
+R-114,New to the net tutorial,"Determine whether the New to the net tutorial displays
+        correctly"
+R-126,Erase all,Clear all of history
+R-165,Replace Forgotten Master Password,"Verify that the process to replace a forgotten master password is
+      easier/more discoverable (though encrypted information should still be
+      lost to the user who has forgotten their password)."
+R-184,"Tasks, passwords saved, remove","Verify that you can remove a username and password for a given site
+      and it will no longer autofill on that sight nor will it be listed in
+      password manager (netscape.com)"
+R-206,Print Paragraph Styles,Determine if paragraph styles print correctly
+R-260,Basic access to dialog,Tests to access this dialog from the menubar and keyboard.
+R-266,Nonexistent URL,Open a nonexistent (bogus) web location.
+R-274,Use on Mac OS,"Use of the native Mac OS file picker to navigate through
+        directories and open files (html, plaintext, image). Cancellation also
+        tested."
+R-296,Select and copy,Select and copy from the info window.

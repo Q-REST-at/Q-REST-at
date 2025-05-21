@@ -1,0 +1,7 @@
+ID,Purpose,Test steps
+21,Security log,Verify that all relevant information is logged in the security log
+49,Scaling of environment,Measure performance during normal reporting operation. Increase CPU & RAM in clusters. Measure performance.
+71,Grid snapshot - Default values,Provoke an overvoltage on one of the meter's phases and verify that events are sent instantaneously to HES. Verify that the correct register (OBIS codes) is associated with the event. Verify that the Optical Eye shows the grid snapshot for the power misdirection event. Verify that the Optical Eye shows the grid snapshot for the voltage rise event
+255,Display of PQ values,Verify that in HES it is possible to analyze and visualize PQ values in e.g. graphs and bars.
+483,Quantity of allowed faulty meters Cat1 - RISE,"During the expected lifetime of the Metering Units, the occurrence of faults (requiring meter replacement) shall not exceed 0.75 % per year of the installed volume."
+484,Amount of allowed faulty meters Cat2 - RISE,"During the expected lifetime of the Metering Units, the occurrence of faults (requiring meter replacement) shall not exceed 0.75 % per year of the installed volume."

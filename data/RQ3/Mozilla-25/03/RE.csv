@@ -1,0 +1,41 @@
+ID,Feature,Description
+R-10,Edit item properties,"Verify that changes to an item are saved without loss of item
+      integrity."
+R-17,Custom Keywords,surf using user-defined 'custom keyword'.
+R-19,Resize columns,Verify that columns are resizable to show/hide more of entries
+R-20,Show/Hide columns,Show and hide columns.
+R-47,D&D to Dialog,"Confirm that text, links, and images dragged to a
+      non-modal dialog are handled properly"
+R-64,Form Manager - Autocomplete,"113893Implement New Form Functionality
+      (waiting on bug status)"
+R-65,Form Manager - Pop-up,"Verify that a form fill popup menu is activated
+      when a field gets accessed that has been saved in form
+      manager data."
+R-69,Save Form Data - dialog yes,"Verify that you can save a form's data from the
+      popup dialog box and you click yes."
+R-89,TS/IM,"Verify that there is Troubleshooting Help about the problem ""if you
+        can't send Instant Messages."""
+R-107,Understanding Privacy,"Determine whether Understanding Privacy help content displays
+        correctly"
+R-125,Delete multiple entries,Delete multiple History entries
+R-129,Sort by columns,sort and reverse-sort per column
+R-163,Test lifecycle of applets,Test lifecycle of applets
+R-173,"Password Manager, multiple passwords","Verify that when you have saved a username and password for a website
+      and you later change the password, that password manager picks up the new
+      password"
+R-179,"Preferences, passwords saved, remove all","Verify that you can remove all username and password information and
+      it will no longer autofill nor will anything be listed in password
+      manager"
+R-199,Sample XML Pages for printing,Determine if XML pages print properly
+R-201,Print some HTML 4.0 pages,Determine if HTML 4.0 pages print properly
+R-214,Quicktime tests,Determine if quicktime movies play properly
+R-220,Search button,Verify that just clicking Search button goes to search page
+R-242,Add/Remove,Check that addition of a panel works
+R-255,Bookmarks,Verify that links in Bookmarks work
+R-262,URL in current browser window,"Open a web location (URL) in the current Navigator window. Includes
+        test to dismiss dialog."
+R-293,Other content,"Attempt to view page info for plain text, xml, ftp listing,
+        directory listing..."
+R-309,Active/Inactive Window,"The active window is visually distinct, inactive = grey title
+        bar."
+R-324,Buttons,Verify that each buttons executes as appropriate.

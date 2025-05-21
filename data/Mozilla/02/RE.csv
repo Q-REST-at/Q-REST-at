@@ -1,4 +1,38 @@
 ID,Feature,Description
-R-081,History columns shall be resizable to show/hide more of entries.,History columns shall be resizable to show/hide more of entries.
-R-083,Recently visited sites shall be re-visited via Back and Forward button dropdown menu.,Recently visited sites shall be re-visited via Back and Forward button dropdown menu.
-R-129,Off-line printing shall function correctly.,Off-line printing shall function correctly.
+R-11,Delete Folder,Verify folder(s) are correctly deleted.
+R-14,Save State,Verify that changes are saved over restart/crash
+R-20,Show/Hide columns,Show and hide columns.
+R-53,D&D from the destkop – Invalid Items,"Confirm that invalid items dragged to the
+      browser window are handled properly"
+R-81,Installation,"Verify that it is possible to install only the needed help files
+        (for components that are actually installed)"
+R-83,Search,"Verify that you have the ability to search by typing keyword
+        synonyms, and verbs to bring up related topics in help content. Verify
+        that if the entered phrase may not actually exist in the help document,
+        but it is related to topic."
+R-118,Feedback Center,Determine whether the Feedback Center displays correctly
+R-121,Record sites,Verify that visited links are recorded.
+R-122,Record after redirect,"Verify that the correct link is recorded after a server
+        redirect."
+R-123,Load recorded url,"Verify that double-clicking on a history link causes it to be
+        launched in a browser window."
+R-124,Delete one entry,Delete a History entry
+R-125,Delete multiple entries,Delete multiple History entries
+R-156,Animated Images,"To determine whether multiple differing animated images on the same
+        page are properly displayed"
+R-158,Image Display,"Determine whether GIF 87 images are properly displayed across
+        different bit depths."
+R-160,Stress,"Determine whether the web brower gracefully deals with unusual,
+        corrupted, or invalid GIF images."
+R-190,Test Page,Print a test page and check to see if it prints properly
+R-197,Print Mozillazine poll result page,Determine if the Mozillazine Poll results page prints properly
+R-203,Print Lists,Determine if lists print correctly
+R-211,Print Range,Determine that print range works properly
+R-220,Search button,Verify that just clicking Search button goes to search page
+R-243,Add/Remove,Adding a already added panel
+R-267,Local file in current browser window,"Open local files (both HTML and plain text tested) in the current
+        Navigator window. Includes tests to dismiss dialog."
+R-286,View source of other content,"View source of plaintext, xml page, ftp listing."
+R-300,Testing under Modern theme,Verify Modern theme works as advertised
+R-323,Add a folder,"Verify that a folder added to the personal toolbar functions
+        properly."

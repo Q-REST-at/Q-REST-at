@@ -1,0 +1,66 @@
+ID,Purpose,Test steps
+T-104,"Purpose
+This basic testcase is designed to verify that Mail and News content
+  comes up when clicked and is displayed corectly and prints correctly","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
+
+Steps/Description
+Select the toplevel Help menu. Select Mail and News Select all contents on right, copy and paste into your favorite
+    word processor and run spell check Click the printer icon
+
+Expected Results
+2. Mail and news content should come up with main topics on the left
+  and detailed information on the right
+3. There should be no spelling errors (Besides obvious computer terms
+  and websites)
+4. Mail and News content should print"
+T-184,"Purpose
+Verify that you can remove a username and password for a given site and it
+  will no longer autofill on that sight nor will it be listed in password
+  manager (netscape.com)r","Initial Conditions
+Password manager should be enabled, in a different browser create an
+  account at a site that requires a username and password such as
+  http://www.netscape.com
+
+Steps/Description
+Go to a site that you have not been to before in Netscape 6, such as
+    http://www.netscape.com Enter your username and password When a dialog appears asking if you would like to save this
+    information, click yes From the tasks drop down menu selecet privacy and security->password
+    manager->view stored passwords Highlight this sight and username in the list and click remove Click cancel Click View saved passwords Highlight this sight and username in the list and click remove Click ok Click View saved passwords
+
+Expected Results
+3. Your username and password should be saved to the password manager
+4. A list of saved passwords should appear with your saved sight and
+  username appearing in the list
+5. This site's information should no longer appear in the list
+6. Window should close
+7. This site should once again, be in the list of saved passwords
+8. This site and username should no longer appear on the list of saved
+  passwords
+10. This site should be removed from the list"
+T-202,"Purpose
+Determine that Seamonkey prints various images properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to open a small
+    .gif image. Click here to open a large
+    .gif image. Click here to open a small
+    .jpg image. Click here to open a largel
+    .jpg image. Click here to open a .xbm image. Click here to open an animated
+    .gif image. Select the menu option ""FILE | PRINT"" to print the image Press ""OK"" to print the image. Similarly, print all the images one by one.
+
+Expected Results
+All images should print properly."
+T-208,"Purpose
+Determine that Page Setup dialog comes up properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Do ""File | Page Setup""
+
+Expected Results:
+Native Page Setup dialog should come up
+* - This menu option ""Page Setup"" should not be visible on windows/linux
+  platforms."

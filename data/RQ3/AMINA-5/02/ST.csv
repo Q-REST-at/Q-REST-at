@@ -1,0 +1,8 @@
+ID,Purpose,Test steps
+43,Function of the metering unit after loss of phases on Cat1,Remove voltage on two of three phases
+44,Function of the metering unit after phase loss on Cat2,Remove voltage on two of three phases
+58,Integrations via files,Put the import file in the import folder.
+220,Recording of measurement value,"Verify that the measured value recorded and stored in the HES is uncorrupted, i.e. exactly the same value as recorded by the Metering Unit.
+Request a timestamped measurement value from the Meter and compare what is displayed on the Meter with the information coming into the HES."
+404,View meters with communication problems in map,Verify that in HES it is possible to visualize Metering Units with communication problems in a graphical view/map that can be zoomed in and out.
+489,Recovery time after communication breakdown max 60 min,Break the communication link from meter. Voltage is left in meter. Wait one hour and turn on the link again.

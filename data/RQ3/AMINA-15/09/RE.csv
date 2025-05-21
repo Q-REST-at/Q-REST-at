@@ -1,0 +1,35 @@
+ID,Feature,Description
+S1,Legal requirements,"Laws, Regulations and standards applicable at the time of signing the contract with regard to function and safety shall be fulfilled for all parts of the Measuring System in accordance with points 1-13 below.
+1. Ellag SFS 1997:857.
+2. The Ordinance (SFS 1999:716) on metering, calculation and reporting of transmitted electricity.
+3. EIFS 2016:2 - The Swedish Energy Markets Inspectorate's Regulations and General Advice on Metering, Calculation and Reporting of Transmitted Electricity.
+4. STAFS 2016:1 - Swedac's Regulations on measuring instruments.
+5. STAFS 2016:4 - Swedac's Regulations and general guidelines on meters for active electrical energy.
+6. STAFS 2009:8 - Swedac's Regulations and general advice on metering systems for the measurement of transmitted electricity.
+7. STAFS 2009:9 - Swedac's Regulations and general advice on periodic inspection of meters for active electrical energy.
+8. EU MID Directive 2014/32/EU.
+9. Extended type approval and certification of Category 1 and 2 meters according to method SPM 1618, test with 12kV surge voltage.
+10. Standards: SS-EN61869-1, SS-EN61869-2, SS-EN50470 and IEC 62056 (DLMS/COSEM suite).
+11. EU Regulation 2016/679 of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).
+12. The EU Declaration of Conformity shall be available for the Metering System if it or parts thereof are manufactured in a country outside the EU.
+13. Law (2003:389) on electronic communications."
+S56,Customer interface is disabled by default,"On delivery from the factory, the Customer Interface of the Metering Unit shall be deactivated."
+S58,Cumulative calculator,The metering unit shall be equipped with a cumulative counter and display at least 7 integer digits and 3 decimal digits.
+S73,Legible labeling,"The marking of the meter's production number must be clearly legible
+- i.e. the font size must not be too small so that the number becomes difficult to read, e.g. for a customer"
+S89,Metering unit in HES,"In HES there should be functionality for automatic and manual administration:
+- Installation of new Metering Unit
+- Replacement of the Metering Unit
+- Decommissioning of Metering Unit"
+S135,Time interval for metric values,There shall be functionality to select different time intervals and time resolution for the Metrics presented.
+S163,Request further confirmation,"Commands, initiated by the User in HES, which may have serious consequences in case of incorrect handling (deletion of stored measurement and structure data and disconnection and reconnection of power) shall require additional confirmation before execution"
+S192,Licensed telecommunications networks,"If the communication solution includes licensed telecommunications networks, it must comply with Ordinances and Regulations in accordance with PTSFS 2015:2 issued by PTS (Swedish Post and Telecom Authority)."
+S215,Integrations via files,HES should be able to handle integrations via files.
+S237,Logging unique identity,The unique identity of the subject shall be recorded for each logged record.
+B31,Record when power output exceeds limit value,"The metering system shall record and store information when the following Events occur:
+15. Total power consumption exceeds the set limit value"
+B33,Register overheating in connection,"The metering system shall record and store information when the following Events occur:
+17. In case of a overheating in connection"
+B34,Configure records to be stored for events,"For each Event, it shall be possible to optionally configure which registers (OBIS codes) in the Metering Unit are to be stored."
+B71,Help function,The HES user interface shall (LB71) include a help function to assist the User in understanding how to perform tasks using the functionality of the system.
+B87,copy static fields,"It shall be possible for the User to be able to copy static fields in HES such as headers, status, responses to Events in the system."

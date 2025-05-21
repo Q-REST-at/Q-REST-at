@@ -1,0 +1,18 @@
+ID,Purpose,Test steps
+21,Security log,Verify that all relevant information is logged in the security log
+50,50 simultaneous users,"Run operations with a logged-in user. For example, searches and exports. Measure response times in the web interface. Run the same operations with 50 concurrent users. Measure response times in the web interface."
+89,Test report,"The Contractor shall establish a test report for the test phases for which the Contractor is responsible during the Delivery Project, as shown in Figure 1 in clause 3.2."
+90,Content of the test report,"The test report shall contain at least:
+-Test cases executed 
+-Results of the tests 
+-Residual errors, if any 
+-Residual test cases, if any 
+-Suggested actions"
+219,Setting the number of decimal places,Verify that it is possible to configure the number of decimal places to be displayed for a measurement value.
+224,Filtering and sorting in alarm list,Verify that a User has the ability to filter and sort in the alarm list.
+248,Metering unit display - Cat1 1 phase,Verify that the display of the Metering Unit for each phase can show the instantaneous value of voltage. Verify that the display of the Metering Unit for each phase can show the instantaneous value of current. Verify that the display of the Metering Unit for each phase can show the instantaneous value of power for the extraction and input of electricity.
+249,Metering unit display - Cat1 3 phase,Verify that the display of the Metering Unit for each phase can show the instantaneous value of voltage. Verify that the display of the Metering Unit for each phase can show the instantaneous value of current. Verify that the display of the Metering Unit for each phase can show the instantaneous value of power for the extraction and input of electricity.
+250,Metering unit display - Cat2,Verify that the display of the Metering Unit for each phase can show the instantaneous value of voltage. Verify that the display of the Metering Unit for each phase can show the instantaneous value of current. Verify that the display of the Metering Unit for each phase can show the instantaneous value of power for the extraction and input of electricity.
+251,Correct meter setting,"Verify that the Meter Reading on the Metering Unit always matches the numerical capacity of the collected Energy Value and the display, even if the Meter Readings have rolled over."
+271,copy static fields,"Verify that it is possible to copy static fields in HES such as headers, status, responses to Events in the system."
+615,Setting the number of decimal places,Verify that the number of decimal places displayed corresponds to the number of decimal places configured to be displayed for a measurement value. Verify that the number of decimal places displayed corresponds to the number of decimal places configured to be displayed for a measurement value.

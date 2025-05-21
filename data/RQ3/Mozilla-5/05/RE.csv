@@ -1,0 +1,10 @@
+ID,Feature,Description
+R-56,D&D URL Proxy Icons,"Verify that dragging the URL proxy icon to a browser
+      window opens that URL in the target window"
+R-131,Show/Hide columns,Show and hide columns.
+R-182,"Tasks, view saved passwords","Verify that when you have saved a username and password in password
+      manager, this information can be viewed in the password manager through
+      tasks"
+R-196,CSS Testcases for printing,Determine if CSS pages print properly
+R-234,JavaScript,"Determine whether text from a JavaScript applet is properly
+        selected in conjunction with other page content."

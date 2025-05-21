@@ -12,10 +12,15 @@
 
 # Data files
 #data/
-#out/
-#res/
+out/
+res/
+profiles/
 #archive/
-containers/
+
+# See: https://github.com/SEM25-BSc/REST-at-upstream/tree/stable
+*.sif
+**requirements.txt
+recipes/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

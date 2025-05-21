@@ -1,0 +1,127 @@
+ID,Purpose,Test steps
+T-6,"Purpose
+This basic testcase is designed to verify that bookmarks are added and
+  deleted from the personal toolbar properly.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks . You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Open the Manage Bookmarks Window. Edit|Cut or Edit|Copy any bookmark. Select the 'Personal Toolbar Folder'. Double-click it or single-click
+    the triangle to open the folder. Select Edit|Paste. Go to a browser window and click once on the new link in the personal
+    toolbar.
+
+Expected Results
+The bookmark you added should appear immediately on the personal
+    toolbar in a browser window and be activated by a single click. It should also be present as a subitem under ""Personal Toolbar Folder""
+    in the toplevel Bookmarks menu, in the bookmarks popup within the personal
+    toolbar itself, and in the bookmarks sidepanel."
+T-40,"Purpose
+Determine whether HTML entities are
+  properly copied from web pages.","Initial Conditions
+None.
+
+Steps/Description
+View the below-linked web page. Copy its content. Paste it into a text editor, such as WordPad (Windows) or BBEdit
+    (Mac).
+
+Expected Results
+After step #3, the character entities should continue to display correctly
+  when pasted out of the browser."
+T-59,"Purpose
+Determine whether the Bookmark Manager properly handles items dragged onto
+  it.","Initial Conditions
+Download the test archive for your system, linked below, to your computer
+  and decompress it.
+
+Steps/Description
+Download the test archive for your system, linked below, to your
+    computer and decompress it. On Windows, drag the Netcenter file to the to the Bookmark
+    Manager On Mac OS, drag the Mac OS bookmark and Netscape
+    Bookmark files to the Bookmark Manager Drag a disk icon (e.g. Macintosh HD on Mac OS, or C:\ on Windows) to the Bookmark Manager Simultaneously drag the mozilla.gif, mozilla.jpg and OwlAlpha.png files
+    to the Bookmark Manager Drag mozillazine.html file to the
+    Bookmark Manager Drag zinealias.html shortcut (alias) to
+    the Bookmark Manager (Mac OS) Drag the contents of the Stress Tests folder simultaneously to
+    the Bookmark Manager
+
+Expected Results
+2. A URL pointer to the hard drive should be added.
+3. Bookmark links to each of the 3 image files should be created.
+4. A bookmark to the mozillazine.html file should be created
+5. A second bookmark to the mozillazine.html file should be created
+6. (Mac OS) Bookmarks should be created for /. (slashdot.org) and dmoz%3A.org (dmoz.org)."
+T-163,"Purpose
+Determine that applet lifecycle works properly (init, start, stop...)","Initial Conditions
+Open the Java console from Tasks | Tools |  Java Console menu While performing every test, hit the BACK button and FORWARD button in
+    the browser and observe results in browser window or console
+
+Steps/Description
+Click the following testcase links
+Test 1 . Observe the clock display the
+    system time on your machine. Hit BACK and FORWARD
+    button and see that time changes and you see a different time with every
+    visit. Test 2 . Hit BACK and
+    FORWARD button on this page and observe that the init, start and
+    stop methods are called in that order in java console. Test 3 . Hit BACK and
+    FORWARD button on this page and observe that the init, start and
+    stop methods are called in that order in java console."
+T-173,"Purpose
+Verify that when you have saved a username and password for a website and
+  you later change the password, that password manager picks up the new
+  password","Initial Conditions
+Password manager should be enable and using a different browser, create a
+  username and passwords for a site such as lycos (http://my.lycos.com) or
+  another of your choice
+
+Steps/Description
+Go to a sight that requires a password, such as
+    http://my.lycos.com Enter a username and password and click sign in When presented with the save password dialog, click yes Shut down Netscape 6 In a different browser, return to the site and change your
+    password Open Netscape 6 Return to http://my.lycos.com (or other site, if used) Delete the prefilled password information and enter the new
+    password Click login Shut down Netscape 6 Open Netscape 6 Return to http://my.lycos.com (or other site, if used) The password and username information should be prefilled, click sign
+    in
+
+Expected Results
+3. The username and password should be saved in Password Manager
+9. You should be logged in to the site
+13. You should be logged in to the site
+9. The username and password should be saved in Password Manager
+12. You should be presented with a dialog box that offers a choice between
+  the two usernames
+13. You should be signed in to the site"
+T-233,"Purpose
+Determine whether drag-scrolling gestures function properly.","Initial Conditions
+None.
+
+Steps/Description
+View the attached drag-scroll-text.html test case If necessary, shrink the window so that the browser window contains
+    both horizontal and vertical scroll bars. Start from the first word (""Currently"") in the upper-left hand corner
+    of the web page, and drag-scroll to the bottom-right hand corner of the
+    page. From the final word (""component"") in the document, drag-scroll from the
+    lower-right hand corner of the web to the upper-left hand corner of the web
+    page. View the drag-scroll-text-frame.html test
+    case. For each the page's two frames, drag-scroll from the top of the page to
+    its bottom. View the drag-scroll-box.html test
+    case. Starting from the first word in the upper-left hand corner of the text
+    area, drag-scroll downwards to the end of the text content.
+
+Expected Results
+After Step #3, the page should be successfully drag-scrolled to the
+  bottom-right hand corner. (despite having to drag-scroll through several
+  table cells, and out of the table)
+After Step #4, the document should be successfully drag-scrolled to its
+  upper-left hand corner.
+After Step #6, drag-scrolling a frame should not impact the contents of
+  its neighbor frame.
+After Step #8, the entire text area should be selected."
+T-239,"Purpose
+Determine that the mouse cursor should change to the proper icon when
+  moved over links","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar, click on any of the default panel,say, CNN.com and
+    open it Moving the mouse over the links in the panel should change the mouse
+    icon thus making the user understand that the text is clickable Moving the mouse over plain html text should also change the mouse
+    icon Moving the mouse away from the clickable text(to a blank space) should
+    change the mouse icon again
+
+Expected Results
+Mouse icons should change properly"

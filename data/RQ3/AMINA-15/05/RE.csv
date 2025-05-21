@@ -1,0 +1,16 @@
+ID,Feature,Description
+S2,Traceable metering devices,"All delivered metering devices, down to component level, shall be traceable and can be linked at least to the manufacturing batch and time of manufacture"
+S86,Management of both primary and secondary registration,"The metering units shall be able to handle both primary and secondary registration of Metrics,"
+S119,Energy values are exported within 30 sec,The energy values (15-minute values) shall be exportable from HES via integrations to other systems within 30 seconds after registration in HES
+S155,Calendar in Swedish format,"HES calendar should be displayed in Swedish format (YYYY-MM-DD, Y=year, M=month, D=day)"
+S182,Life expectancy,Communication equipment shall have a life expectancy of >= 15 years from the date of delivery to GE.
+S196,Virtual and physical servers,HES should be able to run on virtual servers as well as physical ones.
+S241,Authentication against neighboring systems,Authentication shall be used when the Metering System interacts with neighboring systems.
+B48,sealing device,The sealing device of the metering unit shall be raised and clearly visible for easy and accessible insertion of the sealing wire.
+B53,minimum rated current 5A,The metering unit shall be rated for a minimum current of 5 (Imax 100) A.
+B83,View meters with communication problems in map,"In HES, it should be possible to visualize Metering Units with communication problems in a graphical view/map that can be zoomed in and out."
+B90,Mass deletion,"In HES, there shall be a function to perform mass deletion of overall structure data objects so that all linked relations are also deleted. E.g. that this is implemented via group membership."
+B105,Database hosting,The HES database must be able to be hosted in the Contracting Authority's database hosting facility.
+B106,Hardware for the user interface,"HES should be designed to work with different types of computers, tablets and smartphones, with different architectures and operating systems."
+S537,Design of the solution,The Supplier shall design and construct the Solution in accordance with the requirements set out in Appendix B.2.1 Technical Solution Requirements Specification.
+S559,Support under UAT,The Supplier shall be present at the Purchaser's premises and assist the Purchaser in carrying out the UAT.

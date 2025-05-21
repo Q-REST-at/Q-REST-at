@@ -1,0 +1,54 @@
+ID,Purpose,Test steps
+T-15,"Purpose
+This testcase is designed to verify that the view properties feature works
+  as prescribed for various items.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select a bookmark. Select File|Bookmark Properties. Verify, click
+    ""OK"". Select a folder. Select File|Bookmark Properties. Verify, click
+    ""OK"". Select a separator. Select File|Bookmark Properties.
+
+Expected Results
+For step(2) the Bookmark Properties dialog should appear. It should
+    have fields for name, location(url), custom keyword, and description. There
+    should also be a section for setting update and notification options. For step(3) the Bookmark Properties dialog should appear. It should
+    have fields for name and description. No other fileds should appear in this
+    dialog. For step(4) no dialog should appear."
+T-44,"Purpose
+To verify that dragging an image onto the desktop saves the image.","Steps/Description
+Open the testfile.html test
+    file Drag the Space Shuttle image onto the desktop
+
+Expected Results
+2. The image should be saved onto the desktop.
+On Mac OS, the image should also have a file type of JPEG; check using a
+  tool like Resorcerer or ResEdit.)"
+T-166,"Purpose
+Verify that when you save a username and password for a particular
+  website, you can view this information from the preferences panel.","Initial Conditions
+Password manager should be enabled, in a different browser create an
+  account at a site that requires a username and password such as
+  http://www.ebay.com
+
+Steps/Description
+Go to a site that you have not been to before in Netscape 6, such as
+    http://www.ebay.com Enter your username and password When a dialog appears asking if you would like to save this
+    information, click yes From the edit drop down menus, select preference Click on the arrow next to advanced Click on passwords Click View saved passwords Verify that your saved username and password appear in the list
+
+Expected Results
+4. Preference pane should open
+5. Advanced options should appear
+6. Password manager options should appear on right pane
+7. A list of saved passwords should appear"
+T-215,"Purpose
+Determine that files with various formats play properly","Initial Conditions
+You can use any compatible plugin to test these files. Quicktime is
+  preferred.
+
+Steps/Description
+Click here for some audio test files Click here for some sound tests Click here for audio tests page Click here for AIF samples Click here for AU samples Click here for MIDI samples
+
+Expected Results
+All sound files should play properly."

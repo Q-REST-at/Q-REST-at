@@ -1,0 +1,46 @@
+ID,Feature,Description
+R-8,Surf Bookmark,"Verify that double-clicking on a bookmark causes it to be launched in
+      a browser window"
+R-15,View item properties,"Verify that view properties works as appropriate for bookmarks,
+      folders, and separators(negative)"
+R-27,Delete multiple bookmarks,Verify that several bookmarks are deleted at one time.
+R-35,Overflow,"Determine whether extremely large text blocks can be copied from web
+      pages."
+R-48,D&D from the desktop – Folders,"Confirm that dragging a directory
+      to the browser window displays the folder contents"
+R-64,Form Manager - Autocomplete,"113893Implement New Form Functionality
+      (waiting on bug status)"
+R-69,Save Form Data - dialog yes,"Verify that you can save a form's data from the
+      popup dialog box and you click yes."
+R-75,Prefill - choose,"Verify that when you encounter a Web site that could be prefilled
+      and have several choices for fields that you are given the pre-fill
+      dialog and can select from the appropriate values and the information
+      is filled into the form."
+R-108,Creating web pages,"Determine whether Creating web pages help content displays
+        correctly"
+R-156,Animated Images,"To determine whether multiple differing animated images on the same
+        page are properly displayed"
+R-169,"Activation, disable after saved","Verify that when the password manager has been disabled, it is no
+      longer in use, even for passwords already saved"
+R-174,Preferences disable,"Verify that when you disable password manager from the preferences
+      panel, you no longer are asked if you would like to save passwords and
+      longer get prefilled info on sites"
+R-194,Print HTML forms and widgets,Determine if HTML forms and widgets print properly
+R-207,Print Preview,Determine if print Preview works correctly
+R-227,Drag-selection,"Currently, it is my understanding that there will be no new
+        features in this area (can monitor bug list)"
+R-234,JavaScript,"Determine whether text from a JavaScript applet is properly
+        selected in conjunction with other page content."
+R-243,Add/Remove,Adding a already added panel
+R-249,Customization,Test the Customization of panels
+R-254,What's Realted,Verify that links in What's Related panels work
+R-261,Basic UI and navigation,"Determine that interface features (buttons, textfield, droplist)
+        appear and behave as expected. Includes tests to dismiss dialog."
+R-267,Local file in current browser window,"Open local files (both HTML and plain text tested) in the current
+        Navigator window. Includes tests to dismiss dialog."
+R-272,Basic access,"Access from main menu, keyboard accelerator, access keys."
+R-273,Use on Win32,"Use of the native Win32 file picker to navigate through directories
+        and open files (html, plaintext, image). Cancellation also tested."
+R-287,Navigation/UI,"Scrolling and keyboard navigation within the source window. Also
+        should be able to use keyboard accelerators. Resize source window."
+R-291,Basic access,Access from main menu and access keys.

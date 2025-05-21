@@ -1,0 +1,8 @@
+ID,Purpose,Test steps
+29,Switching on and off and status of breakers from other GE system,Verify that switching on is not possible by integration from other system. Verify that switching off is not possible by integration from other system. Verify that status of switches is possible to see by integration.
+78,Dependencies with other systems,"For example, turn off the connection between Collection Manager and OMNIA Flex."
+143,Data in HES,"Verify that structure data can be handled in HES (e.g. Facility ID, Metering Unit). Verify that Metrics can be handled in HES (Metrics with e.g. ID number, status, timestamp). Verify that Events can be handled in HES (Event with e.g. Event ID, times, Alarms)"
+441,Visible manufacturing number - communication module - Cat1,Verify that a serial number on a Communication Module is positioned so that it is not visible on the front of the Metering Unit.
+442,Visible manufacturing number - communication module - Cat2,Verify that a serial number on a Communication Module is positioned so that it is not visible on the front of the Metering Unit.
+463,Terminal block - Cat1,Verify that the Metering Unit has terminal covers that cover the connection cable layer.
+464,Terminal block - Cat2,Verify that the Metering Unit has terminal covers that cover the connection cable layer.

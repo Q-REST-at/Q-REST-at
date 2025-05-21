@@ -1,0 +1,8 @@
+ID,Feature,Description
+R-11,Delete Folder,Verify folder(s) are correctly deleted.
+R-86,Favorite,"Verify that is it is possible to have favorite help topics -
+        similar to IE help which has a special tab to add favorite help
+        topics."
+R-214,Quicktime tests,Determine if quicktime movies play properly
+R-233,Drag Scroll,Determine whether drag-scrolling gestures function properly.
+R-298,Testing under Classic theme,Verify Classic theme works as advertised

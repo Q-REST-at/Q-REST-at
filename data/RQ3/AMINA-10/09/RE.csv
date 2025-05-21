@@ -1,0 +1,11 @@
+ID,Feature,Description
+S2,Traceable metering devices,"All delivered metering devices, down to component level, shall be traceable and can be linked at least to the manufacturing batch and time of manufacture"
+S38,Events linked to HES,Events and associated records (OBIS codes) shall be sent instantaneously to HES.
+S58,Cumulative calculator,The metering unit shall be equipped with a cumulative counter and display at least 7 integer digits and 3 decimal digits.
+S59,Metering unit display,"The display of the metering unit shall be able to show for each phase the instantaneous value of voltage, current, power for the output and input of electricity."
+S237,Logging unique identity,The unique identity of the subject shall be recorded for each logged record.
+B45,screw anchors,There shall be no protrusions around the screw fixings of the metering unit that limit the size of the screw head.
+B62,Energy values to other system within 10 sec,The energy values (15-minute values) shall be exportable from HES via integrations to other systems within 10 seconds after registration in HES.
+B83,View meters with communication problems in map,"In HES, it should be possible to visualize Metering Units with communication problems in a graphical view/map that can be zoomed in and out."
+B113,Synchronization with GE controlled NTP,The metering system and surrounding infrastructure located within GE's network shall be synchronized with GE controlled NTP.
+S557,Scope of UAT,The purchaser's UAT (User Acceptance Test) shall include testing and verification of all requirements according to the Specification unless otherwise agreed.

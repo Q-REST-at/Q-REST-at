@@ -1,0 +1,16 @@
+ID,Feature,Description
+S8,Block switches from HES,The meter switch shall be capable of being blocked from the HES to prevent local switching on of the power.
+S27,type approval,"Extended type approval and certification of Metering Devices shall be carried out according to method SPM 1618, test with 12 kV surge voltage."
+S56,Customer interface is disabled by default,"On delivery from the factory, the Customer Interface of the Metering Unit shall be deactivated."
+S81,Plinth cap,The metering unit shall have a terminal cover that covers the connection cable layer.
+S86,Management of both primary and secondary registration,"The metering units shall be able to handle both primary and secondary registration of Metrics,"
+S148,Time stamp for metric values,Each Metric shall be time stamped with the current time it was received by HES.
+S152,Selecting dates with calendar function,"Where there is a need to select dates in HES, this should be possible through a time and calendar function."
+S163,Request further confirmation,"Commands, initiated by the User in HES, which may have serious consequences in case of incorrect handling (deletion of stored measurement and structure data and disconnection and reconnection of power) shall require additional confirmation before execution"
+S182,Life expectancy,Communication equipment shall have a life expectancy of >= 15 years from the date of delivery to GE.
+S231,Encryption keys,The metering system shall be able to manage and administer the encryption keys of the metering units.
+B34,Configure records to be stored for events,"For each Event, it shall be possible to optionally configure which registers (OBIS codes) in the Metering Unit are to be stored."
+B73,Filtering and sorting in alarm list,A User shall have the possibility to filter and sort the alarm list.
+B89,Request further confirmation,"Commands, initiated by the User in HES, which may have serious consequences in case of incorrect handling (deletion of stored measurement and structure data and switching off and on of power) shall require additional confirmation before execution. Other commands shall be executed directly."
+B91,Configuring the Metering Unit,Configuration of the Metering Device from HES shall be possible without downloading new Firmware.
+S557,Scope of UAT,The purchaser's UAT (User Acceptance Test) shall include testing and verification of all requirements according to the Specification unless otherwise agreed.

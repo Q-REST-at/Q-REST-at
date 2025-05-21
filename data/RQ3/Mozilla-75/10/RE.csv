@@ -1,0 +1,125 @@
+ID,Feature,Description
+R-3,File Bookmark,"Add a new bookmark into a specific location within the bookmarks
+      hierarchy."
+R-4,Create new bookmark,Verify new bookmarks can be created (not added).
+R-5,Delete Bookmark,"Verify that bookmarks are properly deleted from bookmarks file and
+      disappear from all access points."
+R-10,Edit item properties,"Verify that changes to an item are saved without loss of item
+      integrity."
+R-12,Show/Hide Folder,Verify that disclosure triangles/folder icons are in sync.
+R-36,Overflow,"Determine whether extremely large images can be copied from web
+      pages."
+R-41,D&D Links across browser windows,"Confirm that dragging a link across browser windows
+      opens the link."
+R-44,D&D Images onto the Desktop,Vrify that dragging an image onto the desktop saves the image
+R-47,D&D to Dialog,"Confirm that text, links, and images dragged to a
+      non-modal dialog are handled properly"
+R-49,D&D from the desktop – Shortcuts,"Confirm that dragging an Internet shortcut to the
+      browser window opens the URL"
+R-50,D&D from the desktop – Text files,"Confirm that dragging a text file to the browser
+      window displays the document contents"
+R-61,"D&D <a href=""/drag-url-browser-toolbar/"">
+      Given link is non-fetchable, non-retrievable Personal Toolbar",Determine if you can drag items to and from the Personal Toolbar
+R-63,Dragging links to AIM,"Verify that you can drag a URL or page content to
+      an AIM window"
+R-70,Save Form Data - dialog no,"Verify that you can stop a form's data from being saved from
+      the popup dialog box, and you click no."
+R-77,Edit Form Data - cancel,"Verify that if you enter data in the Form Manager and then
+      click cancel, the data has not been saved"
+R-78,Delete Form Data - remove field value,"Verify that if you delete data in the Form Manager, that this
+      data is not shown as an option when prefilling a form."
+R-79,Delete Form Data - cancel,"Verify that if you delete data in the Form Manager then
+      click cancel, the data has not been deleted"
+R-80,F1 shortcut key,Verify that the F1 key brings up the Help dialog
+R-86,Favorite,"Verify that is it is possible to have favorite help topics -
+        similar to IE help which has a special tab to add favorite help
+        topics."
+R-88,TS/Sign on,"Verify that there is Troubleshooting Help about the problem ""if you
+        can't sign on"""
+R-91,Glossary,"Verify that in the Glossary there includes a section on tips and
+        tricks/tip of the day."
+R-95,Forward/Back,Verify the functionality of the forward/back buttons in Help
+R-96,Tool bar Minimization,"Verify that minimization, maximize and close buttons of the toolbar
+        invoke the correct behavior"
+R-97,Page up/down,"Verify that page up and down, in fact, page up and down in
+        help"
+R-100,Drag Receipt,Verify that you can't drag docs into the help window
+R-106,Customizing Netscape 6,"Determine whether Customzing Netscape 6 help content displays
+        correctly"
+R-112,Streamlined Interface,Determine whether Streamlined Interface displays correctly
+R-113,The Best Standards Support,"Determine whether the Best Standards Support displays
+        correctly"
+R-116,Security Center,Determine whether the Security Center displays correctly
+R-118,Feedback Center,Determine whether the Feedback Center displays correctly
+R-121,Record sites,Verify that visited links are recorded.
+R-130,Resize columns,Verify that columns are resizable to show/hide more of entries
+R-131,Show/Hide columns,Show and hide columns.
+R-132,Don't record everything,"Verify that things that aren't supposed to be added to history
+        aren't (eg chorme:/// url's)"
+R-133,Don't show 302 redirect,Don't ever show 302 redirects in history
+R-137,Back and forward with frames,"Verify browser goes back and forward correctly from page with
+        frames."
+R-144,Resized to window,"Determine that after resizing an image to it's original size, it is
+        possible to resize to window again."
+R-152,Image Display,"Determine whether images load directly into the web browser from a
+        local hard drive."
+R-155,Animated Images,"Determine whether displaying animated GIFs result in single server
+        request for the image, rather than additional requests upon each frame
+        change."
+R-157,Image Display,"Determine whether X Bitmap (XBM) format images can be displayed.Note: XBM will not be supported in the initial 5.0
+          release."
+R-158,Image Display,"Determine whether GIF 87 images are properly displayed across
+        different bit depths."
+R-159,Image Display,"Determine whether GIF 89a images are properly displayed across
+        different bit depths."
+R-168,"Save username and password, no","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-169,"Activation, disable after saved","Verify that when the password manager has been disabled, it is no
+      longer in use, even for passwords already saved"
+R-170,"Activiation, Http Authentication","Need a good working case for this, working on
+      it"
+R-179,"Preferences, passwords saved, remove all","Verify that you can remove all username and password information and
+      it will no longer autofill nor will anything be listed in password
+      manager"
+R-180,"Preferences, passwords never saved, remove","Verify that you can remove a site and username from the passwords
+      never saved section of password manager (ivillage.com)"
+R-181,"Preferences, passwords never saved, remove all","Verify that you can remove all site and username information from the
+      passwords never saved section of password manager (ivillage.com)"
+R-185,"Tasks, passwords saved, remove all","Verify that you can remove all username and password information and
+      it will no longer autofill nor will anything be listed in password
+      manager (lycos.com)"
+R-188,Print a Page with frames,Determine whether a page with frames prints properly
+R-196,CSS Testcases for printing,Determine if CSS pages print properly
+R-198,Print large complex pages,Determine if  large page print properly
+R-199,Sample XML Pages for printing,Determine if XML pages print properly
+R-208,Page Setup(mac only),Determine id Page Setup dialog works correctly
+R-210,Header/Footer Test,Determine that header/footer info gets printed
+R-222,URL/Sidebar interaction,Verify that starting a URL bar search triggers the sidebar
+R-230,Triple-click,Determine whether the triple-click gesture functions properly.
+R-232,Shift Select,"Determine whether shift-select gestures for text function
+        properly."
+R-233,Drag Scroll,Determine whether drag-scrolling gestures function properly.
+R-239,UI,Cursors should have the right icon when mousing over
+R-245,Add/Remove,Delete all panels
+R-251,Cancel,Verify that nothing changes when you cancel
+R-252,Save,Verify that order and panel list is immediately applied
+R-259,Add Panel using Javascript,Verify that adding of a panel using javascript works
+R-265,URL autocompletion,"After viewing a file/page or three, test URL
+        autocompletion: test for current browser, new browser and new editor
+        windows."
+R-272,Basic access,"Access from main menu, keyboard accelerator, access keys."
+R-280,Document wrapping,Find with and without document wrapping. Test Find Again.
+R-291,Basic access,Access from main menu and access keys.
+R-295,Navigation/UI,"Scrolling and keyboard navigation within the info window. Also
+        should be able to use [applicable] keyboard accelerators. Resize source
+        window. Manipulate the grippy."
+R-298,Testing under Classic theme,Verify Classic theme works as advertised
+R-303,Verify all the selectable items work under Classic theme,"Click through all the items on menu bar, tool bars, and floating
+        component bar under Classic theme"
+R-306,"Verify all the selectable items on other applications under
+        Modern theme","Click through all the items on menu bar and tool bars under AIM,
+        Composer, Mail and Address book to see all the looks and feel are
+        consistence under Modern theme"
+R-308,Window Title,"Verify the title is correct, ""<page title> - Mozilla"""
+R-312,Close Wndow,Click upper-right (upper left on Mac) to close
+R-326,Component buttons,Verify that component buttons work and behave as appropriate.

@@ -1,0 +1,518 @@
+ID,Purpose,Test steps
+T-3,"Purpose
+This basic testcase is designed to verify that bookmarks can be added and
+  file to a specific location in one step.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which
+    I use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Open this link in a
+    new window. With the new window in front select from the toplevel menu
+    Bookmarks|File Bookmark. In the folder tree select a folder and click 'OK'.
+
+Expected Results
+After Step(2) a dialog should appear with the Name and Location of the
+    current page pre-filled. After Step(3) the bookmark should immediately appear in the toplevel
+    bookmarks menu, the bookmarks popup on the personal toolbar, the bookmarks
+    sidepanel, and the manage bookmarks window at the specified position within
+    the hierarchy."
+T-4,"Purpose
+This basic testcase is designed to verify that new bookmarks are properly
+  created. *This testcase will change/evolve as the UI for this feature becomes
+  finalized.*","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which
+    I use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select File|New Bookmark. Type in any name and location (URL) Click Enter.
+
+Expected Results
+A dialog box should appear prompting you for the Name and Location (URL)
+    of the new bookmark. The new bookmark should immediately appear on the toplevel bookmarks
+    menu, the bookmarks popup on the personal toolbar, the bookmarks sidepanel,
+    and the manage bookmarks window."
+T-8,"Purpose
+This basic testcase is designed to verify that the fundamental bookmark
+  function is in place, i.e. clicking on a bookmark takes you to that page.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks . You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select the toplevel ""Bookmarks"" menu. Select any bookmark on the
+    list. Click ""Bookmarks"" on the Bookmarks/personal toolbar. Select any
+    bookmark on the list. Open the sidebar; click on the ""Bookmarks"" panel. Double-click any
+    bookmark on the list. From the toplevel ""Bookmarks"" menu select ""Manage Bookmarks"".
+    Double-click any bookmark in the window.
+
+Expected Results
+In all cases, the url corresponding to the bookmark you selected should be
+  loaded in the browser window."
+T-20,"Purpose
+This basic testcase is designed to verify that you can pick which columns
+  you would like to show/hide.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Click the icon on the far right of the column headers. Uncheck two of the items (columns). Recheck an item. Quit and restart the application.
+
+Expected Results
+Step(2) a popup menu should appear listing all of the column headers as
+    menuitems. Step(3), they should all be checked by default and unchecking should
+    cause that column to disappear from the manage bookmarks window. Step(4), the columns should reappear upon rechecking its name on the
+    list. Step(5) the columns should appear just as the did after step(4)."
+T-39,"Purpose
+Determine whether text output from a JavaScript applet is properly
+  selected in conjunction with other page content.","Initial Conditions
+None.
+
+Steps/Description
+View the attached test case. Drag-select from ""Browser Javascript Test"" to the bottom of the
+    document. From the Edit menu, select ""Copy"". View the resulting clipboard. (e.g. ""Show Clipboard"" from Finder on
+    Mac, or paste into a text editor on Win32/Linux.)
+
+Expected Results
+After step #3, the entire content of the page should be copied.
+After step #4, the text should be copied reasonably. (use your best
+  discretion, or compare to output of IE 5.)"
+T-45,"Purpose
+Verify that dragging a link or image to a frame-set page properly replaces
+  the entire window contents, and that dragging from within a frame-set page
+  properly replaces the target frame.","Steps/Description
+Open the frame-test.html test file Drag the Drag Me link to the left frame Drag the space shuttle image to the left frame In a new browser window, open the page-test.html test file From the single-page ( page-test.html )
+    window, drag the Drag Me link to a frame in the frame-set ( frame-test.html ) window Press the Back button in the frame-set window From the single-page window, drag the space shuttle image to a frame in
+    the frame-set window
+
+Expected Results
+2. The dragme.html page should open in the target frame (bug 83963 )
+3. The space shuttle image should open in the target frame (bug 83963 )
+5. The dragme.html page should replace the frame-set page
+7. The space shuttle image should replace the frame-set page
+need iframe test cases"
+T-47,"Purpose
+To confirm that text, links, and images dragged to a non-modal dialog are
+  handled properly","Steps/Description
+Open the testfile.html test
+    file Open a non-modal dialog (e.g. Edit | Find in This Page...) Make a text selection and drag it onto a text widget in the
+    dialog. Drag a link onto a text wedget in the dialog Drag the selected text a blank area or a non-text wedget in the
+    dialog Drag a link to a blank area or a non-text wedget in the dialog Drag the space shuttle image to the dialog
+
+Expected Results
+3. The selection text should be copied to the text widget
+4. The link URL should be copied to the text widget
+5-7 The drag attempt should be rejected"
+T-48,"Purpose
+Confirm that dragging a folder (or other directory tree) to the browser
+  window displays the folder contents","Steps/Description
+From the desktop or file manager (e.g. Explorer in Windows or Finder in
+    Mac OS), drag a disk icon to the browser window (e.g. C:\: on Windows or Macintosh
+    HD on Mac OS) From the desktop or file manager, drag a folder (or directory) icon to
+    the browser window On the desktop or in the file manager, create a shortcut (alias in Mac
+    OS) to a folder (or directory). Drag the shortcut to the browser window
+
+Expected Results
+1. A file listing of your hard disk should appear, similar to an FTP
+  directory list.
+2. The directory contents should be displayed in the browser window.
+4. The directory contents should be displayed in the browser window."
+T-75,"Purpose
+Verify that when you encounter a Web site that could be prefilled and
+  have several choices for fields that you are given the pre-fill dialog
+  and can select from the appropriate values and the information is filled
+  into the form","Initial Conditions
+You should have several values for several data fields saved.
+
+Steps/Description
+Go to a site that needs information, for example time.com Click subscribe to Time Enter the Name, Address and e-mail information From the Edit menu, choose Save Form Info Go to another site that requires the same information (Name,
+    address, and e-mail) such as wired.com and click on subscribe to wired
+    (Enter in different values) From the Edit menu, choose Save Form Info Now go to a third site which requires this same information, such
+    as marthastewart.com and click on subscribe to Martha Stewart
+    Living From the Edit menu, choose Fill in Form Verify that the different values entered on steps 3 and 5 are
+    options for the fields to be prefilled Verify that you can select different values in this dialog and the
+    appropriate values are entered on the form
+
+Expected Results
+2. You should be taken to a page where you can enter name, address and
+  e-mail information
+4. Your data should be saved to Form Manager
+6. You should be taken to a page where you can enter name, address and
+  e-mail information
+7. You should be taken to a page where you can enter name, address and
+  e-mail information
+8. A dialog box should appear with your previously saved field values
+  as choices in drop down menus"
+T-88,"Purpose
+Verify that there is Troubleshooting Help about the problem ""if you
+  can't sign on""","Initial Conditions
+Mozilla should be started up
+
+Steps/Description
+From the Help drop down menu, select Help and Support Center Open your sidebar if it is not already open (click on the widget to
+    the left hand side of your browser) Click on the Index tab Doubleclick on the T in the index Click the If You Can't sign on link
+
+Expected Results
+1. The Help and Support Center window should open
+3. An alphabetic list should display on the left hand side of the
+  window
+4. The T should expand and you should see Troubleshooting listed
+5. You should be taken to Help information regarding sign on
+  issues"
+T-96,"Purpose
+This basic testcase is designed to verify that the toolbar acts
+  appropriately when in help","Initial Conditions
+Mozilla should be started up
+
+Steps/Description
+Select the toplevel Help menu. Select Help Contents Click the minimize square in the upper right hand corner Click on the minimized Mozilla in Taskbar Click on the maximize square in the upper right hand corner Click on the x square in the upper right hand corner
+
+Expected Results
+2. Help contents should come up with main topics on the left and
+  detailed information on the right
+3. Help should be minimized and show on your taskbar
+4. Help should be restored to the same size it was in the first
+  place
+5. Help should now be expanded to the entire screen
+6. Mozilla should close"
+T-104,"Purpose
+This basic testcase is designed to verify that Mail and News content
+  comes up when clicked and is displayed corectly and prints correctly","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
+
+Steps/Description
+Select the toplevel Help menu. Select Mail and News Select all contents on right, copy and paste into your favorite
+    word processor and run spell check Click the printer icon
+
+Expected Results
+2. Mail and news content should come up with main topics on the left
+  and detailed information on the right
+3. There should be no spelling errors (Besides obvious computer terms
+  and websites)
+4. Mail and News content should print"
+T-105,"Purpose
+This basic testcase is designed to verify that Instant Messenger
+  content comes up when clicked and is displayed corectly and prints
+  correctly","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
+
+Steps/Description
+Select the toplevel Help menu. Select Instant Messenger Select all contents on right, copy and paste into your favorite
+    word processor and run spell check Click the printer icon
+
+Expected Results
+2. Instant Messenger content should come up with main topics on the
+  left and detailed information on the right
+3. There should be no spelling errors (Besides obvious computer terms
+  and websites)
+4. Instant Messenger content should print"
+T-108,"Purpose
+This basic testcase is designed to verify that Creating web pages help
+  content comes up when clicked, is displayed corectly, and prints
+  correctly","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
+
+Steps/Description
+Select the toplevel Help menu. Select Help Contents Click Creating web pages from the left panel Select all contents on right, copy and paste into your favorite
+    word processor and run spell check Click the printer icon
+
+Expected Results
+3. Creating web pages helpcontent should come up with main topics on
+  the left and detailed information on the right
+4. There should be no spelling errors (Besides obvious computer terms
+  and websites)
+5. Creating web pages content should print"
+T-138,"Purpose
+This basic testcase is designed to verify that a new, empty session
+  history file is created when appropriate.","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select File|New Navigator Window. Select the Go menu. Quit and restart the browser. Select the Go menu.
+
+Expected Results
+After steps(2) and (4) the browser go meu should be ""empty"" ie only Back,
+  Forward, and Home should be listed."
+T-143,"Purpose
+Determine that it is possible to resize an image to it's original size
+  after it has been resized to window size.","Initial Conditions
+Have mozilla started up
+
+Steps/Description
+Complete these steps for all images below
+Open each of the files listed below Right click the image and select resize to window Right click again and select resize to original
+
+Expected Results
+Image should resize to it's original size."
+T-148,"Purpose
+Determine that you can right click an image and print it.","Initial Conditions
+Have mozilla started up and a printer installed on your machine.
+
+Steps/Description
+Complete these steps for all images below
+Open one of the files listed below Right click the image and select print
+
+Expected Results
+Image should print."
+T-157,"Purpose
+Confirm that X Bitmap (XBM) format images can be displayed.
+XBM will not be supported in the initial 5.0 release.
+  This test case may need to be obsoleted.","Initial Conditions
+None.
+
+Steps/Description
+Launch Netscape 6 View the test page (linked below) Independently view each of the two images files (also linked
+    below)
+
+Expected Results
+After step 1, the web page displayed should exhibit display a black
+  & white fancy bitmap image of a clock, followed below by a black and
+  white bitmap image of a penguin.
+After step 2, both the clock and penguin images should be displayed,
+  identically to their appearance in step 1 (or as viewed by Communicator
+  4.x)."
+T-181,"Purpose
+Verify that you can remove a site and username from the passwords
+  never saved section of password manager","Initial Conditions
+Password manager should be enabled, in a different browser create an
+  account at a site that requires a username and password such as
+  http://www.ivillage.com
+
+Steps/Description
+Go to a site that you have not been to before in Netscape 6, such
+    as http://www.ivillage.com Enter your username and password When a dialog appears asking if you would like to save this
+    information, click never for this site From the edit drop down menus, select preference Click on the arrow next to advanced Click on passwords Click View stored passwords Click on the passwords never saved tab Highlight this sight and username in the list and click remove Click cancel Click View saved passwords Click the passwords never saved tab Highlight this sight and username in the list and click remove Click ok Click View stored passwords Click Passwords never saved tab
+
+Expected Results
+3. Your username and password should be saved to the passwords never
+  saved portion of password manager
+4. Preference pane should open
+5. Advanced options should appear
+6. Password manager options should appear on right pane
+7. A list of saved passwords should appear with your saved sight and
+  username appearing in the list
+8. The site and username for this site should be listed under the
+  passwords never saved tab
+9. This site's information should no longer appear in the list
+10. Window should close
+12. This site and username should again appear on the list
+13. This site and username should no longer appear on the list of
+  never saved passwords
+14. This site should be removed from the list
+16. This site and username should not appear on the passwords never
+  saved list."
+T-193,"Purpose
+Determine that Seamonkey prints pages with portrait and landscape settings
+  properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to view a sample page Select menu option ""FILE| PRINT"" Click on the ""Properties"" button. Under the ""Page Setup"" option, in the frame titled ""Orientation"",
+    select the radio button titled ""Portrait"" Press OK twice to print the page Repeat step 1 thru 3 and select the radio button titled ""Landscape""
+    under the ""Orientation"" Frame. Press ""OK"" twice to print the page
+
+Expected Results
+After Step 6, the page should be printed in Portrait setting
+After Step 8, the page should be printed in Landscape setting"
+T-196,"Purpose
+Determine that Seamonkey prints CSS2 pages properly","Steps/Description
+Run the NIST 
+    CSS2 Test Suite Run the NIST 
+    CSS1 Tests Run David
+    Baron's CSS Tests Run W3C's 
+    CSS Tests Suite Run Ian Hickson's Evil
+    Test Suite After visiting each test page, print each test (select Print from the
+    File menu)
+
+Expected Results
+All CSS pages should print as they appear on screen"
+T-232,"Purpose
+Determine whether shift-select gestures for text function properly.","Initial Conditions
+None.
+
+Steps/Description
+View the attached test case file. Hold the shift key down. Click on the ""M"" in ""Multiple"", at the top of the document Using the scroll bar, drag to the bottom of the document Click in the white space at the bottom-right of the document (below any
+    page content) Clear the selection. (e.g. click within the browser window, but outside
+    of the selection) Double click on the ""A"" in ""August"" (boldfaced) Place the mouse pointer at the right edge of the selection. Holding the shift key down, drag down to the end of the paragraph.
+    (""software"")
+
+Expected Results
+After step 5, all of the document content should be selected.
+After step 9, the entire first paragraph should be selected."
+T-236,"Purpose
+Determine that default width of Sidebar is proper","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser In the Sidebar, verify that the default width appears properly and the
+    sidebar does not occupy more that 2 inches(approximately) of the width Quit the browser using File->Quit Restart the browser
+
+Expected Results
+After step 3, the Sidebar default width should remain the same"
+T-241,"Purpose
+Determine that Sidebar opens and closes properly.","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser Point and click with the mouse on te grippy at the center of the
+    Sidebar border Clicking once should close the sidebar Again, point with the mouse on the grippy on the left border of the
+    browser window and click the mouse This should open the Sidebar with the original width
+
+Expected Results
+Sidebar should open/close properly with grippy"
+T-242,"Purpose
+Determine that a panel can be added sucessfully to the Sidebar","Initial Conditions
+This test works only with the ""Classic"" Theme set for the browser.
+
+Steps/Description
+Launch the browser From the sidebar, select ""Tabs | Customize Sidebar"" From the window titled 'Customize Sidebar', select any panel from any
+    of the folders available and click on the 'Tabs' button to add the panel to
+    the sidebar. Press OK to close the window.
+
+Expected Results
+After step 2, the seleced panel should get added to the pane titled ""My
+  Sidebar"". Pressing the OK button in step3 should close the ""Customize
+  Sidebar"" window and the newly added panel should appear at the bottom of the
+  Sidebar in the navigator window."
+T-246,"Purpose
+Determine the list of available remote panels","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar, select ""Tabs | Customize Sidebar"" From the window that opens up, the pane titled
+    ""AvailablePanels"" should list the following folders by default:
+    Favorites, From Netscape, From Others, International. Click and open each folder mentioned above to see that they are
+    not empty and that a listing of panels is available in each
+    folder Verify that the Favourites folder lists these panels: CNN.com,
+    Horoscope, Mozillazine, News, Stocks, Tech News, Weather Verify that the From Netscape folder lists these panels:
+    Calender, Horoscopes, Local Events, Local Movies, Local News, News,
+    Sports, Stocks, Tech News, Weather Verify that the From Others folder lists these panels:
+    BackFlip Buddy, CNET.com, CNN.com, eBay, Kinderview, Mapquest,
+    Mozillazine, Red Herring, Webstakes.com and the folder My Netscape
+    Network The International folder should list the following folders:
+    Brazil, Canada, France, Germany, Japan, Portugal, Spain, Sweden,
+    UK
+
+Expected Results
+All default remote panels should be available"
+T-248,"Purpose
+Determine that panels can be previewed before addition","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar, select ""Tabs | Customize Sidebar"" From the window that opens up, select and click on any panel from
+    the panel titled ""Available Panels"" The ""Preview..."" button should be highlighted Clicking on the ""Preview..."" button should open up a window titled
+    ""Panel Preview"" and showing how the panel looks Pressing the ""x"" button on top right of the window should close the
+    preview window
+
+Expected Results
+Panels can be previewed"
+T-252,"Purpose
+Determine that order and panel list gets saved","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar, select ""Tabs | Customize Sidebar"" From the window that opens up, add a few panels from the left panel
+    (or delete a few panels) Highlight any of the panels in the right pane and click on the
+    reorder arrows on the right side to move the panel up/down in the
+    panels list Press the ""OK"" button to close the window and apply your changes to
+    the Sidebar
+
+Expected Results
+Verify that the panel changes and reordering gets reflected in the
+  Sidebar when you press the OK button"
+T-268,"Purpose
+Test opening local files (both HTML and plain text tested) in a new
+  Navigator window. Includes tests to dismiss dialog.","Initial Conditions
+Copy boring.html and dull.txt into a folder on your machine (eg, you
+    desktop). Then bring up the Open Web Location dialog in the browser.
+UI test #1 Steps/Description Click the Choose File... button. In the resulting file picker dialog, navigate and select the boring.html file. Click Open in the file picker to dismiss
+          it. Select New Navigator window from the
+          droplist, if it isn't already displayed there. Click the Open button (or hit Enter ). Expected Results After step #3, the full path and filename should be displayed
+          in the textfield of the Open Web Location dialog. After the last step, the Open Web Location dialog should be
+          dismissed. A new browser window should then come up, and boring.html displayed in it.
+Dismissal #1 Steps/Description Click the Choose File... button. In the resulting file picker dialog, navigate and select the boring.html file. Click Open in the file picker to dismiss
+          it. Select New Navigator window from the
+          droplist, if it isn't already displayed there. Click the Cancel button (or hit Esc ). Expected Results The dialog should go away and the page in the current browser
+      window remain unchanged .
+UI test #2 Steps/Description Click the Choose File... button. In the resulting file picker dialog, navigate and select the dull.txt file. Click Open in the file picker to dismiss
+          it. Select New Navigator window from the
+          droplist, if it isn't already displayed there. Click the Open button (or hit Enter ). Expected Results After step #3, the full path and filename should be displayed
+          in the textfield of the Open Web Location dialog. After the last step, the Open Web Location dialog should be
+          dismissed. A new browser window should then come up, and dull.txt displayed in it.
+Dismissal #2 Steps/Description Click the Choose File... button. In the resulting file picker dialog, navigate and select the dull.txt file. Click Open in the file picker to dismiss
+          it. Select New Navigator window from the
+          droplist, if it isn't already displayed there. Click the Cancel button (or hit Esc ). Expected Results The dialog should go away and the page in the current browser
+      window remain unchanged ."
+T-270,"Purpose
+Test opening a nonexistent (bogus) local file.","Initial Conditions
+The Open Web Location dialog should already be opened in the
+  browser.
+
+Steps/Description
+Click the Choose File... button. In the resulting file picker dialog, enter the filename of a file
+    which doesn't exist locally on your machine, eg, Navigate to your desktop location, or stay at whatever
+        directory the file picker is currently at. Enter fibble-diddle-teehee.html . Click Open in the file picker to dismiss it. Select Current Navigator window from the droplist,
+    if it isn't already displayed there. Click the Open button (or hit Enter ).
+
+Expected Results
+After step #3, the full path and filename should appear in the
+    textfield of the Open Web Location dialog. After the last step, the dialog should go away. Since this page doesn't exist (well, it shouldn't ;-), the
+    page that loads should display the typical 404 error: Not Found : The requested object does not
+        exist on this server. The link you followed is either outdated,
+        inaccurate, or the server has been instructed not to let you have
+        it."
+T-301,"Purpose
+Visually inspect menu bar, floating component bars and all the tool
+  bars.","Description
+From the main menu bar, select Edit > Preferences >
+    Appearance > Themes. Select ""Modern"" theme on the right hand side of the dialog. Click the ""Apply Modern"" button. Close the Preferences dialog.
+
+Expected Results
+All the menu bars, tool bars, task bars and the widgets are well
+  displayed."
+T-304,"Purpose
+To verify all the selectable items in Classic theme work properly on
+  different applications under browser like composer, mail, news, aim,
+  address book, etc.","Description
+From the main menu bar, select Edit > Preferences >
+    Appearance > Themes. Select ""Classic"" theme on the right hand side of the dialog. Click the ""Apply Classic"" button. Close the Preferences dialog. Click through all the items on menu bars and tool bars under
+    composer, mail, news, aim, and address book to see all the look and
+    feel are consistent.
+
+Expected Results
+All the selectable items and icon under browser should work as
+  advertised"
+T-306,"Purpose
+To verify all the selectable items in Modern theme work properly on
+  different applications under browser like composer, mail, news, aim,
+  address book, etc.","Description
+From the main menu bar, select Edit > Preferences >
+    Appearance > Themes. Select ""Modern"" theme on the right hand side of the dialog. Click the ""Apply Modern"" button. Close the Preferences dialog. Click through all the items on menu bars and tool bars under
+    composer, mail, news, aim and address book to see all the look and
+    feel are consistent.
+
+Expected Results
+All the selectable items and icons under browser should work as
+  advertised."
+T-318,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"
+T-319,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"

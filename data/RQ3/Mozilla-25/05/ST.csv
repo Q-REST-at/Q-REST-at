@@ -1,0 +1,308 @@
+ID,Purpose,Test steps
+T-52,"Purpose
+Confirm that files for installed helper applications are properly
+  processed when dragged from the desktop","Initial Conditions
+Macromedia Flash helper application is installed for the application
+
+Steps/Description
+Download the firstrun.swf test file to your
+    computer From your desktop or file manager, drag the downloaded file to the
+    browser window
+
+Expected Results
+2. The RealPlayer 7 intro animation should display within the browser
+  window."
+T-90,"Purpose
+Verify that there is Troubleshooting Help about the problem ""if you
+  can't see anyone in your buddy list window.""","Initial Conditions
+Mozilla should be started up
+
+Steps/Description
+From the Help drop down menu, select Help and Support Center Open your sidebar if it is not already open (click on the widget to
+    the left hand side of your browser) Click on the Index tab Doubleclick on the T in the index Click the If You Can't See Anyone in you Buddy Window
+
+Expected Results
+1. The Help and Support Center window should open
+3. An alphabetic list should display on the left hand side of the
+  window
+4. The T should expand and you should see Troubleshooting listed
+5. You should be taken to Help information regarding Buddy List Window
+  issues"
+T-97,"Purpose
+This basic testcase is designed to verify that the Page Up and Page Down Keys function properly in help","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+Select the toplevel Help menu. Select Technical Support Push the Page Down Key on your keyboard Push the Page Up Key on your keyboard Click a few random links in help and try using these keys
+    again
+
+Expected Results
+2. You should be taken to http://help.netscape.com/
+4. This should move you down the page until the end
+5. This should move you up the page until you reach the top
+6. Page up and Page Down keys should 
+  consistantly move you up and down pages"
+T-99,"Purpose
+This basic testcase is designed to verify that the up arrow and down arrow Keys function 
+  properly in help","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+Select the toplevel Help menu. Select Technical Support Push the down arrow key on your keyboard Push the up arrow key on your keyboard Click a few random links in help and try using these keys
+    again
+
+Expected Results
+2. You should be taken to http://help.netscape.com/
+4. This should move you down the page until the end
+5. This should move you up the page until you reach the top
+6. Up arrow and down arrow keys 
+  should consistantly move you up and down pages"
+T-109,"Purpose
+This basic testcase is designed to verify that What's new in Netscape
+  6 help content comes up when clicked, is displayed corectly, and prints
+  correctly","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
+
+Steps/Description
+Select the toplevel Help menu. Select What's new in Netscape 6 Click ""My sidebar is yours"" Close the window created in 3 and click on ""Search from anywhere,
+    anytime"" Close the window created in 4 and click on ""Convenient
+    Services"" Close the window created in 5 and click on Start using
+    Netscape
+
+Expected Results
+2. Verify that a screen describing new features in Netscape 6 comes
+  up
+3. Verify that a window describing ""My sidebar"" appears in a new
+  window
+4. Verify that ""Fast and Convenient Search from the Location Bar"" page
+  comes up
+5. Verify that ""A host of Services"" window comes up
+6. Verify that you are taken to http://home.netscape.com/?cp=wn6"
+T-126,"Purpose
+This basic testcase is designed to verify that all links are properly
+  removed from the global history file.","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select Go|History. Observe the contents of the Global History Window. Select Edit|Preferences (from a navigator window) Browse to the Navigator|History Panel. Under ""Browsing History"" click the ""Clear History"" button. Return to observe the contents of the Global History Window.
+
+Expected Results
+If you've observed the initial conditions, the History window should be
+    non-empty upon first observation. After pressing the button, the history window should be empty of
+    individual history items."
+T-167,"Purpose
+Verify that the browser behaves correctly after the never for this site
+  selection is made in the password dialog box.","Initial Conditions
+Clear stored passwords or use a sight that you have not been to before
+
+Steps/Description
+Go to a sight that requires a password, such as
+    http://www.freeride.com Enter a username and password and click login When presented with the save password dialog, click never for this
+    site Shut down Netscape 6 Open Netscape 6 Return to http://www.freeride.com (or other site, if used) Enter a username and password and click login
+
+Expected Results
+3. No password should be saved in Password Manager
+6. The username and password should not be prefilled
+7. The password dialog box should not appear again"
+T-193,"Purpose
+Determine that Seamonkey prints pages with portrait and landscape settings
+  properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to view a sample page Select menu option ""FILE| PRINT"" Click on the ""Properties"" button. Under the ""Page Setup"" option, in the frame titled ""Orientation"",
+    select the radio button titled ""Portrait"" Press OK twice to print the page Repeat step 1 thru 3 and select the radio button titled ""Landscape""
+    under the ""Orientation"" Frame. Press ""OK"" twice to print the page
+
+Expected Results
+After Step 6, the page should be printed in Portrait setting
+After Step 8, the page should be printed in Landscape setting"
+T-200,"Purpose
+Determine that Seamonkey prints Top web pages properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to open a listing of top web
+    sites.. Click on the first web page link. Select the menu option ""FILE | PRINT"" to print the web page Press ""OK"" to print the page Similarly, try printing all the pages one by one.
+
+Expected Results
+All web pages should print properly."
+T-213,"Purpose
+Determine that RealAudio plugin works properly","Initial Conditions
+None
+
+Steps/Description
+Launch the browser Click here to play a realaudio file using the
+    EMBED tag. The audio player should open in the browser window and work
+    properly. Click here to play a realaudio file using the
+    OBJECT tag. The audio player should open in the browser window and work
+    properly. Real World Pages To Test: http://media2.bmrc.berkeley.edu/video/projects/EdForum/EdForum.html http://abcnews.go.com/sections/us/video_index/video_index.html Click on clips to open Javascript window. http://www.spinner.com/ For PR# 32242.
+        Follow links to launch Spinner Lite. Click on links below to open and play real audio files: realaudio file [AUTOSTART=FALSE] realaudio file [AUTOSTART=TRUE] realaudio file [AUTOSTART=TRUE] realaudio file [AUTOSTART=TRUE] realaudio file [AUTOSTART=TRUE] realaudio file [AUTOSTART=TRUE] Go to the IBench website . Click on
+    ""START"" button on the center of the page, click on ""I Agree"". When the
+    performance page loads up, select only ""audio"", ""video"", select speed and
+    click on ""RUN"" . Go throught the tests and check the results that
+    appear. Netscape Radio- Go
+    here . Click on ""Launch Player"", select channel and verify that sound
+    works. ESPN Radio Audio Links - Try some
+    audio links on this page NBA TV - Click here .
+    Try out some video links from ""NBA TV"" on top NBA Highlights. - Click here . Try out
+    audio/video links on this page News.com Videos - Scroll down and try the videos on right side under ""News.com
+    Video & Audio"". Click on each tab on top of the webpage to check other
+    videos on those pages, Eg : ""Enterprise"" ,""E-Business"" and so on. C-Span Video
+    Page . Weather.com - Audio and Video tests Video test page - Try out video clips on this page (lots of them) Cnet Radio
+    website IFilm website .
+
+Expected Results
+All Real media files should load and play properly."
+T-216,"Purpose
+Purpose: Determine that Shockwave plugin works properly","Initial Conditions
+
+Steps/Description
+Click
+    here for nick.com Games page (tons of flash and shockwave games) Click here for I-Bench Shockwave test Context Menu Tests Shockwave Test Page.
+    Click on top 3 links on this page to launch pages with shockwave
+    movies. Click here to
+    visit shockwave.com website. Click on links to 'Games' , 'Shows', ""Music',
+    'Greetings' to test shockwave/ flash contents. This website is an
+    exhaustive collection of shockwave/flash movies to test. Shockwave
+    Gallery website. Click on Games, Toys, Project Samples and other links
+    to test shockwave contents Click
+    here to visit the macromedia showcase gallery with plenty of
+    shockwave/flash websites Sanrio Shockwave
+    Gallery . Click and play the games on this page. DogDay's Shockwave Gallery . Click on
+    links under the title 'Visit The Gallery' to load pages with shockwave
+    content. ZeoSphere Shockwave
+    Gallery . Click on banners on this page to view shockwave content Click
+    here to load an extensive testcase suite for shockwave plugin Click
+    here to load an extensive testcase suite for shockwave plugin Perceptive Productions ShockwaveGallery .
+    Click on the clips on this page one by one to load and view shockwave
+    movies CyberMaze Shockwave Gallery . Click
+    on links on this page to see shockwave content.
+
+Expected Results
+All shockwave and /or flash movies should load work properly"
+T-222,"Purpose
+This basic testcase is designed to verify that initiating a search in the
+  URL bar triggers the opening and loading of search results into the Sidebar
+  Search tab.","Initial Conditions
+Open a new browser window. All prefs should be set to their defaults (new profile).
+
+Steps/Description
+Type a multi-word search term in the URL bar. Anything will do,
+    ""Claudius 'CMaximus' Gayle"" for example. Click the ""Search"" Button.
+
+Expected Results
+After search results load in the browser window, the Sidebar should pop
+    open to the Search tab and be populated with search results as well. The textfield in the sidebar search tab should be populated with your
+    search term exactly as you typed it."
+T-231,"Purpose
+Determine whether discontiguous selection of table cells function
+  properly.","Initial Conditions
+None.
+
+Steps/Description
+View the enclosed test case. Mac OS:
+Drag-select from (1,1) to (2,2) Hold down the command key, and click on the 7 (at 4,4) Hold down the command key, and click on the 4 (at 2,2)
+Windows:
+Drag-select from (1,1) to (2,2) Hold down the Control key, and click on the 7 (at 4,4) Hold down the Control key, and click on the 4 (at 2,2)
+
+Expected Results
+Step 1: The upper-left hand four cells should be selected.
+Step 2: The cell containing the number 7 should be selected, in addition to the four
+  cells selected in step a. (A total of five cells should be selected.)
+Step 3: On Mac OS, the cell containing the number 4 should be deselected; the other
+  four cells should remain selected. (A total of four cells should be
+  selected.) On Windows, the Interface Guidelines lack a useful specification for this
+  action; any user-friendly outcome is acceptable."
+T-236,"Purpose
+Determine that default width of Sidebar is proper","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser In the Sidebar, verify that the default width appears properly and the
+    sidebar does not occupy more that 2 inches(approximately) of the width Quit the browser using File->Quit Restart the browser
+
+Expected Results
+After step 3, the Sidebar default width should remain the same"
+T-238,"Purpose
+Determine that non-default width of Sidebar is retained after new window
+  is opened or browser is restarted","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser Click with the mouse on the Sidebar grippy(mouse pressed) and expand
+    the sidebar Make the width of the Sidebar to whatever you want (upto max
+    allowed) Select File| New Navigator Window to open a new browser window Observe that the Sidebar width should be the same as in the earlier
+    window and should not appear changed Also, after step3, select File|Quit to close the browser Restart the browser
+
+Expected Results
+After step 3 and step 6, sidebar non-default width should be the same as
+  changed earlier"
+T-251,"Purpose
+Determine that cancel button does not apply any changes made
+  earlier","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar , select ""Tabs | Customize Sidebar"" From the window that opens up, add a few panels from the left
+    pane Highlight on any of the panels in the right pane and click on the
+    reorder arrows on the right side to move thepanel up/down in the panels
+    list Now, press the CANCEL button
+
+Expected Results
+None of the changes that you made (addition of panels or reordering)
+  should get saved and the Sidebar should be the same as before"
+T-261,"Purpose
+Basic UI & dismissal tests for the Open Web Location dialog.","Initial Conditions
+The Open Web Location dialog should already be opened in the
+  browser.
+UI test #1 Steps/Description and Expected Results Don't enter anything into the textfield. It should appear
+          similar to this
+          image . Verify that these UI elements are present: A text field where you could enter the URL. A Choose File ... button next to the
+            textfield. A droplist whose current selection is Current
+            Navigator window . An Open button which is greyed-out. A Cancel button which is active.
+UI test #2 Steps/Description and Expected Results Enter http://www.mozillazine.org/ into the
+        textfield. It should appear the same as in UI test #1, except that
+        the Open button is now active.
+UI test #3 Steps/Description Click the droplist to expand it and view all the
+            choices. Click the droplist again to collapse it. Expected Results When expanded, you see three choices in this order: Current Navigator window New Navigator window New Composer window After clicking the droplist a second time, it should display
+          only one of the choices.
+Dismissal test #1 Steps/Description Make sure the textfield is empty. Click the Cancel button. Expected Results The dialog should be dismissed (and no change occurring in the
+        current browser window) at step #2.
+Dismissal test #2 Steps/Description Make sure the textfield is empty. Hit the Escape key. Expected Results The dialog should be dismissed (and no change occurring in the
+        current browser window) at step #2."
+T-269,"Purpose
+Test opening local files (both HTML and plain text tested) in a
+  Composer window. Includes tests to dismiss dialog.","Initial Conditions
+Copy boring.html and dull.txt into a folder on your machine (eg, you
+    desktop). Then bring up the Open Web Location dialog in the browser.
+UI test #1 Steps/Description Click the Choose File... button. In the resulting file picker dialog, navigate and select the boring.html file. Click Open in the file picker to dismiss
+          it. Select New Composer window from the
+          droplist, if it isn't already displayed there. Click the Open button (or hit Enter ). Expected Results After step #3, the full path and filename should be displayed
+          in the textfield of the Open Web Location dialog. After the last step, the Open Web Location dialog should be
+          dismissed. An editor window should then come up, and boring.html displayed in it.
+Dismissal #1 Steps/Description Click the Choose File... button. In the resulting file picker dialog, navigate and select the boring.html file. Click Open in the file picker to dismiss
+          it. Select New Composer window from the
+          droplist, if it isn't already displayed there. Click the Cancel button (or hit Esc ). Expected Results The dialog should go away and the page in the current browser
+      window remain unchanged .
+UI test #2 Steps/Description Click the Choose File... button. In the resulting file picker dialog, navigate and select the dull.txt file. Click Open in the file picker to dismiss
+          it. Select New Composer window from the
+          droplist, if it isn't already displayed there. Click the Open button (or hit Enter ). Expected Results After step #3, the full path and filename should be displayed
+          in the textfield of the Open Web Location dialog. After the last step, the Open Web Location dialog should be
+          dismissed. An editor window should then come up, and dull.txt displayed in it.
+Dismissal #2 Steps/Description Click the Choose File... button. In the resulting file picker dialog, navigate and select the dull.txt file. Click Open in the file picker to dismiss
+          it. Select New Composer window from the
+          droplist, if it isn't already displayed there. Click the Cancel button (or hit Esc ). Expected Results The dialog should go away and the page in the current browser
+      window remain unchanged ."
+T-318,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"

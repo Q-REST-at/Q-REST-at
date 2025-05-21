@@ -1,0 +1,10 @@
+ID,Purpose,Test steps
+96,Retesting after modifications,The supplier shall also report possible consequences and impact on other functions from modifications made. The purchaser has the right to require repetition of the tests made in FAT if such modifications are made.
+302,Possible overheating - Cat1 1 phase,Verify that the metering device has the capability to detect connections that may cause overheating.
+303,Possible overheating - Cat1 3 phase,Verify that the metering device has the capability to detect connections that may cause overheating.
+304,Possible overheating - Cat2,Verify that the metering device has the capability to detect connections that may cause overheating.
+352,Interpolation in HES,Verify that there is functionality in HES to perform interpolations where the collected value is missing.
+465,screw anchors - Cat2,Verify that there are no elevations around the Metering Unit's screw attachments that limit the size of the screw head.
+466,screw anchors - Cat1,Verify that there are no elevations around the Metering Unit's screw attachments that limit the size of the screw head.
+467,mounting bracket - Cat1,Verify that there is a mounting bracket placed on the top of the metering unit for mounting.
+468,mounting bracket - Cat2,Verify that there is a mounting bracket placed on the top of the metering unit for mounting.

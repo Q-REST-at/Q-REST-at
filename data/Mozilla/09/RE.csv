@@ -1,4 +1,47 @@
 ID,Feature,Description
-R-042,"A form's data shall be saved from the popup dialog box, never for this site and never asked again upon returning to the site.","A form's data shall be saved from the popup dialog box, never for this site and never asked again upon returning to the site."
-R-126,Paragraph styles shall print correctly on Seamonkey.,Paragraph styles shall print correctly on Seamonkey.
-R-139,A conducted search shall be bookmarked.,A conducted search shall be bookmarked.
+R-7,Create Folder,Verify new folder creation and nesting of new folders.
+R-30,Prevent bad drops,"Verify that it is NOT possible to drop an item onto itself or its
+      immediate parent or child"
+R-48,D&D from the desktop – Folders,"Confirm that dragging a directory
+      to the browser window displays the folder contents"
+R-65,Form Manager - Pop-up,"Verify that a form fill popup menu is activated
+      when a field gets accessed that has been saved in form
+      manager data."
+R-76,Edit Form Data - new value for field,"Verify that if you add a new value for a field in Form Manager
+      it is later offered as an option when prefilling a form using
+      this field."
+R-87,Index,"Verify that there is an in Index of help content and a list of
+        keywords to links in the help content."
+R-92,Glossary,"Verify that in the Glossary there includes a section for an
+        Intro/tutorial for NS6."
+R-101,Non Clickable Regions,"Verify that clicking non clickable regions in help causes no
+        behavior"
+R-106,Customizing Netscape 6,"Determine whether Customzing Netscape 6 help content displays
+        correctly"
+R-113,The Best Standards Support,"Determine whether the Best Standards Support displays
+        correctly"
+R-140,Retain scroll position,"Verify that browser remembers scroll state when returning to pages
+        in SH"
+R-156,Animated Images,"To determine whether multiple differing animated images on the same
+        page are properly displayed"
+R-159,Image Display,"Determine whether GIF 89a images are properly displayed across
+        different bit depths."
+R-165,Replace Forgotten Master Password,"Verify that the process to replace a forgotten master password is
+      easier/more discoverable (though encrypted information should still be
+      lost to the user who has forgotten their password)."
+R-170,"Activiation, Http Authentication","Need a good working case for this, working on
+      it"
+R-172,"Password Manager, multiple users","Verify that when you have saved multiple username's and password's
+      for a website, you are later presented with those same choices"
+R-183,"Tasks, view passwords never saved","Verify that when you have designated not to ever save a username and
+      password in password manager, this information can be viewed in the
+      password manager through tasks (nbci.com)"
+R-187,"Tasks, passwords never saved, remove all","Verify that you can remove all site and username information from the
+      passwords never saved section of password manager"
+R-199,Sample XML Pages for printing,Determine if XML pages print properly
+R-204,Print Tables,Determine if tables print correctly
+R-238,Width,Retaining non-default size on reopen or new window
+R-247,Add/Remove,Verify list of available local panels
+R-251,Cancel,Verify that nothing changes when you cancel
+R-285,Context menu access,Viewing page and frame source via context menu.
+R-291,Basic access,Access from main menu and access keys.

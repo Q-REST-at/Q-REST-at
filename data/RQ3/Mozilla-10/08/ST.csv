@@ -1,0 +1,161 @@
+ID,Purpose,Test steps
+T-1,"Purpose
+This basic testcase is designed to verify that a bookmarks file is being
+  detected and is being displayed at the appropriate places.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks . You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select the toplevel ""Bookmarks"" menu. Select any bookmark on the
+    list. Click ""Bookmarks"" on the Bookmarks/personal toolbar. Open the sidebar; click on the ""Bookmarks"" panel. From the toplevel ""Bookmarks"" menu select ""Manage Bookmarks"".
+
+Expected Results
+Bookmarks and folders(including the Personal Toolbar Folder) should
+    appear as menu items. Menuitems that are folders should have a solid
+    triangle indicating a submenu is present. Bookmarks and folders(including the Personal Toolbar Folder) should
+    appear as menu items. Menuitems that are folders should have a solid
+    triangle indicating a submenu is present. Bookmarks should appear with the green ribbon icon. Folders should have
+    a folder icon. The Personal Toolbar Folder should have a combination
+    icon. The Manage Bookmarks window should appear and be populated with
+    bookmarks and folders."
+T-15,"Purpose
+This testcase is designed to verify that the view properties feature works
+  as prescribed for various items.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select a bookmark. Select File|Bookmark Properties. Verify, click
+    ""OK"". Select a folder. Select File|Bookmark Properties. Verify, click
+    ""OK"". Select a separator. Select File|Bookmark Properties.
+
+Expected Results
+For step(2) the Bookmark Properties dialog should appear. It should
+    have fields for name, location(url), custom keyword, and description. There
+    should also be a section for setting update and notification options. For step(3) the Bookmark Properties dialog should appear. It should
+    have fields for name and description. No other fileds should appear in this
+    dialog. For step(4) no dialog should appear."
+T-58,"Purpose
+Determine whether the application and OS properly handle items dragged
+  from the Bookmark Manager","Steps/Description
+Replace your browser's bookmarks file with the bookmarks.html file.
+Drag the Sample/FTP:URLs folder to your desktop Drag the FTP: Netscape bookmark to your desktop. Open the Personal Toolbar Folder, as well as its enclosed Channels
+    folder Perform a drag-select beginning with Personal Toolbar Folder ,
+    and ending with Computing and Internet Drag these files to your desktop Drag the @vantage bookmark onto invalid or inappropriate OS interface
+    objects, e.g. Network Neighborhood (win32), or a Desktop Printer (Mac
+    OS). Drag the Business and Finance folder to the Trash (or on
+    Windows, to the Recycle Bin)
+
+Expected Results
+1. The Sample/FTP:URLs folder should appear on your desktop
+  (containing the bookmarks). The file name should be converted to properly
+  handle the lack of slashes within file names on Windows, and colons on Mac
+  OS.
+2. The FTP: Netscape bookmark should appear on your desktop (on Mac
+  OS, also with a file name converted to properly handle the lack of colons
+  within file names.)
+5. All dragged files should appear on the desktop, with the same hierarchy
+  that existed within the Bookmarks window.
+6. All inappropriate icons should reject the drag.
+7. The Business and Finance folder should no longer exist within
+  Bookmark Manager, and be deleted."
+T-117,"Purpose
+Determine whether International Users displays correctly","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+From the Help Drop Down Menu, select Help and Support Center Click on the International Link
+
+Expected Results
+1. The Help and Support Center should come up
+2. You should be taken to an International Users page
+2. This page should Have Current information for International
+  users"
+T-126,"Purpose
+This basic testcase is designed to verify that all links are properly
+  removed from the global history file.","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select Go|History. Observe the contents of the Global History Window. Select Edit|Preferences (from a navigator window) Browse to the Navigator|History Panel. Under ""Browsing History"" click the ""Clear History"" button. Return to observe the contents of the Global History Window.
+
+Expected Results
+If you've observed the initial conditions, the History window should be
+    non-empty upon first observation. After pressing the button, the history window should be empty of
+    individual history items."
+T-157,"Purpose
+Confirm that X Bitmap (XBM) format images can be displayed.
+XBM will not be supported in the initial 5.0 release.
+  This test case may need to be obsoleted.","Initial Conditions
+None.
+
+Steps/Description
+Launch Netscape 6 View the test page (linked below) Independently view each of the two images files (also linked
+    below)
+
+Expected Results
+After step 1, the web page displayed should exhibit display a black
+  & white fancy bitmap image of a clock, followed below by a black and
+  white bitmap image of a penguin.
+After step 2, both the clock and penguin images should be displayed,
+  identically to their appearance in step 1 (or as viewed by Communicator
+  4.x)."
+T-250,"Purpose
+Determine that panels can be reordered","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar , select ""Tabs | Customize Sidebar"" From the window that opens up, add a few panels from the left
+    pane Highlight on any of the panels in the right pane and click on the
+    reorder arrows on the right side Clicking the reorder arrows should move the panel up/down and you
+    should be able to place them wherever you want (top to bottom) Clicking ""OK"" should also reflect the reordering change in the
+    Sidebar in the browser window
+
+Expected Results
+You should be able to reorder panels as you want"
+T-251,"Purpose
+Determine that cancel button does not apply any changes made
+  earlier","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar , select ""Tabs | Customize Sidebar"" From the window that opens up, add a few panels from the left
+    pane Highlight on any of the panels in the right pane and click on the
+    reorder arrows on the right side to move thepanel up/down in the panels
+    list Now, press the CANCEL button
+
+Expected Results
+None of the changes that you made (addition of panels or reordering)
+  should get saved and the Sidebar should be the same as before"
+T-269,"Purpose
+Test opening local files (both HTML and plain text tested) in a
+  Composer window. Includes tests to dismiss dialog.","Initial Conditions
+Copy boring.html and dull.txt into a folder on your machine (eg, you
+    desktop). Then bring up the Open Web Location dialog in the browser.
+UI test #1 Steps/Description Click the Choose File... button. In the resulting file picker dialog, navigate and select the boring.html file. Click Open in the file picker to dismiss
+          it. Select New Composer window from the
+          droplist, if it isn't already displayed there. Click the Open button (or hit Enter ). Expected Results After step #3, the full path and filename should be displayed
+          in the textfield of the Open Web Location dialog. After the last step, the Open Web Location dialog should be
+          dismissed. An editor window should then come up, and boring.html displayed in it.
+Dismissal #1 Steps/Description Click the Choose File... button. In the resulting file picker dialog, navigate and select the boring.html file. Click Open in the file picker to dismiss
+          it. Select New Composer window from the
+          droplist, if it isn't already displayed there. Click the Cancel button (or hit Esc ). Expected Results The dialog should go away and the page in the current browser
+      window remain unchanged .
+UI test #2 Steps/Description Click the Choose File... button. In the resulting file picker dialog, navigate and select the dull.txt file. Click Open in the file picker to dismiss
+          it. Select New Composer window from the
+          droplist, if it isn't already displayed there. Click the Open button (or hit Enter ). Expected Results After step #3, the full path and filename should be displayed
+          in the textfield of the Open Web Location dialog. After the last step, the Open Web Location dialog should be
+          dismissed. An editor window should then come up, and dull.txt displayed in it.
+Dismissal #2 Steps/Description Click the Choose File... button. In the resulting file picker dialog, navigate and select the dull.txt file. Click Open in the file picker to dismiss
+          it. Select New Composer window from the
+          droplist, if it isn't already displayed there. Click the Cancel button (or hit Esc ). Expected Results The dialog should go away and the page in the current browser
+      window remain unchanged ."
+T-305,"Purpose
+To verify all the selectable items under browser in Modern theme.","Description
+From the main menu bar, select Edit > Preferences >
+    Appearance > Themes. Select ""Modern"" theme on the right hand side of the dialog. Click the ""Apply Modern"" button. Close the Preferences dialog. Click through all the items on menu bars, all the tool bars, and
+    floating component bars.
+
+Expected Results
+All the selectable items and icons under browser should work as
+  advertised."

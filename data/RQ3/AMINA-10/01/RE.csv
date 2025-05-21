@@ -1,0 +1,16 @@
+ID,Feature,Description
+S116,Scaling of environment,HES shall be scalable so that the required performance can be maintained with increased data volumes.
+S119,Energy values are exported within 30 sec,The energy values (15-minute values) shall be exportable from HES via integrations to other systems within 30 seconds after registration in HES
+S166,Authorization profiles for user rights,"HES shall have authorization profiles for at least the following user rights:
+- Accessing operating system, starting and stopping the system, updating database, changing authorization profiles, etc.
+- Input/update of structural data, collection of Metering values, etc.
+- Connection and disconnection of the customer installation via the Metering Unit switch
+- Access to Metering Unit meter data and settings
+- Only 'view', not 'edit'"
+S177,Interpolation in HES,There should be functionality in HES to perform interpolations where the collected value is missing.
+S241,Authentication against neighboring systems,Authentication shall be used when the Metering System interacts with neighboring systems.
+S259,Dependencies with other systems,Solution design should be such that dependencies on other systems do not cause the system to lose protection.
+B34,Configure records to be stored for events,"For each Event, it shall be possible to optionally configure which registers (OBIS codes) in the Metering Unit are to be stored."
+B81,Detecting meters with communication problems,"In HES, it shall be possible for the User to detect and view individual Metering Units that have communication problems."
+B91,Configuring the Metering Unit,Configuration of the Metering Device from HES shall be possible without downloading new Firmware.
+B93,Create groups,"Groups should be able to be created dynamically by the User in HES using different parameters, e.g. Facility ID for export of collected data or upgrade of the meter's software where group can be by postal code or meter identity."
