@@ -19,7 +19,7 @@ for dataset in "${datasets[@]}"; do
         new_dataset="RQ3:${dataset}:${sample_size}"
         REST_AT_FLAGS="$session $model $new_dataset gptq.sif GPTQ"
 
-        sbatch ./scripts/job.bash $REST_AT_FLAGS $ITER_PER_SESSION
+        sbatch -o logs/$sesson.log ./scripts/job.bash $REST_AT_FLAGS $ITER_PER_SESSION
         sleep 30
     done
 done
