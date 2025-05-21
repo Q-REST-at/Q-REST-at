@@ -1,7 +1,7 @@
 #!/bin/bash
 ml purge
 
-datasets=("ENCO" "MOZILLA")
+datasets=("AMINA" "Mozilla")
 sample_sizes=(5 10 15 25 50 75 100)
 
 ITER_PER_SESSION=10
