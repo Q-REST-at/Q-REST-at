@@ -7,7 +7,7 @@ library(rstatix)
 #============================ LOAD EXPERIMENT DATA ===========================#
 
 # Load data
-raw_df <- read.csv("./data/workshop_data.csv") # has added "made up" GPTQ data
+raw_df <- read.csv("./data/rq1_flat_df.csv")
 head(raw_df)
 
 
@@ -52,16 +52,9 @@ significant_results <- friedman_results %>%
 
 # TODO list:
 # ============
-# - check for no variance data?
-#   - SNAKE had no variance in the example data, might not be an issue with real data however
+# - add check for no variance data
 # - evaluate effect size
 
-
-# TODO: REMOVE
-# Filter the SNAKE dataset because groups for this dataset has no variance
-# Meaning that the tests fail (no meaningful stat. analysis to be made)
-no_snake_df <- grouped_df %>%
-  filter(dataset != "SNAKE")
 
 # Wrapper function for Pairwise Wilcox test
 run_posthoc <- function(df) {
@@ -74,12 +67,16 @@ run_posthoc <- function(df) {
 # *	  == Moderate evidence
 # ns	== Not significant
 
+# TODO: Filter for no variance values
+#filtered_grouped_df <- grouped_df %>%
+
+
 # Version evaluating ALL pairs regardless of Friedman results
-posthoc_results <- no_snake_df %>%
+posthoc_results <- grouped_df %>%
   mutate(posthoc = map(data, run_posthoc))
 
 # Version with filtering to only evaluate significant results
-posthoc_results <- no_snake_df %>%
+posthoc_results <- grouped_df %>%
   semi_join(significant_results, by = c("model", "dataset", "metric")) %>%
   mutate(posthoc = map(data, run_posthoc))
 
