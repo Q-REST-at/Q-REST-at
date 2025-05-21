@@ -1,0 +1,8 @@
+This folder contains:
+- RE.csv > the full translated and manually verified requirements specification set.
+- ST.csv > 100 test specifications that have been translated and manually verified.
+- 10 randomly sampled subsets with sample size = 25 (sampled from the available portion of translated data)
+
+Please note that this is as far as we have gotten in the translation of the tests.
+
+DO NOT DELETE THIS DATASET OR WE WILL LOSE OUR PROGRESS !!!

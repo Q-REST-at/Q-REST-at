@@ -1,3 +1,0 @@
-This folder contains:
-- the full translated and manually verified requirements specification set.
-- a subset of 100 test specifications that have been translated and manually verified.
