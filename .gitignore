@@ -170,4 +170,8 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
-.Rproj.user
+
+# R-related folders/files
+.Rproj.user/
+.Rhistory
+.RData
