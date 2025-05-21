@@ -116,7 +116,7 @@ def main() -> None:
     load_dotenv()
     session_name = args.session
     model: str = args.model.lower()
-    data: str = args.data.lower()
+    data: str = args.data
     subset: int = args.subset
     quant: str = args.quant.lower()
     log_dir: str = args.log_dir
@@ -158,7 +158,10 @@ def main() -> None:
     # Dynamically construct data path and retrieve a corresponding env variable
     # *************************************************************************
 
-    valid_data = ["mix", "mix-small", "bths", "enco", "snake", "mozilla", "hw"] # hw stands for HealthWatcher dataset
+    valid_data = [
+        "mix", "mix-small", "enco", # legacy
+        "bths", "amina", "snake", "mozilla", "hw"
+    ]
 
     # Special case: for RQ3, datasets are passed as RQ3:[data]:[sample_size].
     # This eliminates the need for a new flag.
@@ -167,11 +170,15 @@ def main() -> None:
         return path\
                 .replace(dataset, f"{dataset}-{sample_size}")\
                 .replace("data", "data/RQ3")
-
-    rq3_flag = data.split(":")
-    is_rq3_option = re.match(r"^RQ3:([^:]+):(\d+)$", data) is not None\
-            and rq3_flag[1].lower() in valid_data\
-            and subset is not None
+     
+    rq3_flag = data.split("-")
+    is_rq3_option = False
+    try:
+        is_rq3_option = re.match(r"^RQ3-([^-]+)-(\d+)$", data) is not None\
+                and rq3_flag[1].lower() in valid_data\
+                and subset is not None
+    except Exception:
+        traceback.print_exc()
 
     if data.lower() in valid_data or is_rq3_option:
         if is_rq3_option: data = rq3_flag[1] # extract dataset
