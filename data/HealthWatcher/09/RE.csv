@@ -1,4 +1,0 @@
-ID,Feature,Description
-FR10,Login,This use case allows an employee to have access to restricted operations on the Health-Watcher system.
-FR13,Register new employee,This use case allows new employees to be registered on the system.
-FR15,Update health unit,This use case allows the health unit's data to be updated.

@@ -1,4 +1,0 @@
-ID,Feature,Description
-FR14,Update employee,This use case allows of the employee's data to be updated on the system.
-FR15,Update health unit,This use case allows the health unit's data to be updated.
-FR16,Change logged employee,This use case allows the currently logged employee to be changed.
