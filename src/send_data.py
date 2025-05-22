@@ -163,10 +163,12 @@ def main() -> None:
         "bths", "amina", "snake", "mozilla", "hw"
     ]
 
-    # Special case: for RQ3, datasets are passed as RQ3:[data]:[sample_size].
+    # Special case: for RQ3, datasets are passed as RQ3-<data>-<sample_size>
     # This eliminates the need for a new flag.
 
     def change_path_RQ3(path: str, dataset: str, sample_size: str) -> str:
+        # Note: the `dataset` replacement is case-sensitive. E.g. will not
+        # replace Mozilla with MOZILLA.
         return path\
                 .replace(dataset, f"{dataset}-{sample_size}")\
                 .replace("data", "data/RQ3")
@@ -178,7 +180,7 @@ def main() -> None:
                 and rq3_flag[1].lower() in valid_data\
                 and subset is not None
     except Exception:
-        traceback.print_exc()
+        pass
 
     if data.lower() in valid_data or is_rq3_option:
         if is_rq3_option: data = rq3_flag[1] # extract dataset
