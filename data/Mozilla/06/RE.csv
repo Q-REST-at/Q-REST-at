@@ -1,43 +1,6 @@
 ID,Feature,Description
-R-6,Add/Delete Personal Toolbar bookmark,"Verify that items from the personal toolbar folder are properly
-      added/deleted."
-R-9,Surf All Bookmarks,Verify that there are no 'dead' default links.
-R-12,Show/Hide Folder,Verify that disclosure triangles/folder icons are in sync.
-R-16,Rename bookmark inline - not implemented,"Change the name of a bookmark without use of the bookmark properties
-      dialog."
-R-36,Overflow,"Determine whether extremely large images can be copied from web
-      pages."
-R-38,General,"Determine whether text can be copied and pasted from text fields
-      within a dialog box."
-R-58,D&D from Bookmark Manager,"Determine if the application and OS properly
-      handle items dragged from the Bookmark Manager"
-R-68,Save Form Data - right click,"Verify that you can save a form's data by right clicking on
-      the form itself."
-R-72,Save Form Data - never return,"Verify that you can save a form's data from the popup dialog
-      box, never for this site and you are never asked again upon
-      returning to the site."
-R-76,Edit Form Data - new value for field,"Verify that if you add a new value for a field in Form Manager
-      it is later offered as an option when prefilling a form using
-      this field."
-R-87,Index,"Verify that there is an in Index of help content and a list of
-        keywords to links in the help content."
-R-90,TS/Buddy List,"Verify that there is Troubleshooting Help about the problme ""if you
-        can't see anyone in your buddy list window."""
-R-95,Forward/Back,Verify the functionality of the forward/back buttons in Help
-R-104,Mail and News,"Determine whether Mail and News help content displays
-        correctly"
-R-112,Streamlined Interface,Determine whether Streamlined Interface displays correctly
-R-116,Security Center,Determine whether the Security Center displays correctly
-R-123,Load recorded url,"Verify that double-clicking on a history link causes it to be
-        launched in a browser window."
-R-130,Resize columns,Verify that columns are resizable to show/hide more of entries
-R-139,Back and forward with named anchors,"Verify browser goes back and forward correctly from sites that use
-        named anchors"
-R-151,Cache/Networking,"Determine whether images load directly into the web browser from a
-        networked server."
-R-188,Print a Page with frames,Determine whether a page with frames prints properly
-R-192,Indentation Test,Determine if a page with indentations prints as seen on screen
-R-204,Print Tables,Determine if tables print correctly
-R-209,Off-Line Printing,Determine that off-line printing works
-R-320,Show and Hide,"Verify that Personal and Navigation bars can be expanded and
-        collapsed"
+R-182,"Tasks, view saved passwords","Verify that when you have saved a username and password in password
+      manager, this information can be viewed in the password manager through
+      tasks"
+R-291,Basic access,Access from main menu and access keys.
+R-311,Collapse (mac only),Click to shrink to content
