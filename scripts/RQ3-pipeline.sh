@@ -3,6 +3,8 @@ ml purge
 
 datasets=("AMINA" "Mozilla")
 sample_sizes=(5 10 15 25 50 75 100)
+model="MIS"
+quant="GPTQ"
 
 ITER_PER_SESSION=10
 
@@ -18,7 +20,7 @@ for dataset in "${datasets[@]}"; do
         session="RQ3_${dataset}_${sample_size}"
         new_dataset="RQ3-${dataset}-${sample_size}"
 
-        REST_AT_FLAGS=("$session" "$model" "$new_dataset" "gptq.sif" "GPTQ" "$ITER_PER_SESSION")
+        REST_AT_FLAGS=("$session" "$model" "$new_dataset" "${quant,,}" "$quant" "$ITER_PER_SESSION")
         sbatch -o logs/"$session".log ./scripts/job.bash "${REST_AT_FLAGS[@]}"
 
         sleep 30
