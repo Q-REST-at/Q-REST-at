@@ -43,7 +43,8 @@ def load_treatment_data(directory: str) -> tuple[dict[str, pd.DataFrame], dict[s
     # (this function supports loading multiple treatment data files from same dir)
     summary_dataframes: dict[str, pd.DataFrame] = {}  # Statistical summary (<session_name>.json)
     detailed_dataframes: dict[str, pd.DataFrame] = {} # All individual data points (all_data_<session_name>.json)
-
+    raw_metric_data = {}
+    
     # Get all files in the given directory
     files = os.listdir(directory)
 
@@ -70,6 +71,8 @@ def load_treatment_data(directory: str) -> tuple[dict[str, pd.DataFrame], dict[s
         # Convert summary metrics to a dataframe
         # Note: this currently excludes "prevalence" and the "frequency_table"
         metric_rows = []
+        raw_metric_data[session] = {}
+
         for _, value in summary_json.items():
             # Only process dictionaries with a "name" field (i.e., metrics)
             if isinstance(value, dict) and "name" in value: 
@@ -80,6 +83,8 @@ def load_treatment_data(directory: str) -> tuple[dict[str, pd.DataFrame], dict[s
                     # Exclude unnecessary fields and flatten the dictionary
                     **{k: v for k, v in value.items() if k != "name" and k != "population"}
                 })
+                raw_metric_data[session][value["name"]] = value
+
         
         # Add the session dataframe to dictionary containing all sessions,
         # using the session name as key
@@ -94,8 +99,8 @@ def load_treatment_data(directory: str) -> tuple[dict[str, pd.DataFrame], dict[s
         # using the session name as key
         detail_df = pd.DataFrame(detail_json)
         detailed_dataframes[session] = detail_df
-
-    return summary_dataframes, detailed_dataframes
+        detailed_dataframes[session] = detail_df
+    return summary_dataframes, detailed_dataframes, raw_metric_data
 
 
 
@@ -118,7 +123,7 @@ def load_experiment_data(base_dir: str, iteration_structure: bool = True) -> \
     # Dictionaries to store dataframes per treatment 
     stat_sum_dfs: dict[str, pd.DataFrame] = {} # statistical summary dataframes
     all_data_dfs: dict[str, pd.DataFrame] = {} # all individual data points dataframes
-
+    raw_metric_data: dict[str, pd.DataFrame] = {}
     # Traverse all the sub-directories
     for day in os.listdir(f"{base_dir}"):
         for timestamp in os.listdir(f"{base_dir}/{day}"):
@@ -133,11 +138,12 @@ def load_experiment_data(base_dir: str, iteration_structure: bool = True) -> \
 
                     # Construct the path to the current directory and load the data
                     files_path = f"{base_dir}/{day}/{timestamp}/{session}"
-                    temp_sum_df, temp_all_df = load_treatment_data(files_path)
+                    temp_sum_df, temp_all_df, temp_raw_metrics = load_treatment_data(files_path)
                     
                     # Append the new data to the dictionaries
                     stat_sum_dfs |= temp_sum_df
                     all_data_dfs |= temp_all_df
+                    raw_metric_data |= temp_raw_metrics  # new!
             
             else:
                 # Skip current iteration if we encountered a file
@@ -151,7 +157,7 @@ def load_experiment_data(base_dir: str, iteration_structure: bool = True) -> \
                 stat_sum_dfs |= temp_sum_df
                 all_data_dfs |= temp_all_df
     
-    return stat_sum_dfs, all_data_dfs
+    return stat_sum_dfs, all_data_dfs, raw_metric_data
 
 
 # Utility functions: storing data
