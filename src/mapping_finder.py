@@ -1,0 +1,154 @@
+#!/usr/bin/env python3
+
+import csv
+from collections import defaultdict
+from typing import Final
+
+"""
+If len(test_ids) == 0: "unassigned"
+If len(test_ids) == 1 and test_id used by only 1 Req ID → 1:1
+If len(test_ids) > 1 and all test_ids used only by this Req ID → 1:M
+If len(req_ids) > 1 and len(test_ids) == 1 → M:1
+If len(req_ids) > 1 and len(test_ids) > 1 → M:M
+"""
+MAPPING_TYPES: Final[list[str]] = ['1:1', '1:n', 'n:1', 'n:m']
+
+datasets: Final[list[str]] = ["AMINA", "BTHS", "HealthWatcher", "Mozilla"]
+
+ITERATIONS: int = 10
+
+"""
+BTHS simplified.
+"""
+test_csv_data = """
+Req ID,Test ID
+1,"A,B,C,D,E,F"
+2,"B,C,D"
+3,
+4,"E,F"
+5,"G,H,I"
+6,J
+7,"K,L"
+8,"M,N,O"
+"""
+
+LATEX_MODE = False
+Mapping = dict[str, tuple[str,...]]
+Classification = dict[str, int | tuple[int, int]]
+
+
+def parse_csv_to_mapping(csv_text: str) -> Mapping:
+    reader = csv.reader(csv_text.strip().splitlines())
+    next(reader)
+
+    mapping: Mapping = {}
+    for req_id, test_ids in reader:
+        req_id = req_id.strip()
+        if not test_ids.strip():
+            mapping[req_id] = tuple()
+        else:
+            test_id_list = [t.strip() for t in test_ids.split(',')]
+            mapping[req_id] = tuple(sorted(test_id_list))
+
+    return mapping
+
+
+def classify_mappings(mapping: Mapping) -> Classification:
+    req_to_test = mapping
+    test_to_req = defaultdict(set)
+
+    # Invert mapping: Test ID --> set of Req IDs
+    for req_id, test_ids in req_to_test.items():
+        for test_id in test_ids:
+            test_to_req[test_id].add(req_id)
+
+    # Initialize classification 'buckets'
+    classifications: dict[str, set[str]] = {
+        **{ k: set() for k in MAPPING_TYPES },
+        "unassigned": set()
+    }
+
+    for req_id, test_ids in req_to_test.items():
+        if not test_ids:
+            classifications['unassigned'].add(req_id)
+            continue
+
+        is_test_ids_shared = any(len(test_to_req[t_id]) > 1 for t_id in test_ids)
+
+        if len(test_ids) == 1:
+            if len(test_to_req[test_ids[0]]) == 1:
+                classifications['1:1'].add(req_id)
+            else:
+                classifications['n:1'].add(req_id)
+        elif not is_test_ids_shared:
+            classifications['1:n'].add(req_id)
+        else:
+            classifications['n:m'].add(req_id)
+
+    # Count unique test IDs used per category
+    test_ids_by_class: dict[str, set[str]] = {
+        key: set(
+            t_id for req_id in reqs for t_id in req_to_test.get(req_id, [])
+        )
+        for key, reqs in classifications.items() if key != 'unassigned'
+    }
+
+    # Final reporting
+    results: Classification = {}
+    for key in MAPPING_TYPES:
+        reqs: set[str] = classifications[key]
+        tests: set[str] = test_ids_by_class.get(key, set())
+        results[key] = (len(reqs), len(tests))
+
+    results['unassigned'] = len(classifications['unassigned'])
+
+    return results
+
+
+def load_file(filepath: str) -> str:
+    try:
+        with open(filepath, "r", encoding="utf-8") as f:
+            return f.read().strip()
+    except Exception:
+        print(Exception);
+        return ""
+
+
+def get_filepaths(dataset: str) -> list[str]:
+    prefix: str = f"./data/{dataset}"
+    if dataset == "BTHS" or dataset == "HealthWatcher":
+        return [f"{prefix}/mapping.csv"] # omit samples
+    else:
+        return [f"{prefix}/{i:02}/mapping.csv" for i in range(1, ITERATIONS + 1)]
+
+
+def get_latex_res(classification: Classification) -> str:
+    return " && ".join([
+        f"{classification[k][0]}:{classification[k][1]}" for k in MAPPING_TYPES
+    ])
+
+
+if __name__ == "__main__":
+    print(f"Types: {' '.join(MAPPING_TYPES)}\n")
+    for dataset in datasets:
+        filepaths = get_filepaths(dataset)
+        print(f"{dataset}"); print("=" * 55) if not LATEX_MODE else None
+
+        for i, file in enumerate(filepaths):
+            print(f"[{i:02}]", end=" ") if not LATEX_MODE else None
+
+            csv_file: str = load_file(file)
+            if csv_file == "":
+                print(f"File {csv_file} could not be loaded. Skipping..")
+                continue
+
+            mapping = parse_csv_to_mapping(csv_file)
+            res = classify_mappings(mapping)
+
+            if LATEX_MODE:
+                print(get_latex_res(res))
+            else:
+                for mt in MAPPING_TYPES:
+                    print(f"{res[mt][0]}:{res[mt][1]} ({mt})", end=" ")
+                print(f"∅: {res['unassigned']}")
+        print()
