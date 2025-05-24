@@ -353,9 +353,9 @@ def main() -> None:
                         "time_to_analyze": time_to_analyze,
                     }
                     if gpu is not None:
-                        data["GPU"] = gpu
+                        data_json["GPU"] = gpu
                     if vram is not None:
-                        data["VRAM"] = vram
+                        data_json["VRAM"] = vram
 
                     json_list.append(data_json)
                 
