@@ -264,7 +264,8 @@ class Model:
             **input_ids,
             max_new_tokens=self.max_new_tokens,
             do_sample=True,
-            temperature=0.1
+            temperature=0.1,
+            pad_token_id=self.tokenizer.eos_token_id
         )
 
         raw_res: str = self.tokenizer.decode(outputs[0])
