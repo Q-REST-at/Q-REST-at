@@ -1,15 +1,327 @@
 ID,Purpose,Test steps
-T-238,"Purpose
-Determine that non-default width of Sidebar is retained after new window
-  is opened or browser is restarted","Initial Conditions
+T-10,"Purpose
+This basic testcase is designed to verify that the edit properties feature
+  works as prescribed for various items.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Select a bookmark. Select File|Bookmark Properties. Change the Name OR the Location. Edit the Description field. Click ""OK"" Surf the link. Select a folder. Select File|Bookmark Properties. Change the Name. Change the description. Click ""OK"".
+
+Expected Results
+For step(2) the changes should take effect upon pressing ""OK"". The
+    changes should be seen in the four standard locations.If the name changed
+    clicking the new bookmark name should go to the same url. If the url
+    changed, clicking the same name should go to the new url. For step(3) the changes should take effect upon pressing ""OK"". The
+    changes should be seen in the four standard locations."
+T-14,"Purpose
+This basic testcase is designed to verify that bookmarks are added and
+  deleted from the personal","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Click on disclosure triangles to open/close several folders. Remember which were open/closed. Do the same for bookmarks folders in the bookmarks sidepanel. (Do not
+    close Manage Bookmarks) Quit the browser (alternately, induce a crash) Launch the browser and open the sidebar and Manage Bookmarks.
+
+Expected Results
+The bookmarks tree should have the same shape, ie folders that were
+    closed should still be closed and those that were open should still be
+    open. This should be true for the bookmarks in the sidepanel as well."
+T-16,"Purpose
+This basic testcase is designed to verify that bookmarks can be renamed
+  ""inline"" i.e. without having to use the bookmarks properties dialog.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which
+    I use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Click a bookmark by single clicking on the name of the bookmark. Type a new name. Press enter. Select Edit|Bookmark Properties, look at the name field.
+
+Expected Results
+In step(2) the bookmark name should hilite and become editable. In step(3) and step(4) the new name you typed should replace the old
+    name."
+T-19,"Purpose
+This basic testcase is designed to verify that columns are resizable by
+  dragging them to an arbitrary size.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Mouseover the separator between the ""Name"" and ""URL"" columns. Click and drag that separator to the left and right. Repeat this with each of the other column separators.
+
+Expected Results
+In step(2) the mouse pointer should change to a double-arrowed
+    icon (platform specific or XP?). In step(3) the column sizes on either side of the separator should
+    shrink and grow as you drag. The content of the column should move with
+    the column header. Column content that is obscured should be replaced by
+    the ellipsis(?)."
+T-36,"Purpose
+Determine whether extremely large images can be copied from web pages.","Initial Conditions
 None.
 
 Steps/Description
-Launch the browser Click with the mouse on the Sidebar grippy(mouse pressed) and expand
-    the sidebar Make the width of the Sidebar to whatever you want (upto max
-    allowed) Select File| New Navigator Window to open a new browser window Observe that the Sidebar width should be the same as in the earlier
-    window and should not appear changed Also, after step3, select File|Quit to close the browser Restart the browser
+View the below-linked 4.7 MB JPEG image. Copy the image to the system Clipboard. View the system Clipboard, or page the Clipboard contents to an
+    application that supports image display.
 
 Expected Results
-After step 3 and step 6, sidebar non-default width should be the same as
-  changed earlier"
+The JPEG file should be properly displayed on the system Clipboard."
+T-37,"Purpose
+Determine whether complicated rich text (such as massively nested tables)
+  can be copied.","Initial Conditions
+None.
+
+Steps/Description
+For each of the following links:
+Select and copy the page content View the system Clipboard
+(examples from NGLayout Stress
+  tests )
+
+Expected Results
+The page content should be properly copied to the Clipboard. (""Proper"" is subjective; compare to IE 4.x or 5.x as a baseline and use your
+  best judgement.)"
+T-41,"Purpose
+To confirm that dragging a text or image link from one browser window to
+  another opens the link in the target window.","Steps/Description
+Open the testfile.html test file Open a new browser window Drag the Drag Me link from the first browser window to the new
+    window Drag the Space Shuttle image from the first browser window to the new
+    window.
+
+Expected Results
+3. The dragme.html page should open in the
+  new window
+4. The large space shuttle image should open in the new window."
+T-52,"Purpose
+Confirm that files for installed helper applications are properly
+  processed when dragged from the desktop","Initial Conditions
+Macromedia Flash helper application is installed for the application
+
+Steps/Description
+Download the firstrun.swf test file to your
+    computer From your desktop or file manager, drag the downloaded file to the
+    browser window
+
+Expected Results
+2. The RealPlayer 7 intro animation should display within the browser
+  window."
+T-69,"Purpose
+This basic testcase is designed to verify that you can save a form's data
+  from the edit menu","Initial Conditions
+You should have no form data saved
+
+Steps/Description
+Go to a site that needs information, for example mapquest.com Fill in all the fields for driving directions and click get
+    directions Click yes From the Tools menu, open the Form Manager sub-menu, and then choose
+    Edit Form Info
+
+Expected Results
+2. A dialog should appear asking if you would like to save the values you
+  filled in
+3. Your data should be saved to Form Manager
+4. Your saved data should appear in the Forms Manager"
+T-99,"Purpose
+This basic testcase is designed to verify that the up arrow and down arrow Keys function 
+  properly in help","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+Select the toplevel Help menu. Select Technical Support Push the down arrow key on your keyboard Push the up arrow key on your keyboard Click a few random links in help and try using these keys
+    again
+
+Expected Results
+2. You should be taken to http://help.netscape.com/
+4. This should move you down the page until the end
+5. This should move you up the page until you reach the top
+6. Up arrow and down arrow keys 
+  should consistantly move you up and down pages"
+T-115,"Purpose
+Determine whether Netscape Technical Support displays correctly","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+From the Help Drop Down Menu, select Help and Support Center Click the Assisted Support Options link Click the Communicator 4.x link Click on the Netscape link Click on the Intertional Browsers link
+
+Expected Results
+1. The Help and Support Center page should come up
+2. You should be taken to the Need some help? page
+2. Help number should be listed 1(800)411-0707 (They
+  will help you for low-cost assistance)
+2. There should be links to Communicator 4.x, Netscape 6,
+  International Browsers
+3. You should be taken to a general Help page for Communicator 4.x
+4. You should be taken to a general Help page for Netscape 6
+4. Verify that the browser mentioned on this page is the correct
+  version of the Netscape 6 browser
+5.You should be taken to a general Help page for International
+  Support"
+T-130,"Purpose
+This testcase is designed to verify that columns are resizable by dragging
+  them to an arbitrary size.","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select Go|History. Mouseover the separator between the ""Name"" and ""URL"" columns. Click and drag that separator to the left and right. Repeat this with each of the other column separators.
+
+Expected Results
+In step(2) the mouse pointer should change to a double-arrowed
+    icon(platform specific or XP?). In step(3) the column sizes on either side of the separator should
+    shrink and grow as you drag. The content of the column should move with
+    the column header. Column content that is obscured should be replaced by
+    the ellipsis(?)."
+T-174,"Purpose
+Verify that when you disable password manager from the preferences panel,
+  you no longer are asked if you would like to save passwords and longer get
+  prefilled info on sites","Initial Conditions
+Browser should be started and you should have a username and password for
+  a site, such as www.freeride.com
+
+Steps/Description
+From the Edit drop down list, select preferences Click the arrow next to advanced Click passwords Unclick the box next to remember passwords for sites that require me to
+    log in Click ok Go to a sight that requires a password, such as
+    http://www.freeride.com Enter a username and password and click sign in
+
+Expected Results
+1. The preference panel should be displayed
+2. The advanced options should be displayed
+3. The password panel should be displayed on the right hand side
+5. The preferences panel should close
+7. You should not be presented with a dialog asking if you would like to
+  save your username and password"
+T-180,"Purpose
+Verify that you can remove a site and username from the passwords never
+  saved section of password manager","Initial Conditions
+Password manager should be enabled, in a different browser create an
+  account at a site that requires a username and password such as
+  http://www.ivillage.com
+
+Steps/Description
+Go to a site that you have not been to before in Netscape 6, such as
+    http://www.ivillage.com Enter your username and password When a dialog appears asking if you would like to save this
+    information, click never for this site From the edit drop down menus, select preference Click on the arrow next to advanced Click on passwords Click View stored passwords Click on the passwords never saved tab Highlight this sight and username in the list and click remove Click cancel Click View saved passwords Click the passwords never saved tab Highlight this sight and username in the list and click remove Click ok Click View stored passwords Click Passwords never saved tab
+
+Expected Results
+3. Your username and password should be saved to the passwords never saved
+  portion of password manager
+4. Preference pane should open
+5. Advanced options should appear
+6. Password manager options should appear on right pane
+7. A list of saved passwords should appear with your saved sight and
+  username appearing in the list
+8. The site and username for this site should be listed under the
+  passwords never saved tab
+9. This site's information should no longer appear in the list
+10. Window should close
+12. This site and username should again appear on the list
+13. This site and username should no longer appear on the list of never
+  saved passwords
+14. This site should be removed from the list
+16. This site and username should not appear on the passwords never saved
+  list."
+T-184,"Purpose
+Verify that you can remove a username and password for a given site and it
+  will no longer autofill on that sight nor will it be listed in password
+  manager (netscape.com)r","Initial Conditions
+Password manager should be enabled, in a different browser create an
+  account at a site that requires a username and password such as
+  http://www.netscape.com
+
+Steps/Description
+Go to a site that you have not been to before in Netscape 6, such as
+    http://www.netscape.com Enter your username and password When a dialog appears asking if you would like to save this
+    information, click yes From the tasks drop down menu selecet privacy and security->password
+    manager->view stored passwords Highlight this sight and username in the list and click remove Click cancel Click View saved passwords Highlight this sight and username in the list and click remove Click ok Click View saved passwords
+
+Expected Results
+3. Your username and password should be saved to the password manager
+4. A list of saved passwords should appear with your saved sight and
+  username appearing in the list
+5. This site's information should no longer appear in the list
+6. Window should close
+7. This site should once again, be in the list of saved passwords
+8. This site and username should no longer appear on the list of saved
+  passwords
+10. This site should be removed from the list"
+T-214,"Purpose
+Determine that Quicktime movies play properly","Initial Conditions
+None
+
+Steps/Description
+Launch the browser Click here to open
+    a video tests page. Click on the Quicktime movie tests and verify that
+    movies play properly Click here to
+    visit a page with quicktime movies. Click on all movies one by one to view
+    them. Click here to view the Apple quicktime trailers page. Click on the images to play the
+    movies. Try the links as well. Try out movies in all sizes (small, medium,
+    large). Move browser scrollbars to see if page paints correctly or not
+    while movie is playing. Click here to view a page with plugins
+    inside table. Try to play all plugins simultaneously. In all steps above, press the browser's BACK or FORWARD button and see
+    that the movie unloads/loads properly Click
+    here . Click on the quicktime logos to watch movies. Some large quicktime movies on this page . IFilm website .
+    choose Quicktime to watch movies on this site. To change preferences, click
+    on ""More Options"" in the right pane of the window and select ""Change
+    preferences"" to change player settings. Green Mile Videos . PlanetOut (Queer Tv) Videos .
+    PlanetOut Archive. Click on ""watch in quicktime for all movies"" Click
+    here . Watch videos in High/Low bandwidth.
+
+Expected Results
+All Quicktime movies should load and play properly."
+T-224,"Purpose
+This basic testcase is designed to verify that a user can change the
+  search engine used to conduct searches.","Initial Conditions
+Open a new browser window. All prefs should be set to their defaults (new profile).
+
+Steps/Description
+Run the single-search test
+    first. In the dropdown box after the word ""using"" select a different search
+    engine. Click the ""Search"" Button next to the textfield. Repeat steps 2-3 as desired.
+
+Expected Results
+Search results from the chosen search engine should load in the browser
+    window. Results should load in the Search tab as well. Search results in the search tab should be prefixed by an icon
+    representing the new search engine - for each result."
+T-253,"Purpose
+Determine that What's Related lists lists related sites","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser Visit any url, say, www.yahoo.com From the Sidebar, select the ""What's Related"" tab to open it (This
+    tab gets added by default) Observe that a listing of websites is given in the What's Related
+    tab
+
+Expected Results
+What's Related tab should list a number of related sites to yahoo.com,
+  eg: aol.com, google.com, msn.com, etc."
+T-304,"Purpose
+To verify all the selectable items in Classic theme work properly on
+  different applications under browser like composer, mail, news, aim,
+  address book, etc.","Description
+From the main menu bar, select Edit > Preferences >
+    Appearance > Themes. Select ""Classic"" theme on the right hand side of the dialog. Click the ""Apply Classic"" button. Close the Preferences dialog. Click through all the items on menu bars and tool bars under
+    composer, mail, news, aim, and address book to see all the look and
+    feel are consistent.
+
+Expected Results
+All the selectable items and icon under browser should work as
+  advertised"
+T-324,"Purpose
+This basic testcase is designed to verify that browser navigation
+  toolbar buttons execute appropriately.","Initial Conditions
+All of the browser's toolbars(3) must be visible. Make sure they are all visible by selecting the top level ""View""
+    menu and looking at the Toolbars submenu. The Navigation Toolbar,
+    Personal Toolbar and Taskbar should all have checks next to their
+    names.
+
+Steps/Description
+Click here to load a
+    page with an animated gif. Wait for it to stop. Click the ""Back"" button on the Navigation toolbar. It looks like a
+    left-pointing arrow. Click the ""Forward"" button on the Navigation toolbar. It looks like
+    a right-pointing arrow. Wait for the gif to stop. Click the ""Reload"" button on the Navigation toolbar. It looks like
+    a curved arrow. Click the ""Reload"" button again, then quickly click the ""Stop""
+    button on the Navigation toolbar. It looks like an ""X""
+
+Expected Results
+While the gif is animating the ""Forward"" and ""Reload"" buttons
+    should be inactive and the ""Back"" and ""Stop"" buttons should be active.
+    When the gif stops, the ""Reload"" button should be active and the ""Stop""
+    button should be inactive. You should go back to the page you were at before. The ""Forward""
+    button should become active. The ""Forward"" button should become inactive again. The gif should begin to animate again. The gif should stop mid-animation"

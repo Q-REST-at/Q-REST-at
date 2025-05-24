@@ -1,7 +1,37 @@
 ID,Feature,Description
-R-6,Add/Delete Personal Toolbar bookmark,"Verify that items from the personal toolbar folder are properly
-      added/deleted."
-R-106,Customizing Netscape 6,"Determine whether Customzing Netscape 6 help content displays
-        correctly"
-R-231,Discontiguous (disjoint) selection,"Determine whether discontiguous selection of table cells function
-        properly."
+R-27,Delete multiple bookmarks,Verify that several bookmarks are deleted at one time.
+R-33,Images,"Determine whether native and non-native images are correctly copied
+      to the system Clipboard."
+R-49,D&D from the desktop – Shortcuts,"Confirm that dragging an Internet shortcut to the
+      browser window opens the URL"
+R-61,"D&D <a href=""/drag-url-browser-toolbar/"">
+      Given link is non-fetchable, non-retrievable Personal Toolbar",Determine if you can drag items to and from the Personal Toolbar
+R-65,Form Manager - Pop-up,"Verify that a form fill popup menu is activated
+      when a field gets accessed that has been saved in form
+      manager data."
+R-82,Tooltips,"Verify that there are ""Big tooltips"" - Similar to popup help for
+        Windows control panels"
+R-121,Record sites,Verify that visited links are recorded.
+R-126,Erase all,Clear all of history
+R-129,Sort by columns,sort and reverse-sort per column
+R-146,Send in mail,"Determine that you can right click an image and send it via
+        email."
+R-153,Image Display,"Determine whether animated GIFs continue to animate after an
+        extended period of 24 hours or greater."
+R-175,Preferences enable,"Verify that when you enable password manager from the preferences
+      panel, you are asked if you would like to save usernames and passwords
+      and get prefilled info on sites"
+R-190,Test Page,Print a test page and check to see if it prints properly
+R-192,Indentation Test,Determine if a page with indentations prints as seen on screen
+R-239,UI,Cursors should have the right icon when mousing over
+R-243,Add/Remove,Adding a already added panel
+R-244,Add/Remove,Delete a panel
+R-256,Bookmarks,Verify that changes reflect immediately from Bookmarks Manager
+R-266,Nonexistent URL,Open a nonexistent (bogus) web location.
+R-294,Info window content,Verify these sections:Information on the current pageForms on the current page (if applicable)Images on the current page (if applicable)Screenshot of selected images below grippy.
+R-296,Select and copy,Select and copy from the info window.
+R-312,Close Wndow,Click upper-right (upper left on Mac) to close
+R-315,Stretch Window Diagonally,"Grab any corner of window and drag to resize. Only bottom-right
+        corner on Mac."
+R-316,Scroll Arrow Up,Click up arrow to scroll page
+R-319,Page scroll,Click in the scrollbar area to page up/down.

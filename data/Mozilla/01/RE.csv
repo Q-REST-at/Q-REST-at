@@ -1,7 +1,39 @@
 ID,Feature,Description
-R-227,Drag-selection,"Currently, it is my understanding that there will be no new
-        features in this area (can monitor bug list)"
-R-257,Add Menu,"Verify that panel title show up in Add menu when panel is
-        added"
-R-321,Reorder,"Verify that toolbars can be dragged&dropped to change their
-        order"
+R-16,Rename bookmark inline - not implemented,"Change the name of a bookmark without use of the bookmark properties
+      dialog."
+R-19,Resize columns,Verify that columns are resizable to show/hide more of entries
+R-27,Delete multiple bookmarks,Verify that several bookmarks are deleted at one time.
+R-35,Overflow,"Determine whether extremely large text blocks can be copied from web
+      pages."
+R-36,Overflow,"Determine whether extremely large images can be copied from web
+      pages."
+R-60,D&D Large Images (stress),"Verify that dragging a large (e.g. 5 MB) image across
+      browser windows, to desktop, and into mail message
+      works properly."
+R-62,D&D Bookmarks menu to toolbar,"Verify that you can drag a bookmark from the Bookmarks menu
+      to the Personal Toolbar."
+R-71,Save Form Data - dialog no,"Verify that you can stop a form's data from being saved from
+      the popup dialog box, and you click no."
+R-102,Help Contents,Determine whether Help Contents displays correctly
+R-123,Load recorded url,"Verify that double-clicking on a history link causes it to be
+        launched in a browser window."
+R-136,Surf Go menuitems,Verify browser goes back and forward to recently visited sites
+R-148,Print image,"Determine that it is possible to print an image without changing
+        the currently loaded page"
+R-166,"Save username and password, yes","Verify that the browser behaves correctly after selections are made
+      in the save password dialog box"
+R-185,"Tasks, passwords saved, remove all","Verify that you can remove all username and password information and
+      it will no longer autofill nor will anything be listed in password
+      manager (lycos.com)"
+R-197,Print Mozillazine poll result page,Determine if the Mozillazine Poll results page prints properly
+R-203,Print Lists,Determine if lists print correctly
+R-224,basic sidebar search,Verify that a user can change the search engine
+R-225,Bookmark Search,Verify that a search query/results can be bookmarked
+R-229,Double-click,Determine whether the double-click gesture functions properly.
+R-235,Startup,Check default panels and default open panels(content loaded?)
+R-245,Add/Remove,Delete all panels
+R-247,Add/Remove,Verify list of available local panels
+R-297,Check for Themes,"Verify both Classic and Modern exist under the themes
+        preferences"
+R-298,Testing under Classic theme,Verify Classic theme works as advertised
+R-308,Window Title,"Verify the title is correct, ""<page title> - Mozilla"""

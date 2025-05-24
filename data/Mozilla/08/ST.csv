@@ -1,32 +1,323 @@
 ID,Purpose,Test steps
-T-149,"Purpose
-Confirm that Seamonkey renders images correctly upon a dynamic
-  resolution change.","Initial Conditions
-System under test should be capable of 8-bit color (256 colors),
-  16-bit and 24 bit
+T-13,"Purpose
+This basic testcase is designed to verify that separators are properly
+  added and deleted.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
 
 Steps/Description
-Launch Netscape 6 View the test case page (linked below) Change the system resolution to 8-bit color (256 colors) Change the system resolution to 16-bit color (65536 colors) Change the system resolution to 24-bit color (16 million
-    colors)
+Select Bookmarks|Manage Bookmarks. Select a bookmark. Select File|New Separator. Select the separator. Select Edit|Delete, click ""OK"".
 
 Expected Results
-After Step 2, the page should be properly dithered to 8-bit color
-After Step 3, the page should be properly dithered to 16-bit
-  color.
-After Step 4, the page should be properly rendered in 24-bit
-  color.
-(After steps 2, 3 and 4, ""proper"" rendering or dithering means that
-  the colors should appear as accurate or more accurate than when this test
-  case is viewed in Communicator 4.x or Internet Explorer 5.x.)"
-T-243,"Purpose
-Determine that a panel that has been already added cannot be added
-  again.","Initial Conditions
+After step (3) separator should immediately appear below the selected
+    item in the toplevel bookmarks menu, the bookmarks popup on the personal
+    toolbar, the bookmarks sidepanel, and the manage bookmarks window. After step (4) the separator should immediately disappear (be deleted)
+    from the toplevel bookmarks menu, the bookmarks popup on the personal
+    toolbar, the bookmarks sidepanel, and the manage bookmarks window."
+T-18,"Purpose
+This basic testcase is designed to verify that the column sorting feature
+  works properly.","Initial Conditions
+Install this bookmarks file.( abcdbookmarks.html ) You must also customize your sidebar to include a bookmarks panel.
+
+Steps/Description
+Select Bookmarks|Manage Bookmarks. Click on the ""Name"" column once. Click on the ""Name"" column a second time. Click on the ""Name"" column a third time. Click on the ""URL"" column once, and a second time. Click on the ""Custom Keyword"" column once, and a second time. Click on the ""Description"" column once, and a second time. Click on the ""Last Visit"" column once, and a second time. Click on the ""Added On"" column once, and a second time. Click on the ""Last Modified"" column once, and a second time.
+
+Expected ResultsBy step
+The bookmarks should sort into alphabetical order. (a-b-c-d-e) The bookmarks should sort into reverse-alphabetical order.
+    (e-d-c-b-a) The bookmarks should sort into ""natural"" order (the way they were
+    originally sorted). (a-d-e-b-c) The bookmarks should sort into order by URL and then the reverse of
+    that order. (d-a-b-c-e) The bookmarks should sort into order by Custom Keyword and then the
+    reverse of that order. (c-d-a-b-e) The bookmarks should sort into order by Description and then the
+    reverse of that order. (b-c-d-a-e) The bookmarks should sort into order by Last Visited time and then the
+    reverse of that order. The bookmarks should sort into order by Added On date and then the
+    reverse of that order. The bookmarks should sort into order by Last Modified date and then the
+    reverse of that order. Separators should separate the sort as well, ie step one should result
+    in a-b-c-d-e|aa-bb-cc-dd-ee, not a-aa-b-bb-c-cc-d-dd-e|."
+T-62,"Purpose
+Verify that you can drag a bookmark from the Bookmarks menu to the
+  Personal Toolbar.","Steps/Description
+From the Tasks drop down menu, select Tools-> JavaScript
+    Console Click Clear and close the console From the Bookmarks drop down menu select manage bookmarks Drag a bookmark from the manage bookmarks window to the personal
+    toolbar Verify that a bookmark icon appears on your toolbar and when clicked,
+    it takes you to the appropriate website From the Tasks drop down menu, select Tools-> JavaScript
+    Console Verify that there are no new errors in the console
+
+Expected Results
+To be written"
+T-107,"Purpose
+This basic testcase is designed to verify that Understanding privacy
+  content comes up when clicked, is displayed corectly, and prints
+  correctly","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
+
+Steps/Description
+Select the toplevel Help menu. Select Help Contents Click Understanding Privacy from the left panel Select all contents on right, copy and paste into your favorite
+    word processor and run spell check Click the printer icon
+
+Expected Results
+3. Understanding privacy content should come up with main topics on
+  the left and detailed information on the right
+4. There should be no spelling errors (Besides obvious computer terms
+  and websites)
+5. Understanding Privacy content should print"
+T-110,"Purpose
+This basic testcase is designed to verify that Security and Privacy
+  help content comes up when clicked, is displayed corectly, and prints
+  correctly","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
+
+Steps/Description
+Select the toplevel Help menu. Select What's new in Netscape six from the submenu Click Security and Privacy Select all contents of the page, and right click, select copy and
+    then paste into your favorite word processor and run spell check
+
+Expected Results
+3. A new window should open with Easier Security at the top of the
+  page
+4. There should be no spelling errors (Besides obvious computer terms
+  and websites)"
+T-111,"Purpose
+This basic testcase is designed to verify that Security and Privacy
+  help content comes up when clicked and is displayed correctly","Initial Conditions
+Netscape should be started
+
+Steps/Description
+Select the toplevel Help menu. Select What's new in Netscape six from the submenu Click Same time messaging Select all contents of the page, and right click, select copy and
+    then paste into your favorite word processor and run spell check
+
+Expected Results
+3. A new window should open with ""Multiple Mail Accounts &
+  Identities"" at the top of the page
+4. There should be no spelling errors (Besides obvious computer terms
+  and websites)"
+T-117,"Purpose
+Determine whether International Users displays correctly","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+From the Help Drop Down Menu, select Help and Support Center Click on the International Link
+
+Expected Results
+1. The Help and Support Center should come up
+2. You should be taken to an International Users page
+2. This page should Have Current information for International
+  users"
+T-125,"Purpose
+This basic testcase is designed to verify that multiple links are properly
+  deleted and no longer displayed","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select Go|History. Select any history entry. Shift+click or drag to select more (at least
+    3). Select Edit|Delete. Restart the browser. Select Go|History
+
+Expected Results
+After step(3) the titles and links to the history entries should now be
+    removed from the history window. After step(4) they should still be gone."
+T-128,"Purpose
+This testcase is designed to verify that history items appear grouped in
+  the new ""by day"" format or the ""old skool"" flat format in the global history
+  window.","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select Go|History. In the Global History window, select View|Group By|Day. In the Global History window, select View|Group By|Site. In the Global History window, select View|Group By|None.
+
+Expected Results
+After Step(2), history entries should appear grouped into folders
+    labeled ""Today"", ""Yesterday"", ""2 days ago"", ... ,""6 days ago"", and ""Older
+    than 6 days"". After Step(3), the history items should appear grouped by domain name
+    (no folders). After Sep (4), the history items should appear -???"
+T-129,"Purpose
+This testcase is designed to verify that the column sorting feature works
+  properly.","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select Go|History. This is most easily tested by using the View|Group
+  By|None setting but not strictly necessary.
+Click on the ""Title"" column once. Click on the ""Title"" column a second time. Click on the ""Title"" column a third time. Click on the ""Location"" column once, and a second time. Click on the ""Last Visited"" column once, and a second time.
+
+Expected Results
+By step:
+The bookmarks should sort into alphabetical order, by Title. The bookmarks should sort into reverse-alphabetical order, by
+    Title. The bookmarks should sort into ""natural"" order (the way they were
+    originally sorted). The bookmarks should sort into order by Location and then the reverse
+    of that order. The bookmarks should sort into order by Last Visited and then the
+    reverse of that order."
+T-157,"Purpose
+Confirm that X Bitmap (XBM) format images can be displayed.
+XBM will not be supported in the initial 5.0 release.
+  This test case may need to be obsoleted.","Initial Conditions
 None.
 
 Steps/Description
-Launch the browser From the sidebar, select ""Tabs | Customize Sidebar"" From the window that opens up, select ""What's Related"" or ""Search""
-    (already added panels) and click on ""Add"" button.
+Launch Netscape 6 View the test page (linked below) Independently view each of the two images files (also linked
+    below)
 
 Expected Results
-After step 2, the panel should only be highlighted in the right pane and
-  should not get added again to the list."
+After step 1, the web page displayed should exhibit display a black
+  & white fancy bitmap image of a clock, followed below by a black and
+  white bitmap image of a penguin.
+After step 2, both the clock and penguin images should be displayed,
+  identically to their appearance in step 1 (or as viewed by Communicator
+  4.x)."
+T-163,"Purpose
+Determine that applet lifecycle works properly (init, start, stop...)","Initial Conditions
+Open the Java console from Tasks | Tools |  Java Console menu While performing every test, hit the BACK button and FORWARD button in
+    the browser and observe results in browser window or console
+
+Steps/Description
+Click the following testcase links
+Test 1 . Observe the clock display the
+    system time on your machine. Hit BACK and FORWARD
+    button and see that time changes and you see a different time with every
+    visit. Test 2 . Hit BACK and
+    FORWARD button on this page and observe that the init, start and
+    stop methods are called in that order in java console. Test 3 . Hit BACK and
+    FORWARD button on this page and observe that the init, start and
+    stop methods are called in that order in java console."
+T-174,"Purpose
+Verify that when you disable password manager from the preferences panel,
+  you no longer are asked if you would like to save passwords and longer get
+  prefilled info on sites","Initial Conditions
+Browser should be started and you should have a username and password for
+  a site, such as www.freeride.com
+
+Steps/Description
+From the Edit drop down list, select preferences Click the arrow next to advanced Click passwords Unclick the box next to remember passwords for sites that require me to
+    log in Click ok Go to a sight that requires a password, such as
+    http://www.freeride.com Enter a username and password and click sign in
+
+Expected Results
+1. The preference panel should be displayed
+2. The advanced options should be displayed
+3. The password panel should be displayed on the right hand side
+5. The preferences panel should close
+7. You should not be presented with a dialog asking if you would like to
+  save your username and password"
+T-184,"Purpose
+Verify that you can remove a username and password for a given site and it
+  will no longer autofill on that sight nor will it be listed in password
+  manager (netscape.com)r","Initial Conditions
+Password manager should be enabled, in a different browser create an
+  account at a site that requires a username and password such as
+  http://www.netscape.com
+
+Steps/Description
+Go to a site that you have not been to before in Netscape 6, such as
+    http://www.netscape.com Enter your username and password When a dialog appears asking if you would like to save this
+    information, click yes From the tasks drop down menu selecet privacy and security->password
+    manager->view stored passwords Highlight this sight and username in the list and click remove Click cancel Click View saved passwords Highlight this sight and username in the list and click remove Click ok Click View saved passwords
+
+Expected Results
+3. Your username and password should be saved to the password manager
+4. A list of saved passwords should appear with your saved sight and
+  username appearing in the list
+5. This site's information should no longer appear in the list
+6. Window should close
+7. This site should once again, be in the list of saved passwords
+8. This site and username should no longer appear on the list of saved
+  passwords
+10. This site should be removed from the list"
+T-185,"Purpose
+Verify that you can remove all username and password information and it
+  will no longer autofill nor will anything be listed in password manager
+  (lycos.com)","Initial Conditions
+Password manager should be enabled and you should have saved username
+  and password information for several sites
+
+Steps/Description
+From the task drop down menus, select privacy and
+     security->password manager->view stored passwords Click remove all Click cancel From the task drop down menus, select privacy and
+     security->password manager->view stored passwords Click remove all Click ok From the task drop down menus, select privacy and
+     security->password manager->view stored passwords
+
+Expected Results
+1. A list of saved passwords should appear with your saved sights and
+   usernames appearing in the list
+2. All of the saved site and username information should be removed
+   from the list
+4. All of the saved site and username information should again, appear
+   in the list
+5. All of the saved site and username information should be removed
+   from the list
+6. The password manager should close
+7. There should be no information listed under the passwords saved
+   tab"
+T-195,"Purpose
+Determine that Seamonkey prints page source properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Go to mozilla home page Select menu option ""View | Page Source"" to view the source code A new window with the source opens up. Select menu option ""FILE | PRINT"" Press ""OK"" to print the page
+
+Expected Results
+After Step 6, the page source should print as seen on screen"
+T-224,"Purpose
+This basic testcase is designed to verify that a user can change the
+  search engine used to conduct searches.","Initial Conditions
+Open a new browser window. All prefs should be set to their defaults (new profile).
+
+Steps/Description
+Run the single-search test
+    first. In the dropdown box after the word ""using"" select a different search
+    engine. Click the ""Search"" Button next to the textfield. Repeat steps 2-3 as desired.
+
+Expected Results
+Search results from the chosen search engine should load in the browser
+    window. Results should load in the Search tab as well. Search results in the search tab should be prefixed by an icon
+    representing the new search engine - for each result."
+T-238,"Purpose
+Determine that non-default width of Sidebar is retained after new window
+  is opened or browser is restarted","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser Click with the mouse on the Sidebar grippy(mouse pressed) and expand
+    the sidebar Make the width of the Sidebar to whatever you want (upto max
+    allowed) Select File| New Navigator Window to open a new browser window Observe that the Sidebar width should be the same as in the earlier
+    window and should not appear changed Also, after step3, select File|Quit to close the browser Restart the browser
+
+Expected Results
+After step 3 and step 6, sidebar non-default width should be the same as
+  changed earlier"
+T-240,"Purpose
+Determine that when the mouse is moved over panels, the panels
+  highlight","Initial Conditions
+This test works only with the ""Classic"" Theme set for the browser.
+
+Steps/Description
+Launch the browser Move the mouse on any of the panels in the Sidebar Each panel should highlight making itself visible when the mouse is
+    over it
+
+Expected Results
+Panels should highlight when mouse is moved over them"
+T-251,"Purpose
+Determine that cancel button does not apply any changes made
+  earlier","Initial Conditions
+None.
+
+Steps/Description
+Launch the browser From the Sidebar , select ""Tabs | Customize Sidebar"" From the window that opens up, add a few panels from the left
+    pane Highlight on any of the panels in the right pane and click on the
+    reorder arrows on the right side to move thepanel up/down in the panels
+    list Now, press the CANCEL button
+
+Expected Results
+None of the changes that you made (addition of panels or reordering)
+  should get saved and the Sidebar should be the same as before"
+T-314,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"

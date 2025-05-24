@@ -1,6 +1,39 @@
 ID,Feature,Description
-R-149,Image Display,"Determine whether images are properly redithered upon system
-        bit-depth changes."
-R-243,Add/Remove,Adding a already added panel
-R-287,Navigation/UI,"Scrolling and keyboard navigation within the source window. Also
-        should be able to use keyboard accelerators. Resize source window."
+R-13,Create/Delete separator,Verify separators are properly added/deleted.
+R-18,Sort by columns,sort and reverse-sort per column
+R-62,D&D Bookmarks menu to toolbar,"Verify that you can drag a bookmark from the Bookmarks menu
+      to the Personal Toolbar."
+R-82,Tooltips,"Verify that there are ""Big tooltips"" - Similar to popup help for
+        Windows control panels"
+R-107,Understanding Privacy,"Determine whether Understanding Privacy help content displays
+        correctly"
+R-110,Security and Privacy,Determine whether Security and Privacy displays correctly
+R-111,Same time messaging,Determine whether Same time messaging displays correctly
+R-117,International Users,Determine whether International Users displays correctly
+R-125,Delete multiple entries,Delete multiple History entries
+R-128,Change grouping,Change the History View to Group by Day|Site|None
+R-129,Sort by columns,sort and reverse-sort per column
+R-157,Image Display,"Determine whether X Bitmap (XBM) format images can be displayed.Note: XBM will not be supported in the initial 5.0
+          release."
+R-163,Test lifecycle of applets,Test lifecycle of applets
+R-174,Preferences disable,"Verify that when you disable password manager from the preferences
+      panel, you no longer are asked if you would like to save passwords and
+      longer get prefilled info on sites"
+R-184,"Tasks, passwords saved, remove","Verify that you can remove a username and password for a given site
+      and it will no longer autofill on that sight nor will it be listed in
+      password manager (netscape.com)"
+R-185,"Tasks, passwords saved, remove all","Verify that you can remove all username and password information and
+      it will no longer autofill nor will anything be listed in password
+      manager (lycos.com)"
+R-195,"Print a ""Page Source""",Determine if page source prints as seen on screen
+R-224,basic sidebar search,Verify that a user can change the search engine
+R-238,Width,Retaining non-default size on reopen or new window
+R-240,Mouse Over,"Verify that panels appear highlighted when mouse is moved over
+        them"
+R-251,Cancel,Verify that nothing changes when you cancel
+R-276,Basic access of Find and Find Again,"Access from main menu, keyboard accelerator, access keys."
+R-284,Basic access,"Access from main menu, keyboard accelerator, access keys."
+R-293,Other content,"Attempt to view page info for plain text, xml, ftp listing,
+        directory listing..."
+R-314,Stretch Window Vertically,"Grab top/bottom window edge and drag to resize. Not available on
+        Mac."

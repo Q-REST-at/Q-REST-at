@@ -1,6 +1,42 @@
 ID,Feature,Description
-R-41,D&D Links across browser windows,"Confirm that dragging a link across browser windows
-      opens the link."
-R-87,Index,"Verify that there is an in Index of help content and a list of
-        keywords to links in the help content."
-R-203,Print Lists,Determine if lists print correctly
+R-30,Prevent bad drops,"Verify that it is NOT possible to drop an item onto itself or its
+      immediate parent or child"
+R-33,Images,"Determine whether native and non-native images are correctly copied
+      to the system Clipboard."
+R-35,Overflow,"Determine whether extremely large text blocks can be copied from web
+      pages."
+R-58,D&D from Bookmark Manager,"Determine if the application and OS properly
+      handle items dragged from the Bookmark Manager"
+R-64,Form Manager - Autocomplete,"113893Implement New Form Functionality
+      (waiting on bug status)"
+R-73,Prefill - OK Dialog,"Verify that when you encounter a Web site that could be prefilled,
+      that you are given the pre-fill dialog and when you click ok, the
+      information is filled into the form."
+R-103,Browsing the Web,"Determine whether Browsing the web help content displays
+        correctly"
+R-125,Delete multiple entries,Delete multiple History entries
+R-136,Surf Go menuitems,Verify browser goes back and forward to recently visited sites
+R-171,"Actitvation, ftp","Need a good working case for this, working on
+      it"
+R-176,"Preferences, view saved passwords","Verify that when you have saved a username and password in password
+      manager, this information can be viewed in the password manager through
+      preferences"
+R-177,"Preferences, view passwords never saved","Verify that when you have designated not to ever save a username and
+      password in password manager, this information can be viewed in the
+      password manager through preferences (expedia.com)"
+R-181,"Preferences, passwords never saved, remove all","Verify that you can remove all site and username information from the
+      passwords never saved section of password manager (ivillage.com)"
+R-186,"Tasks, passwords never saved, remove","Verify that you can remove a site and username from the passwords
+      never saved section of password manager"
+R-197,Print Mozillazine poll result page,Determine if the Mozillazine Poll results page prints properly
+R-209,Off-Line Printing,Determine that off-line printing works
+R-211,Print Range,Determine that print range works properly
+R-213,Realplayer tests,Determine if Realaudio works properly
+R-217,Acrobat Tests,Determine if Acrobat plugin works properly
+R-233,Drag Scroll,Determine whether drag-scrolling gestures function properly.
+R-236,Startup,Check default width of Sidebar
+R-241,Opening/Closing,Check Opening/Closing of Sidebar with grippy
+R-250,Re-Order,Verify reordering of panels works
+R-262,URL in current browser window,"Open a web location (URL) in the current Navigator window. Includes
+        test to dismiss dialog."
+R-298,Testing under Classic theme,Verify Classic theme works as advertised

@@ -1,30 +1,304 @@
 ID,Purpose,Test steps
-T-65,"Purpose
-Verify that a form fill popup menu is activated when a field gets accessed
-  that has been saved in Form Manager data.","Initial Conditions
-N/A
+T-10,"Purpose
+This basic testcase is designed to verify that the edit properties feature
+  works as prescribed for various items.","Initial Conditions
+You must have a bookmarks file. To promote consistency, you may choose to use the default set of Netscape Seamonkey Bookmarks , which I
+    use. I have also provided the default Mozilla bookmarks file. You also have the option to use this very large bookmarks file . You must also customize your sidebar to include a bookmarks panel.
 
 Steps/Description
-Go to a site that requires you to fill in data such as ivillage.com
-    (then go to the page to create an account) Fill in data on the form From the Edit drop down menus, select save form data Shut down the browser Start the browser again and return to ivillage.com Click in the first field
+Select Bookmarks|Manage Bookmarks. Select a bookmark. Select File|Bookmark Properties. Change the Name OR the Location. Edit the Description field. Click ""OK"" Surf the link. Select a folder. Select File|Bookmark Properties. Change the Name. Change the description. Click ""OK"".
 
 Expected Results
-3. A dialog box should appear, alerting you to the fact that the data has
-  been captured
-6. A popup list should appear with the choice of selecting what you typed
-  in the first time"
-T-163,"Purpose
-Determine that applet lifecycle works properly (init, start, stop...)","Initial Conditions
-Open the Java console from Tasks | Tools |  Java Console menu While performing every test, hit the BACK button and FORWARD button in
-    the browser and observe results in browser window or console
+For step(2) the changes should take effect upon pressing ""OK"". The
+    changes should be seen in the four standard locations.If the name changed
+    clicking the new bookmark name should go to the same url. If the url
+    changed, clicking the same name should go to the new url. For step(3) the changes should take effect upon pressing ""OK"". The
+    changes should be seen in the four standard locations."
+T-51,"Purpose
+Confirm that supported image files dragged to the browser window are
+  properly displayed","Steps/Description
+Download each of the image files each below to your computer From your desktop or file manager, drag each downloaded file to the
+    browser window
+
+Expected Results
+2. Each image should be displayed in the browser window."
+T-114,"Purpose
+This basic testcase is designed to verify that the New to the net help
+  content comes up when clicked, is displayed corectly, and prints
+  correctly","Initial Conditions
+Netscape should be started and a printer should be installed on the
+  machine you are using
 
 Steps/Description
-Click the following testcase links
-Test 1 . Observe the clock display the
-    system time on your machine. Hit BACK and FORWARD
-    button and see that time changes and you see a different time with every
-    visit. Test 2 . Hit BACK and
-    FORWARD button on this page and observe that the init, start and
-    stop methods are called in that order in java console. Test 3 . Hit BACK and
-    FORWARD button on this page and observe that the init, start and
-    stop methods are called in that order in java console."
+Select the toplevel Help menu. Select ""What's new in Netscape 6"" Click ""My sidebar is yours"" Close the window created in 3 and click on ""Search from anywhere,
+    anytime"" Close the window created in 4 and click on ""Convenient
+    Services"" Close the window created in 5 and click on Start using
+    Netscape
+
+Expected Results
+2. Verify that a screen describing new features in Netscape 6 comes
+  up
+3. Verify that a window describing ""My sidebar"" appears in a new
+  window
+4. Verify that ""Fast and Convenient Search from the Location Bar"" page
+  comes up
+5. Verify that ""A host of Services"" window comes up
+6. Verify that you are taken to http://home.netscape.com/?cp=wn6"
+T-116,"Purpose
+Determine whether the Security Center displays correctly","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+From the Help Drop Down Menu, select Help and Support Center Click on the Security Center Link
+
+Expected Results
+The images should be too big for the browser window and you should
+  have to scroll to see the entire pictures (should not resize with
+  text)"
+T-119,"Purpose
+Determine whether the About Netscape displays correctly","Initial Conditions
+Netscape should be started up
+
+Steps/Description
+From the help drop down menu, select About Netscape 6 Click on Contributors link Click on Mozilla Public License and Netscape Public License Click on the license link Click on the Java link Click on the Sun Microsystems link Click on the Copyright Â© 1998-2000 Support.com, Inc. link Click on the Lernout & Hauspie Speech Products N.V. link Click on the Net2Phone, Inc. Hackensack, NJ USA. link
+
+Expected Results
+1. The About Netscape page should come up
+2. Verify that the Contributors page (Terri Preston should be listed)
+  :-)
+3. Verify that you are taken to http://www.mozilla.org/MPL/
+4. Verify that you are taken to
+  jar:resource:///chrome/en-US.jar!/locale/en-US/global/license.txt
+5. & 6. Verify that you are taken to http://java.sun.com/
+7. Verify that you are taken to http://www.support.com/
+8. Verify that you are taken to the Lernout & Hauspie page (this
+  is currently NS bug 12462 )
+9. Verify that you are taken to http://www.net2phone.com/"
+T-121,"Purpose
+This basic testcase is designed to verify that links are properly added to
+  the global history file.","Initial Conditions
+You must have used the installation of the browser you plan to
+    test. If you have not, browse around some, then come back. Or run the gomenu-list test first.
+
+Steps/Description
+Select Go|History. Observe the contents of the Global History Window. Quit and restart the browser. Select Go|History.
+
+Expected Results
+If you've observed the initial conditions, the History window should be
+    non-empty upon first observation. After restart, the History window should still be non-empty."
+T-135,"Purpose
+This basic testcase is designed to verify that links are properly added to
+  the global history file.","Initial Conditions
+Your session history needs to be empty for this test so restart the
+    browser or open a new window. To check, the Back/Forward buttons should be
+    inactive and the dropdowns should not appear at all when the session
+    history is empty.
+
+Steps/Description
+Follow this Netscape link. Follow this Netscape
+    People link. Wait for the redirect (15sec). Follow this Mozilla QA link. Follow this Mozilla link. From the ""Back"" button dropdown select the 4th item from the top
+    ""Netscape.com"". From the ""Forward"" button dropdown select the 3rd item from the top
+    ""Mozilla QA Home Page""
+
+Expected Results
+For Step(6), the dropdown menu should be apparent and active, the 4th
+    item should be ""Netscape.com"", the page title, and selecting it should
+    actually load that page For Step(7), the dropdown menu should be apparent and active, the 3rd
+    item should be ""Mozilla QA Home Page"", the page title, and selecting it
+    should actually load that page."
+T-148,"Purpose
+Determine that you can right click an image and print it.","Initial Conditions
+Have mozilla started up and a printer installed on your machine.
+
+Steps/Description
+Complete these steps for all images below
+Open one of the files listed below Right click the image and select print
+
+Expected Results
+Image should print."
+T-152,"Purpose
+To confirm that images load directly into the web browser from a local
+  hard drive.","Initial Conditions
+Disk and memory caches to be cleared.
+
+Steps/Description
+Copy these below-linked files to your hard drive: vlpan12.gif,
+    vlpan11.jpg and wall_ni.png. View each of those images.
+
+Expected Results
+After loading vlpan12.gif, a 530x462 GIF image of the surface of Mars
+  should display.
+After loading vlpan11.jpg, a 1496x1536 JPEG image of the surface of
+  Mars should display.
+After loading wall_ni.png, a 640x480 PNG image of the Great Wall
+  should display."
+T-154,"Purpose
+Confirm that an automatically updated web cam continues to refresh
+  over an extended (24 hours) period of time.","Initial Conditions
+System under test must be configured to continue normal operation and
+  not ""sleep"" or power down after an extended period of inactivity.
+
+Steps/Description
+Launch Netscape 6 View the test page (linked below) Leave the browser operating untouched for 24 hours
+
+Expected Results
+The images on the page should continue to auto-refresh every 45
+  seconds."
+T-161,"Purpose
+Determine that applets within different html tags work properly","Initial Conditions
+None
+
+Steps/Description
+Testing the <APPLET> tag Testing the <OBJECT> tag
+
+Expected Results
+All applets should load and run properly"
+T-162,"Purpose
+Determine that applets within different html tags work properly","Initial Conditions
+None
+
+Steps/Description
+Run the Java-to-JS tests Run the the JS-to-Java tests
+
+Expected Results
+All tests should load and run properly"
+T-178,"Purpose
+Verify that you can remove a username and password for a given site and it
+  will no longer autofill on that sight nor will it be listed in password
+  manager","Initial Conditions
+Password manager should be enabled, in a different browser create an
+  account at a site that requires a username and password such as
+  http://www.espn.com
+
+Steps/Description
+Go to a site that you have not been to before in Netscape 6, such as
+    http://www.espn.com Enter your username and password When a dialog appears asking if you would like to save this
+    information, click yes From the edit drop down menus, select preference Click on the arrow next to advanced Click on passwords Click View saved passwords Highlight this sight and username in the list and click remove Click cancel Click View saved passwords Highlight this sight and username in the list and click remove Click ok Click View saved passwords
+
+Expected Results
+3. Your username and password should be saved to the password manager
+4. Preference pane should open
+5. Advanced options should appear
+6. Password manager options should appear on right pane
+7. A list of saved passwords should appear with your saved sight and
+  username appearing in the list
+8. This site's information should no longer appear in the list
+9. Window should close
+10. This site should once again, be in the list of saved passwords
+11. This site and username should no longer appear on the list of saved
+  passwords
+13. This site should be removed from the list"
+T-184,"Purpose
+Verify that you can remove a username and password for a given site and it
+  will no longer autofill on that sight nor will it be listed in password
+  manager (netscape.com)r","Initial Conditions
+Password manager should be enabled, in a different browser create an
+  account at a site that requires a username and password such as
+  http://www.netscape.com
+
+Steps/Description
+Go to a site that you have not been to before in Netscape 6, such as
+    http://www.netscape.com Enter your username and password When a dialog appears asking if you would like to save this
+    information, click yes From the tasks drop down menu selecet privacy and security->password
+    manager->view stored passwords Highlight this sight and username in the list and click remove Click cancel Click View saved passwords Highlight this sight and username in the list and click remove Click ok Click View saved passwords
+
+Expected Results
+3. Your username and password should be saved to the password manager
+4. A list of saved passwords should appear with your saved sight and
+  username appearing in the list
+5. This site's information should no longer appear in the list
+6. Window should close
+7. This site should once again, be in the list of saved passwords
+8. This site and username should no longer appear on the list of saved
+  passwords
+10. This site should be removed from the list"
+T-202,"Purpose
+Determine that Seamonkey prints various images properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Click here to open a small
+    .gif image. Click here to open a large
+    .gif image. Click here to open a small
+    .jpg image. Click here to open a largel
+    .jpg image. Click here to open a .xbm image. Click here to open an animated
+    .gif image. Select the menu option ""FILE | PRINT"" to print the image Press ""OK"" to print the image. Similarly, print all the images one by one.
+
+Expected Results
+All images should print properly."
+T-208,"Purpose
+Determine that Page Setup dialog comes up properly","Initial Conditions
+None
+
+Steps/Description
+Launch Apprunner Do ""File | Page Setup""
+
+Expected Results:
+Native Page Setup dialog should come up
+* - This menu option ""Page Setup"" should not be visible on windows/linux
+  platforms."
+T-219,"Purpose
+Determine that Viewpoint Plugin works correctly","Initial Conditions
+None
+
+Steps/Description
+http://cole.viewpoint.com/~compuserve/ http://developer.viewpoint.com/ -
+    Click on ""check out our demos"" Viewpoint Home page- Click on the ads on the front page. Also, click on the ""Gallery"" link
+    on home page to check out links/tests there http://auto.viewpoint.com/ http://www.viewpoint.com/medical http://www.viewpoint.com/products/3-11.html http://www.viewpoint.com/company/advertising.jsp http://www.viewpoint.com/zoomview Lots of viewpoint demo tests (Some links might not work/ require username password which we can't
+    access) http://www.viewpoint.com/demos/vpdemos/zoomview/medical/index.html http://www.fordvehicles.com/suvs/explorer/3Dviews/index.asp?flashok=true http://www.viewpoint.com/demos/vpdemos/flashvet/vaio/index.html http://www.viewpoint.com/demos/vpdemos/electronics/aibo/index.html http://www.geometrix.com/facevision/applications/merchandising.html - click on 'Launch demo' http://www.geometrix.com/facevision/technology/face.html# http://www.bikewerx.co.uk/catcage2.htm http://sspp.gsfc.nasa.gov/3d/ - Select
+    models from under ""3D Model Listing"" http://www.nextdimension.de/vetframe.html - Select demos from listing on the left http://www.esterling.co.uk/metastream.asp http://www.softmax.at/zimmer.htm- Select 3d demos from listing on the right http://cole.viewpoint.com/~avinberg/
+
+Expected Results
+All Viewpoint media player files should load/work properly"
+T-220,"Purpose
+This basic testcase is designed to verify that simply clicking the
+  ""Search"" button behaves as designed.","Initial Conditions
+Open a new browser window.
+
+Steps/Description
+Without editing anything in the URL Bar, click the ""Search"" button to the
+  right of the URL bar.
+
+Expected Results
+Clicking the ""Search"" button with a ""clean"" URL bar should just go to
+    the default search page. The current default search page for Netscape commercial builds is
+    http://home.netscape.com/escapes/search."
+T-299,"Purpose
+Visually inspect menu bar, floating component bar, and all the tool
+  bars.","Description
+From the main menu bar, select Edit >
+     Preferences > Appearance > Themes. Select ""Classic"" theme on the right hand side of the
+     dialog. Click the ""Apply Classic"" button. Close the Preferences dialog.
+
+Expected Results
+All the menu bars, tool bars, task bars, and the widgets are well
+      displayed."
+T-303,"Purpose
+To verify all the selectable items under browser in Classic theme.","Description
+From the main menu bar, select
+    Edit > Preferences > Appearance > Themes. Select ""Classic"" theme on the right hand side of the dialog. Click the ""Apply Classic"" button. Close the Preferences dialog. Click through all the items on menu bars, tool bars, and floating
+    component bars.
+
+Expected Results
+All the selectable items and icons under browser should work as
+  advertised."
+T-315,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"
+T-318,"Purpose
+This is just a place holder testcase.","Initial Conditions
+Go back to the testcase matrix.
+
+Steps/Description
+If you're here, you shouldn't be. It means the testcase you clicked on
+  consists solely of performing the action in the description field of the
+  testcase matrix.
+
+Expected Results"
