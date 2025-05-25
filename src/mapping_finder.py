@@ -155,6 +155,7 @@ def get_latex_trow(classification: Classification) -> str:
 LATEX_HEADER: Final[str] = "RE & ST & P & N & Prevalence ($\\%$) & $1{:}1$ & $1{:}M$ & $M{:}1$ & $N{:}M$ & Unassigned \\\\"
 
 
+# TODO: make the tables more pleasant to look at.
 def get_latex_table(dataset: str, data: list[Classification]) -> str:
     has_subsets = len(data) > 1
     return """
