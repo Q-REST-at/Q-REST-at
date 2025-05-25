@@ -123,7 +123,7 @@ def get_filepaths(dataset: str) -> list[str]:
 
 
 def get_latex_res(classification: Classification) -> str:
-    return " && ".join([
+    return " & ".join([
         f"{classification[k][0]}:{classification[k][1]}" for k in MAPPING_TYPES
     ])
 
