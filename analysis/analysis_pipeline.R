@@ -1,34 +1,37 @@
 #install.packages("tidyverse")
 #install.packages("rstatix")
 #install.packages("coin") # Used internally by rstatix's Wilcox_effsize()
+#install.packages("rcompanion") # has implementations for the Vargha-Delaney A12 measure.
 library(tidyverse)
 library(rstatix)
+library(rcompanion)
+
 
 options(scipen = 50) # Show decimals instead of scientific notation (RStudio)
 
 
 #============================== SELECT WHICH RQ ===============================#
 
-use_rq1 = TRUE
+USE_RQ1 = TRUE
 
 #============================ LOAD EXPERIMENT DATA ============================#
 
 # Load data
-if (use_rq1) {
-  raw_df <- read.csv("./data/rq1_flat_df.csv")
+if (USE_RQ1) {
+  raw_df <- read.csv("./data/PT6_prompt/rq1_flat_df-PT6.csv")
 } else {
-  raw_df <- read.csv("./data/rq2_flat_df.csv")
+  raw_df <- read.csv("./data/PT6_prompt/rq2_flat_df-PT6.csv")
 }
 
 
 #=============================== PRE-PROCESSING ===============================#
 
 # Metrics to test
-rq1_metrics <- c("balanced_accuracy", "recall", "precision", "f1")
-rq2_metrics <- c("time_to_analyze", "vram_max_usage_mib")
+RQ1_METRICS <- c("balanced_accuracy", "recall", "precision", "f1")
+RQ2_METRICS <- c("time_to_analyze", "vram_max_usage_mib")
 
 # Set which RQ metrics to use
-metrics <- if (use_rq1) rq1_metrics else rq2_metrics
+metrics <- if (USE_RQ1) RQ1_METRICS else RQ2_METRICS
 
 
 # Expand the metrics columns to "true" long format
@@ -122,14 +125,143 @@ posthoc_results <- filtered_df %>%
 
 #========================== EFFECT SIZE CALCULATION ===========================#
 
-run_effsize <- function(df) {
+# Vargha, A. and H.D. Delaney. A Critique and Improvement of the CL Common Language Effect Size Statistics of
+# McGraw and Wong. 2000. Journal of Educational and Behavioral Statistics 25(2):101–132.
+# 
+# Of course, these interpretations have no universal authority. They are just guidelines based on the judgement of 
+# the authors, and are probably specific to field of study and specifics of the situation under study.
+# 
+# You might see the original paper for their discussion on the derivation of these guidelines.
+# 
+# Small : 0.56  – < 0.64 or > 0.34 – 0.44
+# Medium: 0.64  – < 0.71 or > 0.29 – 0.34
+# Large : ≥ 0.71 or ≤ 0.29
+
+map_vda_effect <- function(vda_value) {
+  if((0.56 <= vda_value & vda_value < 0.64) | (0.34 < vda_value & vda_value <= 0.44)) {
+    effect <- "Small"
+  } else if((0.64 <= vda_value & vda_value < 0.71) | (0.29 < vda_value & vda_value <= 0.34)) {
+    effect <- "Medium"
+  } else if(vda_value >= 0.71 | vda_value <= 0.29) {
+    effect <- "Large"
+  } else {
+    effect <- "Negligible"
+  }
+}
+
+
+# Custom paired VDA function (for within-subjects/repeated-measures design)
+# (there are no existing paired implementations available in libraries)
+run_paired_vda <- function(df) {
   # Count the unique number of quantization groups
   q_groups <- unique(df$quantization)
   
   # If the row does not contain at least two quantization groups, we can't
   # perform any meaningful pairwise (effect size) analysis
-  if (length(q_groups) < 2) {
-    return(tibble::tibble(group1 = NA, group2 = NA, effsize = NA, magnitude = NA, status = "skip"))
+  if (length(q_groups) < 2) { 
+    return(tibble(
+        group1 = NA, 
+        group2 = NA, 
+        vda = NA,
+        magnitude = NA, 
+        status = "skip")
+      ) 
+  }
+  
+  # Generate all unique pairwise combinations of the quantization levels (n choose 2)
+  group_pairs <- combn(sort(q_groups), 2, simplify = FALSE)
+  
+  # Apply the VDA calculations to each unique pair
+  map_dfr(group_pairs, function(pair) {
+    df_pair <- df %>% filter(quantization %in% pair)
+    
+    # Extract values as vectors for each group
+    values_group1 <- df_pair %>% filter(quantization == pair[1]) %>% pull(value)
+    values_group2 <- df_pair %>% filter(quantization == pair[2]) %>% pull(value)
+    
+    # Ensure equal length 
+    if (length(values_group1) != length(values_group2)) stop("Unequal lengths for paired samples")
+    
+    # Calculate the differences
+    differences = values_group1 - values_group2
+    
+    # Count the number of positive, negative, and zero differences
+    n <- length(differences)
+    n_pos <- sum(differences > 0)   # Trials where group1 > group2
+    n_neg <- sum(differences < 0)   # Trials where group1 < group2
+    n_zero <- sum(differences == 0) # Trials where group1 == group2 (tie)
+    
+    # VDA formula:
+    # A_paired = P(X > Y) + 0.5 * P(X < Y)
+    # Where:
+    #   X ~ Group A
+    #   Y ~ Group B
+    
+    # Compute A_paired (VDA for paired data)
+    # Interpretation: probability that group1 outperforms group2
+    # Ties are given half credit (0.5), similar to rank-based methods
+    A_paired <- (n_pos + 0.5 * n_zero) / n
+
+    # Create result row as a tibble
+    tibble(
+      group1 = pair[1],
+      group2 = pair[2],
+      vda = A_paired,
+      magnitude = map_vda_effect(A_paired), # Get magnitude label
+      status = "ok"
+    )
+  })
+}
+
+# Apply the paired VDA effect size function to each nested dataframe
+effsize_results <- posthoc_results %>%
+  mutate(effsize = map(data, run_paired_vda))
+
+
+#============================== COMBINE RESULTS ===============================#
+
+# Combine posthoc and effect size nested data frames row-by-row
+combined_results <- effsize_results %>%
+  mutate(
+    # Combine the posthoc and effsize nested data frames
+    # The map2 function iterates over two arguments simultaneously
+    analysis_results = map2(posthoc, effsize, function(post, eff) {
+      # Join by group1/group2 (inner join keeps only matching comparisons)
+      full_join(post, eff, by = c("group1", "group2")) %>%
+        select(
+          group1, group2,
+          n1, n2, statistic, p, p.adj, p.adj.signif,
+          vda, magnitude, status
+        )
+    })
+  ) %>%
+  select(-posthoc, -effsize)  # Drop the old nested columns if not needed
+
+
+#============================== OUTPUT RESULTS ================================#
+
+# Remove the nested data before flattening
+summary_results <- combined_results %>%
+  select(-data) %>%
+  unnest(analysis_results)
+
+
+write_csv(summary_results, "results/PT6/rq2_post-hoc_results-PT6.csv")
+
+
+
+
+
+########################### [DEPRECATED] WILCOXON R ############################
+
+run_wilcoxon_r_effsize <- function(df) {
+  # Count the unique number of quantization groups
+  q_groups <- unique(df$quantization)
+  
+  # If the row does not contain at least two quantization groups, we can't
+  # perform any meaningful pairwise (effect size) analysis
+  if (length(q_groups) < 2) { # FIXME: potential bug here? see below how to make "error" tibble
+    return(tibble(group1 = NA, group2 = NA, effsize = NA, magnitude = NA, status = "skip")) 
   }
   
   # Generate all pairwise combinations (n choose 2) of quantization groups
@@ -167,47 +299,3 @@ run_effsize <- function(df) {
     return(result)
   })
 }
-
-# Apply effect size to each nested dataframe
-effsize_results <- posthoc_results %>%
-  mutate(effsize = map(data, run_effsize))
-
-
-
-#============================== COMBINE RESULTS ===============================#
-
-# Combine posthoc and effect size nested data frames row-by-row
-combined_results <- effsize_results %>%
-  mutate(
-    # Combine the posthoc and effsize nested data frames
-    # The map2 function iterates over two arguments simultaneously
-    analysis_results = map2(posthoc, effsize, function(post, eff) {
-      # Drop the n1 and n2 columns from the effect size table (eff)
-      # to prevent duplicated columns (e.g., n1.x, n1.y) after the join
-      eff_clean <- eff %>% select(-n1, -n2)
-      
-      # Join by group1/group2 (inner join keeps only matching comparisons)
-      full_join(post, eff_clean, by = c("group1", "group2")) %>%
-        select(
-          group1, group2,
-          n1, n2, statistic, p, p.adj, p.adj.signif,
-          effsize, magnitude, status
-        )
-    })
-  ) %>%
-  select(-posthoc, -effsize)  # Drop the old nested columns if not needed
-
-
-
-#============================== OUTPUT RESULTS ================================#
-
-
-# Remove the nested data before flattening
-summary_results <- combined_results %>%
-  select(-data) %>%
-  unnest(analysis_results)
-
-
-write_csv(summary_results, "results/rq1_post-hoc_results.csv")
-
-
