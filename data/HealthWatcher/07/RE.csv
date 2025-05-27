@@ -1,4 +1,21 @@
 ID,Feature,Description
 FR01,Query information,This use case allows a citizen to perform queries. The citizem might query which health units take care of a specific specialty or what are the specialties of a particular health unit.
+FR02,Complaint specification,"This use case allows a citizen to register complaints. Complaints can be:
+- Animal Complaint (Sick animals, Infestations (rodents, scorpions, bats, etc.), Diseases related to mosquitoes (dengue, filariose), Animal maltreatment)
+- Food Complaint (Cases where there is a suspicion infected food being eaten)
+- Special Complaint (Cases related to several reasons, which are not mentioned above (restaurants with hygiene problems, leaking sewerage, suspicious water transporting trucks, etc.))"
+FR10,Login,This use case allows an employee to have access to restricted operations on the Health-Watcher system.
+FR11,Register tables,"This use case allows the registration of system tables. The following operations are possible: insert, update, delete, search and print.
+The available tables include:
+- Health unit (unit code, unit description).
+- Specialty (code and description).
+- Health unit / Specialty (health unit and specialty).
+- Employee (login, name and password).
+- Type of disease (code, name, description, symptom and duration).
+- Symptom (code and description).
+- Type of disease / Symptom (type of disease and symptom)."
 FR12,Update complaint,This use case allows the state of a complaint to be updated.
+FR13,Register new employee,This use case allows new employees to be registered on the system.
+FR14,Update employee,This use case allows of the employee's data to be updated on the system.
 FR15,Update health unit,This use case allows the health unit's data to be updated.
+FR16,Change logged employee,This use case allows the currently logged employee to be changed.

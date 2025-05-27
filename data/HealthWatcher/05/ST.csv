@@ -38,6 +38,74 @@ T-1,,"1. The citizen chooses the type of query
 2.4.4 The symptoms for the selected disease type are retrieved.
 2.4.5 The complete disease information is returned to the user.
 3. The query results are formatted and presented to the user on their local display."
+T-2,,"1. The citizen selects the kind of complaint.
+2. The system shows the specific screen for each type of complaint.
+3. The system registers the kind, date and time of the complaints.
+4. The citizen provides the complaint specific data.
+5. The system saves the complaint.
+5.1. The information entered by the user is sent to the server.
+5.2. The system parses the data entered by the user.
+5.3. The system creates a new instance of the appropriate complaint type.
+5.4. The system generates a unique identifier and assigns this to the new complaint.
+5.5. The complainers address is parsed and saved.
+5.6. The common complaint information is parsed and stored with the OPENED state.
+5.7. The specific complaint data is then extracted and stored accordingly.
+5.8. The system ensures the data is left in a consistent state.
+6. The unique identifier is returned and presented to the user on their local display."
+T-3,,"1. The employee provides the login and password.
+2. The login and password are sent to the server.
+3. The system retrieves the employee details using the login as a unique identifier.
+4. The system validates the entered password.
+5. The result of the login attempt is presented to the employee on their local display."
+T-4,,"1. The employee chooses the option to register (insert/update) in one of the tables.
+2. The employee enters the data. 
+3. The system saves the data."
+T-5,,"1. The employee selects the update complaint option.
+2. The system retrieves the list of all registered complaints.
+2.1. The complaint list is populated with general and complaint type specific data.
+3. The list of complaints is returned to the employee.
+4. The complaints are formatted and presented to the employee on their local display.
+5. The employee selects the complaint they wish to update.
+6. The complaint unique identifier is sent to the server.
+7. The system ensures the complaint data is consistent.
+8. The system retrieves the complaint entry.
+9. The complaint is returned to the employee.
+10.The complaint is formatted and presented to the employee on their local display.
+11.The employee enters the conclusion.
+12.The conclusion is sent to the server.
+13.The complaint status is set to closed; the date the conclusion was entered is set in addition to the employee who dealt with the complaint.
+14.The system ensures the complaint is left in a consistent state. 
+15.The complaint information is updated to store the new information.
+
+Alternative Flow
+2 and 8: An error occurs retrieving the registered complaints. 2. Raise an error message.
+7 and 14: Data consistency cannot be ensured. 1. The complaint changes are rolled-back. 2. Raise an error message.
+3, 6, 9, and 12: A communication error occurs. 1. Raise an error message.
+15: An error occurs storing the updated complaint. 1. The complaint changes are rolled back. 2. Raise an error message."
+T-6,,"1. The employee selects the insert employee option.
+2. The employee provides the following information about the new employee: (Name, Login ID, Password (with second password field for confirmation))
+3. The employee confirms the operation.
+4. The entered data is transmitted to the server.
+5. The system verifies the entered data.
+6. The system ensures employee data is consistent.
+7. The system saves the new employee's data.
+
+Alternative flow
+2: Incomplete data entered. 1. Show a message informing the employee of the missing/incorrect data.
+4: A communication error occurs. 1. Raise an error message.
+5: The employee is already entered 1. Inform the employee that the new employee is already entered. 2. Abandon the entry.
+6: Data Consistency cannot be ensured. 1. The employee entry is rolled-back. 2. The employee is informed the employee cannot be inserted. 
+7: An error occurs storing the new employee’s details. 1. The employee entry is rolled-back. 2. Raise an error message."
+T-7,,"1. The employee chooses the update employee option.
+2. The employee provides the data to be updated: (Name, New password (with second password field for confirmation), Current password)
+3. The employee confirms the update.
+4. The entered data is sent to the server.
+5. The system verifies the entered data.
+6. The system ensures the employee data is consistent.
+7. The system stores the updated employee information.
+
+Alternative flow
+On step 3, in case the name or the current password is missing/invalid, an error message should be showed."
 T-8,,"1. The employee chooses the update health unit option.
 2. The system retrieves the list of all health units.
 3. The list of health units is returned to the employee.
