@@ -5,8 +5,11 @@ file_path = "./analysis/summary_table.csv"
 
 df = pd.read_csv(file_path)
 
-numeric_cols = list(df.columns)
+numeric_cols: list[str] = list(df.columns)
 numeric_cols.remove('Treatment')
+
+# Use `min` on these, not `max`
+min_cols: list[str] = ['Time to Analyze', 'VRAM Max Usage MiB']
 
 def format_latex_mathmode(t: tuple[float, float]) -> str:
     return f"${t[0]}\\pm{t[1]}$"
@@ -48,13 +51,18 @@ for dataset, df in group_by_dataset:
 
     for i, n_col in enumerate(numeric_cols):
         df[f'{n_col}_tuple'] = df[n_col].apply(parse_uncertainty)
-        best = max(df[f'{n_col}_tuple'], key=lambda x : (x[0], -x[1]))
 
+        if n_col in min_cols:
+            best = min(df[f'{n_col}_tuple'], key=lambda x : (x[0], -x[1]))
+        else:
+            best = max(df[f'{n_col}_tuple'], key=lambda x : (x[0], -x[1]))
+        
         df[f'{n_col}_str'] = df[f'{n_col}_tuple'].apply(
             lambda x: f"\\colorbox{{color{i+1}}}{{{format_latex_mathmode(x)}}}" if x == best else format_latex_mathmode(x)
         )
 
-    df = df[[col for col in df.columns if col.endswith('_str')]]
+    df = df[['Treatment'] + [col for col in df.columns if col.endswith('_str')]]
+    df.rename(columns={'Treatment': 'Model'}, inplace=True) # Use Treatment instead of Model
     df.columns = [col.replace("_str", "") for col in df.columns]
 
     latex_table = df.to_latex(
