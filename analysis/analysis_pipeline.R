@@ -12,15 +12,17 @@ options(scipen = 50) # Show decimals instead of scientific notation (RStudio)
 
 #============================== SELECT WHICH RQ ===============================#
 
-USE_RQ1 = TRUE
+USE_RQ1 = FALSE
 
 #============================ LOAD EXPERIMENT DATA ============================#
 
-# Load data
+# Load data for the correct RQ and set VDA flag (see effect size method)
 if (USE_RQ1) {
   raw_df <- read.csv("./data/PT6_prompt/rq1_flat_df-PT6.csv")
+  use_lower_is_better = FALSE
 } else {
   raw_df <- read.csv("./data/PT6_prompt/rq2_flat_df-PT6.csv")
+  use_lower_is_better = TRUE
 }
 
 
@@ -151,8 +153,8 @@ map_vda_effect <- function(vda_value) {
 
 
 # Custom paired VDA function (for within-subjects/repeated-measures design)
-# (there are no existing paired implementations available in libraries)
-run_paired_vda <- function(df) {
+# (there are no existing paired implementations available in packages)
+run_paired_vda <- function(df, lower_is_better = FALSE) {
   # Count the unique number of quantization groups
   q_groups <- unique(df$quantization)
   
@@ -180,7 +182,9 @@ run_paired_vda <- function(df) {
     values_group2 <- df_pair %>% filter(quantization == pair[2]) %>% pull(value)
     
     # Ensure equal length 
-    if (length(values_group1) != length(values_group2)) stop("Unequal lengths for paired samples")
+    if (length(values_group1) != length(values_group2)) {
+      stop("Unequal lengths for paired samples")
+    }
     
     # Calculate the differences
     differences = values_group1 - values_group2
@@ -192,15 +196,21 @@ run_paired_vda <- function(df) {
     n_zero <- sum(differences == 0) # Trials where group1 == group2 (tie)
     
     # VDA formula:
-    # A_paired = P(X > Y) + 0.5 * P(X < Y)
+    # A_paired = (#(A > B) + 0.5 * #(A < B)) / n
     # Where:
-    #   X ~ Group A
-    #   Y ~ Group B
+    #   A ~ Group A
+    #   B ~ Group B
+    #   n ~ number of paired comparisons
     
     # Compute A_paired (VDA for paired data)
     # Interpretation: probability that group1 outperforms group2
-    # Ties are given half credit (0.5), similar to rank-based methods
-    A_paired <- (n_pos + 0.5 * n_zero) / n
+    # Ties are given half credit (0.5), as in rank-based methods
+    # Adjust comparison direction based on whether lower or higher values are better
+    if (lower_is_better) {
+      A_paired <- (n_neg + 0.5 * n_zero) / n
+    } else {
+      A_paired <- (n_pos + 0.5 * n_zero) / n
+    }
 
     # Create result row as a tibble
     tibble(
@@ -215,7 +225,7 @@ run_paired_vda <- function(df) {
 
 # Apply the paired VDA effect size function to each nested dataframe
 effsize_results <- posthoc_results %>%
-  mutate(effsize = map(data, run_paired_vda))
+  mutate(effsize = map(data, run_paired_vda, lower_is_better = use_lower_is_better))
 
 
 #============================== COMBINE RESULTS ===============================#
