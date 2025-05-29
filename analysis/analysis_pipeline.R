@@ -10,6 +10,30 @@ library(rcompanion)
 options(scipen = 50) # Show decimals instead of scientific notation (RStudio)
 
 
+#=================================== USAGE ====================================#
+
+# This R script performs a full statistical analysis on the desired input data.
+
+# The analysis includes: 
+#   - Friedman NHST (non-parametric NHST for repeated measures)
+#   - Post-hoc pairwise Wilcoxon signed-rank test (paired)
+#     - with Holm-Bonferroni correction for multiple testing
+#   - Custom Paired VDA implementation for effect size estimation
+
+# Simply set "USE_RQ1" flag to TRUE/FALSE for the desired analysis and the
+# pipeline will handle the execution automatically.
+
+# The script filters out treatments with no variance and blocked groups with 
+# fewer than 2 members, as these are not suitable for pairwise post-hoc analysis.
+
+# The results are written to file using the corresponding prefix: "rq1" | "rq2". 
+# However, changing destination output and file name requires manual changes
+# in the section "OUTPUT RESULTS" close to the bottom.
+
+
+# Note: there is a deprecated Wilcoxon r effect size implementation at the
+# bottom of the file. This however, does not execute when running the file.
+
 #============================== SELECT WHICH RQ ===============================#
 
 USE_RQ1 = FALSE
@@ -255,8 +279,10 @@ summary_results <- combined_results %>%
   select(-data) %>%
   unnest(analysis_results)
 
+rq_label <- if (USE_RQ1) "rq1" else "rq2"
+file_path <- paste0("results/PT6/", rq_label, "_post-hoc_results-PT6.csv")
 
-write_csv(summary_results, "results/PT6/rq2_post-hoc_results-PT6.csv")
+write_csv(summary_results, file_path)
 
 
 
@@ -264,48 +290,51 @@ write_csv(summary_results, "results/PT6/rq2_post-hoc_results-PT6.csv")
 
 ########################### [DEPRECATED] WILCOXON R ############################
 
-run_wilcoxon_r_effsize <- function(df) {
-  # Count the unique number of quantization groups
-  q_groups <- unique(df$quantization)
-  
-  # If the row does not contain at least two quantization groups, we can't
-  # perform any meaningful pairwise (effect size) analysis
-  if (length(q_groups) < 2) { # FIXME: potential bug here? see below how to make "error" tibble
-    return(tibble(group1 = NA, group2 = NA, effsize = NA, magnitude = NA, status = "skip")) 
-  }
-  
-  # Generate all pairwise combinations (n choose 2) of quantization groups
-  group_pairs <- combn(sort(q_groups), 2, simplify = FALSE)
-  
-  # Apply wilcox_effsize to each unique pair of quantization groups individually
-  # This avoids losing all results due to the error: "all pairwise differences equal zero",
-  # which occurs when all values in the paired comparison are identical (zero difference)
-  # By evaluating one pair at a time, we preserve valid results even if one pair fails
-  map_dfr(group_pairs, function(pair) {
-    df_pair <- df %>% filter(quantization %in% pair)
+if (FALSE) {
+
+  run_wilcoxon_r_effsize <- function(df) {
+    # Count the unique number of quantization groups
+    q_groups <- unique(df$quantization)
     
-    # Try to compute effect size just for this pair
-    result <- tryCatch({
-      eff <- wilcox_effsize(df_pair, value ~ quantization, paired = TRUE)
-      eff %>% mutate(status = "ok")
-    }, error = function(e) {
-      # This catch handles errors like "all pairwise differences equal zero"
-      # Instead of skipping the result entirely, we log the pair with NA values,
-      # making it explicit which group comparisons failed
-      message("Effect size failed for pair: ", paste(pair, collapse = " vs "), " → ", e$message)
-      tibble(
-        group1 = pair[1],
-        group2 = pair[2],
-        effsize = NA_real_,
-        # Add n1 and n2 for schema consistency, to not break the function that
-        # combines the nested posthoc + effect size dataframes
-        n1 = df_pair %>% filter(quantization == pair[1]) %>% nrow(),
-        n2 = df_pair %>% filter(quantization == pair[2]) %>% nrow(),
-        magnitude = NA_character_,
-        status = "error"
-      )
+    # If the row does not contain at least two quantization groups, we can't
+    # perform any meaningful pairwise (effect size) analysis
+    if (length(q_groups) < 2) { # FIXME: potential bug here? see below how to make "error" tibble
+      return(tibble(group1 = NA, group2 = NA, effsize = NA, magnitude = NA, status = "skip")) 
+    }
+    
+    # Generate all pairwise combinations (n choose 2) of quantization groups
+    group_pairs <- combn(sort(q_groups), 2, simplify = FALSE)
+    
+    # Apply wilcox_effsize to each unique pair of quantization groups individually
+    # This avoids losing all results due to the error: "all pairwise differences equal zero",
+    # which occurs when all values in the paired comparison are identical (zero difference)
+    # By evaluating one pair at a time, we preserve valid results even if one pair fails
+    map_dfr(group_pairs, function(pair) {
+      df_pair <- df %>% filter(quantization %in% pair)
+      
+      # Try to compute effect size just for this pair
+      result <- tryCatch({
+        eff <- wilcox_effsize(df_pair, value ~ quantization, paired = TRUE)
+        eff %>% mutate(status = "ok")
+      }, error = function(e) {
+        # This catch handles errors like "all pairwise differences equal zero"
+        # Instead of skipping the result entirely, we log the pair with NA values,
+        # making it explicit which group comparisons failed
+        message("Effect size failed for pair: ", paste(pair, collapse = " vs "), " → ", e$message)
+        tibble(
+          group1 = pair[1],
+          group2 = pair[2],
+          effsize = NA_real_,
+          # Add n1 and n2 for schema consistency, to not break the function that
+          # combines the nested posthoc + effect size dataframes
+          n1 = df_pair %>% filter(quantization == pair[1]) %>% nrow(),
+          n2 = df_pair %>% filter(quantization == pair[2]) %>% nrow(),
+          magnitude = NA_character_,
+          status = "error"
+        )
+      })
+      
+      return(result)
     })
-    
-    return(result)
-  })
-}
+  }
+} # end of if-statement
