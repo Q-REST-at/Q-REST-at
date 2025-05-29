@@ -165,18 +165,22 @@ box_time_data <- long_df %>% filter(metric == "Time to Analyze")
 # Plot 1: VRAM
 box_vram <- ggplot(box_vram_data, aes(x = quantization, y = value, fill = quantization)) +
   geom_boxplot(alpha = 0.8, width = 0.5) +
-  geom_jitter(width = 0.15, alpha = 0.4, size = 1) +
+  geom_jitter(width = 0.15, alpha = 0.4, size = 0.5) +
   facet_grid(. ~ dataset) +
-  scale_y_continuous(limits = c(0, 17000), breaks = seq(0, 17000, 2000)) +
+  scale_y_continuous(
+    breaks = c(seq(3500, 7500, by = 1000), seq(15000, 17000, by = 1000)),
+    limits = c(3500, 17000)
+  ) +
+  scale_y_break(c(7500, 15000), scales = 0.5 ) +
   scale_fill_manual(values = CUSTOM_PALLETE) +
-  labs(title = "VRAM Max Usage MiB", x = NULL, fill = "Quantization:") +
+  labs(title = "VRAM Max Usage MiB (Broken Y-Axis)", x = NULL, y = NULL, fill = "Quantization:") +
   theme_bw() + 
   theme(legend.position = "bottom", axis.text.x = element_text(angle = 90))
 
 # Plot 2: Time (with trimmed Y range)
-box_time <- ggplot(time_data, aes(x = quantization, y = value, fill = quantization)) +
+box_time <- ggplot(box_time_data, aes(x = quantization, y = value, fill = quantization)) +
   geom_boxplot(alpha = 0.8, width = 0.5) +
-  geom_jitter(width = 0.15, alpha = 0.4, size = 1) +
+  geom_jitter(width = 0.15, alpha = 0.4, size = 0.5) +
   facet_grid(. ~ dataset) +
   scale_y_continuous(
     breaks = c(seq(0, 40, by = 5), seq(100, 700, by = 100)),
@@ -184,7 +188,7 @@ box_time <- ggplot(time_data, aes(x = quantization, y = value, fill = quantizati
   ) +
   scale_y_break(c(40, 100), scales = 0.5 ) +
   scale_fill_manual(values = CUSTOM_PALLETE) +
-  labs(title = "Time to Analyze (Broken Y-Axis)", x = NULL, fill = "Quantization:") +
+  labs(title = "Time to Analyze (Broken Y-Axis)", x = NULL, y = NULL, fill = "Quantization:") +
   theme_bw() +
   theme(
     legend.position = "none",
@@ -202,5 +206,5 @@ combined_rq2_box_plot <- box_time / box_vram +
     )
   )
 
-ggsave(combined_rq2_box_plot, filename = "results/RQ2 Box Plot.pdf", width = 20, height = 20, units = "cm", device = cairo_pdf())
+ggsave(combined_rq2_box_plot, filename = "results/RQ2 Box Plot.pdf", width = 18, height = 22, units = "cm", device = cairo_pdf())
 dev.off()
