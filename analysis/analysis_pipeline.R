@@ -37,7 +37,7 @@ options(scipen = 50) # Show decimals instead of scientific notation (RStudio)
 
 #============================== SELECT WHICH RQ ===============================#
 
-USE_RQ1 = FALSE
+USE_RQ1 = TRUE
 
 
 #============================ LOAD EXPERIMENT DATA ============================#
@@ -132,10 +132,10 @@ run_posthoc <- function(df) {
 }
 
 # Guide--Interpreting adjusted P-value column:
-# ***	== Very strong evidence of difference
+# *** == Very strong evidence of difference
 # **  == Strong evidence
-# *	  == Moderate evidence
-# ns	== Not significant
+# *   == Moderate evidence
+# ns  == Not significant
 
 
 # Version evaluating ALL pairs regardless of Friedman results
@@ -265,7 +265,7 @@ combined_results <- effsize_results %>%
         )
     })
   ) %>%
-  select(-posthoc, -effsize)  # Drop the old nested columns if not needed
+  select(-posthoc, -effsize)  # Drop the old nested columns
 
 
 
@@ -334,4 +334,5 @@ if (FALSE) {
       return(result)
     })
   }
+
 } # end of if-statement
