@@ -103,6 +103,11 @@ def main() -> None:
     # Note: each outermost directory name is composed of: treatment + dataset.
     # However, for simplicity we simply call the variable here "treatment".
     for treatment in os.listdir(f"./out"):
+        # Skip current iteration if we encountered a file
+        if not os.path.isdir(f"./out/{treatment}"): 
+            print(f"{treatment} is not a directory - skipping...")
+            continue
+
         # Output directory filepath
         res_dir: str = f"./res/{date_str}/{time_str}/{treatment}"
         # Replace ":" in Windows environement to avoid crashes due to illegal filename characters
@@ -167,10 +172,11 @@ def main() -> None:
                     err: dict[str, list[str]] = payload["data"]["err"]
 
                     time_to_analyze: float = payload["data"]["time_to_analyze"]
-
+                    
                     # GPU and VRAM metrics are single nested dictionaries
-                    gpu: dict[str, Any] = payload["data"]["GPU"]
-                    vram: dict[str, Any] = payload["data"]["VRAM"]
+                    # GPU and VRAM can be null
+                    gpu: dict[str, Any] | None = payload.get("data", {}).get("GPU")
+                    vram: dict[str, Any] | None = payload.get("data", {}).get("VRAM")
 
                     curr_tests: set[str]
                     curr_mapping: dict[str, set[str]]
@@ -285,14 +291,16 @@ def main() -> None:
                     all_err.append(len(err))
 
                     all_time_to_analyze.append(time_to_analyze)
+                    
+                    # Append only if GPU and VRAM are not None
+                    if gpu is not None and vram is not None:
+                        all_gpu_util_mean.append(gpu["utilization"].get("avg"))
+                        all_gpu_util_max.append(gpu["utilization"].get("max"))
 
-                    all_gpu_util_mean.append(gpu["utilization"]["avg"])
-                    all_gpu_util_max.append(gpu["utilization"]["max"])
+                        all_vram_util_mean.append(vram["utilization"]["avg"])
+                        all_vram_util_max.append(vram["utilization"]["max"])
 
-                    all_vram_util_mean.append(vram["utilization"]["avg"])
-                    all_vram_util_max.append(vram["utilization"]["max"])
-
-                    all_vram_max_usage_MiB.append(vram["max_usage_MiB"])
+                        all_vram_max_usage_MiB.append(vram["max_usage_MiB"])
 
                     prevalence: float = (tp + fn) / n
 
@@ -312,9 +320,11 @@ def main() -> None:
                         "specificity": specificity,
                         "err": len(err),
                         "time_to_analyze": time_to_analyze,
-                        "GPU": gpu,
-                        "VRAM": vram
                     }
+                    if gpu is not None:
+                        data["GPU"] = gpu
+                    if vram is not None:
+                        data["VRAM"] = vram
 
                     with open(eval_path, "w+") as f:
                         json.dump(data, f, indent=2)
@@ -341,9 +351,11 @@ def main() -> None:
                         "specificity": specificity,
                         "err": len(err),
                         "time_to_analyze": time_to_analyze,
-                        "GPU": gpu,
-                        "VRAM": vram
                     }
+                    if gpu is not None:
+                        data_json["GPU"] = gpu
+                    if vram is not None:
+                        data_json["VRAM"] = vram
 
                     json_list.append(data_json)
                 
@@ -372,12 +384,20 @@ def main() -> None:
             "frequency_table": frequency_table,
             "all_err": Stats("all_err", all_err).as_dict,
             "all_time_to_analyze": Stats("all_time_to_analyze", all_time_to_analyze).as_dict,
-            "all_gpu_util_mean": Stats("all_gpu_util_mean", all_gpu_util_mean).as_dict,
-            "all_gpu_util_max": Stats("all_gpu_util_max", all_gpu_util_max).as_dict,
-            "all_vram_util_mean": Stats("all_vram_util_mean", all_vram_util_mean).as_dict,
-            "all_vram_util_max": Stats("all_vram_util_max", all_vram_util_max).as_dict,
-            "all_vram_max_usage_MiB": Stats("all_vram_max_usage_MiB", all_vram_max_usage_MiB).as_dict
         }
+
+        # Additional error checking - including only if GPU and VRAM data is present
+        if all_gpu_util_mean:
+            data["all_gpu_util_mean"] = Stats("all_gpu_util_mean", all_gpu_util_mean).as_dict
+        if all_gpu_util_max:
+            data["all_gpu_util_max"] = Stats("all_gpu_util_max", all_gpu_util_max).as_dict
+        if all_vram_util_mean:
+            data["all_vram_util_mean"] = Stats("all_vram_util_mean", all_vram_util_mean).as_dict
+        if all_vram_util_max:
+            data["all_vram_util_max"] = Stats("all_vram_util_max", all_vram_util_max).as_dict
+        if all_vram_max_usage_MiB:
+            data["all_vram_max_usage_MiB"] = Stats("all_vram_max_usage_MiB", all_vram_max_usage_MiB).as_dict
+
 
         print(f"Info - Logging total and average metrics for {treatment}")
         with open(f"{res_dir}/{treatment}.json", "w") as f:
