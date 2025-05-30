@@ -22,8 +22,8 @@ CUSTOM_PALLETE = c("GPTQ" = "#A97FED", "COSINE" = "#D4C4EA",
 
 #============================== SELECT WHICH RQ ===============================#
 
-USE_RQ1 = FALSE
-INCLUDE_COSINE = FALSE
+USE_RQ1 = TRUE
+INCLUDE_COSINE = TRUE
 
 
 #============================ LOAD EXPERIMENT DATA ============================#
@@ -33,7 +33,7 @@ if (USE_RQ1) {
   raw_df <- read.csv("./data/PT6_prompt/rq1_flat_df-PT6.csv")
   if (INCLUDE_COSINE) {
     cosine_df <- read.csv("./data/rq1_flat_df-Cosine.csv")
-    raw_df <- bind_rows(llm_df, cosine_df)
+    raw_df <- bind_rows(raw_df, cosine_df)
   }
 
 } else {
@@ -53,6 +53,7 @@ metrics <- if (USE_RQ1) RQ1_METRICS else RQ2_METRICS
 # Expand the metrics columns to "true" long format
 long_df <- raw_df %>%
   select(model, quantization, dataset, iteration, all_of(metrics)) %>%
+  #filter(dataset == "BTHS") %>% # filter for specific datasets
   pivot_longer(cols = all_of(metrics), names_to = "metric", values_to = "value") %>%
   # Rename columns to a more human-readable format
   # "." is a placeholder for the value being piped, which is needed since we 
@@ -62,7 +63,8 @@ long_df <- raw_df %>%
            tools::toTitleCase()) %>% 
   # Essentially a ternary: ifelse(test_condition, value_if_true, value_if_false)
   mutate(metric = ifelse(metric == "Vram Max Usage Mib", "VRAM Max Usage MiB", metric))
-
+  #mutate(dataset = ifelse(dataset == "HW", "HEALTHWATCHER", dataset))
+  
 # Group by: quantization, dataset, metric
 summary_df <- long_df %>%
   select(-model) %>% # drop the model column, we only have one in the experiment
@@ -70,12 +72,14 @@ summary_df <- long_df %>%
   summarise(Mean = mean(value), Median = median(value), SD = sd(value),
             YMin = Mean - SD, YMax = Mean + SD)
 
+summary_df$quantization <- factor(summary_df$quantization, levels = c("AQLM", "AWQ", "GPTQ", "NONE", "COSINE"))
+
 
 #================================ PLOTTING RQ1 ================================#
 
 #---------------------------------- BAR PLOT ----------------------------------#
 # Bar chart for easy to understand overview of all relevant information
-rq1__bar_plot <- ggplot(summary_df, aes(x = quantization, y = Median, fill = quantization, group = metric)) +
+rq1_bar_plot <- ggplot(summary_df, aes(x = quantization, y = Median, fill = quantization, group = metric)) +
   geom_col(width = 0.5) + 
   geom_errorbar(aes(ymin = YMin, ymax = YMax), alpha = 0.8, width = 0.5) +
   scale_y_continuous(limits = c(0,1), breaks = seq(0,1,by=0.1)) +
@@ -93,12 +97,15 @@ rq1_box_plot <- ggplot(long_df, aes(x = quantization, y = value, fill = quantiza
   geom_boxplot(alpha = 0.8, width = 0.5) +
   geom_jitter(width = 0.15, alpha = 0.4, size = 1) +
   scale_y_continuous(limits = c(0,1), breaks = seq(0,1,by=0.1)) + 
-  facet_grid(vars(metric), vars(dataset), scales = "free") +
+  facet_grid(vars(metric), vars(dataset), scales = "free") +  # full grid with all datasets
+  #facet_wrap(vars(metric), ncol = 2, scales = "free") + # 2x2 grid for just one dataset
   scale_fill_manual(values = CUSTOM_PALLETE) +
   labs(title = NULL, x = NULL, y = NULL, fill = "Quantization:") +
   theme_bw() +
   theme_bw() + theme(legend.position = "bottom", axis.text.x = element_text(angle = 90))
 
+# 2x2 grid: width = 15, height = 15
+# full grid: width = 24, height = 20
 ggsave(rq1_box_plot, filename = "results/RQ1 Box Plot.pdf", width = 24, height = 20, units = "cm", device = cairo_pdf())
 dev.off()
 
@@ -136,7 +143,7 @@ box_time <- ggplot(bar_time_data, aes(x = quantization, y = Median, fill = quant
   ) +
   scale_y_break(c(30, 100), scales = 0.5 ) +
   scale_fill_manual(values = CUSTOM_PALLETE) +
-  labs(title = "Time to Analyze (Broken Y-Axis)", x = NULL, fill = "Quantization:") +
+  labs(title = "Inference Time in Seconds", x = NULL, fill = "Quantization:") +
   theme_bw() +
   theme(
     legend.position = "none",
@@ -173,11 +180,45 @@ box_vram <- ggplot(box_vram_data, aes(x = quantization, y = value, fill = quanti
   ) +
   scale_y_break(c(7500, 15000), scales = 0.5 ) +
   scale_fill_manual(values = CUSTOM_PALLETE) +
-  labs(title = "VRAM Max Usage MiB (Broken Y-Axis)", x = NULL, y = NULL, fill = "Quantization:") +
+  labs(title = "VRAM Max Usage MiB", 
+       x = NULL, y = NULL, 
+       fill = "Quantization:"
+  ) +
   theme_bw() + 
-  theme(legend.position = "bottom", axis.text.x = element_text(angle = 90))
+  theme(legend.position = "bottom", axis.text.x = element_text(angle = 90),
+        axis.text.y.right = element_blank(),  # Hide right y-axis labels
+        axis.ticks.y.right = element_blank()   # Hide right y-axis ticks
+  )
 
-# Plot 2: Time (with trimmed Y range)
+############################### USE THIS FOR 2X2 PLOT (TO BE REFACTORED) #######
+box_vram <- ggplot(box_vram_data, aes(x = quantization, y = value, fill = quantization)) +
+  geom_boxplot(alpha = 0.8, width = 0.5) +
+  geom_jitter(width = 0.15, alpha = 0.4, size = 0.5) +
+  facet_grid(. ~ dataset) +
+  scale_y_continuous(
+    breaks = c(seq(3500, 7500, by = 1000), seq(15000, 17000, by = 1000)),
+    limits = c(3500, 17000)
+  ) +
+  scale_y_break(c(7500, 15000), scales = 0.5) +
+  scale_fill_manual(values = CUSTOM_PALLETE) +
+  labs(
+    title = "VRAM Max Usage MiB",
+    x = NULL, y = NULL,
+    fill = "Quantization:"
+  ) +
+  guides(fill = guide_legend(title.position = "top")) +  # <-- stack legend title above keys
+  theme_bw() +
+  theme(
+    legend.position = "bottom",
+    legend.direction = "horizontal",   # <-- ensures horizontal layout
+    legend.title.align = 0.5,          # <-- center-aligns the title
+    axis.text.x = element_text(angle = 90),
+    axis.text.y.right = element_blank(),
+    axis.ticks.y.right = element_blank()
+  )
+
+
+# Plot 2: Time 
 box_time <- ggplot(box_time_data, aes(x = quantization, y = value, fill = quantization)) +
   geom_boxplot(alpha = 0.8, width = 0.5) +
   geom_jitter(width = 0.15, alpha = 0.4, size = 0.5) +
@@ -188,7 +229,7 @@ box_time <- ggplot(box_time_data, aes(x = quantization, y = value, fill = quanti
   ) +
   scale_y_break(c(40, 100), scales = 0.5 ) +
   scale_fill_manual(values = CUSTOM_PALLETE) +
-  labs(title = "Time to Analyze (Broken Y-Axis)", x = NULL, y = NULL, fill = "Quantization:") +
+  labs(title = "Inference Time in Seconds", x = NULL, y = NULL, fill = "Quantization:") +
   theme_bw() +
   theme(
     legend.position = "none",
@@ -206,5 +247,7 @@ combined_rq2_box_plot <- box_time / box_vram +
     )
   )
 
+# full box: width = 18, height = 22
+# 2x2 box: width = 10, height = 20
 ggsave(combined_rq2_box_plot, filename = "results/RQ2 Box Plot.pdf", width = 18, height = 22, units = "cm", device = cairo_pdf())
 dev.off()
