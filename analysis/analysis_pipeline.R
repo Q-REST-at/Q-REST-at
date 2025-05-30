@@ -32,21 +32,21 @@ options(scipen = 50) # Show decimals instead of scientific notation (RStudio)
 
 
 # Note: there is a deprecated Wilcoxon r effect size implementation at the
-# bottom of the file. This however, does not execute when running the file.
+# bottom of the file. It currently does not execute when running.
+
 
 #============================== SELECT WHICH RQ ===============================#
 
 USE_RQ1 = FALSE
+
 
 #============================ LOAD EXPERIMENT DATA ============================#
 
 # Load data for the correct RQ and set VDA flag (see effect size method)
 if (USE_RQ1) {
   raw_df <- read.csv("./data/PT6_prompt/rq1_flat_df-PT6.csv")
-  use_lower_is_better = FALSE
 } else {
   raw_df <- read.csv("./data/PT6_prompt/rq2_flat_df-PT6.csv")
-  use_lower_is_better = TRUE
 }
 
 
@@ -178,7 +178,7 @@ map_vda_effect <- function(vda_value) {
 
 # Custom paired VDA function (for within-subjects/repeated-measures design)
 # (there are no existing paired implementations available in packages)
-run_paired_vda <- function(df, lower_is_better = FALSE) {
+run_paired_vda <- function(df) {
   # Count the unique number of quantization groups
   q_groups <- unique(df$quantization)
   
@@ -229,12 +229,7 @@ run_paired_vda <- function(df, lower_is_better = FALSE) {
     # Compute A_paired (VDA for paired data)
     # Interpretation: probability that group1 outperforms group2
     # Ties are given half credit (0.5), as in rank-based methods
-    # Adjust comparison direction based on whether lower or higher values are better
-    if (lower_is_better) {
-      A_paired <- (n_neg + 0.5 * n_zero) / n
-    } else {
-      A_paired <- (n_pos + 0.5 * n_zero) / n
-    }
+    A_paired <- (n_pos + 0.5 * n_zero) / n
 
     # Create result row as a tibble
     tibble(
@@ -249,7 +244,8 @@ run_paired_vda <- function(df, lower_is_better = FALSE) {
 
 # Apply the paired VDA effect size function to each nested dataframe
 effsize_results <- posthoc_results %>%
-  mutate(effsize = map(data, run_paired_vda, lower_is_better = use_lower_is_better))
+  mutate(effsize = map(data, run_paired_vda))
+
 
 
 #============================== COMBINE RESULTS ===============================#
@@ -270,6 +266,7 @@ combined_results <- effsize_results %>%
     })
   ) %>%
   select(-posthoc, -effsize)  # Drop the old nested columns if not needed
+
 
 
 #============================== OUTPUT RESULTS ================================#
