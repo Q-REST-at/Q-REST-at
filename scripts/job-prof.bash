@@ -64,7 +64,8 @@ if [[ "$ITER_PER_SESSION" -gt 0 ]]; then
         # First call `send_data.py` to prompt the model. This produces `res.json` under LOG_DIR_ITER.
         PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
             python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME \
-                                    --quant $QUANT --logDir $LOG_DIR_ITER --subset $iter
+                                    --quant $QUANT --logDir $LOG_DIR_ITER --subset $iter \
+                                    --system "./prompts/system/list/PT6.txt" --prompt "./prompts/user/list/PT6.txt"
         kill "$MONITOR_PID"
         sleep 0.1
 
@@ -86,7 +87,8 @@ else
 
     PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
         python -m src.send_data --model $MODEL --data $DATA --sessionName $SESSION_NAME \
-                                --quant $QUANT --logDir $LOG_DIR
+                                --quant $QUANT --logDir $LOG_DIR \
+                                --system "./prompts/system/list/PT6.txt" --prompt "./prompts/user/list/PT6.txt"
 
     PYTHONPATH=$PROJ_PATH apptainer exec $PROJ_PATH/$CONTAINER_NAME \
         python -m src.gpu_prof "$PROFILE_DIR.csv" "$LOG_DIR/res.json"
