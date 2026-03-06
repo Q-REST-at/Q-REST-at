@@ -10,7 +10,7 @@ library(ggbreak)
 
 options(scipen = 50) # Show decimals instead of scientific notation (RStudio)
 
-CUSTOM_PALLETE = c("GPTQ" = "#A97FED", "COSINE" = "#D4C4EA",  
+CUSTOM_PALLETE = c("GPTQ" = "#A97FED",  
                    "AWQ" = "#24ECDE", "AQLM"="#34D773", 
                    "NONE"="#2A503B")
 #34D773 - Emerald  
