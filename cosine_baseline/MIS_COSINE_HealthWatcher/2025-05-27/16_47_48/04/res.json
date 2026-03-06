@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "req_path": "../data/HealthWatcher/04/RE.csv",
+    "test_path": "../data/HealthWatcher/04/ST.csv",
+    "mapping_path": "../data/HealthWatcher/04/mapping.csv"
+  },
+  "data": {
+    "links": {
+      "FR01": [
+        "T-1"
+      ],
+      "FR02": [
+        "T-5"
+      ],
+      "FR10": [],
+      "FR11": [
+        "T-1"
+      ],
+      "FR12": [
+        "T-2",
+        "T-5"
+      ],
+      "FR13": [
+        "T-6"
+      ],
+      "FR14": [
+        "T-6",
+        "T-7"
+      ],
+      "FR15": [
+        "T-1",
+        "T-8"
+      ],
+      "FR16": []
+    },
+    "time-to-analyze": 0.0034906864166259766
+  }
+}
